@@ -1,0 +1,194 @@
+---
+sidebar: sidebar 
+permalink: get-started/prepare-cluster-admin.html 
+keywords: afx, afx system, prepare, administration 
+summary: AFX를 프로덕션 환경에 배포하기 전에 관리 구조와 구성 옵션을 이해하는 것이 중요합니다.  이를 통해 AFX 클러스터의 안전하고 효율적이며 효과적인 관리가 보장됩니다. 
+---
+= AFX 스토리지 시스템 관리를 준비하세요
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX를 프로덕션 환경에 배포하기 전에 관리 구조와 구성 옵션을 이해하는 것이 중요합니다.  이를 통해 AFX 클러스터의 안전하고 효율적이며 효과적인 관리가 보장됩니다.
+
+
+
+== 스토리지 가상 머신 이해
+
+스토리지 가상 머신(SVM)은 ONTAP 클러스터 내의 격리된 서버 또는 테넌트 환경입니다.  연결된 클라이언트에 데이터를 제공하도록 SVM을 구성할 수 있습니다.  AFX SVM의 기능과 특성을 잘 알고 있어야 합니다.
+
+
+NOTE: AFX 클러스터를 설정하고 처음 배포할 때 하나의 데이터 SVM이 생성됩니다.  필요한 경우 추가 데이터 SVM을 만들 수 있습니다.
+
+행정 통제:: 데이터 SVM을 사용하면 데이터와 애플리케이션을 격리하고 강화할 수 있습니다.  이 기능은 대규모 조직에 다양한 그룹이 있는 경우에 유용할 수 있습니다.  데이터 액세스, 보안 및 보호와 관련된 정책을 수립하기 위해 관리 제어를 SVM에 위임할 수 있습니다.
+계정 및 RBAC 역할:: AFX에는 클러스터 수준과 SVM 수준의 두 가지 인증 및 권한 부여 수준이 있습니다.  클러스터 계정 외에도 각 SVM에는 고유한 사용자 및 역할 집합이 있습니다.  대부분의 상황에서는 클러스터 수준 계정을 사용하는 것이 적합합니다.  하지만 환경에 따라서는 더 제한적인 SVM 계정과 역할을 구성하고 사용해야 할 수도 있습니다. 보다 link:../administer/additional-ontap-svm.html["추가 AFX SVM 관리"] 자세한 내용은.
+SVM 범위 리소스:: AFX 리소스와 구성 가능한 엔터티는 클러스터 또는 특정 SVM과 연결됩니다.  볼륨과 버킷은 물론 SVM 사용자 계정과 RBAC 역할을 포함하여 SVM 범위가 있는 리소스가 많이 있습니다.
+전용 네트워크 인터페이스:: 각 SVM에는 전용 네트워크 인터페이스 세트가 있습니다.  예를 들어, 관리 및 클라이언트 데이터 액세스를 위해 SVM에 별도의 LIF가 할당됩니다.
+
+
+
+
+== 두 개의 AFX 관리 수준
+
+AFX로 수행하는 관리 ONTAP 작업은 일반적으로 두 가지 범주로 나뉩니다.  일부 작업은 ONTAP 클러스터 전체에 적용되는 반면, 다른 작업은 특정 SVM에 적용됩니다.  이로 인해 2계층 행정 모델이 탄생하게 됩니다.
+
+이러한 수준은 관리 작업이 어떻게 구성되고 할당되는지를 설명하는 것이지, 반드시 연관된 보안이 어떻게 구성되는지를 설명하는 것은 아니라는 점에 유의하는 것이 중요합니다.  예를 들어, 클러스터 수준 관리를 수행하려면 클러스터 관리자 계정이 필요하지만, SVM 관리에도 사용할 수 있습니다.
+
+클러스터 관리자:: 클러스터 관리자는 모든 데이터 SVM을 포함하여 AFX 클러스터를 완벽하게 제어할 수 있습니다.  AFX 클러스터 관리 수준에는 클러스터 관리자가 수행할 수 있는 작업만 포함되고 SVM 관련 관리 작업은 포함되지 않습니다. 보다 link:../administer/view-dashboard.html["클러스터 관리"] 자세한 내용은.
+SVM 관리자:: SVM 관리자 역할은 특정 데이터 SVM을 제어하므로 클러스터 관리자에 비해 제한이 더 많습니다.  SVM 관리에는 볼륨 생성과 같이 SVM 범위가 있는 개체와 리소스에 대한 작업을 수행하는 것이 포함됩니다. 보다 link:../manage-data/prepare-manage-data.html["스토리지 VM 및 데이터 관리"] 자세한 내용은.
+
+
+
+
+== 3개의 관리 인터페이스
+
+AFF 및 FAS 시스템과 마찬가지로 AFX에는 세 가지 관리 인터페이스가 있습니다.  사용해야 하는 LIF(또는 IP 주소)는 관리 인터페이스와 환경에 따라 달라집니다.
+
+
+NOTE: 대부분의 관리 작업에는 시스템 관리자 사용자 인터페이스가 선호됩니다.  달리 명시되지 않는 한 관리자 계정을 사용해야 합니다.
+
+[cols="25,75"]
+|===
+| 인터페이스 | 설명 
+
+
+| 시스템 관리자 | 이는 웹 브라우저를 통해 사용할 수 있는 그래픽 사용자 인터페이스입니다.  사용하기 쉽고 고객에게 필요한 대부분의 기능에 접근할 수 있습니다.  시스템 관리자를 통해 AFX에 액세스하면 대부분의 ONTAP 클러스터 및 SVM 관리 요구 사항을 가장 간편하게 처리할 수 있습니다. 
+
+
+| 명령줄 인터페이스 | ONTAP CLI는 SSH를 사용하여 접근할 수 있습니다.  계정에 따라 클러스터 관리 LIF 또는 SVM 관리 LIF에 액세스할 수 있습니다.  CLI는 사용하기 어렵지만 더 강력합니다.  고급 관리 업무에서는 선호되고, 때로는 필수이기도 합니다. 
+
+
+| REST API | AFX에는 AFX 클러스터 관리를 자동화하는 데 사용할 수 있는 REST API가 포함되어 있습니다.  API는 고유한 AFX 기능을 지원하기 위해 수정된 부분을 제외하면 Unified ONTAP 개성 REST API에서 사용 가능한 많은 동일한 호출을 공유합니다. 
+|===
+
+
+== 시스템 관리자에서 정보를 검색, 필터링 및 정렬하는 방법을 알아보세요.
+
+시스템 관리자 사용자 인터페이스에는 필요한 정보에 액세스하고 표시할 수 있는 강력한 기능 세트가 포함되어 있습니다.  이러한 기능을 사용하는 방법을 배우면 AFX 스토리지 시스템을 보다 효과적으로 관리하는 데 도움이 됩니다. 보다 https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html["시스템 관리자에서 정보 검색, 필터링, 정렬"^] 자세한 내용은.
+
+
+
+== ONTAP CLI에 접속하세요
+
+대부분의 AFX 관리에는 System Manager를 사용할 수 있지만, ONTAP 명령줄 인터페이스를 사용해서만 수행할 수 있는 일부 작업도 있습니다.
+
+.이 작업에 관하여
+SSH(보안 셸)를 통해 ONTAP CLI에 액세스할 수 있습니다.  CLI에는 사용자가 사용할 수 있는 명령과 명령 매개변수를 결정하는 여러 가지 권한 수준이 있습니다.  그만큼 `admin` 레벨은 가장 권한이 낮고 로그인 시 기본값입니다. 세션의 권한을 다음 수준으로 높일 수 있습니다. `advanced` 필요한 경우 사용 `set` 명령.
+
+.시작하기 전에
+다음이 필요합니다.
+
+* 클러스터 또는 SVM 관리 LIF의 IP 주소 또는 도메인 이름
+* 계정 자격 증명
+* 로컬 워크스테이션의 SSH 클라이언트
+
+
+.단계
+. SSH를 사용하여 AFX 클러스터에 연결합니다. 예:
++
+`ssh admin@10.69.117.24`
+
+. 계정 비밀번호를 입력하세요.
+. 계층 구조의 맨 위에 명령 디렉토리를 표시합니다.
++
+`?`
+
+. 세션의 권한 수준을 높이세요. `admin` 에게 `advanced` :
++
+`set -privilege advanced`
+
+
+
+
+
+== ONTAP HA 쌍 작업
+
+Unified ONTAP 과 마찬가지로 AFX 클러스터 노드는 장애 허용 및 중단 없는 운영을 위해 고가용성(HA) 쌍으로 구성됩니다.  HA 페어링은 스토리지 장애 조치와 같은 노드 장애가 발생하더라도 스토리지 작업이 온라인 상태를 유지할 수 있는 기능을 제공합니다.  각 노드는 다른 노드와 협력하여 단일 쌍을 형성합니다.  이는 일반적으로 두 노드의 NVRAM 모듈 간의 직접 연결을 사용하여 수행됩니다.
+
+AFX를 사용하면 백엔드 클러스터 스위치에 새로운 HA VLAN을 추가하여 NVRAM 모듈이 HA 파트너 노드 간에 연결된 상태를 유지할 수 있습니다.  HA 쌍은 여전히 ​​AFX 시스템에서 사용되지만, 파트너 노드를 직접 연결할 필요는 더 이상 없습니다.
+
+
+
+== AFX 시스템 배포 제한 사항
+
+AFX에서는 클러스터를 구성하고 사용할 때 최소값과 최대값을 포함한 여러 가지 제한을 적용합니다.  이러한 제한은 다음을 포함한 여러 가지 범주로 나뉩니다.
+
+클러스터당 컨트롤러 노드:: 각 AFX 클러스터에는 최소 4개의 노드가 있어야 합니다.  최대 노드 수는 ONTAP 릴리스에 따라 다릅니다.
+저장 용량:: 이는 클러스터 스토리지 가용성 영역(SAZ)에 있는 모든 SSD 디스크의 총 용량입니다.  최대 저장 용량은 ONTAP 릴리스에 따라 다릅니다.  클러스터의 기능을 확인하려면 상호 운용성 매트릭스 도구(IMT)에서 제공되는 정보를 검토해야 합니다.
+
+
+
+
+== AFX 시스템 상태 확인
+
+AFX 관리 작업을 수행하기 전에 클러스터의 상태를 확인해야 합니다.
+
+
+TIP: 운영이나 성능 문제가 의심되는 경우를 포함하여 언제든지 AFX 클러스터의 상태를 확인할 수 있습니다.
+
+.시작하기 전에
+다음이 필요합니다.
+
+* 클러스터 관리 IP 주소 또는 FQDN
+* 클러스터의 관리자 계정(사용자 이름 및 비밀번호)
+
+
+.단계
+. 브라우저를 사용하여 시스템 관리자에 연결합니다.
++
+`\https://$FQDN_IPADDR/`
+
++
+*예*
+
++
+`\https://10.61.25.33/`
+
+. 관리자 사용자 이름과 비밀번호를 입력하고 * Sign in*을 선택하세요.
+. 케이블 연결을 포함한 시스템 대시보드와 클러스터 상태를 검토합니다.  또한 왼쪽에 있는 _탐색 창_을 주목하세요.
++
+link:../administer/view-dashboard.html["대시보드 및 클러스터 상태 보기"]
+
+. 시스템 이벤트와 감사 로그 메시지를 표시합니다.
++
+link:../administer/view-events-log.html["AFX 이벤트 및 감사 로그 보기"]
+
+. *통찰력* 권장 사항을 표시하고 기록합니다.
++
+link:../administer/view-insights.html["Insights를 사용하여 AFX 클러스터 성능 및 보안을 최적화하세요"]
+
+
+
+
+
+== 데이터 SVM 생성 및 사용을 위한 빠른 시작
+
+AFX 클러스터를 설치하고 설정한 후에는 대부분 AFX 배포에서 일반적으로 수행되는 관리 작업을 수행할 수 있습니다.  클라이언트와 데이터를 공유하기 위해 필요한 주요 단계는 다음과 같습니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"]사용 가능한 데이터 SVM 표시
+[role="quick-margin-para"]
+link:../administer/display-svms.html["표시하다"]데이터 SVM 목록을 보고 사용할 수 있는 것이 있는지 확인하세요.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"]선택적으로 데이터 SVM을 생성합니다.
+[role="quick-margin-para"]
+link:../administer/create-svm.html["만들다"]기존 SVM을 사용할 수 없는 경우 애플리케이션 워크로드와 데이터를 격리하고 보호하기 위한 SVM입니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["삼"]SVM 구성
+[role="quick-margin-para"]
+link:../administer/configure-svm.html["구성"]SVM을 구축하고 클라이언트 액세스를 준비하세요.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"]저장소 프로비저닝 준비
+[role="quick-margin-para"]
+link:../manage-data/prepare-manage-data.html["준비하다"]데이터를 할당하고 관리합니다.
+
+
+
+== 관련 정보
+
+* https://docs.netapp.com/us-en/ontap/concepts/introducing-ontap-interfaces-concept.html["ONTAP 사용자 인터페이스"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/set-privilege-level-task.html["ONTAP CLI에서 권한 수준 설정"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/index.html["ONTAP CLI를 사용하여 클러스터 관리에 대해 알아보세요"^]
+* link:../faq-ontap-afx.html["AFX 스토리지 시스템에 대한 FAQ"]
+

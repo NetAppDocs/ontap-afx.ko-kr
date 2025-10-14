@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: get-started/quick-start.html 
+keywords: afx, afx system, quick start 
+summary: AFX 시스템을 처음 실행하려면 하드웨어 구성 요소를 설치하고, 클러스터를 설정하고, 클러스터와 SVM을 관리할 준비를 해야 합니다. 
+---
+= AFX 스토리지 시스템 설정을 위한 빠른 시작
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 시스템을 처음 실행하려면 하드웨어 구성 요소를 설치하고, 클러스터를 설정하고, 클러스터와 SVM을 관리할 준비를 해야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"]하드웨어 설치 및 설정
+[role="quick-margin-para"]
+link:../install-setup/install-setup-workflow.html["설치하다"]AFX 스토리지 시스템을 구축하고 클러스터를 설정할 준비를 하세요.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"]클러스터 설정
+[role="quick-margin-para"]
+빠르고 쉬운 프로세스를 따르세요link:../install-setup/cluster-setup.html["설정"] System Manager를 사용하여 ONTAP 클러스터를 관리합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["삼"]클러스터 관리를 준비하세요
+[role="quick-margin-para"]
+AFX를 프로덕션 환경에 배포하기 전에 다음 사항이 필수입니다.link:../get-started/prepare-cluster-admin.html["준비하다"] 스토리지 가상 머신(SVM), 사용자, 역할 및 관리 인터페이스를 포함한 관리 구조를 이해함으로써 안전하고 효율적이며 효과적인 클러스터 관리를 보장합니다.

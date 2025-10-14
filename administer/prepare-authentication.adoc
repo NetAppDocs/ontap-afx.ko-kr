@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: administer/prepare-authentication.html 
+keywords: afx, afx cluster, authentication 
+summary: AFX 시스템에서 사용자 계정과 역할을 정의하는 데 사용되는 인증 및 권한 부여 서비스를 준비해야 합니다. 
+---
+= AFX 스토리지 시스템 인증 서비스 준비
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 시스템에서 사용자 계정 및 역할 정의에 사용되는 인증 및 권한 부여 서비스를 준비해야 합니다.
+
+
+
+== LDAP 구성
+
+중앙 위치에서 인증 정보를 유지 관리하도록 LDAP(Lightweight Directory Access Protocol) 서버를 구성할 수 있습니다.
+
+.시작하기 전에
+인증서 서명 요청을 생성하고 CA 서명 서버 디지털 인증서를 추가해야 합니다.
+
+.단계
+. 시스템 관리자에서 *클러스터*를 선택한 다음 *설정*을 선택합니다.
+. 선택하다image:icon_gear_white_bg.png["파란색 기계 기어의 윤곽"] *LDAP* 옆에 있습니다.
+. 선택하다image:icon_add.gif["흰색 배경에 파란색 추가"] LDAP 서버의 이름이나 IP 주소를 제공합니다.
+. 스키마, 기본 DN, 포트, 바인딩을 포함한 필요한 구성 정보를 제공합니다.
+. *저장*을 선택하세요.
+
+
+
+
+== SAML 인증 구성
+
+SAML(Security Assertion Markup Language) 인증을 사용하면 사용자는 LDAP와 같은 다른 프로토콜을 사용하는 공급자 대신 보안 ID 공급자(IdP)를 통해 인증받을 수 있습니다.
+
+.시작하기 전에
+* 원격 인증에 사용할 ID 공급자를 구성해야 합니다.  구성 세부 정보는 공급자 문서를 참조하세요.
+* ID 공급자의 URI가 있어야 합니다.
+
+
+.단계
+. 시스템 관리자에서 *클러스터*를 선택한 다음 *설정*을 선택합니다.
+. 선택하다image:icon_gear_white_bg.png["기계 기어의 파란색 윤곽선"] *보안*에서 *SAML 인증* 옆에 있습니다.
+. *SAML 인증 사용*을 선택합니다.
+. *IdP URL*과 *호스트 시스템* IP 주소를 제공하고 *저장*을 선택합니다.
++
+확인 창에 메타데이터 정보가 표시되며, 이 정보는 자동으로 클립보드에 복사됩니다.
+
+. 지정한 IdP 시스템으로 이동하여 클립보드에서 메타데이터를 복사하여 시스템 메타데이터를 업데이트합니다.
+. 시스템 관리자의 확인 창으로 돌아가서 *호스트 URI 또는 메타데이터로 IdP를 구성했습니다*를 선택합니다.
+. SAML 기반 인증을 활성화하려면 *로그아웃*을 선택하세요.
++
+IdP 시스템에 인증 화면이 표시됩니다.
+
+
+
+
+
+== 관련 정보
+
+* link:../administer/manage-users-roles.html["AFX 클러스터 사용자 및 역할 관리"]
+* https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html["원격 ONTAP 사용자에 대한 SAML 인증 구성"^]
+* https://docs.netapp.com/us-en/ontap/authentication-access-control/index.html["인증 및 액세스 제어"^]
+

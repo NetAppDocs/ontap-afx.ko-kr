@@ -1,0 +1,56 @@
+---
+section: administer
+title: 클러스터 관리
+entries:
+- title: 클러스터 프로세스 모니터링
+  entries:
+  - title: 대시보드 및 클러스터 상태 보기
+    url: "/administer/view-dashboard.html"
+  - title: 통찰력 보기
+    url: "/administer/view-insights.html"
+  - title: 모니터 성능
+    url: "/administer/monitor-cluster-performance.html"
+  - title: 이벤트 및 로그 보기
+    url: "/administer/view-events-log.html"
+  - title: 채용공고 보기
+    url: "/administer/view-jobs.html"
+- title: 네트워킹 및 보안 관리
+  entries:
+  - title: 클러스터 네트워킹 관리
+    url: "/administer/manage-cluster-networking.html"
+  - title: 이더넷 포트 관리
+    url: "/administer/manage-ethernet-ports.html"
+  - title: 인증 서비스 준비
+    url: "/administer/prepare-authentication.html"
+  - title: 사용자 및 역할 관리
+    url: "/administer/manage-users-roles.html"
+  - title: 인증서 관리
+    url: "/administer/manage-certificates.html"
+- title: 스토리지 VM 관리
+  entries:
+  - title: SVM을 표시합니다
+    url: "/administer/display-svms.html"
+  - title: 데이터 SVM 생성
+    url: "/administer/create-svm.html"
+  - title: 데이터 SVM 구성
+    url: "/administer/configure-svm.html"
+  - title: SVM 마이그레이션
+    url: "/administer/migrate-svm.html"
+- title: 클러스터를 지원하세요
+  entries:
+  - title: AutoSupport 관리
+    url: "/administer/manage-autosupport.html"
+  - title: 지원 사례 보기 및 제출
+    url: "/administer/submit-view-case.html"
+- title: 클러스터 업그레이드 및 유지 관리
+  entries:
+  - title: 클러스터 확장
+    url: "/administer/expand-cluster.html"
+  - title: ONTAP 업그레이드
+    url: "/administer/upgrade-ontap.html"
+  - title: 펌웨어 업데이트
+    url: "/administer/update-firmware.html"
+  - title: 하드웨어 유지 관리
+    url: "/administer/maintain-hardware.html"
+- title: 추가 관리
+  url: "/administer/additional-ontap-cluster.html"

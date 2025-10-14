@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+permalink: secure-data/ransomware-protection.html 
+keywords: afx, afx system, ransomware, ransomware protection 
+summary:  
+---
+= AFX 스토리지 시스템에 대한 랜섬웨어 공격으로부터 보호
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

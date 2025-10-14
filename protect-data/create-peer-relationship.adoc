@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: protect-data/create-peer-relationship.html 
+keywords: afx, afx system, peering, peer relationship 
+summary: '피어 관계는 클러스터와 스토리지 가상 머신(VM)이 안전하게 데이터를 교환할 수 있도록 하는 네트워크 연결을 정의합니다. SnapMirror 사용하여 서로 다른 클러스터의 스토리지 VM 간에 피어 관계를 생성하여 데이터 보호 및 재해 복구를 활성화할 수 있습니다.' 
+---
+= AFX 스토리지 시스템에서 클러스터 간 SVM 피어 관계 생성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+피어 관계는 클러스터와 스토리지 가상 머신(VM)이 안전하게 데이터를 교환할 수 있도록 하는 네트워크 연결을 정의합니다. SnapMirror 사용하여 서로 다른 클러스터의 스토리지 VM 간에 피어 관계를 생성하여 데이터 보호 및 재해 복구를 활성화할 수 있습니다.
+
+.시작하기 전에
+스토리지 VM 피어 관계를 생성하려면 먼저 로컬 클러스터와 원격 클러스터 간에 클러스터 피어 관계를 설정해야 합니다. link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship["클러스터 피어 관계 생성"] 아직 하지 않았다면.
+
+.단계
+. 시스템 관리자에서 *보호 > 개요*를 선택합니다.
+. *스토리지 VM 피어*에서 *스토리지 VM 피어 추가*를 선택합니다.
+. 로컬 클러스터에서 스토리지 VM을 선택한 다음, 원격 클러스터에서 스토리지 VM을 선택합니다.
+. *스토리지 VM 피어 추가*를 선택합니다.
+
+
+.관련 정보
+* https://docs.netapp.com/us-en/ontap/peering/peering-basics-concept.html["동료 관계에 대해 자세히 알아보세요"^] .
+

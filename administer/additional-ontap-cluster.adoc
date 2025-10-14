@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: administer/additional-ontap-cluster.html 
+keywords: afx, afx system, additional administration, advanced administration 
+summary: 일반적인 AFX 클러스터 관리 외에도 환경에 따라 수행해야 할 다른 작업이 있을 수 있습니다.  대부분의 추가 작업은 시스템 관리자를 사용하여 수행할 수 있지만, 어떤 경우에는 CLI를 사용해야 할 수도 있습니다. 
+---
+= AFX 스토리지 시스템 클러스터에 대한 추가 관리
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일반적인 AFX 클러스터 관리 외에도 환경에 따라 수행해야 할 다른 작업이 있을 수 있습니다.  대부분의 추가 작업은 시스템 관리자를 사용하여 수행할 수 있지만, 어떤 경우에는 CLI를 사용해야 할 수도 있습니다.
+
+
+NOTE: 설명된 ONTAP 기능과 관리 방식은 AFX 스토리지 시스템과 Unified ONTAP 실행하는 AFF 또는 FAS 시스템에서 공통적입니다.  해당 Unified ONTAP 문서에 대한 링크가 적절하게 포함되어 있습니다.
+
+
+
+== 라이센스
+
+AFX 시스템은 Unified ONTAP AFF 및 FAS 시스템과 유사한 방식으로 라이센스가 부여됩니다.  AFX 클러스터에는 지원되는 프로토콜에 대한 대부분의 기능이 기본적으로 포함되어 있습니다.
+
+
+
+=== ONTAP 라이선스 관리
+
+ONTAP 라이선스는 하나 이상의 소프트웨어 권한에 대한 기록입니다.  모든 라이선스는 NetApp 라이선스 파일(NLF)을 사용하여 정의되고 제공됩니다. 참조하다 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["ONTAP 라이선싱 개요"^] 자세한 내용은.
+
+
+
+=== AFX 시스템에 라이센스 설치
+
+필요에 따라 AFX 스토리지 시스템에 추가 기능을 활성화하기 위해 라이선스 파일을 설치할 수 있습니다.
+
+.단계
+. 시스템 관리자에서 *클러스터*를 선택한 다음 *설정*을 선택합니다.
+. *라이센스* 옆에서 다음을 선택하세요.image:icon_arrow.gif["오른쪽을 가리키는 파란색 화살표"] .
+. 사용 가능한 ONTAP 기능을 표시하려면 *기능* 탭을 선택하세요.
+. 선택적으로 라이선스를 설치하려면 *설치된 라이선스* 탭을 선택하세요.
+. 선택하다image:icon_add_blue_bg.png["더하기 기호 뒤에 흰색 글자로 'add'라는 단어가 붙은 파란색 사각형"] .
+. 로컬 라이선스 파일을 선택하고 *추가*를 선택합니다.
+
+
+
+
+== 보안
+
+AFX 배포 시 구성하고 사용할 수 있는 선택적 보안 기능이 여러 가지 있습니다.
+
+
+
+=== ONTAP 보안 및 데이터 암호화
+
+AFX 스토리지 시스템의 보안과 개인 정보 보호를 보호하는 것이 중요합니다. .  https://docs.netapp.com/us-en/ontap/security-encryption/index.html["보안 및 데이터 암호화"^]
+
+
+
+=== ONTAP 인증 및 액세스 제어
+
+AFX 스토리지 시스템은 인증 및 액세스 제어 서비스를 구성하기 위한 여러 가지 옵션을 제공합니다. 참조하다 https://docs.netapp.com/us-en/ontap/authentication-access-control/index.html["인증 및 액세스 제어"^] 자세한 내용은.
+
+
+
+=== AFX 시스템에서 OAuth 2.0 관리
+
+OAuth 2.0은 서명된 액세스 토큰을 사용하여 보호된 리소스에 대한 액세스를 제한하고 제어하는 데 사용되는 업계 표준 인증 프레임워크입니다.
+
+.단계
+. 시스템 관리자에서 *클러스터*를 선택한 다음 *설정*을 선택합니다.
+. *보안* 섹션에서 *OAuth 2.0 인증* 옆을 선택하세요.image:icon_arrow.gif["오른쪽을 가리키는 파란색 화살표"] .
+. OAuth 2.0 활성화
+. *구성 추가*를 선택하고 구성 세부 정보를 제공합니다.
+. *저장*을 선택하세요.
+
+
+
+
+== 관련 정보
+
+* link:../faq-ontap-afx.html["AFX 스토리지 시스템에 대한 FAQ"]
+* https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["ONTAP OAuth 2.0 구현 개요"^]
+* link:../administer/additional-ontap-svm.html["AFX SVM에 대한 추가 관리"]
+

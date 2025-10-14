@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: administer/create-svm.html 
+keywords: afx, afx system, svm, create svm 
+summary: SVM을 생성하면 격리를 제공하고 보안을 강화할 수 있습니다.  조직 내의 다양한 그룹이나 프로젝트에 대해 이 작업을 수행할 수 있습니다. 
+---
+= AFX 스토리지 시스템 SVM 생성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SVM을 생성하면 격리를 제공하고 보안을 강화할 수 있습니다.  조직 내의 다양한 그룹이나 프로젝트에 대해 이 작업을 수행할 수 있습니다.
+
+.이 작업에 관하여
+SVM을 생성할 때는 이름을 제공하고 클라이언트 액세스를 위한 하나 이상의 프로토콜을 구성해야 합니다.  클라이언트 프로토콜을 선택하면 네트워크 구성을 묻는 메시지가 표시됩니다.  SVM 구성을 생성한 후 필요에 따라 변경할 수 있습니다.
+
+.시작하기 전에
+다음이 필요합니다.
+
+* 최소 4개의 IP 주소
+* IPspace의 이름
+
+
+.단계
+. 시스템 관리자에서 *클러스터*를 선택한 다음 *스토리지 VM*을 선택합니다.
+. 선택하다image:icon_add_blue_bg.png["더하기 기호 뒤에 흰색 글자로 'add'라는 단어가 붙은 파란색 사각형"] .
+. SVM의 이름을 입력하세요.
+. 클라이언트 액세스를 위한 프로토콜을 선택하고 적절한 구성 세부 정보를 제공합니다.
+. IP 주소와 서브넷 마스크를 포함하여 SVM에 대한 네트워크 인터페이스를 추가합니다.
+. *저장소 VM 관리*에서 선택적으로 다음을 수행합니다.
++
+.. 최대 용량을 활성화하고 값을 선택하세요
+.. SVM의 관리자 계정 관리
+
+
+. *저장*을 선택하세요.
+
+
+.관련 정보
+* link:../administer/configure-svm.html["AFX 시스템 SVM 구성"]
+* link:../administer/manage-cluster-networking.html["AFX 시스템 클러스터 네트워킹 관리"]
+

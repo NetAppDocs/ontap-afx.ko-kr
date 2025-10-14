@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: install-setup/power-on-configure-switch.html 
+keywords: afx, afx 1k, cable controllers, Cisco Nexus 9332D-GX2B, Cisco Nexus 9364D-GX2A, switches, switch, power on, configure switches, 
+summary: AFX 1K 스토리지 시스템의 전원을 켜고 스위치를 구성하는 방법을 알아보세요. 
+---
+= AFX 1K 스토리지 시스템의 전원을 켜고 스위치를 구성하세요.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 1K 스토리지 시스템에 케이블을 연결한 후에는 Cisco Nexus 9332D-GX2B 또는 9364D-GX2A 스위치의 전원을 켜고 구성해야 합니다.
+
+.단계
+. 스위치의 전원 코드를 전원에 꽂습니다.
+. 각 스위치의 전원을 켭니다.
+. AFX 1K 스토리지 시스템을 지원하도록 스위치를 구성합니다.
++
+** Cisco Nexus 9332D-GX2B 스위치의 경우 클러스터 및 스토리지 스위치 설명서를 참조하세요.link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9332d-gx2b/configure-software-overview-9332d-cluster.html["Cisco Nexus 9332D-GX2B 스위치 구성"^] .
+** Cisco Nexus 9364D-GX2A 스위치의 경우 클러스터 및 스토리지 스위치 설명서를 참조하세요.link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9364d-gx2a/configure-software-overview-9364d-cluster.html["Cisco Nexus 9364D-GX2A 스위치 구성"^] .
+
+
+
+
+.다음은 무엇인가요?
+AFX 1K 스토리지 시스템에 대한 스위치를 구성한 후,link:power-on-hardware.html["AFX 1K 스토리지 시스템 전원을 켜세요"] .

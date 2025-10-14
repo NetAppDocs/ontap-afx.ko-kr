@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: get-started/compare-unified-ontap.html 
+keywords: afx, afx system, compare afx, compare unified ontap 
+summary: 'NetApp AFX 시스템은 AFF 및 FAS 스토리지에서 실행되는 ONTAP 특성(Unified ONTAP 이라고 함)과 다른 맞춤형 ONTAP 특성을 실행합니다.  AFX 시스템이 FAS 및 AFF 시스템과 어떻게 유사하고 어떻게 다른지 알아야 합니다.  이는 귀중한 관점을 제공하며 사용자 환경에 AFX를 배포할 때 도움이 될 수 있습니다.' 
+---
+= AFX 저장 시스템을 AFF 및 FAS 시스템과 비교
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp AFX 시스템은 AFF 및 FAS 스토리지에서 실행되는 ONTAP 특성(Unified ONTAP 이라고 함)과 다른 맞춤형 ONTAP 특성을 실행합니다.  AFX 시스템이 FAS 및 AFF 시스템과 어떻게 유사하고 어떻게 다른지 알아야 합니다.  이는 귀중한 관점을 제공하며 사용자 환경에 AFX를 배포할 때 도움이 될 수 있습니다.
+
+
+TIP: 이 AFX 설명서에는 Unified ONTAP 문서 사이트의 다양한 주제에 대한 링크가 포함되어 있습니다.  추가 콘텐츠는 AFX 스토리지 시스템을 관리할 때 도움이 될 수 있는 보다 심도 있고 다양한 관점을 제공합니다.
+
+
+
+== 구성 차이점
+
+AFX 구성은 AFF 및 FAS 시스템과 몇 가지 측면에서 다릅니다.
+
+고급 용량 밸런싱:: 고급 용량 균형 기능은 다음을 사용하여 제어됩니다. `-gdd` CLI 매개변수는 모든 FlexGroup 볼륨에 대해 기본적으로 활성화됩니다.
+
+
+
+
+== 지원되지 않거나 제한된 Unified ONTAP 기능
+
+AFX, AFF, FAS 스토리지 시스템은 매우 유사하지만 AFX에서 지원되지 않는 몇 가지 기능이 있습니다.  AFX에 대한 업데이트 및 변경 사항은 해당 사이트에서 검토해야 합니다.link:../release-notes/whats-new-9171.html["새로운 소식"] 귀하의 릴리스에 따른 섹션입니다.
+
+다음 기능은 여러 카테고리로 구성되어 있으며, AFX에서 사용할 수 없거나 변경되었습니다.
+
+
+
+=== 일반적인 특징
+
+* FabricPool
+* MetroCluster
+* AI 기반 랜섬웨어 방지 보호
+* ONTAPI API(ZAPI)
+
+
+
+
+=== SAN 관련 기능
+
+* SAN 관리 및 클라이언트 액세스
+* 두꺼운 프로비저닝 볼륨
+
+
+
+
+=== 집계 관련 기능
+
+다음 집계 관련 기능은 AFX 시스템에서 사용할 수 없습니다.
+
+* 디스크 집계에 직접 액세스
+* NetApp 집계 암호화(NAE)
+* 집계 수준 중복 제거
+* SyncMirror (집계 미러링)
+* RAID 관리
+
+
+
+
+=== 데이터 복제
+
+* LUN을 포함하는 AFF 또는 FAS 시스템에서 볼륨 복제가 없습니다.
+* AFX FlexGroup 볼륨은 Unified ONTAP 9.16.1 이상에만 복제할 수 있습니다.
+
+
+
+
+== 명령줄 인터페이스 변경 사항
+
+AFX에서 사용할 수 있는 ONTAP CLI는 일반적으로 AFF 및 FAS 시스템에서 사용할 수 있는 CLI를 반영합니다.  하지만 다음과 같은 몇 가지 차이점이 있습니다.
+
+* 다음과 관련된 새로운 AFX 명령:
++
+** 저장 가용성 영역의 용량 표시
+** 부트 미디어
+
+
+* SAN 관련 명령 없음
+* 집계 관리 명령이 더 이상 필요하지 않습니다.
+* FlexAggr 명령은 FlexAggr만 표시하거나 보여줄 수 있습니다.
+
+
+
+
+== 관련 정보
+
+* link:../get-started/system-design.html["AFX 시스템 특성"]
+* link:../get-started/software-architecture.html["AFX 아키텍처의 세부 사항"]
+* link:../faq-ontap-afx.html["AFX 스토리지 시스템에 대한 FAQ"]
+* link:../administer/additional-ontap-cluster.html["추가 AFX 클러스터 관리"]
+* link:../administer/additional-ontap-svm.html["추가 AFX SVM 관리"]
+

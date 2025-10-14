@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-setup-workflow.html 
+keywords: afx, afx 1k, install, setup, workflow 
+summary: AFX 1K 스토리지 시스템을 설치하고 설정하고 ONTAP 환경에 배포해 보세요. 
+---
+= AFX 1K 스토리지 시스템 설치 및 설정 워크플로
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 1K 스토리지 시스템을 설치하고 구성하려면 하드웨어 요구 사항을 검토하고, 사이트를 준비하고, 스위치를 설치하고, 하드웨어 구성 요소를 설치하고 케이블을 연결하고, 시스템의 전원을 켜고, ONTAP AFX 클러스터를 설정해야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"]link:install-setup-requirements.html["하드웨어 설치 요구 사항을 검토하세요"]
+[role="quick-margin-para"]
+AFX 1K 스토리지 시스템을 설치하는 데 필요한 하드웨어 요구 사항을 검토하세요.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"]link:prepare-hardware.html["AFX 1K 스토리지 시스템 설치를 준비하세요"]
+[role="quick-margin-para"]
+AFX 1K 스토리지 시스템을 설치하려면 현장 준비, 환경 및 전기적 요구 사항 확인, 충분한 랙 공간 확보, 장비 풀기, 포장 명세서에 따른 내용물 확인, 지원을 위한 하드웨어 등록 등의 작업을 준비합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["삼"]link:install-switches.html["AFX 1K 스토리지 시스템용 스위치 설치"]
+[role="quick-margin-para"]
+캐비닛이나 랙에 Cisco Nexus 9332D-GX2B 또는 9364D-GX2A 스위치를 설치합니다.  Cisco Nexus 9364D-GX2A 스위치를 사용하는 경우 패스스루 패널 키트를 설치하세요.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"]link:deploy-hardware.html["AFX 1K 스토리지 시스템용 하드웨어 설치"]
+[role="quick-margin-para"]
+보관 시스템과 선반에 레일 키트를 설치하세요.  보관 시스템을 캐비닛이나 통신 랙에 안전하게 보관하세요.  다음으로, 설치된 레일 위로 선반을 밀어 넣습니다.  마지막으로, 케이블 정리를 위해 보관 시스템 뒷면에 케이블 관리 장치를 부착합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"]link:cable-hardware.html["AFX 1K 스토리지 시스템의 컨트롤러와 선반을 케이블로 연결합니다."]
+[role="quick-margin-para"]
+하드웨어에 케이블을 연결하려면 먼저 스토리지 컨트롤러 노드를 네트워크에 연결한 다음, 컨트롤러 노드와 스토리지 선반을 클러스터 스위치에 연결합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["육"]link:power-on-configure-switch.html["AFX 1K 스토리지 시스템의 전원을 켜고 스위치를 구성하세요."]
+[role="quick-margin-para"]
+하드웨어에 케이블을 연결한 다음, 전원을 켜고 AFX 1K 스토리지 시스템의 스위치를 구성합니다.  Cisco Nexus 9332D-GX2B 및 9364D-GX2A 스위치에 대한 구성 지침을 확인하세요.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["일곱"]link:power-on-hardware.html["AFX 1K 스토리지 시스템의 전원을 켜세요"]
+[role="quick-margin-para"]
+각 저장 선반의 전원을 켜고 컨트롤러 노드의 전원을 켜기 전에 고유한 선반 ID를 지정하여 설정에서 각 선반을 명확하게 식별합니다.

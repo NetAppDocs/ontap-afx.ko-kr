@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-setup-requirements.html 
+keywords: afx, afx 1k, install, setup, requirements, cautions 
+summary: AFX 1K 보관 컨트롤러와 보관 선반에 필요한 장비와 들어올릴 때의 주의사항을 검토하세요. 
+---
+= AFX 1K 스토리지 시스템 설치 요구 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 1K 보관 컨트롤러와 보관 선반에 필요한 장비와 들어올릴 때의 주의사항을 검토하세요.
+
+
+
+== 설치에 필요한 장비
+
+AFX 1K 보관 시스템을 설치하려면 다음과 같은 장비와 도구가 필요합니다.
+
+* 저장 시스템을 구성하기 위한 웹 브라우저 접속
+* 정전기 방전(ESD) 스트랩
+* 플래시
+* USB/직렬 연결이 가능한 노트북 또는 콘솔
+* 보관 선반 ID를 설정하기 위한 종이 클립 또는 좁은 팁 볼펜
+* 필립스 #2 드라이버
+
+
+
+
+== 리프팅 시 주의사항
+
+AFX 스토리지 컨트롤러와 스토리지 선반은 무겁습니다.  이런 품목을 들어올리거나 옮길 때는 주의하세요.
+
+
+
+=== 스토리지 컨트롤러 무게
+
+AFX 1K 스토리지 컨트롤러를 옮기거나 들어 올릴 때는 필요한 예방 조치를 취하세요.
+
+AFX 1K 스토리지 컨트롤러의 무게는 최대 62.83파운드(28.5kg)입니다.  보관 컨트롤러를 들어 올리려면 두 사람이나 유압 리프트를 사용하세요.
+
+image::../media/drw_a1k_weight_caution_ieops-1698.svg[ASA A1K 리프팅 주의 아이콘]
+
+
+
+=== 보관 선반 무게
+
+선반을 옮기거나 들어 올릴 때는 필요한 예방 조치를 취하세요.
+
+.NX224 선반
+--
+NX224 선반의 무게는 최대 60.1파운드(27.3kg)입니다.  선반을 들어 올리려면 두 사람이나 유압식 리프트를 사용하세요.  선반 무게의 불균형을 방지하기 위해 모든 구성 요소를 선반(앞면과 뒷면 모두)에 보관하세요.
+
+image::../media/drw_nx224_lifting_weight_ieops-2437.svg[NX224 NSM100 리프팅 주의]
+
+.관련 정보
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["안전 정보 및 규정 고지 사항"^]
+
+
+.다음은 무엇인가요?
+하드웨어 요구 사항을 검토한 후link:prepare-hardware.html["AFX 1K 스토리지 시스템 설치를 준비하세요"] .
+
+--

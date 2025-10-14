@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: protect-data/create-consistency-group.html 
+keywords: afx, afx system, consistency group, create consistency group 
+summary: 일관성 그룹을 생성하면 애플리케이션 워크로드에 대한 스토리지 관리 및 데이터 보호를 간소화할 수 있습니다.  일관성 그룹은 기존 볼륨이나 새 볼륨을 기반으로 할 수 있습니다. 
+---
+= AFX 스토리지 시스템에 일관성 그룹 생성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일관성 그룹을 생성하면 애플리케이션 워크로드에 대한 스토리지 관리 및 데이터 보호를 간소화할 수 있습니다.  일관성 그룹은 기존 볼륨이나 새 볼륨을 기반으로 할 수 있습니다.
+
+.시작하기 전에
+새로운 볼륨을 하나 더 만들 계획이라면 볼륨을 만들 때 구성 옵션을 고려해야 합니다.
+
+.단계
+. 시스템 관리자에서 *보호*를 선택한 다음 *일관성 그룹*을 선택합니다.
+. 선택하다image:icon_add_blue_bg.png["더하기 기호 뒤에 흰색 글자로 'add'라는 단어가 붙은 파란색 사각형"] 다음 중 하나를 선택하세요:
++
+** 기존 볼륨 사용
+** 새로운 NAS 볼륨 사용
+
+
+. 이름, 볼륨, 애플리케이션 유형, 보호 등 구성 세부 정보를 제공합니다.
+. *추가*를 선택하세요.
+
+
+.관련 정보
+* link:../protect-data/manage-consistency-groups.html["일관성 그룹 관리"]
+* link:../manage-data/create-configure-volume.html["AFX 볼륨 생성 및 구성"]
+

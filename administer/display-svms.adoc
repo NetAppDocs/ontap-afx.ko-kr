@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: administer/display-svms.html 
+keywords: afx, afx system, svm, display svm 
+summary: AFX 클러스터에 정의된 데이터 저장 VM을 표시할 수 있습니다.  각 SVM은 데이터를 구성하고 클라이언트 액세스를 제공하기 위한 격리된 환경을 제공합니다. 
+---
+= AFX 스토리지 시스템 SVM 표시
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 클러스터에 정의된 데이터 저장 VM을 표시할 수 있습니다.  각 SVM은 데이터를 구성하고 클라이언트 액세스를 제공하기 위한 격리된 환경을 제공합니다.
+
+.단계
+. 시스템 관리자에서 *클러스터*를 선택한 다음 *스토리지 VM*을 선택합니다.
+. 원하는 SVM 위에 마우스를 올려놓고 선택하세요image:icon_kabob.gif["세 개의 세로 파란색 점"] SVM 시작 및 중지를 포함한 기본 관리 옵션을 확인합니다.
+. 선택적으로 특정 SVM을 선택하여 개요, 설정, 복제, 파일 시스템 등 자세한 내용을 볼 수 있습니다.
+
+
+.관련 정보
+* link:../administer/configure-svm.html["AFX 시스템 SVM 구성"]
+* link:../get-started/prepare-cluster-admin.html["스토리지 가상 머신 이해"]
+

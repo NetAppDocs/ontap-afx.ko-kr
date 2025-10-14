@@ -1,0 +1,67 @@
+---
+indexpage:
+  title: AFX 문서
+  summary: NetApp ONTAP AFX 스토리지 시스템은 고성능 NAS 및 S3 고객의 고유한 요구 사항에 초점을 맞춘 분산형 하드웨어
+    및 소프트웨어 솔루션입니다.  성능과 확장성은 AI 및 ML 워크로드의 요구 사항을 충족하도록 특별히 설계되었습니다.  AFX는 스토리지 전문가와
+    비전문가 모두 관리할 수 있도록 간소화된 사용자 환경을 제공합니다.
+  keywords: afx, afx system, afx docs
+  lead: NetApp AFX 스토리지 시스템은 고성능 NAS 및 S3 고객의 고유한 요구 사항에 초점을 맞춘 분산형 하드웨어 및 소프트웨어 솔루션입니다.  성능과
+    확장성은 AI 및 ML 워크로드의 요구 사항을 충족하도록 특별히 설계되었습니다.  AFX는 스토리지 전문가와 비전문가 모두 관리할 수 있도록
+    간소화된 사용자 환경을 제공합니다.
+  tiles:
+  - title: 시작하기
+    links:
+    - title: AFX에 대해 알아보세요
+      url: "/get-started/ontap-afx-storage.html"
+    - title: 빠른 시작
+      url: "/get-started/quick-start.html"
+    - title: AFX 하드웨어 설치
+      url: "/install-setup/install-setup-workflow.html"
+    - title: AFX 클러스터 설정
+      url: "/install-setup/cluster-setup.html"
+  - title: 클러스터 관리
+    links:
+    - title: AFX 관리를 준비하세요
+      url: "/get-started/prepare-cluster-admin.html"
+    - title: 스토리지 VM 관리
+      url: "/administer/display-svms.html"
+    - title: 클러스터 업그레이드 및 유지 관리
+      url: "/administer/expand-cluster.html"
+    - title: 추가 관리
+      url: "/administer/additional-ontap-cluster.html"
+  - title: 데이터 관리 및 액세스
+    links:
+    - title: 데이터 관리를 준비하세요
+      url: "/manage-data/prepare-manage-data.html"
+    - title: 볼륨 생성 및 구성
+      url: "/manage-data/create-configure-volume.html"
+    - title: 버킷 생성 및 구성
+      url: "/manage-data/create-configure-bucket.html"
+  - title: 데이터 보호
+    links:
+    - title: 데이터 보호를 준비하세요
+      url: "/protect-data/prepare-protect-data.html"
+    - title: 스냅샷 만들기
+      url: "/protect-data/create-snapshot.html"
+  - title: 보안 데이터
+    links:
+    - title: 데이터 보안을 준비하세요
+      url: "/secure-data/prepare-secure-data.html"
+    - title: 저장 중인 데이터 암호화
+      url: "/secure-data/encrypt-data-at-rest.html"
+  - title: REST API
+    links:
+    - title: REST API에 대해 알아보세요
+      url: "/rest/learn-rest-api.html"
+    - title: 첫 번째 API 호출
+      url: "/rest/first-call.html"
+    - title: REST API 참조
+      url: "/rest/api-reference.html"
+  - title: 더 많은 정보를 얻으세요
+    links:
+    - title: AFX 시스템 FAQ
+      url: "/faq-ontap-afx.html"
+    - title: 다른 ONTAP 시스템에 대한 문서
+      url: https://docs.netapp.com/us-en/ontap-family/
+    - title: 추가 자료
+      url: "/learn-more/additional-resources.html"

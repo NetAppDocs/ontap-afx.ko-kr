@@ -1,0 +1,44 @@
+---
+section: svm-admin
+title: 스토리지 VM 및 데이터 관리
+entries:
+- title: 데이터 관리
+  entries:
+  - title: 데이터 관리를 준비하세요
+    url: "/manage-data/prepare-manage-data.html"
+  - title: 볼륨 생성 및 구성
+    url: "/manage-data/create-configure-volume.html"
+  - title: 볼륨 관리
+    url: "/manage-data/manage-volumes.html"
+  - title: 버킷 생성 및 구성
+    url: "/manage-data/create-configure-bucket.html"
+  - title: 버킷 관리
+    url: "/manage-data/manage-buckets.html"
+  - title: 스토리지 모니터링 및 문제 해결
+    url: "/manage-data/monitor-debug-storage.html"
+- title: 데이터 보호
+  entries:
+  - title: 데이터 보호를 준비하세요
+    url: "/protect-data/prepare-protect-data.html"
+  - title: 일관성 그룹 만들기
+    url: "/protect-data/create-consistency-group.html"
+  - title: 일관성 그룹 관리
+    url: "/protect-data/manage-consistency-groups.html"
+  - title: 스냅샷 만들기
+    url: "/protect-data/create-snapshot.html"
+  - title: 스냅샷 관리
+    url: "/protect-data/manage-snapshots.html"
+  - title: SVM 피어 관계 생성
+    url: "/protect-data/create-peer-relationship.html"
+  - title: 스냅샷 복제 설정 및 관리
+    url: "/protect-data/snapshot-replication.html"
+  - title: 정책 및 일정 관리
+    url: "/protect-data/policies-schedules.html"
+- title: 보안 데이터
+  entries:
+  - title: 데이터 보안을 준비하세요
+    url: "/secure-data/prepare-secure-data.html"
+  - title: 저장 중인 데이터 암호화
+    url: "/secure-data/encrypt-data-at-rest.html"
+- title: 추가 관리
+  url: "/administer/additional-ontap-svm.html"

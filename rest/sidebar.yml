@@ -1,0 +1,10 @@
+---
+section: rest
+title: REST API를 사용하세요
+entries:
+- title: REST API에 대해 알아보세요
+  url: "/rest/learn-rest-api.html"
+- title: 첫 번째 REST API 호출
+  url: "/rest/first-call.html"
+- title: REST API 참조
+  url: "/rest/api-reference.html"

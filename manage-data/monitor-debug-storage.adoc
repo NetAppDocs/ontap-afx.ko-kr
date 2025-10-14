@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: manage-data/monitor-debug-storage.html 
+keywords: afx, afx system, monitor, troubleshoot, debug 
+summary:  
+---
+= AFX 스토리지 시스템 모니터링 및 문제 해결
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 시스템에는 각 클러스터가 관리하는 스토리지를 모니터링하는 여러 옵션이 포함되어 있습니다.
+
+
+
+== NAS 클라이언트 표시
+
+현재 AFX 클러스터에 연결된 NFS 및 SMB/CIFS 클라이언트 목록을 표시할 수 있습니다.
+
+.단계
+. 시스템 관리자의 탐색 창에서 *클라이언트*를 선택합니다.
+. 원하는 대로 *NFS* 또는 *SMB/CIFS* 탭을 선택합니다.
+. 디스플레이를 사용자 정의하고 필요에 따라 클라이언트 정보를 검색하고 다운로드하세요.
+
+
+
+
+== 관련 정보
+
+* link:../manage-data/prepare-manage-data.html["AFX 데이터 관리를 준비하세요"]
+

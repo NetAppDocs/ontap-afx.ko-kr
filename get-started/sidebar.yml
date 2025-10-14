@@ -1,0 +1,46 @@
+---
+section: get-started
+title: 시작하기
+entries:
+- title: AFX 시스템에 대해 알아보세요
+  entries:
+  - title: NetApp AFX에 대해 알아보세요
+    url: "/get-started/ontap-afx-storage.html"
+  - title: 시스템 특성
+    url: "/get-started/system-design.html"
+  - title: 아키텍처 세부 정보
+    url: "/get-started/software-architecture.html"
+  - title: AFX를 AFF 및 FAS 와 비교하세요
+    url: "/get-started/compare-unified-ontap.html"
+- title: 빠른 시작
+  url: "/get-started/quick-start.html"
+- title: AFX 시스템 설치
+  entries:
+  - title: 워크플로 설치
+    url: "/install-setup/install-setup-workflow.html"
+  - title: 하드웨어 요구 사항 검토
+    url: "/install-setup/install-setup-requirements.html"
+  - title: 설치 준비
+    url: "/install-setup/prepare-hardware.html"
+  - title: 하드웨어 설치
+    entries:
+    - title: 스위치 설치
+      url: "/install-setup/install-switches.html"
+    - title: 보관 시스템과 선반 설치
+      url: "/install-setup/deploy-hardware.html"
+  - title: 케이블링
+    entries:
+    - title: 지원되는 구성 검토
+      url: "/install-setup/afx-cable-overview.html"
+    - title: 네트워크 정보 수집
+      url: "/install-setup/install-network-reqs.html"
+    - title: 케이블 하드웨어
+      url: "/install-setup/cable-hardware.html"
+  - title: 스위치 전원 켜기 및 구성
+    url: "/install-setup/power-on-configure-switch.html"
+  - title: 시스템 전원 켜기
+    url: "/install-setup/power-on-hardware.html"
+- title: AFX 시스템 설정
+  url: "/install-setup/cluster-setup.html"
+- title: AFX 관리를 준비하세요
+  url: "/get-started/prepare-cluster-admin.html"

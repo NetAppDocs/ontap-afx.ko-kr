@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: administer/maintain-hardware.html 
+keywords: afx, afx system, maintain hardware, hardware 
+summary: AFX 스토리지 시스템에서 유지 관리 절차를 수행하는 방법을 알아보려면 AFX 유지 관리 설명서로 이동하세요. 
+---
+= AFX 스토리지 시스템 하드웨어 유지 관리
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+로 이동합니다 https://docs.netapp.com/us-en/ontap-systems/afx-landing-maintain/index.html["AFX 유지 관리 문서"^] AFX 스토리지 시스템에서 유지 관리 절차를 수행하는 방법을 알아보세요.

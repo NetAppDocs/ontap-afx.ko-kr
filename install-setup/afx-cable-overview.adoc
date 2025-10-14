@@ -1,0 +1,62 @@
+---
+permalink: install-setup/afx-cable-overview.html 
+sidebar: sidebar 
+keywords: afx, afx 1k, cable, overview, cisco 9332, cisco 9364, cabling, hardware, switches, storage shelves, disk shelves, controller nodes 
+summary: 컨트롤러 노드를 네트워크, 스위치, 스토리지 선반에 케이블로 연결하는 방법을 알아보세요. 
+---
+= AFX 1K 스토리지 시스템에 지원되는 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+적절한 시스템 설정에 필요한 호환 가능한 스토리지 디스크 선반, 스위치 및 케이블 유형을 비롯하여 AFX 1K 스토리지 시스템에 지원되는 하드웨어 구성 요소와 케이블 옵션에 대해 알아보세요.
+
+
+
+== 지원되는 AFX 1K 케이블링 구성
+
+AFX 1K 스토리지 시스템의 초기 구성은 듀얼 스위치를 통해 스토리지 디스크 선반에 연결된 최소 4개의 컨트롤러 노드를 지원합니다.
+
+추가 컨트롤러 노드와 디스크 셸프는 초기 AFX 1K 스토리지 시스템 구성을 확장합니다.  확장된 AFX 1K 구성은 아래에 표시된 스키마와 동일한 스위치 기반 케이블링 방법을 따릅니다.
+
+image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["AFK 1K 스토리지 시스템 케이블링 예시"]
+
+
+
+== 지원되는 하드웨어 구성 요소
+
+AFX 1K 스토리지 시스템에 호환되는 스토리지 디스크 선반, 스위치 및 케이블 유형을 검토해 보세요.
+
+[cols="2,2,3,6"]
+|===
+| *컨트롤러 선반* | *디스크 선반* | *지원되는 스위치* | *지원 케이블* 
+
+
+ a| 
+AFX 1K
+ a| 
+NX224
+ a| 
+* Cisco 넥서스 9332D-GX2B(400GbE)
+* Cisco 넥서스 9364D-GX2A(400GbE)
+
+ a| 
+* 400GbE QSFP-DD 브레이크아웃 케이블에서 4x100GbE QSFP 브레이크아웃 케이블로
++
+
+NOTE: 브레이크아웃 케이블은 스위치, 컨트롤러, 디스크 쉘프 간의 100GbE 연결에 사용됩니다.
+
++
+** 컨트롤러 클러스터 및 HA 포트에 대한 100GbE 케이블
+** 디스크 쉘프에 100GbE 케이블 연결
+
+
+* 스위치 A와 스위치 B 간 ISL 연결을 위한 2 x 400GbE 케이블
+* 관리 연결을 위한 RJ-45 케이블
+
+
+|===
+.다음은 무엇인가요?
+지원되는 시스템 구성 및 하드웨어 구성 요소를 검토한 후,link:install-network-reqs.html["AFX 1K 스토리지 시스템의 네트워크 요구 사항을 검토하세요"] .
