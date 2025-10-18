@@ -539,12 +539,8 @@
   <block id="d9e933a0183aa036605a2650b119960c" category="paragraph">ONTAP 은 포괄적인 기능 세트와 광범위한 스토리지 요구 사항에 대한 적응성으로 유명한 견고하고 다재다능한 스토리지 플랫폼입니다.  이러한 유연성 덕분에 다양한 작업 부하를 가진 조직에 매우 적합한 선택이지만, 일부 고객은 특정 환경의 요구 사항에 맞춰 최적화된 맞춤형 스토리지 솔루션을 통해 이점을 얻을 수 있습니다.</block>
   <block id="6823723f3d129ef57f6bcfbcd86bd04e" category="paragraph">이러한 특수한 요구 사항을 해결하기 위해 일부 NetApp 스토리지 시스템은 고유한 ONTAP 특성을 제공하며, 각각 고유한 고객 요구 사항을 지원하도록 설계된 기능 세트를 포함합니다.  ONTAP 개성은 일반적으로 하드웨어와 소프트웨어 기능의 조합으로 구성되며, 타겟 사용 사례에 최적화된 경험을 제공하도록 특별히 제작되었습니다.  NetApp 세 가지 ONTAP 특성을 제공합니다.</block>
   <block id="b33eab3f59e19afa3da64a7838372c21" category="list-text">통합 ONTAP</block>
-  <block id="0ad35f334baf990d3a31bf6cfa0709f5" category="list-text">Unified ONTAP 특성은 최대의 유연성을 위해 NAS, SAN, S3 프로토콜을 지원하는 광범위한 데이터 관리 기능을 제공합니다.  이는 AFF 및 FAS 시스템뿐만 아니라 ONTAP Select 및 Cloud Volumes ONTAP 과 같은 가상화된 배포에서도 사용할 수 있는 NetApp 주력 제품입니다.</block>
-  <block id="e9d7397e9772df2e11071d57657f4b22" category="list-text">AFX</block>
-  <block id="adf18a62ba91568ae4c17ed21c595973" category="list-text">AFX ONTAP 개성은 AI/ML 애플리케이션을 포함한 고성능 NAS 및 S3 워크로드의 엄격한 요구 사항을 충족하도록 설계된 분산 솔루션을 제공합니다.  AFX 시스템은 확장 가능하고 처리량이 높은 파일 및 개체 스토리지를 필요로 하는 고객을 위해 특수 기능을 제공합니다.</block>
   <block id="df5b8332c344a8d1a2ca6124ea06defe" category="list-text">ASA r2</block>
   <block id="fde1abb5537b55c34521d414267b3f70" category="inline-link">ASA r2 시스템</block>
-  <block id="fc33e2bbed08316e89f0df10590d22cc" category="list-text">ASA r2 ONTAP 개성은 SAN 전용 환경을 위해 특별히 설계된 분산 솔루션을 제공합니다.<block ref="e4ca437dd887d2a61be13c7ee5ecdac0" category="inline-link-rx"></block>   블록 워크로드에 대한 스토리지 환경을 간소화하여 SAN 고객에게 최적화된 성능과 간소화된 관리를 제공합니다.</block>
   <block id="6d1fe0d9c2d18d3c107ffcb493bdacf4" category="paragraph">NetApp 이러한 고유한 ONTAP 특성을 제공함으로써 조직이 운영 요구 사항과 애플리케이션 작업 부하에 맞는 스토리지 솔루션을 선택할 수 있도록 지원합니다.</block>
   <block id="255bf722ae2f40f567ba6f42a03ffeee" category="paragraph-title">NetApp 스토리지 시스템의 ONTAP 특성을 변경할 수 있나요?</block>
   <block id="6adee2606f39ed8126ea7419135e040d" category="paragraph">아니요. ONTAP 스토리지 시스템의 특성은 변경할 수 없습니다.  예를 들어, Unified ONTAP 특성을 실행하는 FAS 또는 AFF 스토리지 시스템을 AFX 스토리지 시스템으로 변환하거나 업그레이드할 수 없습니다.</block>
@@ -686,11 +682,8 @@
   <block id="ea7c1af5f0c16b4f7fadf9fe7aa9bd4b" category="section-title">ONTAP HA 쌍 작업</block>
   <block id="44abd47dc22d8944944122617fadf4fe" category="paragraph">Unified ONTAP 과 마찬가지로 AFX 클러스터 노드는 장애 허용 및 중단 없는 운영을 위해 고가용성(HA) 쌍으로 구성됩니다.  HA 페어링은 스토리지 장애 조치와 같은 노드 장애가 발생하더라도 스토리지 작업이 온라인 상태를 유지할 수 있는 기능을 제공합니다.  각 노드는 다른 노드와 협력하여 단일 쌍을 형성합니다.  이는 일반적으로 두 노드의 NVRAM 모듈 간의 직접 연결을 사용하여 수행됩니다.</block>
   <block id="f1fda245e68667d714e981e6aef06611" category="paragraph">AFX를 사용하면 백엔드 클러스터 스위치에 새로운 HA VLAN을 추가하여 NVRAM 모듈이 HA 파트너 노드 간에 연결된 상태를 유지할 수 있습니다.  HA 쌍은 여전히 ​​AFX 시스템에서 사용되지만, 파트너 노드를 직접 연결할 필요는 더 이상 없습니다.</block>
-  <block id="67c232c91fe284ec9b1946d4112dfec0" category="section-title">AFX 시스템 배포 제한 사항</block>
-  <block id="9f663c4191836dca7619153a5977feb9" category="paragraph">AFX에서는 클러스터를 구성하고 사용할 때 최소값과 최대값을 포함한 여러 가지 제한을 적용합니다.  이러한 제한은 다음을 포함한 여러 가지 범주로 나뉩니다.</block>
   <block id="4f153ef27e03f77db56acbf6b56a9003" category="list-text">클러스터당 컨트롤러 노드</block>
   <block id="e9f7ded0687b255de1c10debe9fb0f7d" category="list-text">각 AFX 클러스터에는 최소 4개의 노드가 있어야 합니다.  최대 노드 수는 ONTAP 릴리스에 따라 다릅니다.</block>
-  <block id="ec2bdf0a3ea1b056843de1d3ae912a78" category="list-text">이는 클러스터 스토리지 가용성 영역(SAZ)에 있는 모든 SSD 디스크의 총 용량입니다.  최대 저장 용량은 ONTAP 릴리스에 따라 다릅니다.  클러스터의 기능을 확인하려면 상호 운용성 매트릭스 도구(IMT)에서 제공되는 정보를 검토해야 합니다.</block>
   <block id="20940568e8a8df65f4ded7552f91cb5a" category="section-title">AFX 시스템 상태 확인</block>
   <block id="32b20b465c25cf57c303655ae17c2681" category="paragraph">AFX 관리 작업을 수행하기 전에 클러스터의 상태를 확인해야 합니다.</block>
   <block id="9d7934850e239388cf4ca1ba33e75b38" category="admonition">운영이나 성능 문제가 의심되는 경우를 포함하여 언제든지 AFX 클러스터의 상태를 확인할 수 있습니다.</block>
@@ -1542,7 +1535,6 @@
   <block id="99ec9f1726a6519eae656fd574344d13" category="list-text"><block ref="99ec9f1726a6519eae656fd574344d13" category="inline-link-rx"></block></block>
   <block id="1b145f28c9e1e4044efc92e3e1567780" category="summary">간단한 curl 명령을 실행하여 AFX REST API를 사용하고 사용 가능 여부를 확인할 수 있습니다.</block>
   <block id="82c5461d1a57f884eb846ca365801e17" category="doc">첫 번째 AFX 스토리지 시스템 REST API 호출</block>
-  <block id="2adee5bb9e9abee9178f660513c83f69" category="paragraph">AFX는 세 가지 독특한 ONTAP 개성 중 하나입니다.  응답에 포함된 두 필드를 기반으로 클러스터의 ONTAP 특성을 확인하려면 REST API를 호출할 수 있습니다.</block>
   <block id="7013ac323311e3dab810263b1d637a84" category="paragraph">로컬 워크스테이션에서 curl 유틸리티를 사용할 수 있어야 할 뿐만 아니라 다음 사항도 필요합니다.</block>
   <block id="e57ddd021ae925c610e301862e495d93" category="list-text">AFX 시스템 클러스터 관리 LIF의 IP 주소 또는 FQDN</block>
   <block id="6c62a36f8e262347f2ba79452265a020" category="list-text">ONTAP REST API에 액세스할 권한이 있는 계정에 대한 ONTAP 자격 증명</block>
@@ -1703,4 +1695,16 @@
   <block id="a5c027a54a434f7725d8ad7b173208cd" category="paragraph">AFX 스토리지 시스템에서 적용되는 ONTAP 데이터 보호 한도 및 제약 사항을 알고 있어야 합니다.</block>
   <block id="ea39e5b3dcce663e71e4c4855aff145f" category="paragraph-title">SnapMirror 동기식(SM-S)</block>
   <block id="763091f517e8df088fc850122ac6b19c" category="paragraph">SM-S를 사용할 때는 규모 제한이 있습니다. 단일 AFX 시스템 클러스터에서 최대 400개의 관계를 가질 수 있습니다.</block>
+  <block id="b38e285f6cc8e00ab41aae31ee5de40a" category="list-text">*Unified ONTAP* - Unified ONTAP 특성은 최대의 유연성을 위해 NAS, SAN 및 S3 프로토콜을 지원하는 광범위한 데이터 관리 기능을 제공합니다. 이는 AFF 및 FAS 시스템뿐만 아니라 ONTAP Select 및 Cloud Volumes ONTAP 과 같은 가상화된 배포에서도 사용할 수 있는 NetApp 주력 제품입니다.</block>
+  <block id="41935759e3103eaecb4e639fabcfeaf8" category="list-text">*AFX* - AFX ONTAP 개성은 AI/ML 애플리케이션을 포함하여 고성능 NAS 및 S3 워크로드의 엄격한 요구 사항을 충족하도록 설계된 분산 솔루션을 제공합니다. AFX 시스템은 확장 가능하고 처리량이 높은 파일 및 개체 스토리지를 필요로 하는 고객을 위해 특수 기능을 제공합니다.</block>
+  <block id="4a4f6533cdc5a6d5e2e86605c2f59747" category="list-text">* ASA r2* - ASA r2 ONTAP 개성은 SAN 전용 환경을 위해 특별히 설계된 분산 솔루션을 제공합니다.<block ref="e4ca437dd887d2a61be13c7ee5ecdac0" category="inline-link-rx"></block>  블록 워크로드에 대한 스토리지 환경을 간소화하여 SAN 고객에게 최적화된 성능과 간소화된 관리를 제공합니다.</block>
+  <block id="523837832bb488119118889ecba260ea" category="section-title">AFX 클러스터 배포 제한 사항</block>
+  <block id="6a304cee8eaf01d4c0221bb8185c36ae" category="paragraph">AFX에서는 클러스터를 구성하고 사용할 때 최소값과 최대값을 포함한 여러 가지 제한을 적용합니다. 이러한 제한은 다음을 포함한 여러 범주로 나뉩니다.</block>
+  <block id="fb2af5c08b54884bae80e5f29c0d24f3" category="list-text">이는 클러스터 스토리지 가용성 영역(SAZ)에 있는 모든 SSD 디스크의 총 용량입니다. 최대 저장 용량은 ONTAP 릴리스에 따라 다릅니다.</block>
+  <block id="04f1bd4b5783cf5250b6f11f5f3c45bd" category="paragraph">클러스터의 기능을 확인하려면 NetApp Hardware Universe 및 상호 운용성 매트릭스 도구에서 제공하는 정보를 검토해야 합니다.</block>
+  <block id="4c1c93397a0ad82f0b80502a6c7c0799" category="list-text"><block ref="4c1c93397a0ad82f0b80502a6c7c0799" category="inline-link-rx"></block></block>
+  <block id="f6735f5b05187d612456240f1b4e15a9" category="list-text"><block ref="f6735f5b05187d612456240f1b4e15a9" category="inline-link-rx"></block></block>
+  <block id="158b0cd8e98337e4dafd6291bed45568" category="inline-link">상호 운용성 매트릭스 도구 개요</block>
+  <block id="c9f4862e07def71045419c1015337766" category="list-text"><block ref="c9f4862e07def71045419c1015337766" category="inline-link-rx"></block></block>
+  <block id="b6b9f4e0ea5360bfc7fbf3d03fb49e3e" category="paragraph">AFX는 NetApp 에서 제공하는 세 가지 ONTAP 특성 중 하나입니다.  REST API 호출을 실행하여 ONTAP 클러스터의 특성을 확인할 수 있습니다.  시스템 관리자나 CLI를 사용하여 ONTAP 특성을 확인할 수도 있습니다. 자세한 내용은 FAQ 페이지를 참조하세요.</block>
 </blocks>
