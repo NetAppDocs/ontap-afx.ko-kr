@@ -553,7 +553,6 @@
   <block id="0fd83bea6e8889a6410f4ad7c356b1c6" category="paragraph">분산형 스토리지와 관련된 두 번째 개념은 집계 및 RAID 관리가 관리 가능한 엔터티로서 제거된다는 것입니다.  AFX 내의 스토리지 추상화 계층은 물리적 디스크와 RAID 그룹을 포함한 스토리지의 하위 수준 측면을 자동으로 구성하고 관리합니다.  이를 통해 AFX 관리자는 볼륨과 버킷을 기반으로 한 고수준 스토리지 구성에 집중할 수 있습니다.</block>
   <block id="67a915151759ecc737f698391f7cfd08" category="section-title">상호 운용성</block>
   <block id="8fbc7f1351a3e90b34e2d50e0c07adcf" category="paragraph-title">동일한 ONTAP 클러스터에서 AFX 시스템 노드를 AFF, ASA 또는 FAS 시스템 노드와 혼합할 수 있습니까?</block>
-  <block id="6855bc632a4fb3c6b7b6e30b99fd4b1c" category="paragraph-title">SnapMirror 또는 FlexCache 위한 AFX 시스템과 함께 Unified ONTAP (FAS, AFF, ASA )을 실행하는 시스템을 사용하려면 어떤 ONTAP 버전이 필요합니까?</block>
   <block id="b3c2db23091a0f69d5a98f7aa85c5999" category="inline-link">TR-4743</block>
   <block id="e41e8ba406c753a1f299483cef4ae186" category="paragraph">AFX의 SnapMirror 버전 규칙은 Unified ONTAP 과 동일합니다.  즉, Unified ONTAP 에서 복제하려면 소스 시스템이 지원되는 버전 범위 내에 있어야 합니다.  AFX에서 복제하려면 Unified ONTAP 시스템이 ONTAP 9.16.1 이상이어야 합니다(고급 용량 분산 기능이 지원되는 가장 초기 릴리스).  FlexCache 의 경우 소스 및 대상 시스템에 대해 설명된 것과 동일한 규칙이 적용됩니다.<block ref="21d9cc15452a0fa353089141a3f02dce" category="inline-link-rx"></block> .</block>
   <block id="ed403710028c21becee46d02ed8f44c0" category="paragraph">FlexGroup 볼륨에 대한 지원에는 몇 가지 차이점이 있습니다.  AFX의 FlexGroup 볼륨은 Writeback 모드를 사용하는 FlexCache 볼륨의 원본 볼륨이 될 수 없습니다.</block>
@@ -1707,4 +1706,9 @@
   <block id="158b0cd8e98337e4dafd6291bed45568" category="inline-link">상호 운용성 매트릭스 도구 개요</block>
   <block id="c9f4862e07def71045419c1015337766" category="list-text"><block ref="c9f4862e07def71045419c1015337766" category="inline-link-rx"></block></block>
   <block id="b6b9f4e0ea5360bfc7fbf3d03fb49e3e" category="paragraph">AFX는 NetApp 에서 제공하는 세 가지 ONTAP 특성 중 하나입니다.  REST API 호출을 실행하여 ONTAP 클러스터의 특성을 확인할 수 있습니다.  시스템 관리자나 CLI를 사용하여 ONTAP 특성을 확인할 수도 있습니다. 자세한 내용은 FAQ 페이지를 참조하세요.</block>
+  <block id="43d14ed81363c455618b5103ece599d4" category="paragraph-title">AFX 스토리지 시스템은 언제부터 출시되었나요? AFX에서 지원되는 가장 초기의 ONTAP 버전은 무엇입니까?</block>
+  <block id="7f24225fb2bbf5b324522918a991d678" category="paragraph">AFX 스토리지 시스템은 2025년 10월 NetApp Insight 컨퍼런스에서 발표되었습니다. AFX는 ONTAP 9.17.1 및 이후 릴리스를 지원합니다. 자세한 내용은 NetApp 영업 담당자에게 문의하세요.</block>
+  <block id="3c9f430479263b3b25ec8e84988d27be" category="paragraph-title">AFX 시스템 클러스터와 함께 FlexCache 사용할 수 있나요?</block>
+  <block id="d53231824f8827127654628ac3883d6c" category="paragraph">네. AFX 스토리지 시스템은 Unified ONTAP 특성을 실행하는 AFF 또는 FAS 시스템과의 FlexCache 지원합니다. 유일한 제한 사항은 쓰기 백업 모드가 있는 FlexCache AFX에서 지원되지 않는다는 것입니다.</block>
+  <block id="f580013220a8ab44a2f9b864e7f6425a" category="paragraph-title">SnapMirror 또는 FlexCache 위해 AFX 시스템과 함께 Unified ONTAP 개성을 실행하는 AFF 또는 FAS 시스템을 사용하려면 어떤 ONTAP 버전이 필요합니까?</block>
 </blocks>
