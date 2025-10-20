@@ -1209,7 +1209,6 @@
   <block id="419c1482f6cc63984c67f7fdaf13bd01" category="list-text"><block ref="419c1482f6cc63984c67f7fdaf13bd01" category="inline-link-rx"></block></block>
   <block id="3a77755c4eaf7897cda1f7db8e722428" category="inline-link">ONTAP 자동화</block>
   <block id="486f6a4f906831713aed8c2567b3d906" category="list-text"><block ref="486f6a4f906831713aed8c2567b3d906" category="inline-link-rx"></block></block>
-  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="section-title">NetApp 지원</block>
   <block id="668e2078ef1b1722c77cdb5c523a4463" category="inline-link">NetApp 지식 기반</block>
   <block id="95ef25aa47e9457c9ecb60dba8cacdf3" category="doc">AFX 저장 시스템에 대한 법적 고지</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">법적 고지사항은 저작권 표시, 상표, 특허 등에 대한 정보를 제공합니다.</block>
@@ -1711,4 +1710,7 @@
   <block id="3c9f430479263b3b25ec8e84988d27be" category="paragraph-title">AFX 시스템 클러스터와 함께 FlexCache 사용할 수 있나요?</block>
   <block id="d53231824f8827127654628ac3883d6c" category="paragraph">네. AFX 스토리지 시스템은 Unified ONTAP 특성을 실행하는 AFF 또는 FAS 시스템과의 FlexCache 지원합니다. 유일한 제한 사항은 쓰기 백업 모드가 있는 FlexCache AFX에서 지원되지 않는다는 것입니다.</block>
   <block id="f580013220a8ab44a2f9b864e7f6425a" category="paragraph-title">SnapMirror 또는 FlexCache 위해 AFX 시스템과 함께 Unified ONTAP 개성을 실행하는 AFF 또는 FAS 시스템을 사용하려면 어떤 ONTAP 버전이 필요합니까?</block>
+  <block id="05669daf6632b75bf0f439e5c851177a" category="section-title">NetApp 마케팅 및 지원</block>
+  <block id="4d4bcd00dec0ee009c6a6c831d33fda4" category="inline-link">NetApp AFX</block>
+  <block id="7eee2dae65b99dd9a2020ea7343b8b68" category="list-text"><block ref="7eee2dae65b99dd9a2020ea7343b8b68" category="inline-link-rx"></block></block>
 </blocks>
