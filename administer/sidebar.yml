@@ -30,9 +30,9 @@ entries:
   entries:
   - title: SVM을 표시합니다
     url: "/administer/display-svms.html"
-  - title: 데이터 SVM 생성
+  - title: SVM 생성
     url: "/administer/create-svm.html"
-  - title: 데이터 SVM 구성
+  - title: SVM 구성
     url: "/administer/configure-svm.html"
   - title: SVM 마이그레이션
     url: "/administer/migrate-svm.html"

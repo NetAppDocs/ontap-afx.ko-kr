@@ -14,7 +14,7 @@ summary: 'NetApp AFX 시스템은 AFF 및 FAS 스토리지에서 실행되는 ON
 NetApp AFX 시스템은 AFF 및 FAS 스토리지에서 실행되는 ONTAP 특성(Unified ONTAP 이라고 함)과 다른 맞춤형 ONTAP 특성을 실행합니다.  AFX 시스템이 FAS 및 AFF 시스템과 어떻게 유사하고 어떻게 다른지 알아야 합니다.  이는 귀중한 관점을 제공하며 사용자 환경에 AFX를 배포할 때 도움이 될 수 있습니다.
 
 
-TIP: 이 AFX 설명서에는 Unified ONTAP 문서 사이트의 다양한 주제에 대한 링크가 포함되어 있습니다.  추가 콘텐츠는 AFX 스토리지 시스템을 관리할 때 도움이 될 수 있는 보다 심도 있고 다양한 관점을 제공합니다.
+TIP: AFX 설명서에는 ONTAP 특성에 관계없이 동일하게 동작하는 기능에 대한 자세한 내용을 제공하는 Unified ONTAP 문서 사이트의 다양한 항목에 대한 링크가 포함되어 있습니다.  추가 콘텐츠는 AFX 스토리지 시스템을 관리할 때 도움이 될 수 있는 보다 자세한 내용을 제공합니다.
 
 
 
@@ -69,7 +69,7 @@ AFX, AFF, FAS 스토리지 시스템은 매우 유사하지만 AFX에서 지원�
 === 데이터 복제
 
 * LUN을 포함하는 AFF 또는 FAS 시스템에서 볼륨 복제가 없습니다.
-* AFX FlexGroup 볼륨은 Unified ONTAP 9.16.1 이상에만 복제할 수 있습니다.
+* FlexGroup 볼륨은 Unified ONTAP 9.16.1 이상에만 복제할 수 있습니다.
 
 
 

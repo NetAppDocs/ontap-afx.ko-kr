@@ -41,7 +41,7 @@ AFX 클러스터에는 처음에 구성해야 하는 4개의 영역이 있습니
 * DNS 도메인 이름
 * DNS 이름 서버 IP 주소
 * NTP 서버 IP 주소
-* 데이터 서브넷 마스크
+* 서브넷 마스크
 
 
 .단계
@@ -104,6 +104,6 @@ AFX 시스템 ONTAP 클러스터에는 설정 중에 구성된 세 가지 영역
 당신은해야합니다link:../get-started/prepare-cluster-admin.html["AFX 관리를 준비하세요"] 프로덕션 환경에서 AFX 클러스터를 사용하기 전에.
 
 .관련 정보
-* link:../administer/configure-svm.html["AFX 데이터 SVM 구성"]
+* link:../administer/configure-svm.html["AFX SVM 구성"]
 * link:../get-started/prepare-cluster-admin.html["AFX 관리를 준비하세요"]
 
