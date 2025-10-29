@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: administer/maintain-hardware.html 
+permalink: maintain-hardware.html 
 keywords: afx, afx system, maintain hardware, hardware 
 summary: AFX 스토리지 시스템에서 유지 관리 절차를 수행하는 방법을 알아보려면 AFX 유지 관리 설명서로 이동하세요. 
 ---

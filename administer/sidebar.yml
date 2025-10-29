@@ -50,7 +50,5 @@ entries:
     url: "/administer/upgrade-ontap.html"
   - title: 펌웨어 업데이트
     url: "/administer/update-firmware.html"
-  - title: 하드웨어 유지 관리
-    url: "/administer/maintain-hardware.html"
 - title: 추가 관리
   url: "/administer/additional-ontap-cluster.html"
