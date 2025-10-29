@@ -356,8 +356,6 @@
   <block id="d1c1098f48087357ac90227a16c8ce05" category="section-title">상호 운용성 고려 사항</block>
   <block id="003431cd9bfaf71ce41b593a52eef029" category="paragraph">SVM 마이그레이션을 계획하고 수행하기 전에 기능과 제한 사항을 포함한 상호 운용성 고려 사항을 알아야 합니다.</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="section-title">사용 사례</block>
-  <block id="aec776d00ac0b2ac01caca7839a38a2e" category="paragraph">클러스터 관리자는 SVM을 소스 클러스터에서 대상 클러스터로 다시 이동할 수 있습니다.  용량 관리 및 부하 분산의 일환으로 이를 수행할 수도 있고, 장비 업그레이드나 데이터 센터 통합을 허용하기 위해 이를 수행할 수도 있습니다.</block>
-  <block id="70358fd17892e7eef43751c5c6946eb0" category="paragraph">AFX 스토리지 시스템은 Unified ONTAP 에서의 기존 업그레이드를 지원하지 않으므로 SVM 마이그레이션은 중요한 사용 사례입니다.  중단 없이 Unified ONTAP9 클러스터에서 AFX 클러스터로 애플리케이션 워크로드를 이동할 수 있습니다.  또한 SVM은 AFX 클러스터에서 Unified ONTAP 클러스터로, AFX 클러스터 간에 마이그레이션하는 등 다른 방법으로도 마이그레이션할 수 있습니다.</block>
   <block id="768b0db9b2b3020606a863a7304f2bb6" category="section-title">버전 상호 운용성</block>
   <block id="4c07b9a244d0b610dffd3f95dfe2141c" category="paragraph">다음 표에서는 ONTAP 특성과 소스 및 대상 클러스터의 릴리스에 따라 허용되는 SVM 마이그레이션을 설명합니다.</block>
   <block id="02674a4ef33e11c879283629996c8ff8" category="cell">방향</block>
@@ -373,7 +371,6 @@
   <block id="9f6385211c0120de98d15e76448a065c" category="list-text">FabricPool (복합 집합체에 있는 볼륨)</block>
   <block id="74a419556785700d1cff50e71e2c6f66" category="list-text">두꺼운 프로비저닝 볼륨</block>
   <block id="be1b9ef68f31ecee991e2282c1f24f0f" category="section-title">볼륨 프로비저닝</block>
-  <block id="03ee3c2dee1a91ecfb0e9091c6ad64ae" category="paragraph">AFX 볼륨은 클러스터의 SAZ(스토리지 가용성 영역) 전체에 걸쳐 배치를 균형 있게 조정하기 위해 프로비저닝됩니다.</block>
   <block id="7420b76eb6276efbe1211f3a42108fa9" category="list-text">공간 보장</block>
   <block id="e42ca8050871a475bf759240b1011c5e" category="list-text">AFX는 두꺼운 프로비저닝을 지원하지 않습니다.  사전 검사는 마이그레이션 중인 SVM의 볼륨이 두꺼운 프로비저닝된 경우 마이그레이션이 실패하도록 하는 데 사용됩니다.</block>
   <block id="d7f2615c71a1567cc13cf3a7f7de0aea" category="list-text">암호화</block>
@@ -1685,7 +1682,6 @@
   <block id="228a97428b2aeec69210739af416feeb" category="summary">SVM을 만든 후에는 요구 사항과 클라이언트 요구 사항에 따라 구성을 업데이트할 수 있습니다.</block>
   <block id="c1eb2ef19412fc8a729ccabaa304e64b" category="paragraph">특정 SVM의 랜딩 페이지에 있는 탭에 반영된 대로 SVM 구성에 대한 액세스 경로는 4개입니다. 여기에는 다음이 포함됩니다.</block>
   <block id="feb5d82aa83ef8e2c0f2897980886042" category="summary">SVM을 한 ONTAP 클러스터에서 다른 ONTAP 클러스터로 마이그레이션할 수 있습니다. AFX를 사용한 SVM 마이그레이션은 Unified ONTAP 과 동일하게 작동하지만 상호 운용성 고려 사항이 몇 가지 있습니다. SVM 마이그레이션 수행에 대한 자세한 내용은 Unified ONTAP 설명서를 참조하세요.</block>
-  <block id="de588dc77b66037715d1febfdf7f9ae7" category="paragraph">SVM을 한 ONTAP 클러스터에서 다른 ONTAP 클러스터로 마이그레이션할 수 있습니다. AFX를 사용한 SVM 마이그레이션은 Unified ONTAP 과 동일하게 작동하지만 상호 운용성 고려 사항이 몇 가지 있습니다. SVM 마이그레이션 수행에 대한 자세한 내용은 제공된 Unified ONTAP 설명서를 참조하세요.</block>
   <block id="4c2e600ea7c53e0c32af10f2e4850cd6" category="paragraph-title">AFX 스토리지 시스템의 백엔드 클러스터 네트워크에서 모든 유형의 스위치를 사용할 수 있나요?</block>
   <block id="42ed7ea439950fed1039106f87d3419f" category="admonition">AFX 설명서에는 ONTAP 특성에 관계없이 동일하게 동작하는 기능에 대한 자세한 내용을 제공하는 Unified ONTAP 문서 사이트의 다양한 항목에 대한 링크가 포함되어 있습니다.  추가 콘텐츠는 AFX 스토리지 시스템을 관리할 때 도움이 될 수 있는 보다 자세한 내용을 제공합니다.</block>
   <block id="765b47efc6becfafc2dfb93543aab395" category="list-text">고급 용량 균형 기능은 다음을 사용하여 제어됩니다.<block ref="7617fb157efcfcd230d531be7d153280" prefix=" " category="inline-code"></block> CLI 매개변수는 모든 FlexGroup 볼륨에 대해 기본적으로 활성화됩니다.</block>
@@ -1716,4 +1712,12 @@
   <block id="679eb87712080343e0bc37dbc08451df" category="paragraph">볼륨을 생성할 때 최소한의 구성 세부 정보를 제공해야 합니다. 볼륨을 생성하는 동안이나 나중에 볼륨을 편집하여 추가 세부 정보를 제공할 수 있습니다. 추가 SVM을 생성한 경우 볼륨에 대한 SVM을 선택해야 합니다.</block>
   <block id="93b1520005778e826c33efa7132d61c9" category="sidebar">SVM 생성</block>
   <block id="b4f82cc57b777a6dc79376d19998c912" category="sidebar">SVM 구성</block>
+  <block id="23dd8e2a3266c643a92829254de9f453" category="paragraph">SVM을 한 ONTAP 클러스터에서 다른 ONTAP 클러스터로 마이그레이션할 수 있습니다. AFX를 사용한 SVM 마이그레이션은 Unified ONTAP 과 동일하게 작동하지만 여러 가지 상호 운용성 고려 사항과 제한 사항이 있습니다. SVM 마이그레이션 수행에 대한 자세한 내용은 Unified ONTAP 설명서를 참조하세요.</block>
+  <block id="d3600eb6973aa12c110f41460c893d41" category="paragraph">클러스터 관리자는 SVM을 소스 클러스터에서 대상 클러스터로 다시 이동할 수 있습니다. 용량 관리 및 부하 분산의 일환으로 이를 수행할 수도 있고, 장비 업그레이드나 데이터 센터 통합을 허용하기 위해 이를 수행할 수도 있습니다. AFX 스토리지 시스템은 Unified ONTAP 에서의 기존 업그레이드를 지원하지 않으므로 SVM 마이그레이션은 중요한 사용 사례입니다.</block>
+  <block id="d6f4865759aeafd0faf5d3cbce10e548" category="paragraph">중단 없이 Unified ONTAP 클러스터에서 AFX 클러스터로 애플리케이션 워크로드를 이동할 수 있습니다.  또한 SVM은 AFX 클러스터에서 Unified ONTAP 클러스터로, 그리고 AFX 클러스터 간에 마이그레이션하는 등 다른 방법으로도 마이그레이션될 수 있습니다.</block>
+  <block id="367fd97b2408a2862e7a2b7bc0f52d14" category="paragraph">볼륨은 AFX 클러스터의 SAZ(스토리지 가용성 영역) 전체에 걸쳐 배치를 균형 있게 조정하도록 프로비저닝됩니다.</block>
+  <block id="d66c3d45d2bb8165afc4400849d5ef66" category="section-title">추가 제한 사항</block>
+  <block id="110352dfc6688e1ab1d9271ac5a2552b" category="paragraph">SVM을 마이그레이션하기 전에 고려해야 할 추가 제한 사항이 있습니다.</block>
+  <block id="937992c5285f166aa01c3633fc6cb85b" category="list-text">AFX 스토리지 시스템은 NetApp MetroCluster 지원하지 않습니다.  이로 인해 SVM을 마이그레이션할 때 제한이 발생합니다.  MetroCluster 사용하도록 구성된 AFF 또는 FAS 시스템(또는 Unified ONTAP 개성을 실행하는 NetApp 시스템)으로 AFX SVM을 마이그레이션하거나 이러한 시스템에서 AFX SVM을 마이그레이션할 수 없습니다.  이러한 마이그레이션 시나리오는 지원되지 않지만 AFX 사전 검사에서 명시적으로 차단되지 않으므로 시도하지 않도록 주의해야 합니다.</block>
+  <block id="372a3016fd08d93f2bfe7c10abae9936" category="list-text"><block ref="372a3016fd08d93f2bfe7c10abae9936" category="inline-link-macro-rx"></block></block>
 </blocks>
