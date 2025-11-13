@@ -29,47 +29,51 @@ AFX 구성은 AFF 및 FAS 시스템과 몇 가지 측면에서 다릅니다.
 
 == 지원되지 않거나 제한된 Unified ONTAP 기능
 
-AFX, AFF, FAS 스토리지 시스템은 매우 유사하지만 AFX에서 지원되지 않는 몇 가지 기능이 있습니다.  AFX에 대한 업데이트 및 변경 사항은 해당 사이트에서 검토해야 합니다.link:../release-notes/whats-new-9171.html["새로운 소식"] 귀하의 릴리스에 따른 섹션입니다.
-
-다음 기능은 여러 카테고리로 구성되어 있으며, AFX에서 사용할 수 없거나 변경되었습니다.
+NetApp AFX는 고성능 NAS 및 개체 워크로드에 최적화되어 있습니다.  이 때문에 AFF 와 FAS 는 물론 다른 Unified ONTAP 스토리지 시스템에도 차이점이 있습니다.  다음 기능은 NetApp AFX에서 사용할 수 없습니다. 목록은 주요 기능 또는 기능 영역별로 구성되어 있습니다.  AFX에 대한 업데이트 및 변경 사항도 검토해야 합니다.link:../release-notes/whats-new-9171.html["새로운 소식"] 귀하의 석방을 기준으로 합니다.
 
 
 
-=== 일반적인 특징
-
-* FabricPool
-* MetroCluster
-* AI 기반 랜섬웨어 방지 보호
-* ONTAPI API(ZAPI)
-
-
-
-
-=== SAN 관련 기능
+=== 블록 및 SAN
 
 * SAN 관리 및 클라이언트 액세스
-* 두꺼운 프로비저닝 볼륨
+* LUN 및 NVMe 네임스페이스
+* 볼륨의 두꺼운 프로비저닝
 
 
 
 
-=== 집계 관련 기능
+=== 집계 및 물리적 저장소
 
-다음 집계 관련 기능은 AFX 시스템에서 사용할 수 없습니다.
-
-* 디스크 집계에 직접 액세스
+* MetroCluster
+* 물리적 노드 소유 집계
+* RAID 관리
 * NetApp 집계 암호화(NAE)
 * 집계 수준 중복 제거
 * SyncMirror (집계 미러링)
-* RAID 관리
+* FabricPool 계층화
 
 
 
 
-=== 데이터 복제
+=== 데이터 복제(SnapMirror)
 
-* LUN을 포함하는 AFF 또는 FAS 시스템에서 볼륨 복제가 없습니다.
-* FlexGroup 볼륨은 Unified ONTAP 9.16.1 이상에만 복제할 수 있습니다.
+
+NOTE: Unified ONTAP 과 AFX 간의 모든 데이터 복제는 동일한 버전 제한 사항을 사용하여 양방향으로 지원됩니다. https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror 관계에 대한 호환 ONTAP 버전"^] (몇 가지 사소한 예외가 있음).
+
+* LUN 또는 NVMe 네임스페이스를 포함하는 AFF 또는 FAS 시스템에서 볼륨 복제가 없습니다.
+* FlexGroup 볼륨은 고급 용량 밸런싱이 필요하기 때문에 AFX에서 Unified ONTAP 버전 9.16.1 이상으로만 복제할 수 있습니다.
+
+
+
+
+=== 관리 용이성
+
+* ONTAPI API(ZAPI)
+* 지원되지 않는 기능(예: MetroCluster)에 대한 REST API
+* 성능 통계를 위한 REST API의 몇 가지 초기 제한 사항
+* AIQ Unified Manager 지원
+* Grafana Harvest 버전 25.08.1 이상
+* NetApp Trident 버전 25.10 이상
 
 
 
@@ -86,7 +90,7 @@ AFX에서 사용할 수 있는 ONTAP CLI는 일반적으로 AFF 및 FAS 시스�
 
 * SAN 관련 명령 없음
 * 집계 관리 명령이 더 이상 필요하지 않습니다.
-* FlexAggr 명령은 FlexAggr만 표시하거나 보여줄 수 있습니다.
+* 집계 표시에 이제 전체 스토리지 가용성 영역(SAZ)이 표시됩니다.
 
 
 

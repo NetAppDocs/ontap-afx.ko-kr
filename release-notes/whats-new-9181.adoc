@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9181.html 
+keywords: 'afx, release notes, what"s new, 9.18.1' 
+summary: AFX 스토리지 시스템에서 사용할 수 있는 ONTAP 9.18.1의 새로운 기능에 대해 알아보세요. 
+---
+= AFX 스토리지 시스템용 ONTAP 9.18.1의 새로운 기능
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 스토리지 시스템에서 사용할 수 있는 ONTAP 9.18.1의 새로운 기능에 대해 알아보세요.
+
+
+
+== 스토리지 리소스 관리 향상
+
+[cols="2,4"]
+|===
+| 업데이트 | 설명 
+
+
+| 향상된 볼륨 배치  a| 
+NetApp AFX는 클러스터의 모든 노드에 볼륨 배치를 자동으로 균형 있게 조정합니다.  이전 ONTAP 릴리스에서는 배치 알고리즘이 클러스터의 볼륨 수를 기반으로 했습니다.  모든 노드에는 활동에 관계없이 동일한 수의 볼륨이 할당됩니다.  ONTAP 9.18.1부터 볼륨을 배치하거나 이동할 때 노드의 성능을 고려하도록 알고리즘이 향상되었습니다.  이를 통해 AFX 클러스터의 노드 전반에서 성능 균형이 향상되고 단일 노드가 과부하될 가능성이 훨씬 줄어듭니다.
+
+|===
+.관련 정보
+* https://docs.netapp.com/us-en/ontap/release-notes/index.html["ONTAP 9 출시 주요 내용"^]
+

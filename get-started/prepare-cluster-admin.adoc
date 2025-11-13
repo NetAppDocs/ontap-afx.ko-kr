@@ -115,9 +115,10 @@ AFX에서는 클러스터를 구성하고 사용할 때 최소값과 최대값�
 
 클러스터당 컨트롤러 노드:: 각 AFX 클러스터에는 최소 4개의 노드가 있어야 합니다.  최대 노드 수는 ONTAP 릴리스에 따라 다릅니다.
 저장 용량:: 이는 클러스터 스토리지 가용성 영역(SAZ)에 있는 모든 SSD 디스크의 총 용량입니다. 최대 저장 용량은 ONTAP 릴리스에 따라 다릅니다.
+클러스터 스위치:: 클러스터 스토리지 네트워크에는 최소 두 개의 스위치가 필요합니다.  허용되는 최대값은 클러스터의 컨트롤러 노드 총 수에 따라 결정됩니다.
 
 
-AFX 클러스터의 기능을 확인하려면 NetApp Hardware Universe 및 상호 운용성 매트릭스 도구에서 제공하는 정보를 검토해야 합니다.
+AFX 클러스터의 기능을 확인하려면 NetApp Hardware Universe 및 상호 운용성 매트릭스 도구에서 제공되는 세부 정보를 검토해야 합니다.
 
 
 
@@ -187,12 +188,12 @@ link:../manage-data/prepare-manage-data.html["준비하다"]데이터를 할당�
 
 == 관련 정보
 
+* https://hwu.netapp.com/["NetApp Hardware Universe"^]
+* https://imt.netapp.com/["NetApp 상호 운용성 매트릭스 도구"^]
+* https://docs.netapp.com/us-en/interoperability-matrix-tool/["상호 운용성 매트릭스 도구 개요"^]
 * https://docs.netapp.com/us-en/ontap/concepts/introducing-ontap-interfaces-concept.html["ONTAP 사용자 인터페이스"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/set-privilege-level-task.html["ONTAP CLI에서 권한 수준 설정"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/index.html["ONTAP CLI를 사용하여 클러스터 관리에 대해 알아보세요"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/types-svms-concept.html["ONTAP 클러스터의 SVM 유형"^]
-* https://hwu.netapp.com/["NetApp Hardware Universe"^]
-* https://imt.netapp.com/["NetApp 상호 운용성 매트릭스 도구"^]
-* https://docs.netapp.com/us-en/interoperability-matrix-tool/["상호 운용성 매트릭스 도구 개요"^]
 * link:../faq-ontap-afx.html["AFX 스토리지 시스템에 대한 FAQ"]
 

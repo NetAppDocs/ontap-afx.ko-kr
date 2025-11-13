@@ -565,8 +565,6 @@
   <block id="5f23273522ab6b5896afbea443e4b0e5" category="paragraph-title">AFX 클러스터의 스토리지는 어떻게 구성되나요?</block>
   <block id="d37066fb090f24f4a9c3a6f25f61165b" category="paragraph">AFX 클러스터에 연결된 모든 디스크와 스토리지 쉘프는 스토리지 가용성 영역(SAZ)의 일부입니다.  각 AFX 클러스터는 여러 AFX 클러스터에서 공유할 수 없는 SAZ를 하나만 지원합니다( SnapMirror 복제 및 FlexCache 작업 제외).</block>
   <block id="515a19ff656ef4e9a76499b11053c88b" category="paragraph">모든 노드는 SAZ의 모든 스토리지를 볼 수 있습니다.  클러스터에 스토리지 선반이 추가되면 ONTAP 자동으로 디스크를 추가합니다.</block>
-  <block id="25241163c37737db44029ed2218be089" category="paragraph">AFX에는 집계가 없습니다.  모든 스토리지는 클러스터의 모든 노드에서 액세스할 수 있는 단일 스토리지 가용성 영역에 포함됩니다.  결과적으로 볼륨 이동은 실제로 데이터를 복사할 필요가 없습니다.  대신 모든 볼륨 이동은 노드 간 포인터 업데이트를 통해 수행됩니다.  이를 ZCVM(Zero Copy Volume Move)이라고 하며, 실제로 데이터가 복사되거나 이동되지 않기 때문에 즉시 발생합니다.  이는 기본적으로 SnapMirror 복사 없이 Unified ONTAP 에서 사용되는 볼륨 이동 프로세스와 동일합니다.</block>
-  <block id="504c7335601a5530da6d79c69af25d23" category="paragraph-title">AFX는 SAZ 전체에서 데이터를 어디에 배치할지 어떻게 결정합니까?</block>
   <block id="0dffaaac24629ec57e41901c2c49b5e9" category="paragraph">AFX에는 시스템과 사용자 개체 불균형에 대응하는 ATM(자동 토폴로지 관리)이라는 기능이 포함되어 있습니다.  ATM의 주요 목적은 AFX 클러스터 전반의 거래량을 균형 있게 조절하는 것입니다.  불균형이 감지되면 내부 작업이 트리거되어 활성 노드에 데이터를 균등하게 분산합니다.  데이터는 ZCVM을 사용하여 재할당되며, 객체 메타데이터만 복사하고 업데이트하면 됩니다.</block>
   <block id="1bce74755c5e5305616eddc17873d185" category="summary">NetApp AFX 시스템은 AFF 및 FAS 스토리지에서 실행되는 ONTAP 특성(Unified ONTAP 이라고 함)과 다른 맞춤형 ONTAP 특성을 실행합니다.  AFX 시스템이 FAS 및 AFF 시스템과 어떻게 유사하고 어떻게 다른지 알아야 합니다.  이는 귀중한 관점을 제공하며 사용자 환경에 AFX를 배포할 때 도움이 될 수 있습니다.</block>
   <block id="9f2c66d4e6da8c9b288f3ecdc75c974a" category="doc">AFX 저장 시스템을 AFF 및 FAS 시스템과 비교</block>
@@ -575,24 +573,13 @@
   <block id="51d20ad0622a1bf32203f0fd69eff8ee" category="list-text">고급 용량 밸런싱</block>
   <block id="9754d771ba2a8ed846d729e396e82783" category="section-title">지원되지 않거나 제한된 Unified ONTAP 기능</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="inline-link-macro">새로운 소식</block>
-  <block id="7b4782deb376294d92e8953f8d14855a" category="paragraph">AFX, AFF, FAS 스토리지 시스템은 매우 유사하지만 AFX에서 지원되지 않는 몇 가지 기능이 있습니다.  AFX에 대한 업데이트 및 변경 사항은 해당 사이트에서 검토해야 합니다.<block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block> 귀하의 릴리스에 따른 섹션입니다.</block>
-  <block id="7e5420bd0c8a1984076f52885dda77eb" category="paragraph">다음 기능은 여러 카테고리로 구성되어 있으며, AFX에서 사용할 수 없거나 변경되었습니다.</block>
-  <block id="c019c7d7df190a17c6a7c8ae73d2e948" category="section-title">일반적인 특징</block>
-  <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
   <block id="1749d12df3df2319d3eee218a277ff83" category="list-text">MetroCluster</block>
-  <block id="b85613bdef7890eb0e7b102e18d6b27e" category="list-text">AI 기반 랜섬웨어 방지 보호</block>
   <block id="15169cb3273453f9de28b0eb0c7c34b0" category="list-text">ONTAPI API(ZAPI)</block>
-  <block id="447c75e67fae69491fa1ab2dd2fdeb78" category="section-title">SAN 관련 기능</block>
   <block id="b21d10ebb4dc1d3fa9cab52510e6e840" category="list-text">SAN 관리 및 클라이언트 액세스</block>
-  <block id="cfae0238b4919617857b6a1108b796ae" category="section-title">집계 관련 기능</block>
-  <block id="2e0d41fbc34c75b0698a9f38cb988125" category="paragraph">다음 집계 관련 기능은 AFX 시스템에서 사용할 수 없습니다.</block>
-  <block id="c800d2b73bbcd99c7c3ec3ee0739dda1" category="list-text">디스크 집계에 직접 액세스</block>
   <block id="a809a3f67f68e189b93c920155d8f362" category="list-text">NetApp 집계 암호화(NAE)</block>
   <block id="7b8bac56c28696d13bf861ef5b905715" category="list-text">집계 수준 중복 제거</block>
   <block id="bf474f5b27943f46dddafa6903a3aca0" category="list-text">SyncMirror (집계 미러링)</block>
   <block id="542dbb009e960ad2ab0d38ef4a2c5f99" category="list-text">RAID 관리</block>
-  <block id="0a9e63106b5735d38d5bf5377346f3ed" category="section-title">데이터 복제</block>
-  <block id="d3e592d24d461a69505c06ca342a0fbd" category="list-text">LUN을 포함하는 AFF 또는 FAS 시스템에서 볼륨 복제가 없습니다.</block>
   <block id="1ac02e30a31e8e8a271f79d995edae6b" category="section-title">명령줄 인터페이스 변경 사항</block>
   <block id="f0fbad4010250530a02ebeee997be99b" category="paragraph">AFX에서 사용할 수 있는 ONTAP CLI는 일반적으로 AFF 및 FAS 시스템에서 사용할 수 있는 CLI를 반영합니다.  하지만 다음과 같은 몇 가지 차이점이 있습니다.</block>
   <block id="6ad554038f01b36139932064b15f012f" category="list-text">다음과 관련된 새로운 AFX 명령:</block>
@@ -600,7 +587,6 @@
   <block id="c6a69d731488373ecdb2d591b1a85654" category="list-text">부트 미디어</block>
   <block id="f130631d40cc171d52dc63501045c8da" category="list-text">SAN 관련 명령 없음</block>
   <block id="863a16df67e2ceabb787910e2b537e42" category="list-text">집계 관리 명령이 더 이상 필요하지 않습니다.</block>
-  <block id="43e46fcef487eab4c976633bb3771ac5" category="list-text">FlexAggr 명령은 FlexAggr만 표시하거나 보여줄 수 있습니다.</block>
   <block id="f716c6e3202ed7d92fc8348d46cf91c0" category="inline-link-macro">AFX 시스템 특성</block>
   <block id="ddd733c8c3891b4ecfcd87a0c6163694" category="list-text"><block ref="ddd733c8c3891b4ecfcd87a0c6163694" category="inline-link-macro-rx"></block></block>
   <block id="82a5887f8adb06bd19d86cf8996f4769" category="inline-link-macro">AFX 아키텍처의 세부 사항</block>
@@ -612,7 +598,6 @@
   <block id="d86fdbf9ebe98514661e8642bcee1f8c" category="list-text">텍스트, 이미지, 비디오를 포함한 다양한 데이터 유형을 처리합니다.</block>
   <block id="7c780abd9bdd1f2a63614e10e5038ab8" category="list-text">엄격한 응답 시간 창이 필요한 저지연 실시간 추론 애플리케이션입니다.</block>
   <block id="9eb56258e895facbc7db3fd59e0bb9d0" category="list-text">데이터 엔지니어와 데이터 과학자가 셀프 서비스 데이터 관리를 통해 이점을 얻을 수 있는 데이터 과학 및 머신 러닝 파이프라인입니다.</block>
-  <block id="382ba90445ad355e4d0640a736b4ae10" category="list-text">RDMA 전송을 갖춘 다중 GPU 시스템과 같이 높은 동시성과 병렬 I/O가 필요한 작업 부하.</block>
   <block id="5bd59b49924352b734854b619f72ae71" category="section-title">하드웨어 인프라</block>
   <block id="1d61c0e2cf63f7bf0195212c9846c849" category="paragraph">NetApp AFX 스토리지 시스템은 고성능 NAS 고객의 요구 사항에 맞춰 간소화된 환경을 만드는 통합 하드웨어 및 소프트웨어 솔루션을 제공합니다.</block>
   <block id="66d537e06ce64167a2a89717123fb13a" category="paragraph">AFX 클러스터에는 다음 하드웨어 구성 요소가 사용됩니다.</block>
@@ -731,31 +716,16 @@
   <block id="3680a461b7da6c652dacd37e78790a59" category="section-title">논리적 구성 요소</block>
   <block id="c59d0be08da9503ec5fe235ae0fd48e8" category="paragraph">AFX에는 여러 가지 논리적 구성 요소가 포함되어 있습니다.  이러한 기능은 클러스터의 물리적 구성 요소와 함께 소프트웨어로 구현됩니다.  논리적 구성 요소는 AFX 시스템의 사용과 구성을 결정하는 구조를 강화합니다.</block>
   <block id="65b9c79f6fc3fe829a50473cb293f46d" category="section-title">공용 스토리지 풀</block>
-  <block id="98e10503c863685716dd8a6af0655051" category="paragraph">스토리지 가용성 영역(SAZ)은 클러스터 전체의 공통 스토리지 풀입니다.  이는 모든 컨트롤러 노드에 단일 통합 네임스페이스를 제공하는 스토리지 쉘프의 디스크 컬렉션입니다.  SAZ는 노드에서 사용되는 저장 선반에 대한 고정된 제한이 없는 프로비저닝 모델을 제공합니다.  고객은 전체 AFX 클러스터의 속성으로 여유 공간과 저장 공간 사용량을 볼 수 있습니다.</block>
   <block id="68c82055f30da4852b6ba323555b088b" category="section-title">FlexVolumes, FlexGroups 및 버킷</block>
-  <block id="2e9f820f533beec53162d9fa6fc87cae" category="paragraph">FlexVolumes, FlexGroups 및 S3 버킷은 클라이언트 액세스 프로토콜을 기반으로 AFX 관리자에게 노출되는 _데이터 컨테이너_입니다.  이러한 확장 가능한 컨테이너는 복잡한 내부 저장소 세부 정보 중 많은 부분을 추상화하도록 설계되었습니다.</block>
   <block id="4888f5f13a5d3e3be2bd58117e84381a" category="section-title">데이터 레이아웃 및 액세스</block>
   <block id="f26f912146dbd8ebbf1d5a486eafdd3e" category="paragraph">GPU의 원활한 액세스와 효율적인 활용을 위해 데이터 레이아웃과 액세스가 조정되었습니다.  이는 병목 현상을 제거하고 일관된 성능을 유지하는 데 중요한 역할을 합니다.</block>
   <block id="7a37d7fa7abad6b7c1f982d285ab2c47" category="section-title">SVM 및 멀티 테넌시</block>
-  <block id="5f6ca18e64633c41b7ce8db58e842a58" category="paragraph">AFX는 AFF 및 FAS 시스템에서 사용 가능한 SVM 모델을 기반으로 하는 테넌트 모델을 제공합니다.  AFX 테넌트 모델은 간소화된 관리를 위해 간소화되었습니다.</block>
   <block id="789523490b5432d306149df5c01d2946" category="section-title">AFX 클러스터 배포</block>
-  <block id="7f118dd9288c3fe39cf47e1f8c466b6e" category="paragraph">다음 그림은 일반적인 AFX 클러스터 배포를 보여줍니다.  컨트롤러 노드는 저장 선반에서 분리되어 공유 네트워크를 통해 연결됩니다.</block>
   <block id="54dc0ff6a5d6a080c896de05ec31762c" category="inline-image-macro">AFX 클러스터 아키텍처</block>
   <block id="9d406ef56e35fceeceb777198c3bf02c" category="paragraph"><block ref="9d406ef56e35fceeceb777198c3bf02c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="146bce7e5064a390cf7d24e569ded6b6" category="list-text">스토리지와 컴퓨팅 기능 분리</block>
-  <block id="488ac6d8b0b2f8a57a54112ba3e640c5" category="list-text">AFF 및 FAS 스토리지 시스템과 달리 클러스터의 AFX 스토리지 및 컴퓨팅 요소는 분리되어 있습니다.  AFX 컨트롤러는 제한된 로컬 디스크 세트에만 액세스할 수 없습니다.</block>
-  <block id="3e6ddd52fc2d6199e3bca227606a1e01" category="list-text">집계 및 RAID 관리 제거</block>
-  <block id="6746bcab662db05438ad593c8ce3db25" category="list-text">스토리지 관리자는 더 이상 집계 및 RAID 그룹을 관리할 필요가 없습니다.  AFX는 이러한 작업을 처리하여 관리를 간소화하고 비전문가도 데이터를 관리할 수 있는 기회를 제공합니다.</block>
   <block id="da5d30cbf87a14e17de4115fc37e0f37" category="list-text">클러스터를 위한 단일 스토리지 풀</block>
-  <block id="aea305bce3a1dfab3f4b85842e812dc4" category="list-text">AFX 컴퓨팅과 스토리지를 분리하고 스토리지 관리를 간소화하면 단일 스토리지 풀이 생성됩니다.  이 스토리지 가용성 영역(SAZ)은 AFX 클러스터의 모든 컨트롤러 노드에서 사용할 수 있습니다. 보다<block ref="7605095791d77a2a1e3fa2bb7965cf64" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
   <block id="f07bcd2df9fddb686c563d2c1be9a9ab" category="list-text">고성능</block>
-  <block id="13a40123f8b31b169fc2edd20f3c4842" category="list-text">AFX는 특수 AI/ML 애플리케이션에 필요한 고성능을 위해 제작되었습니다.  최신 하드웨어를 보다 효율적으로 활용하여 매우 낮은 지연 시간과 높고 지속적인 대역폭을 제공할 수 있습니다.</block>
-  <block id="a0eb69a0317da37cc67f0894aa50b023" category="list-text">운영의 단순성</block>
-  <block id="eb4ceb32a48f8a193f7ade2f4c27c70a" category="list-text">단일 스토리지 풀은 자동 스토리지 관리를 포함한 다른 기능과 함께 훨씬 더 간단한 관리 및 운영 모델을 제공합니다.</block>
-  <block id="2d215ebfc0280f8163d071454ec7ce01" category="list-text">확장성</block>
-  <block id="d873ab9d45206d09cab7051400112531" category="list-text">클러스터 내의 컨트롤러 노드와 스토리지 선반 세트는 애플리케이션 요구 사항에 따라 독립적으로 확장될 수 있습니다.  컨트롤러나 선반을 추가할 때는 관리 요구 사항과 중단이 제한적입니다.</block>
-  <block id="a28e19685ed26ba7cb421f419ad1ccd3" category="list-text">향상된 데이터 이동성</block>
-  <block id="cbddb588d113a3d7c3587214ed253bda" category="list-text">실제로 데이터를 복사하지 않고도 볼륨을 클러스터 컨트롤러 노드 간에 중단 없이 이동할 수 있습니다.  대신 메타데이터 디렉토리와 인덱스 포인터가 업데이트됩니다.  이를 통해 일반적인 관리 절차의 성능은 물론, 장애 발생 시 복구 성능도 크게 향상됩니다.</block>
   <block id="6c0cd4de34dd2ec788634d8318964a80" category="summary">컨트롤러 노드를 네트워크, 스위치, 스토리지 선반에 케이블로 연결하는 방법을 알아보세요.</block>
   <block id="adfec3799d67c625e4ec00b0811cd65d" category="doc">AFX 1K 스토리지 시스템에 지원되는 구성</block>
   <block id="9f6b3b511e97827d6204aae870f4b619" category="paragraph">적절한 시스템 설정에 필요한 호환 가능한 스토리지 디스크 선반, 스위치 및 케이블 유형을 비롯하여 AFX 1K 스토리지 시스템에 지원되는 하드웨어 구성 요소와 케이블 옵션에 대해 알아보세요.</block>
@@ -1641,18 +1611,14 @@
   <block id="9cdb0f273ab22003628192e697981917" category="paragraph-title">클러스터 스위치는 어떻게 구성되나요?</block>
   <block id="105f13233e6f74d02fd41159a532f770" category="paragraph">클러스터 네트워크 스위치는 NetApp 에서 제공하는 구성 파일을 사용하여 구성됩니다. 구성 파일의 변경은 지원되지 않습니다.</block>
   <block id="ad5b5485d7c558ed08465ac5fa9579b3" category="paragraph-title">AFX에서 볼륨 이동 작업은 AFF 나 FAS 시스템과 비교했을 때 어떻게 다르게 진행됩니까?</block>
-  <block id="c5767895814e2f8cb34c84245552ba84" category="paragraph">Unified ONTAP 특성을 실행하는 AFF 및 FAS 시스템을 사용하면 클러스터 내의 한 노드 또는 집계에서 다른 노드 또는 집계로 볼륨을 중단 없이 이전할 수 있습니다. 이 작업은 SnapMirror 기술을 사용한 백그라운드 복사 작업을 통해 수행되며, 이때 새 위치에 새로운 대상 볼륨이 생성됩니다. 볼륨 크기와 클러스터 리소스 활용도에 따라 볼륨 이동이 완료되는 데 걸리는 시간이 달라질 수 있습니다.</block>
-  <block id="604d13ebe56ee6f22f1a3cf482e9cba8" category="paragraph">최초 AFX 릴리스에서는 볼륨은 스토리지 장애 조치 시나리오에서만 이동하며, 클러스터에서 노드가 추가되거나 제거될 때만 이동합니다. 이러한 움직임은 ONTAP 통해서만 제어됩니다.</block>
   <block id="0a33bb860367c3285ff09c33b79eef88" category="list-text"><block ref="0a33bb860367c3285ff09c33b79eef88" category="inline-link-rx"></block></block>
   <block id="2042512ad460fc59bd9840e2dbf6204c" category="list-text">NFS 트렁킹</block>
-  <block id="8eac7569fe98a77b56bea69f883ebcb6" category="list-text">NFS 트렁킹은 NFS v4.1 클라이언트가 NFS 서버의 다양한 LIF에 여러 연결을 열 수 있도록 하는 기술입니다. 이를 통해 데이터 전송 속도가 향상되고 트렁킹이 가능한 클라이언트로 FlexVol 볼륨을 내보낼 때 여러 경로를 통해 복원력이 제공됩니다.</block>
   <block id="b76f98fdaf313a65cf2c6f59a3752a76" category="paragraph">트렁킹을 사용하려면 NFS에 대해 SVM을 구성해야 하며 NFSv4.1을 활성화해야 합니다. 또한 구성 변경 후에는 모든 NFSv4.x 클라이언트를 다시 마운트해야 하며, 이는 중단을 초래할 수 있습니다. NFS 트렁킹에 대한 지원 및 구성 절차는 모든 ONTAP 시스템에서 동일합니다. 자세히 알아보세요<block ref="3bbd72ecc33379409e84301ec3f716f9" category="inline-link-rx"></block></block>
   <block id="31a905eba0332220f52d70c6b0e96375" category="list-text">FSA(파일 시스템 분석)는 FlexGroup 또는 FlexVol 볼륨 내의 파일 사용 및 스토리지 용량 추세에 대한 실시간 가시성을 제공하는 ONTAP 기능입니다. 스토리지 활용도와 최적화 기회에 대한 통찰력을 제공함으로써 외부 도구의 필요성을 없애줍니다. FSA는 SVM, 볼륨, 디렉토리, 파일 수준을 포함하여 볼륨의 파일 시스템 계층의 다양한 수준에 대한 자세한 보기를 제공합니다.</block>
   <block id="5daeb7d02f0c8f2c5f519d60becbcc5d" category="section-title">AFF 또는 FAS 시스템에서 데이터 마이그레이션</block>
   <block id="dce8a1fa8e4a094ef871a7103f3f1f14" category="paragraph">다음 기술을 사용하면 Unified ONTAP 개성을 실행하는 AFF 또는 FAS 시스템에서 AFX로의 완전히 통합된 마이그레이션 경로를 사용할 수 있습니다.</block>
   <block id="d1d87d5c226a16c3537cdaf52219e6f9" category="paragraph">또한 FlexCache 볼륨은 AFX와 AFF 또는 FAS 시스템 사이에 양방향으로 연결될 수 있습니다.</block>
   <block id="a7ac1d2e69b9bbb9a2accb2ec30a1d69" category="inline-link">엑스피</block>
-  <block id="a1ffadf93063cf27ac6a6513b066437f" category="paragraph">ONTAP 아닌 시스템에서의 데이터 마이그레이션은 파일 수준 복사 작업을 사용하여 수행할 수 있습니다. 다음과 같은 빠른 복사 유틸리티<block ref="2e068de43ed51d2c33a896a672bd332b" category="inline-link-rx"></block> RoboCopy(SMB용) 및 rsync(NFS용)와 같은 표준 유틸리티는 물론 DataDobi와 같은 타사 도구도 사용할 수 있습니다.</block>
   <block id="d04306e92cf7956801c3a9ab37e4dd4b" category="paragraph">소스 데이터 볼륨에 LUN이나 NVMe 네임스페이스가 포함되어 있지 않으면 AFF 또는 FAS 시스템에서 AFX로 데이터를 복제할 수 있습니다. AFX에서 AFF 또는 FAS 시스템으로 복제할 때, AFF 또는 FAS 시스템에 지원되는 최소 ONTAP 버전은 9.16.1입니다. 이는 고급 용량 분산을 지원하는 최초의 ONTAP 릴리스입니다.</block>
   <block id="03c39d763ca15978d9ef16c2ba5fe98a" category="inline-link">데이터 보호 및 재해 복구</block>
   <block id="9e873281484e8b5b9a062501ed2ec409" category="admonition">AFF 및 FAS 시스템에서 사용 가능한 많은 개념 및 관리 절차가 AFX 스토리지 시스템과 동일하므로 Unified ONTAP 설명서를 검토하십시오.<block ref="dbe2ffaa0f590f79d1f22685959df345" category="inline-link-rx"></block> 도움이 될 수 있습니다.</block>
@@ -1684,8 +1650,6 @@
   <block id="4c2e600ea7c53e0c32af10f2e4850cd6" category="paragraph-title">AFX 스토리지 시스템의 백엔드 클러스터 네트워크에서 모든 유형의 스위치를 사용할 수 있나요?</block>
   <block id="42ed7ea439950fed1039106f87d3419f" category="admonition">AFX 설명서에는 ONTAP 특성에 관계없이 동일하게 동작하는 기능에 대한 자세한 내용을 제공하는 Unified ONTAP 문서 사이트의 다양한 항목에 대한 링크가 포함되어 있습니다.  추가 콘텐츠는 AFX 스토리지 시스템을 관리할 때 도움이 될 수 있는 보다 자세한 내용을 제공합니다.</block>
   <block id="765b47efc6becfafc2dfb93543aab395" category="list-text">고급 용량 균형 기능은 다음을 사용하여 제어됩니다.<block ref="7617fb157efcfcd230d531be7d153280" prefix=" " category="inline-code"></block> CLI 매개변수는 모든 FlexGroup 볼륨에 대해 기본적으로 활성화됩니다.</block>
-  <block id="80fdcbf5318cc8c8b782fe1e7d993261" category="list-text">FlexGroup 볼륨은 Unified ONTAP 9.16.1 이상에만 복제할 수 있습니다.</block>
-  <block id="1803226ae8ecf68b259a8b81dd429f18" category="paragraph">NetApp AFX 스토리지 시스템은 AI/ML 환경과 기타 관련 데이터 중심 애플리케이션의 고유한 요구 사항을 충족합니다. AFX 스토리지 시스템은 다음을 포함하여 다양한 작업 부하를 관리하는 조직에 이상적입니다.</block>
   <block id="5da4db9a83f67785c558d8ef8930983d" category="section-title">시스템 설계 특성</block>
   <block id="662e223dde993ac9a5f94e9df73c6020" category="paragraph">AFX 시스템은 고성능 NAS 플랫폼으로 작동할 수 있도록 하는 여러 가지 설계 특성을 갖추고 있습니다.</block>
   <block id="1a305bb61d773e7c7f5ad044dfc05c1d" category="list-text">SVM의 유형</block>
@@ -1694,7 +1658,6 @@
   <block id="e8bc1a75864c7a9374e67c0bd33006ce" category="list-text">각 SVM에는 전용 네트워크 인터페이스 세트가 있습니다. 예를 들어, 관리 및 클라이언트 액세스를 위해 SVM에 별도의 LIF가 할당됩니다.</block>
   <block id="809ced36d61a966c3c67e773781e8212" category="list-text">클러스터 관리자는 모든 SVM을 포함하여 AFX 클러스터를 완벽하게 제어할 수 있습니다. AFX 클러스터 관리 수준에는 클러스터 관리자가 수행할 수 있는 작업만 포함되고 SVM 관련 관리 작업은 포함되지 않습니다. 보다<block ref="b7c6f4e89f282d3743609571d8ac253f" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
   <block id="1d82ecf6b3e30f8f3261b09fc7460cc8" category="list-text">SVM 관리자 역할은 특정 SVM을 제어하므로 클러스터 관리자에 비해 제한이 더 많습니다. SVM 관리에는 볼륨 생성과 같이 SVM 범위가 있는 개체와 리소스에 대한 작업을 수행하는 것이 포함됩니다. 보다<block ref="ebfee1a77bcca45a20260db66aedfa55" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
-  <block id="e7cc598931ecb05f201eccb80edc35c0" category="paragraph">AFX 클러스터의 기능을 확인하려면 NetApp Hardware Universe 및 상호 운용성 매트릭스 도구에서 제공하는 정보를 검토해야 합니다.</block>
   <block id="0471cd90a0f200d2ea4dc6668e82834e" category="section-title">SVM 생성 및 사용을 위한 빠른 시작</block>
   <block id="5874dae1e3f2cc499f13dd22399c0cdc" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>사용 가능한 SVM 표시</block>
   <block id="928443d797f5bfbe15e0c62ea304137b" category="paragraph"><block ref="fc233a35ea84021cc2134d6c4801b6e5" category="inline-link-macro-rx"></block>SVM 목록을 보고 사용할 수 있는 것이 있는지 확인하세요.</block>
@@ -1720,4 +1683,61 @@
   <block id="937992c5285f166aa01c3633fc6cb85b" category="list-text">AFX 스토리지 시스템은 NetApp MetroCluster 지원하지 않습니다.  이로 인해 SVM을 마이그레이션할 때 제한이 발생합니다.  MetroCluster 사용하도록 구성된 AFF 또는 FAS 시스템(또는 Unified ONTAP 개성을 실행하는 NetApp 시스템)으로 AFX SVM을 마이그레이션하거나 이러한 시스템에서 AFX SVM을 마이그레이션할 수 없습니다.  이러한 마이그레이션 시나리오는 지원되지 않지만 AFX 사전 검사에서 명시적으로 차단되지 않으므로 시도하지 않도록 주의해야 합니다.</block>
   <block id="372a3016fd08d93f2bfe7c10abae9936" category="list-text"><block ref="372a3016fd08d93f2bfe7c10abae9936" category="inline-link-macro-rx"></block></block>
   <block id="f090951c6f34b76fa7499153d4fd51be" category="sidebar">하드웨어 유지 관리</block>
+  <block id="e54c3f54834f8c71fc8b62702e6e49d6" category="paragraph-title">AFX 클러스터에서 데이터는 어떻게 할당되나요?</block>
+  <block id="8d32ce02a0e3a054354be2b6938e411d" category="paragraph">데이터가 할당되면 SAZ의 모든 디스크에 배치될 수 있습니다.  데이터를 한 번 배치하면 더 이상 옮길 필요가 없습니다.  볼륨은 기본 데이터를 기반으로 생성되어 특정 노드에 할당됩니다.  볼륨은 일반적으로 밸런싱 프로세스의 일부로 AFX에 의해 이동될 수 있습니다.  이는 어느 노드의 NVRAM 쓰기 작업을 디스크에 커밋하는지에 영향을 미칩니다.  볼륨을 이동하면 볼륨을 소유하는 노드가 변경되지만 데이터 자체는 그대로 유지됩니다.</block>
+  <block id="fea5bf7e0ffa785207241e1460f535ee" category="paragraph-title">AFX는 SAZ 전체의 거래량을 어떻게 관리하나요?</block>
+  <block id="c2b54597271f6f6d560cd22eb63e5a01" category="paragraph-title">AFX 클러스터의 노드에 볼륨을 어떻게 배치합니까?</block>
+  <block id="1a541551c5f705f0ffec2c7f7e7afb59" category="paragraph">NetApp AFX는 클러스터의 모든 노드에 볼륨 배치를 자동으로 균형 있게 조정합니다.  ONTAP 9.18.1부터 볼륨을 배치하거나 이동할 때 노드의 성능을 고려하도록 배치 알고리즘이 향상되었습니다.  이를 통해 AFX 클러스터의 노드 전반에서 성능 균형이 향상되고 단일 노드가 과부하될 가능성이 훨씬 줄어듭니다.  이전 AFX 릴리스에서는 클러스터의 총 볼륨 수를 기준으로 배치가 결정되었습니다.  모든 노드에는 활동에 관계없이 동일한 수의 볼륨이 할당됩니다.</block>
+  <block id="39d6c09487ae39b696712047458ae97f" category="paragraph">Unified ONTAP 특성을 실행하는 AFF 및 FAS 시스템을 사용하면 클러스터 내의 한 노드 또는 집계에서 다른 노드 또는 집계로 볼륨을 중단 없이 이전할 수 있습니다. 이 작업은 SnapMirror 기술을 사용한 백그라운드 복사 작업을 통해 수행됩니다.  대상 목적지에 새로운 대상 볼륨이 생성됩니다.  볼륨 크기와 클러스터 리소스 활용도에 따라 볼륨 이동 작업이 완료되는 데 걸리는 시간이 달라질 수 있습니다.</block>
+  <block id="411d09bf181cc2e222bccf10feaa6685" category="paragraph">AFX에는 집계가 없습니다. 모든 스토리지는 클러스터의 모든 노드가 접근할 수 있는 단일 스토리지 가용성 영역(SAZ)에 포함됩니다. 결과적으로 볼륨 이동은 실제로 데이터를 복사할 필요가 없습니다.  대신 모든 볼륨 이동은 노드 간 포인터 업데이트를 통해 수행됩니다. 이를 ZCVM(Zero Copy Volume Move)이라고 하며, 실제로 데이터가 복사되거나 이동되지 않기 때문에 즉시 발생합니다. 이는 기본적으로 SnapMirror 복사 없이 Unified ONTAP 에서 사용되는 볼륨 이동 프로세스와 동일합니다.</block>
+  <block id="268c5fd9a5edfb16a9eb083ccc6295cb" category="paragraph">최초 9.17.1 AFX 릴리스에서는 볼륨이 스토리지 장애 조치 복구 시나리오와 클러스터에서 노드가 추가되거나 제거될 때만 이동합니다. 이러한 움직임은 ONTAP 통해서만 제어됩니다.</block>
+  <block id="fb5d5611f76c91a55f531d729a96c588" category="paragraph">NetApp AFX는 고성능 NAS 및 개체 워크로드에 최적화되어 있습니다.  이 때문에 AFF 와 FAS 는 물론 다른 Unified ONTAP 스토리지 시스템에도 차이점이 있습니다.  다음 기능은 NetApp AFX에서 사용할 수 없습니다. 목록은 주요 기능 또는 기능 영역별로 구성되어 있습니다.  AFX에 대한 업데이트 및 변경 사항도 검토해야 합니다.<block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block> 귀하의 석방을 기준으로 합니다.</block>
+  <block id="2e3bb6088dc4e4a9fd41f59e608d064e" category="section-title">블록 및 SAN</block>
+  <block id="1e6026bdcb8941485ad6d5451708325a" category="list-text">LUN 및 NVMe 네임스페이스</block>
+  <block id="7921b04e636fb6fa93137406e2d5d5f5" category="list-text">볼륨의 두꺼운 프로비저닝</block>
+  <block id="1ff27fa0db5e6762419b83eb195369cb" category="section-title">집계 및 물리적 저장소</block>
+  <block id="9349adf882814a54316e0374c470dc4f" category="list-text">물리적 노드 소유 집계</block>
+  <block id="47f64097ec44c9f18f4025941f2e4436" category="list-text">FabricPool 계층화</block>
+  <block id="9f230f2388eaca64e976d4426cb28829" category="section-title">데이터 복제(SnapMirror)</block>
+  <block id="d76efe2dcc04a87cf2807d9ac97ca877" category="inline-link">SnapMirror 관계에 대한 호환 ONTAP 버전</block>
+  <block id="b6af26e669bc576925c6e70d3998ef10" category="admonition">Unified ONTAP 과 AFX 간의 모든 데이터 복제는 동일한 버전 제한 사항을 사용하여 양방향으로 지원됩니다.<block ref="c81211c3848bebb897a62ef728e17034" category="inline-link-rx"></block> (몇 가지 사소한 예외가 있음).</block>
+  <block id="9102a23d21c093d0022a6fb5b8246278" category="list-text">LUN 또는 NVMe 네임스페이스를 포함하는 AFF 또는 FAS 시스템에서 볼륨 복제가 없습니다.</block>
+  <block id="76d95595cf37824064f04931bb34b692" category="list-text">FlexGroup 볼륨은 고급 용량 밸런싱이 필요하기 때문에 AFX에서 Unified ONTAP 버전 9.16.1 이상으로만 복제할 수 있습니다.</block>
+  <block id="b7c94ef25c0629a65f8a1f6ce7014d95" category="section-title">관리 용이성</block>
+  <block id="a701ac944f045a1319dfa2aefa340a51" category="list-text">지원되지 않는 기능(예: MetroCluster)에 대한 REST API</block>
+  <block id="79c2b38f38c51ccecb846e7b61411345" category="list-text">성능 통계를 위한 REST API의 몇 가지 초기 제한 사항</block>
+  <block id="53c74ff394516eb726fa498958baa748" category="list-text">AIQ Unified Manager 지원</block>
+  <block id="9778559854e477e3145f111560df12c2" category="list-text">Grafana Harvest 버전 25.08.1 이상</block>
+  <block id="2d13ab42fbf58a40e728ee212f01218c" category="list-text">NetApp Trident 버전 25.10 이상</block>
+  <block id="ccb648feabbcf21905f5b3e3b6da2bfe" category="list-text">집계 표시에 이제 전체 스토리지 가용성 영역(SAZ)이 표시됩니다.</block>
+  <block id="853b2544b8e3ce0ee8744c82e99c89a0" category="paragraph">NetApp AFX 스토리지 시스템은 높은 성능과 독립적인 확장성을 요구하는 NAS 및 S3 개체 워크로드의 고유한 요구 사항을 충족합니다.  이러한 애플리케이션은 높은 동시성과 병렬 I/O를 기반으로 구축된 고급 디자인의 이점을 누리고 있습니다.  AFX는 다음을 포함하여 여러 유형의 애플리케이션 워크로드를 배포하고 관리하는 조직에 이상적입니다.</block>
+  <block id="25b0ede2a92c78f78da91d95666bf71d" category="list-text">다른 NetApp ONTAP 스토리지 시스템과 달리 AFX 클러스터의 컴퓨팅 및 스토리지 요소는 분리되어 있으며 스위치드 네트워크를 통해 결합되어 있습니다.  디스크 소유권이 더 이상 특정 노드에 구속되지 않아 여러 가지 이점이 있습니다.  예를 들어, AFX 클러스터의 컴퓨팅 및 스토리지 구성 요소는 독립적으로 확장될 수 있습니다.</block>
+  <block id="43d8f973e2fb177a81c60f7548038901" category="list-text">자동화된 스토리지 관리</block>
+  <block id="2e18b9556df6cd162435d73dfce9ad5a" category="list-text">AFX 스토리지 관리자는 더 이상 물리적 집계를 사용할 수 없습니다.  대신 AFX는 클러스터에 새로운 스토리지 선반이 추가되면 노드에 대한 가상 용량 할당과 RAID 그룹 구성을 자동으로 관리합니다.  이러한 설계는 관리를 간소화하고 비전문가에게도 데이터를 관리할 수 있는 기회를 제공합니다.</block>
+  <block id="46344363890c22d91f2ef4fed08f5266" category="list-text">스토리지 노드와 쉘프는 NetApp AFX와 분리되어 있으므로 클러스터의 모든 스토리지 용량은 SAZ(스토리지 가용성 영역)라는 단일 풀에 수집됩니다.  SAZ의 디스크와 셸프는 AFX 클러스터의 모든 스토리지 노드에서 읽기 및 쓰기 작업을 위해 사용할 수 있습니다.  또한, 모든 클러스터 노드는 장애 발생 시 디스크 재구축에 참여할 수 있습니다. 참조하다<block ref="7605095791d77a2a1e3fa2bb7965cf64" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
+  <block id="7bb6b245106e76057e98a7c54e7f002c" category="list-text">NetApp AFX는 매우 낮은 지연 시간과 높고 지속적인 대역폭을 제공하므로 고성능 NAS 및 개체 작업 부하에 맞게 설계되었습니다.  AFX는 고유한 아키텍처를 통해 디스크에 대한 노드의 높은 비율을 처리할 수 있는 최신 하드웨어와 스토리지 선반을 사용합니다.  일반적인 1:1(노드:셸프) 비율을 넘어 스토리지 노드를 확장하면 디스크의 에지 한계까지 가능한 성능 프로필이 극대화됩니다.  이 디자인은 가장 중요한 애플리케이션에 효율성과 저장 밀도를 제공합니다.</block>
+  <block id="a4f642d12bd74981e73ac7d7d10741f6" category="list-text">독립적이고 대규모</block>
+  <block id="2fcd66ecd08442fdef6c928acebb950b" category="list-text">분리된 스토리지 노드와 셸프를 기반으로 AFX 클러스터는 애플리케이션 요구 사항에 따라 독립적이고 중단 없이 확장될 수 있습니다.  CPU와 처리량을 늘리려면 스토리지 노드를 추가하고, 스토리지 용량과 디스크 성능을 늘리려면 쉘프를 추가할 수 있습니다.  NetApp AFX 아키텍처는 클러스터의 최대 크기에 대한 새로운 가능성을 제공합니다.  ONTAP 릴리스를 기반으로 한 AFX 클러스터의 최신 제한 사항은 NetApp Hardware Universe 참조하세요.</block>
+  <block id="2f7fb5bdcacb24913e25f8e91356a001" category="list-text">제로 복사 데이터 이동성</block>
+  <block id="b5d790ac6b0ca829027c20b5f2b59328" category="list-text">NAS 및 개체 클라이언트는 ONTAP 클러스터의 볼륨에 액세스합니다.  중단 없이 노드 전체에 볼륨을 재배치하여 용량 및 성능 균형 목표를 달성할 수 있습니다.  Unified ONTAP 사용하면 SnapMirror 기술을 사용하여 볼륨을 이동하는데, 이 과정에서 시간이 걸리고 임시 용량이 추가로 필요할 수 있습니다.  하지만 AFX를 사용하면 공유 스토리지 가용성 영역(SAZ) 내에서 데이터 복사 작업이 더 이상 필요하지 않습니다.  대신 볼륨 메타데이터만 이동하므로 성능이 크게 향상됩니다. 참조하다<block ref="7605095791d77a2a1e3fa2bb7965cf64" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
+  <block id="716320dfdc9aa6d8963d789930acc129" category="list-text">향상된 HA 기능</block>
+  <block id="48006463a92b587d00f84e474456a88b" category="list-text">NetApp AFX는 고가용성(HA) 구성 및 처리를 위한 다양한 개선 사항을 제공합니다.  AFX를 사용하면 HA 파트너 노드를 직접 연결할 필요가 없으며 대신 HA 쌍이 내부 클러스터 네트워크를 통해 통신할 수 있습니다.  이 설계는 관리자에게 데이터 센터의 별도 랙이나 행에 HA 쌍을 배포하여 장애 허용성을 강화하는 옵션을 제공합니다.  또한 AFX의 제로 복사 모빌리티는 HA 장애 조치 시나리오까지 확장됩니다.  노드에 장애가 발생하면 해당 볼륨은 HA 파트너로 장애 조치되어 남아 있는 모든 쓰기 작업을 디스크에 커밋합니다.  그런 다음 ONTAP 클러스터의 모든 남은 노드에 볼륨을 균등하게 분산합니다.  즉, 데이터 배치를 처음 설계할 때 스토리지 장애 조치 성능을 더 이상 고려할 필요가 없습니다.</block>
+  <block id="108832fd85d9c44525525e7110199351" category="admonition">당신은 검토해야합니다<block ref="7605095791d77a2a1e3fa2bb7965cf64" category="inline-link-macro-rx"></block> 하드웨어 상호 운용성 및 업그레이드 옵션에 대한 자세한 내용은 여기를 참조하세요.</block>
+  <block id="f267a68fd1c8bddcc992701898021398" category="list-text">클러스터 스위치</block>
+  <block id="ca072ee7c94ac8b1c4168b4f9659440c" category="list-text">클러스터 스토리지 네트워크에는 최소 두 개의 스위치가 필요합니다.  허용되는 최대값은 클러스터의 컨트롤러 노드 총 수에 따라 결정됩니다.</block>
+  <block id="5551ba28b2361e1cad3f6c601b809eb8" category="paragraph">AFX 클러스터의 기능을 확인하려면 NetApp Hardware Universe 및 상호 운용성 매트릭스 도구에서 제공되는 세부 정보를 검토해야 합니다.</block>
+  <block id="f0fbe990f7dbf23c23155fb4992afadd" category="paragraph">스토리지 가용성 영역(SAZ)은 클러스터 전체의 공통 스토리지 풀입니다. 이는 모든 컨트롤러 노드가 읽고 쓸 수 있는 액세스 권한을 가진 저장 선반에 있는 디스크 모음입니다.  SAZ는 노드에서 사용할 수 있는 저장 선반에 대한 고정된 제한이 없는 프로비저닝 모델을 제공합니다. 노드 전체에 걸친 볼륨 배치는 ONTAP 에서 자동으로 처리됩니다. 고객은 전체 AFX 클러스터의 속성으로 여유 공간과 저장 공간 사용량을 볼 수 있습니다.</block>
+  <block id="6276d3038553af5a3d64d410c1e6d661" category="paragraph">FlexVolumes, FlexGroups 및 S3 버킷은 클라이언트 액세스 프로토콜을 기반으로 AFX 관리자에게 노출되는 _데이터 컨테이너_입니다. Unified ONTAP 과 동일하게 작동합니다.  이러한 확장 가능한 컨테이너는 데이터 배치 및 용량 균형 조정과 같은 복잡한 내부 저장소 세부 정보를 추상화하도록 설계되었습니다.</block>
+  <block id="637decf5bf324423d7de9f02cca6a31e" category="paragraph">AFX는 AFF 및 FAS 시스템에서 사용 가능한 SVM 모델을 기반으로 하는 테넌트 모델을 제공합니다. AFX 테넌트 모델은 Unified ONTAP 과 동일하지만 NAS 및 S3 개체 환경에서 관리를 간소화하기 위해 간소화되었습니다.  예를 들어, SAN에 대한 구성 옵션과 집계 및 RAID 그룹이 제거되었습니다.</block>
+  <block id="ff6c2b95a7fa386685bbbbe0d3ca5899" category="paragraph">다음 그림은 일반적인 AFX 클러스터 배포를 보여줍니다. AFX 클러스터에는 스토리지 선반에서 분리되어 공유 내부 네트워크를 통해 연결된 컨트롤러 노드가 포함됩니다.  AFX 클러스터 경계 외부에서 클라이언트는 별도의 클라이언트 네트워크를 통해 클러스터에 액세스합니다.</block>
+  <block id="56e8bf99f72e4387c99a20eec48f6e38" category="list-text">NFS 세션 트렁킹</block>
+  <block id="8dbdf6aef2a6207f9a2325908b0086b9" category="list-text">NFS 트렁킹은 NFS v4.1 클라이언트가 NFS 서버의 다양한 LIF에 여러 연결을 열 수 있도록 하는 기술입니다. 이를 통해 데이터 전송 속도가 향상되고 트렁킹이 가능한 클라이언트에 볼륨을 내보낼 때 여러 경로를 통해 복원력이 제공됩니다.  트렁크에 참여하려면 LIF가 동일한 노드에 있어야 합니다.</block>
+  <block id="6fe4264e25ab7d4538e3cd8b851adfcf" category="inline-link">복사 및 동기화</block>
+  <block id="78629379d17a65d519f7cf960a03b47b" category="paragraph">ONTAP 아닌 시스템에서의 데이터 마이그레이션은 파일 수준 복사 작업을 사용하여 수행할 수 있습니다. 다음과 같은 빠른 복사 유틸리티<block ref="2e068de43ed51d2c33a896a672bd332b" category="inline-link-rx"></block> 또는<block ref="0f8d02f34458f370fc0c271006069c90" category="inline-link-rx"></block> RoboCopy(SMB용) 및 rsync(NFS용)와 같은 표준 유틸리티는 물론 DataDobi와 같은 타사 도구도 사용할 수 있습니다.</block>
+  <block id="c5066f5f4ccd7899dcc6874e15fde3d5" category="summary">AFX 스토리지 시스템에서 사용할 수 있는 ONTAP 9.18.1의 새로운 기능에 대해 알아보세요.</block>
+  <block id="d8d3367441e4d16afdbbbb9a3e68ea0a" category="doc">AFX 스토리지 시스템용 ONTAP 9.18.1의 새로운 기능</block>
+  <block id="79be8b53f2b2857aa5fc647e13086c0a" category="section-title">스토리지 리소스 관리 향상</block>
+  <block id="5c9caa41b457294382a8eb7e1cef25e5" category="cell">향상된 볼륨 배치</block>
+  <block id="bd6a1d603e00e7749c4356b336d60ddb" category="paragraph">NetApp AFX는 클러스터의 모든 노드에 볼륨 배치를 자동으로 균형 있게 조정합니다.  이전 ONTAP 릴리스에서는 배치 알고리즘이 클러스터의 볼륨 수를 기반으로 했습니다.  모든 노드에는 활동에 관계없이 동일한 수의 볼륨이 할당됩니다.  ONTAP 9.18.1부터 볼륨을 배치하거나 이동할 때 노드의 성능을 고려하도록 알고리즘이 향상되었습니다.  이를 통해 AFX 클러스터의 노드 전반에서 성능 균형이 향상되고 단일 노드가 과부하될 가능성이 훨씬 줄어듭니다.</block>
+  <block id="d529398546b94e10169c1e6f6f8aed12" category="sidebar">ONTAP 9.18.1의 새로운 기능</block>
 </blocks>
