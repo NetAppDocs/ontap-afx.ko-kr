@@ -1742,4 +1742,7 @@
   <block id="5fc4cd787cd9359f05ffec407ae5a910" category="list-text">e7a(클러스터)</block>
   <block id="86b2625bfd2ba28e4a629382f2ebe2cf" category="list-text">e1b(HA)</block>
   <block id="245f02c7386817b111d049fbb0a850bf" category="list-text">e7b(클러스터)</block>
+  <block id="e32cffee371df018e91cf4e0e060f3d8" category="admonition">AFF 및 FAS 시스템에서 사용할 수 있는 개념과 관리 절차 중 상당수가 AFX 스토리지 시스템에서도 동일하므로 Unified ONTAP 설명서를 검토하는 것이 도움이 될 수 있습니다. 링크를 참조하세요 <block ref="c31eb1064832aa01316b6b2a27c0e82b" category="inline-xref-macro-rx"></block> 자세한 내용은.</block>
+  <block id="2b9e4f1d12477d7c60c4bdda5204b441" category="inline-link">ONTAP 파일 시스템 분석에 대해 알아보세요</block>
+  <block id="9f1fbf578c51e2bec88398ab0ce2b672" category="list-text"><block ref="9f1fbf578c51e2bec88398ab0ce2b672" category="inline-link-rx"></block></block>
 </blocks>
