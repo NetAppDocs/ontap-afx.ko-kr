@@ -62,7 +62,6 @@
   <block id="b9476488ba06770e5c543d441ead26ab" category="paragraph">볼륨 수준에서 파일을 WORM(Write Once Read Many) 상태로 변환하여 파일을 보호할 수 있습니다.  SnapLock 두 가지 모드를 지원합니다.  규정 준수 모드는 정부 또는 업계별 요구 사항을 충족하는 보존 기간이 만료될 때까지 파일을 삭제할 수 없도록 보장합니다.  엔터프라이즈 모드에서는 권한이 있는 사용자가 보존 기간이 만료되기 전에 파일을 삭제할 수 있습니다. 참조하다<block ref="961426c728ee82adbe3a73025990fea9" category="inline-link-rx"></block> 자세한 내용은.</block>
   <block id="d4ebca245013c8e11a21200cf7abd53f" category="section-title">ONTAP 이벤트 및 성능 모니터링</block>
   <block id="c19e19aadc6d75262a0f85886dc5deb3" category="inline-link">이벤트, 성능 및 상태 모니터링</block>
-  <block id="f374f4f413ce58f29a5db8436a4f29ad" category="paragraph">클러스터의 상태와 성능을 모니터링할 수 있습니다.  여기에는 이벤트에 대한 알림 설정과 시스템 상태 알림에 대한 알림 관리가 포함됩니다.  참조하다<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block> 더 많은 정보를 원하시면</block>
   <block id="e5037510086003d93a3daf34030bf4c4" category="inline-link-macro">AFX 클러스터에 대한 추가 관리</block>
   <block id="cba9c10f96b3122132057453ba39d735" category="list-text"><block ref="cba9c10f96b3122132057453ba39d735" category="inline-link-macro-rx"></block></block>
   <block id="cca25dd2421f27456e2c8857f143bcc2" category="doc">AFX 스토리지 시스템 SVM 구성</block>
@@ -1745,4 +1744,8 @@
   <block id="e32cffee371df018e91cf4e0e060f3d8" category="admonition">AFF 및 FAS 시스템에서 사용할 수 있는 개념과 관리 절차 중 상당수가 AFX 스토리지 시스템에서도 동일하므로 Unified ONTAP 설명서를 검토하는 것이 도움이 될 수 있습니다. 링크를 참조하세요 <block ref="c31eb1064832aa01316b6b2a27c0e82b" category="inline-xref-macro-rx"></block> 자세한 내용은.</block>
   <block id="2b9e4f1d12477d7c60c4bdda5204b441" category="inline-link">ONTAP 파일 시스템 분석에 대해 알아보세요</block>
   <block id="9f1fbf578c51e2bec88398ab0ce2b672" category="list-text"><block ref="9f1fbf578c51e2bec88398ab0ce2b672" category="inline-link-rx"></block></block>
+  <block id="1a0f4bec43cf474af35c9e77aa8c28af" category="section-title">정책</block>
+  <block id="4793cb6d96d5d4cc5414378f2e112491" category="inline-link">ONTAP FPolicy 솔루션에 대해 알아보세요</block>
+  <block id="2eeb3252b3af5fe61779a84830d2e434" category="paragraph">FPolicy는 스토리지 가상 머신(SVM)에서 파일 액세스 이벤트를 모니터링하고 관리하는 데 사용되는 파일 액세스 알림 프레임워크입니다.  FPolicy를 사용하면 정의한 기준에 따라 모니터링할 파일 작업을 정의하고, 선택적으로 차단할 수 있는 정책을 만들 수 있습니다.  FPolicy는 일반적으로 보안 감사, 규정 준수 및 데이터 거버넌스에 사용됩니다. 참조하다<block ref="ebf1bc585900d5a5c7e4dd72e223b4f2" category="inline-link-rx"></block> 자세한 내용은.</block>
+  <block id="148f6424d726591d91b9421c2ce15592" category="paragraph">클러스터의 상태와 성능을 모니터링할 수 있습니다. 여기에는 이벤트에 대한 알림 설정과 시스템 상태 알림에 대한 알림 관리가 포함됩니다. 참조하다<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block> 자세한 내용은.</block>
 </blocks>
