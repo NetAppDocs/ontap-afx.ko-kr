@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: secure-data/secure-ip-connections.html 
+keywords: netapp afx, afx, ip security, ipsec, secure data, data security, encryption, data-in-flight, secure connections, hardware offload 
+summary: 'IP 보안(IPsec)은 IP 수준에서 네트워크 엔드포인트 간 트래픽 흐름에 대한 데이터 암호화, 무결성 및 인증을 제공하는 인터넷 프로토콜 표준입니다.  IPsec을 사용하면 AFX 클러스터와 클라이언트 간의 프런트엔드 네트워크 보안을 강화할 수 있습니다.' 
+---
+= AFX 스토리지 시스템의 보안 IP 연결
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IP 보안(IPsec)은 IP 수준에서 네트워크 엔드포인트 간 트래픽 흐름에 대한 데이터 암호화, 무결성 및 인증을 제공하는 인터넷 프로토콜 표준입니다.  IPsec을 사용하면 AFX 클러스터와 클라이언트 간의 프런트엔드 네트워크 보안을 강화할 수 있습니다.
+
+
+
+== AFX 시스템에서 IPsec 구성
+
+AFX 스토리지 시스템의 IPsec 구성 절차는 하드웨어 오프로드 기능과 함께 사용되는 지원되는 네트워크 인터페이스 컨트롤러(NIC) 카드를 제외하고는 AFF 및 FAS 시스템과 동일합니다. 참조하다 https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["ONTAP 네트워크에 대한 IP 보안 구성을 준비합니다."^] 자세한 내용은.
+
+
+
+== 하드웨어 오프로드 기능
+
+암호화 및 무결성 검사와 같은 여러 IPsec 암호화 작업은 AFX 시스템에서 지원되는 NIC 카드로 오프로드할 수 있습니다.  이를 통해 IPsec으로 보호되는 네트워크 트래픽의 성능과 처리량이 크게 향상될 수 있습니다.
+
+
+NOTE: ONTAP 9.18.1부터 IPsec 하드웨어 오프로드 기능이 확장되어 IPv6 트래픽을 지원합니다.
+
+다음 NIC 카드는 ONTAP 9.17.1부터 AFX 스토리지 시스템의 IPsec 하드웨어 오프로드 기능에 지원됩니다.
+
+* X50130B(2p, 40G/100G 이더넷 컨트롤러)
+* X50131B(2p, 40G/100G/200G/400G 이더넷 컨트롤러)
+
+
+를 참조하세요 https://hwu.netapp.com/["NetApp Hardware Universe"^] AFX 시스템에서 실행되는 ONTAP 릴리스에 지원되는 카드에 대한 자세한 내용은 다음을 참조하세요.
+
+
+
+== 관련 정보
+
+* https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["ONTAP 네트워크에 대한 IP 보안 구성을 준비합니다."^]
+* https://hwu.netapp.com/["NetApp Hardware Universe"^]
+
