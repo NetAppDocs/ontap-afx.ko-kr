@@ -1766,4 +1766,10 @@
   <block id="9b3ab302175091da61fb00078bbdf676" category="paragraph">를 참조하세요<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> AFX 시스템에서 실행되는 ONTAP 릴리스에 지원되는 카드에 대한 자세한 내용은 다음을 참조하세요.</block>
   <block id="d41e75fa1b06d9a7c925a3f985c520e5" category="list-text"><block ref="d41e75fa1b06d9a7c925a3f985c520e5" category="inline-link-rx"></block></block>
   <block id="0a0e33e3bee1123a43e4178aad30ed45" category="sidebar">보안 IP 연결</block>
+  <block id="70aaaf8a9f143b7a315bba12766865d7" category="summary">ONTAP 클러스터를 되돌리는 것은 모든 노드를 이전 주요 ONTAP 릴리스로 이동하는 프로세스입니다.</block>
+  <block id="ae002bc4aaa91da5f0456bd41f4ec74f" category="doc">ONTAP 되돌리기는 AFX 스토리지 시스템에서 지원되지 않습니다.</block>
+  <block id="25a89c0d2271ffea21d078f4e6d93fd2" category="paragraph">NetApp AFX 스토리지 시스템은 ONTAP 되돌리기를 지원하지 않습니다. AFX로 되돌리기 작업을 시도하면 클러스터 불안정성과 데이터 손실이 발생할 수 있습니다. AFX 시스템에서는 되돌리기 작업을 시도해서는 안 됩니다.</block>
+  <block id="b34a4582eb04bf97b29749b7a8e1ee38" category="inline-link-macro">ONTAP 되돌리기</block>
+  <block id="dbca7577f0796430f28fd2f1f5805bc9" category="admonition">AFX 스토리지 시스템은 지원하지 않습니다 <block ref="af98218b92f959dac30e2de6f742409f" category="inline-link-macro-rx"></block> 운영.</block>
+  <block id="0f3715b1b8b72110fa162f2666d15f10" category="sidebar">제한 사항 되돌리기</block>
 </blocks>

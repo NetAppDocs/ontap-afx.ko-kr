@@ -27,6 +27,8 @@ indexpage:
       url: "/administer/display-svms.html"
     - title: 클러스터 업그레이드 및 유지 관리
       url: "/administer/expand-cluster.html"
+    - title: 제한 사항 되돌리기
+      url: "/administer/revert-ontap.html"
     - title: 추가 관리
       url: "/administer/additional-ontap-cluster.html"
   - title: 데이터 관리 및 액세스

@@ -50,5 +50,7 @@ entries:
     url: "/administer/upgrade-ontap.html"
   - title: 펌웨어 업데이트
     url: "/administer/update-firmware.html"
+  - title: 제한 사항 되돌리기
+    url: "/administer/revert-ontap.html"
 - title: 추가 관리
   url: "/administer/additional-ontap-cluster.html"
