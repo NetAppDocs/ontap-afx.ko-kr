@@ -10,7 +10,7 @@ summary: 이 FAQ 목록은 고객이 AFX 스토리지 시스템에 대해 일반
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

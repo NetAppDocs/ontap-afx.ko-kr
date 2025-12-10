@@ -444,7 +444,6 @@
   <block id="c06b2149bbe3e94f6eac8a64039cc025" category="list-text">EULA를 읽어보세요.</block>
   <block id="d6aeb9cf91111f522e0f1901518a3836" category="list-text">권장 업데이트에 대한 *알림 표시*를 기본값으로 적용합니다.  선택적으로, 권장 업데이트를 *자동으로 업데이트*하거나 *자동으로 해제*하도록 선택합니다.</block>
   <block id="17ac6cdd9934a4f4aca00f5228a64555" category="list-text">업데이트 수정 사항이 현재 및 향후 모든 업데이트에 적용된다는 사실을 확인하려면 선택하세요.</block>
-  <block id="09190524572cf4f2b42ddf32f3f54ce7" category="paragraph">권장 업데이트는 귀하가 선택한 업데이트에 따라 OTAP AFX 시스템에 자동으로 다운로드되어 설치됩니다.</block>
   <block id="5de0adb95551ff3c1458ae6247a4959f" category="section-title">자동 업데이트 비활성화</block>
   <block id="6141cdc0ba26479d87d6b8c24af9fc18" category="paragraph">설치되기 전에 권장 업데이트를 볼 수 있는 유연성을 원하시면 자동 업데이트를 비활성화하세요.  자동 업데이트를 비활성화하면 펌웨어 및 시스템 파일을 수동으로 업데이트해야 합니다.</block>
   <block id="9c2cdad0235d8d361f21c8343ef95363" category="list-text">시스템 관리자에서 *클러스터 &gt; 설정*을 선택합니다.</block>
@@ -1409,8 +1408,6 @@
   <block id="ce587252d09bb3dfb2d53f154ba81d93" category="section-title">3단계: 복제 관계 생성</block>
   <block id="c8733c85583475859780bc7c89c97d92" category="paragraph">스냅샷 복제 관계는 AFX 시스템과 원격 위치 간의 연결을 설정하여 일관성 그룹을 원격 클러스터에 복제할 수 있도록 합니다.  복제된 일관성 그룹은 재해 복구나 데이터 마이그레이션에 사용할 수 있습니다.</block>
   <block id="c5d439ea8d2444de271a6842180ae515" category="paragraph">랜섬웨어 공격으로부터 보호하기 위해 복제 관계를 설정할 때 대상 스냅샷을 잠그도록 선택할 수 있습니다.  잠긴 스냅샷은 실수로 또는 악의적으로 삭제될 수 없습니다.  랜섬웨어 공격으로 볼륨이 손상된 경우 잠긴 스냅샷을 사용하여 데이터를 복구할 수 있습니다.</block>
-  <block id="bf5d4ab274f571d57107a348e35cb081" category="inline-link-macro">스냅샷 준수 시계 초기화</block>
-  <block id="a2070fe1416691eeb91c53762fd2a74c" category="paragraph">대상 스냅샷을 잠그려면 다음을 수행해야 합니다.<block ref="27d9d0ff36409c51abdcd0a6f30da304" category="inline-link-macro-rx"></block> 복제 관계를 생성하기 전에.</block>
   <block id="f07148b3f2fd0f0a23b807626916df29" category="paragraph">잠긴 대상 스냅샷이 있거나 없는 복제 관계를 만듭니다.</block>
   <block id="b581751404702669bf568b5f9581e76c" category="open-title">잠긴 스냅샷으로</block>
   <block id="82fd6aa34bfb21de39dd81c963a0a2e8" category="list-text">시스템 관리자에서 *보호 &gt; 일관성 그룹*을 선택합니다.</block>
@@ -1772,4 +1769,5 @@
   <block id="b34a4582eb04bf97b29749b7a8e1ee38" category="inline-link-macro">ONTAP 되돌리기</block>
   <block id="dbca7577f0796430f28fd2f1f5805bc9" category="admonition">AFX 스토리지 시스템은 지원하지 않습니다 <block ref="af98218b92f959dac30e2de6f742409f" category="inline-link-macro-rx"></block> 운영.</block>
   <block id="0f3715b1b8b72110fa162f2666d15f10" category="sidebar">제한 사항 되돌리기</block>
+  <block id="c29e3429d133a5255487ffdb4b3cd5b3" category="paragraph">권장 업데이트는 귀하가 선택한 업데이트에 따라 ONTAP AFX 시스템에 자동으로 다운로드되어 설치됩니다.</block>
 </blocks>

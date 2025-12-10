@@ -7,7 +7,7 @@ summary: AFX 스토리지 시스템에서 유지 관리 절차를 수행하는 �
 = AFX 스토리지 시스템 하드웨어 유지 관리
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
