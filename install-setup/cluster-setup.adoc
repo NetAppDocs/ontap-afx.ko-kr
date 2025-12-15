@@ -72,6 +72,10 @@ DNS 및 NTP 서버에 대한 세부 정보를 정의합니다.
 +
 클러스터 암호화에 대한 세부 정보를 정의할 수 있습니다. *계속*을 선택하세요.
 
++
+
+NOTE: Windows 환경이 아닌 곳에서 클러스터를 생성하는 방법에 대한 자세한 내용은 다음을 참조하세요. link:https://docs.netapp.com/us-en/ontap/software_setup/setup-cluster.html["ONTAP 클러스터를 생성하고 노드를 참여시키세요."^].
+
 
 
 .다음은 무엇입니까?
