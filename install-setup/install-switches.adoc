@@ -36,7 +36,7 @@ NetApp 패스스루 패널 키트에는 다음 하드웨어가 포함되어 있�
 NOTE: 점퍼 코드는 패스스루 키트에 포함되어 있지 않습니다.  스위치와 함께 점퍼 케이블이 제공되지 않은 경우 NetApp 에 ​​문의하여 올바른 점퍼 케이블을 주문하세요.
 
 
-NOTE: Cisco 9332D-GX2B 및 9364D-GX2A는 포트 측 흡입 스위치입니다.  스위치의 네트워크 포트는 캐비닛 앞면을 향하도록 설치해야 하며, 배기 팬은 캐비닛 뒷면을 향해야 합니다.  이 구성을 사용하면 캐비닛 전면의 네트워크 포트에서 캐비닛 후면의 스토리지 포트까지 연결할 수 있을 만큼 긴 케이블을 사용해야 합니다.  + 이러한 스위치에 대한 자세한 내용은 Cisco 웹사이트를 방문하세요. https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9332D-GX2B NX-OS 모드 스위치 하드웨어 설치 가이드"^] 그리고 https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9364D-GX2A NX-OS 모드 스위치 하드웨어 설치 가이드"^] .
+NOTE: 스위치의 공기 흐름이 포트 측 흡기(버건디색 팬 및 PSU)로 구성된 경우, 스위치의 네트워크 포트는 캐비닛 전면을 향하도록 설치해야 하며, 배기 팬은 캐비닛 후면을 향해야 합니다. 이 구성에서는 캐비닛 전면의 네트워크 포트에서 캐비닛 후면의 스토리지 포트까지 연결할 수 있을 만큼 충분히 긴 케이블을 사용해야 합니다. + 이러한 스위치에 대한 자세한 내용은 Cisco 웹사이트 https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9332D-GX2B NX-OS 모드 스위치 하드웨어 설치 가이드"^] 및 https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9364D-GX2A NX-OS 모드 스위치 하드웨어 설치 가이드"^]를 참조하십시오.
 
 .단계
 . 패스스루 블랭킹 패널을 설치합니다.

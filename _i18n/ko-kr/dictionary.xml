@@ -980,7 +980,6 @@
   <block id="784c55256af328db72b621f19722713c" category="admonition">점퍼 코드는 패스스루 키트에 포함되어 있지 않습니다.  스위치와 함께 점퍼 케이블이 제공되지 않은 경우 NetApp 에 ​​문의하여 올바른 점퍼 케이블을 주문하세요.</block>
   <block id="290d336236260cd4a5246beda2a977d5" category="inline-link">Cisco Nexus 9332D-GX2B NX-OS 모드 스위치 하드웨어 설치 가이드</block>
   <block id="b1ec8c60f31cf5056d372b5933be8b0b" category="inline-link">Cisco Nexus 9364D-GX2A NX-OS 모드 스위치 하드웨어 설치 가이드</block>
-  <block id="66bae34306cc0c72e7058ee11822a847" category="admonition">Cisco 9332D-GX2B 및 9364D-GX2A는 포트 측 흡입 스위치입니다.  스위치의 네트워크 포트는 캐비닛 앞면을 향하도록 설치해야 하며, 배기 팬은 캐비닛 뒷면을 향해야 합니다.  이 구성을 사용하면 캐비닛 전면의 네트워크 포트에서 캐비닛 후면의 스토리지 포트까지 연결할 수 있을 만큼 긴 케이블을 사용해야 합니다.  + 이러한 스위치에 대한 자세한 내용은 Cisco 웹사이트를 방문하세요.<block ref="41dd90940bbf956b1a1bc9743b5329d8" category="inline-link-rx"></block> 그리고<block ref="0684e00763f44490e4a966ecd9b6db00" category="inline-link-rx"></block> .</block>
   <block id="233f5d43fe68130332533db747eb58bf" category="list-text">패스스루 블랭킹 패널을 설치합니다.</block>
   <block id="f6a7153bd6774aa611c605474f2c556a" category="list-text">캐비닛이나 랙에서 스위치와 블랭킹 패널의 수직 위치를 결정합니다.</block>
   <block id="eca4fd64fa30887cca883fb2a8f5e9b3" category="list-text">앞쪽 캐비닛 레일에 맞는 사각형 구멍에 양쪽에 클립 너트 두 개를 설치합니다.</block>
@@ -1772,4 +1771,5 @@
   <block id="c29e3429d133a5255487ffdb4b3cd5b3" category="paragraph">권장 업데이트는 귀하가 선택한 업데이트에 따라 ONTAP AFX 시스템에 자동으로 다운로드되어 설치됩니다.</block>
   <block id="f6ea197b186340b340ddfd0eb0da559f" category="inline-link-macro">ONTAP 클러스터를 생성하고 노드를 참여시키세요.</block>
   <block id="46111b54a1fe09b4b0f338f84ed73d0f" category="admonition">Windows 환경이 아닌 곳에서 클러스터를 생성하는 방법에 대한 자세한 내용은 다음을 참조하세요. <block ref="084582f867948d8226893522df8bc4b0" category="inline-link-macro-rx"></block>.</block>
+  <block id="26790bd35f75a3d2177dc5a2d5e4162f" category="admonition">스위치의 공기 흐름이 포트 측 흡기(버건디색 팬 및 PSU)로 구성된 경우, 스위치의 네트워크 포트는 캐비닛 전면을 향하도록 설치해야 하며, 배기 팬은 캐비닛 후면을 향해야 합니다. 이 구성에서는 캐비닛 전면의 네트워크 포트에서 캐비닛 후면의 스토리지 포트까지 연결할 수 있을 만큼 충분히 긴 케이블을 사용해야 합니다. + 이러한 스위치에 대한 자세한 내용은 Cisco 웹사이트<block ref="41dd90940bbf956b1a1bc9743b5329d8" category="inline-link-rx"></block> 및<block ref="0684e00763f44490e4a966ecd9b6db00" category="inline-link-rx"></block>를 참조하십시오.</block>
 </blocks>
