@@ -15,6 +15,12 @@ AFX 1K 스토리지 시스템에 케이블을 연결한 후에는 Cisco Nexus 93
 
 .단계
 . 스위치의 전원 코드를 전원에 꽂습니다.
+. 두 스위치 사이에 ISL 케이블을 연결하십시오.
++
+** Cisco Nexus 9332D-GX2B 스위치의 경우 ISL 연결에는 포트 31/32를 사용하십시오. 자세한 내용은 link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9332D-GX2B NX-OS 모드 스위치 하드웨어 설치 가이드"^]을 참조하십시오.
+** Cisco Nexus 9364D-GX2A 스위치의 경우 ISL 연결에는 포트 63/64를 사용하십시오. 자세한 내용은 link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9364D-GX2A NX-OS 모드 스위치 하드웨어 설치 가이드"^]을 참조하십시오.
+
+
 . 각 스위치의 전원을 켭니다.
 . AFX 1K 스토리지 시스템을 지원하도록 스위치를 구성합니다.
 +
