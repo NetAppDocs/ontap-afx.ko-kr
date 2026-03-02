@@ -792,28 +792,18 @@
   <block id="808f3fa88e6266b2beb8f1153dd991ec" category="list-text">다음 포트를 이더넷 데이터 네트워크 스위치 B에 연결합니다.</block>
   <block id="53c535a8b8a2c8bb670d136b82e73f99" category="list-text">e2b</block>
   <block id="969d430598a257671bdf944480e4d46b" category="list-text">e3b</block>
-  <block id="4015e00b406d10c628519f953d69e086" category="section-title">3단계: 클러스터 및 HA 연결 케이블 연결</block>
-  <block id="093fe9dff1e5370d0b97313cefba5acd" category="paragraph">클러스터와 HA 상호 연결 케이블을 사용하여 포트 e1a와 e7a를 스위치 A에 연결하고, e1b와 e7b를 스위치 B에 연결합니다. e1a/e1b 포트는 HA 연결에 사용되고, e7a/e7b 포트는 클러스터 연결에 사용됩니다.</block>
-  <block id="7d1e8fb2f50320f7b5004ba0fd39055b" category="list-text">다음 컨트롤러 포트를 클러스터 네트워크 스위치 A의 ISL이 아닌 포트에 연결합니다.</block>
   <block id="595df28a8a4a9361a6231a9d84e8cd08" category="list-text">컨트롤러 A</block>
   <block id="9cb7b36b3f2bccc776862e6f2f494077" category="list-text">e1a</block>
   <block id="a9e70fa35de61f4ac25cc4bcd706a55d" category="list-text">컨트롤러 B</block>
-  <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">클러스터 HA 케이블</block>
-  <block id="f1d133e33e29362e931a34312a961d0b" category="image-alt">클러스터 네트워크에 케이블 클러스터 연결</block>
-  <block id="ac32cb5bd4dc17916ab1ece800d39226" category="list-text">다음 컨트롤러 포트를 클러스터 네트워크 스위치 B의 ISL이 아닌 포트에 연결합니다.</block>
   <block id="e737b5ac24a63afc00e81377a906728d" category="list-text">e1b</block>
-  <block id="c61349783073807f1993874d0e3a4a8c" category="section-title">4단계: 컨트롤러-스위치 스토리지 연결 케이블 연결</block>
   <block id="da160308e3b4b4a80bf1b72b5bdbedb8" category="inline-link">Hardware Universe</block>
-  <block id="7bebd570400c9d8d9796caad43fdcebd" category="paragraph">컨트롤러 스토리지 포트를 스위치에 연결합니다.  스위치에 맞는 케이블과 커넥터가 있는지 확인하세요. 보다<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block> 자세한 내용은.</block>
   <block id="d7434100057b78673eee73421ad29942" category="list-text">다음 스토리지 포트를 스위치 A의 ISL이 아닌 포트에 연결합니다.</block>
   <block id="405e469b4aa3065616ee04f4a4b2b35e" category="list-text">e10a</block>
   <block id="2772fdc65a945771c18178a5b650c575" category="list-text">e11a</block>
   <block id="b222cca23840b6a495e76b8c300b08f2" category="image-alt">100Gb 케이블</block>
-  <block id="56812cf9e76eb2dfaa41475474798d4b" category="image-alt">스위치 A에 케이블 컨트롤러 스토리지</block>
   <block id="dc1921771bb6c193442045d9a99b8c9d" category="list-text">다음 스토리지 포트를 스위치 B의 ISL이 아닌 포트에 연결합니다.</block>
   <block id="d5dec99b9c0f6ad0c56335c85d42e40b" category="list-text">e10b</block>
   <block id="6dfe0149eb6951bd7c7e5c94c1713869" category="list-text">e11b</block>
-  <block id="73b33ccdc5c989a11800499004721836" category="image-alt">스위치 B에 케이블 컨트롤러 스토리지</block>
   <block id="18154dcfffa2547c8d59ed9df65fb3ac" category="section-title">5단계: 선반-스위치 연결 케이블 연결</block>
   <block id="b1ea5415ee8f031dcace291f9c98e0be" category="paragraph">NX224 스토리지 선반을 스위치에 연결합니다.</block>
   <block id="5a684badbec5242d1800f819ca49559e" category="paragraph">스토리지 시스템에서 지원하는 최대 선반 수와 모든 케이블 옵션에 대해서는 다음을 참조하세요.<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> .</block>
@@ -1776,4 +1766,12 @@
   <block id="f8979ce4e5d66f41e330415672140ef8" category="list-text">Cisco Nexus 9364D-GX2A 스위치의 경우 ISL 연결에는 포트 63/64를 사용하십시오. 자세한 내용은 <block ref="d3ef7ae1e3bea631e525704fa9f8906b" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="35baa74f76db10604e3f71a16b4078d1" category="paragraph">NetApp AFX는 고성능 NAS 및 객체 워크로드에 최적화되어 있습니다. 따라서 AFF 및 FAS 스토리지 시스템과는 몇 가지 차이점이 있습니다. 다음 기능은 NetApp AFX에서 사용할 수 없으며, 목록은 주요 기능 또는 기능 영역별로 정리되어 있습니다. 또한 사용 중인 ONTAP 릴리스에 따라 <block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block>에서 AFX의 업데이트 및 변경 사항을 검토해야 합니다.</block>
   <block id="86daf5160966102a39f5f3c0390bde11" category="list-text">로드 공유 미러</block>
+  <block id="8c60e60e96c6540bd35beb72adc17cb0" category="section-title">3단계: 클러스터, HA 및 스토리지 연결을 스위치 A에 케이블로 연결합니다</block>
+  <block id="1255d6bb11db98e4f919212687145a90" category="paragraph">4x100GbE 브레이크아웃 케이블을 사용하여 컨트롤러의 클러스터, HA 및 스토리지 포트를 네트워크 스위치 A에 연결합니다. 클러스터 및 HA 인터커넥트 케이블을 사용하여 포트 e1a와 e7a를 스위치 A에 연결합니다. e1a 포트는 HA 연결에 사용되고 e7a 포트는 클러스터 연결에 사용됩니다. 스토리지 연결의 경우 포트 e10a와 e11a를 스위치 A에 연결합니다.</block>
+  <block id="245afd341214dde6198c6abfdac71264" category="paragraph">스위치에 맞는 케이블과 커넥터를 사용하고 있는지 확인하십시오. <block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block>자세한 내용은 해당 링크를 참조하십시오.</block>
+  <block id="e42929c9f069074fd111dfa1c107772e" category="list-text">다음 컨트롤러 포트를 네트워크 스위치 A의 ISL 포트가 아닌 아무 포트에 연결하십시오.</block>
+  <block id="c1209a2ef5ab3b20312d0aebe91b01d3" category="image-alt">케이블 컨트롤러 클러스터</block>
+  <block id="c42589aeb6cdc4aab7c9ee5517ef1f84" category="section-title">4단계: 클러스터, HA 및 스토리지 연결을 스위치 B에 케이블로 연결합니다</block>
+  <block id="14aa705a8a71a02fb1b277002e0c52ed" category="paragraph">4x100GbE 브레이크아웃 케이블을 사용하여 컨트롤러의 클러스터, HA 및 스토리지 포트를 네트워크 스위치 B에 연결합니다. 클러스터 및 HA 인터커넥트 케이블을 사용하여 포트 e1b와 e7b를 스위치 B에 연결합니다. e1b 포트는 HA 연결에 사용되고 e7b 포트는 클러스터 연결에 사용됩니다. 스토리지 연결의 경우 포트 e10b와 e11b를 스위치 B에 연결합니다.</block>
+  <block id="8cff5fa6944271f10e636cadf3153077" category="list-text">다음 컨트롤러 포트를 네트워크 스위치 B의 ISL 포트가 아닌 아무 포트에 연결하십시오.</block>
 </blocks>
