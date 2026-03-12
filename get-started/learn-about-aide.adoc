@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: get-started/learn-about-aide.html 
+keywords: ai, ai data engine, aide, learn about aide, aide pipeline data management, data governance 
+summary: 'NetApp AI Data Engine(AIDE)은 AFX 클러스터에 연결된 데이터 컴퓨팅 노드에서 실행되는 스토리지 통합 AI 데이터 서비스입니다. 선택적으로 AIDE를 AFX 클러스터에 설치 및 통합하여 AI 및 ML 워크로드에 전용 GPU 가속 데이터 처리를 제공함으로써 AFX의 기능을 확장하는 동시에 ONTAP의 모든 이점을 유지할 수 있습니다.' 
+---
+= NetApp AI Data Engine에 대해 알아보십시오
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp AI Data Engine(AIDE)은 AFX 클러스터에 연결된 데이터 컴퓨팅 노드에서 실행되는 스토리지 통합 AI 데이터 서비스입니다. 선택적으로 AIDE를 AFX 클러스터에 설치 및 통합하여 AI 및 ML 워크로드에 전용 GPU 가속 데이터 처리를 제공함으로써 AFX의 기능을 확장하는 동시에 ONTAP의 모든 이점을 유지할 수 있습니다.
+
+
+
+== AIDE 개요
+
+AIDE는 AI 및 ML 워크로드에 필요한 데이터 준비 및 관리를 가속화하고 간소화하도록 설계된 시스템입니다. AIDE는 별도로 설치되며 AFX 스토리지 시스템 클러스터와 긴밀하게 통합됩니다. AIDE는 고성능 및 확장 가능한 AFX 스토리지 기반을 활용하는 동시에 AI 데이터 처리, 거버넌스 및 워크플로 자동화를 위한 특수 서비스를 제공합니다.
+
+AIDE의 핵심 강점은 대규모 분산 데이터 세트 전반에 걸쳐 메타데이터 관리를 중앙 집중화하고 자동화하는 능력입니다. ONTAP 볼륨의 데이터를 기반으로 메타데이터 저장소를 지속적으로 카탈로그화하고 업데이트하도록 구성할 수 있어 사용자가 효율적으로 검색, 분류 및 거버넌스 정책을 적용할 수 있습니다. 내부 처리 파이프라인은 의미 검색 및 검색 작업에 필요한 벡터 임베딩 생성을 포함하여 AI에서 바로 사용할 수 있는 데이터 세트를 생성합니다.
+
+보안 및 거버넌스 또한 설계의 핵심 요소입니다. AIDE는 인증, 새로운 RBAC 역할을 통한 액세스 제어, 데이터 분류, 그리고 민감한 정보 보호를 위한 정책 기반 시행 기능을 제공합니다. 자동 수정, 마스킹, 감사 로깅과 같은 기능은 관련 규제 요건을 충족하고 AI 수명주기 전반에 걸쳐 중요한 데이터를 보호하는 데 도움이 됩니다.
+
+AIDE는 신속한 데이터 검색, 큐레이션 및 워크플로우 관리를 위한 도구를 제공하여 데이터 엔지니어와 데이터 과학자의 역량을 강화합니다. 전용 AIDE 콘솔과 향상된 AFX REST API를 통해 사용자는 큐레이션된 데이터 컬렉션을 생성하고, 벡터 검색을 수행하며, 외부 AI 및 GenAI 애플리케이션과 통합할 수 있습니다. AIDE는 필요한 수작업을 줄여주므로 팀은 데이터에서 인사이트를 추출하는 데 집중할 수 있습니다.
+
+
+
+== 설치 옵션
+
+AIDE를 AFX 스토리지 클러스터에 설치하고 통합하는 방법에는 두 가지 옵션이 있습니다.
+
+
+
+=== AFX와 AIDE 함께 설정하세요
+
+AFX 스토리지 시스템과 AIDE를 동시에 배포하면 통합되고 간소화된 설치 프로세스를 통해 즉각적인 통합과 최적의 구성을 보장합니다. 이러한 턴키 방식은 온보딩을 간소화하고 호환성을 보장하며, 신속한 가치 실현을 목표로 하는 신규 구축 환경에 이상적인 완벽하게 작동하는 AI 데이터 플랫폼을 빠르게 활용할 수 있도록 지원합니다.
+
+
+
+=== 기존 AFX 클러스터에 AIDE를 통합합니다
+
+이미 AFX 스토리지 클러스터를 설치하고 운영 중인 경우 언제든지 AIDE를 추가하여 데이터 접근성과 가치를 향상시킬 수 있습니다. AIDE는 기존 AFX 스토리지 환경에 애드온으로 배포되어 운영에 지장을 주지 않고 기존 클러스터 스토리지 네트워크에 연결됩니다. 통합 프로세스는 사용 가능한 ONTAP 볼륨을 자동으로 검색하고 메타데이터를 동기화합니다. AI 자동화, 거버넌스 및 큐레이션 도구를 통해 데이터 처리 워크플로우를 개선하는 동시에 기존 스토리지 기반을 유지할 수 있습니다.
+
+
+
+== 관련 정보
+
+* https://docs.netapp.com/us-en/ai-data-engine/get-started/learn-about.html["AI Data Engine에 대해 알아보십시오"^]
+* https://docs.netapp.com/us-en/ai-data-engine/faq-aide.html["NetApp AI Data Engine FAQ"^]
+* https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["ONTAP AIDE 클러스터를 설정하세요"^]
+* https://www.netapp.com/data-services/ai-data-engine/["NetApp AI Data Engine"^]
+
