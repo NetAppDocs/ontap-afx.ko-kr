@@ -1078,8 +1078,6 @@
   <block id="eccb4d5293fe0dd408e74aab9093fb9b" category="list-text">LED가 깜박거리고 팬이 작동하기 시작하면 컨트롤러에 전원이 공급되고 있음을 나타냅니다.</block>
   <block id="2a15831b428ec92914dd2d9b9c14a463" category="list-text">팬은 시동 시 시끄러울 수 있는데, 이는 정상적인 현상입니다.</block>
   <block id="d420064a5f4919f9be16d853c6d1997c" category="list-text">각 전원 공급장치에 있는 고정장치를 사용하여 전원 코드를 고정하세요.</block>
-  <block id="d86c8f4fff3fb2feed3ee9c6ab6626ed" category="inline-link-macro">AFX 클러스터 설정</block>
-  <block id="4eb20ef06f12f582d4ebd27eaee89115" category="paragraph">AFX 1K 저장 시스템을 켠 후에는<block ref="a4e3e0c950d1563a6f1d32259f274df6" category="inline-link-macro-rx"></block> .</block>
   <block id="4037f9dba9d587023878b63255863f7d" category="summary">ONTAP 환경에 AFX 1K 스토리지 시스템을 설치하고 하드웨어를 등록하여 지원 혜택을 받으세요.</block>
   <block id="b81fa34f137f3d44fa104594a5caaef5" category="paragraph">AFX 1K 스토리지 시스템을 설치하려면 설치 장소를 준비하고, 상자를 풀고, 상자 내용물을 포장 명세서와 비교하고, 지원 혜택을 받기 위해 시스템을 등록해야 합니다.</block>
   <block id="92c8397408f55d9526d554c55cde3d22" category="section-title">1단계: 사이트 준비</block>
@@ -1774,4 +1772,11 @@
   <block id="c42589aeb6cdc4aab7c9ee5517ef1f84" category="section-title">4단계: 클러스터, HA 및 스토리지 연결을 스위치 B에 케이블로 연결합니다</block>
   <block id="14aa705a8a71a02fb1b277002e0c52ed" category="paragraph">4x100GbE 브레이크아웃 케이블을 사용하여 컨트롤러의 클러스터, HA 및 스토리지 포트를 네트워크 스위치 B에 연결합니다. 클러스터 및 HA 인터커넥트 케이블을 사용하여 포트 e1b와 e7b를 스위치 B에 연결합니다. e1b 포트는 HA 연결에 사용되고 e7b 포트는 클러스터 연결에 사용됩니다. 스토리지 연결의 경우 포트 e10b와 e11b를 스위치 B에 연결합니다.</block>
   <block id="8cff5fa6944271f10e636cadf3153077" category="list-text">다음 컨트롤러 포트를 네트워크 스위치 B의 ISL 포트가 아닌 아무 포트에 연결하십시오.</block>
+  <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">설치 및 유지보수 절차를 수행하는 동안에는 항상 검증된 접지점에 연결된 접지 손목 스트랩을 착용하십시오. 적절한 ESD 예방 조치를 따르지 않으면 컨트롤러 노드, 스토리지 셸프 및 네트워크 스위치가 영구적으로 손상될 수 있습니다.</block>
+  <block id="1e64a8c98278cbf94fdc5e55cf23d748" category="inline-link-macro">AIDE 데이터 컴퓨팅 노드 설치</block>
+  <block id="5d16f9931acd5c0aea8659ad61ec6628" category="admonition">AI Data Engine(AIDE)과 함께 AFX 1K를 배포하는 경우 AFX 시스템 전원을 켠 후 AIDE 데이터 컴퓨팅 노드를 설치하십시오. 자세한 내용은 <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="d9af9d0a822fab56f67da32f96760bcd" category="paragraph">AFX 1K 스토리지 시스템의 전원을 켠 후 배포 옵션에 따라 설정을 완료하십시오.</block>
+  <block id="9f17a32279457eb3f0ec945352a82e96" category="inline-link-macro">AFX 클러스터 설정</block>
+  <block id="65baec5e9f4a78defefb1154f095ae89" category="list-text">전용 AFX 1K 스토리지 시스템 배포의 경우 <block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>로 이동하십시오.</block>
+  <block id="2958d97f86a68931454e4d5cb0f3fa2a" category="list-text">AI Data Engine(AIDE)이 포함된 AFX 1K 배포의 경우 <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>로 이동하십시오.</block>
 </blocks>

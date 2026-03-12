@@ -38,6 +38,9 @@ NOTE: 점퍼 코드는 패스스루 키트에 포함되어 있지 않습니다. 
 
 NOTE: 스위치의 공기 흐름이 포트 측 흡기(버건디색 팬 및 PSU)로 구성된 경우, 스위치의 네트워크 포트는 캐비닛 전면을 향하도록 설치해야 하며, 배기 팬은 캐비닛 후면을 향해야 합니다. 이 구성에서는 캐비닛 전면의 네트워크 포트에서 캐비닛 후면의 스토리지 포트까지 연결할 수 있을 만큼 충분히 긴 케이블을 사용해야 합니다. + 이러한 스위치에 대한 자세한 내용은 Cisco 웹사이트 https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9332D-GX2B NX-OS 모드 스위치 하드웨어 설치 가이드"^] 및 https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9364D-GX2A NX-OS 모드 스위치 하드웨어 설치 가이드"^]를 참조하십시오.
 
+
+CAUTION: 설치 및 유지보수 절차를 수행하는 동안에는 항상 검증된 접지점에 연결된 접지 손목 스트랩을 착용하십시오. 적절한 ESD 예방 조치를 따르지 않으면 컨트롤러 노드, 스토리지 셸프 및 네트워크 스위치가 영구적으로 손상될 수 있습니다.
+
 .단계
 . 패스스루 블랭킹 패널을 설치합니다.
 +
