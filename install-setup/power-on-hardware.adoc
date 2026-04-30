@@ -162,5 +162,7 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K 저장 시스템
 AFX 1K 스토리지 시스템의 전원을 켠 후 배포 옵션에 따라 설정을 완료하십시오.
 
 * 전용 AFX 1K 스토리지 시스템 배포의 경우 link:../install-setup/cluster-setup.html["AFX 클러스터 설정"]로 이동하십시오.
-* AI Data Engine(AIDE)이 포함된 AFX 1K 배포의 경우 link:https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["AIDE 데이터 컴퓨팅 노드 설치"]로 이동하십시오.
+* AI Data Engine(AIDE)이 포함된 AFX 1K 배포의 경우, AIDE 타사 서버 또는 NetApp에서 제공하는 데이터 컴퓨팅 노드를 설치하십시오.
+* 타사 서버 배포의 경우 https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["타사 서버의 AI Data Engine용 하드웨어 설치"^]를 완료한 다음 https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-aide-as-software.html["타사 서버에 AIDE 소프트웨어 설치"^]을 진행하십시오.
+* NetApp DCN 배포의 경우 다음을 완료하십시오 https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["NetApp에서 제공하는 데이터 컴퓨팅 노드에 AI Data Engine용 하드웨어 설치"^].
 

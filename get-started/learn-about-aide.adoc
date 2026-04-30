@@ -11,7 +11,7 @@ summary: 'NetApp AI Data Engine(AIDE)은 AFX 클러스터에 연결된 데이터
 
 
 [role="lead"]
-NetApp AI Data Engine(AIDE)은 AFX 클러스터에 연결된 데이터 컴퓨팅 노드에서 실행되는 스토리지 통합 AI 데이터 서비스입니다. 선택적으로 AIDE를 AFX 클러스터에 설치 및 통합하여 AI 및 ML 워크로드에 전용 GPU 가속 데이터 처리를 제공함으로써 AFX의 기능을 확장하는 동시에 ONTAP의 모든 이점을 유지할 수 있습니다.
+NetApp AI Data Engine(AIDE)은 AFX 클러스터에 연결된 컴퓨팅 노드에서 실행되는 스토리지 통합형 AI 데이터 서비스입니다. NetApp에서 제공하는 데이터 컴퓨팅 노드(DCN) 또는 타사 서버의 AIDE 소프트웨어를 사용하는 두 가지 배포 모델 중 하나를 사용하여 AIDE를 AFX 클러스터에 선택적으로 설치하고 통합할 수 있습니다. NetApp DCN 배포는 전체 AIDE 기능을 제공하는 반면, 타사 서버 배포는 메타데이터에 중점을 둡니다.
 
 
 
