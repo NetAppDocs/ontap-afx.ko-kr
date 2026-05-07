@@ -1,0 +1,109 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9191.html 
+keywords: 'afx, release notes, what"s new, 9.19.1, ai data engine, aide' 
+summary: AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.19.1에 포함된 새로운 기능에 대해 알아보십시오. 
+---
+= AFX 스토리지 시스템용 ONTAP 9.19.1의 새로운 기능
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.19.1에 포함된 새로운 기능에 대해 알아보십시오.
+
+
+TIP:  https://docs.netapp.com/us-en/ai-data-engine/release-notes/whats-new.html["AI Data Engine"^]에 대한 새롭고 향상된 지원에 대해 알아보십시오.
+
+
+
+== 성능 및 확장성
+
+[cols="2,4"]
+|===
+| 업데이트 | 설명 
+
+
+| 확장된 AFX 클러스터 크기  a| 
+ONTAP 9.19.1은 AFX 클러스터를 최대 32개 노드까지 확장할 수 있도록 지원합니다. 이를 통해 워크로드 및 애플리케이션의 증가하는 요구 사항에 맞춰 AFX 스토리지 시스템을 확장할 수 있습니다.
+
+
+
+| 교차 파일 순차 읽기(CFSR)  a| 
+Cross File Sequential Read는 특정 미디어 및 엔터테인먼트 워크로드에서 읽기 성능을 크게 향상시킬 수 있습니다. 이 기능은 순차적 비디오 프레임을 지능적으로 미리 가져와 비디오 편집 애플리케이션의 처리량을 대폭 개선하고 지연 시간을 줄입니다. 자세한 내용은 link:../administer/additional-ontap-svm.html["AFX 스토리지 시스템 SVM에 대한 추가 관리"]을(를) 검토하십시오.
+
+
+
+| 전역 중복 제거  a| 
+글로벌 데이터 중복 제거는 ONTAP 데이터 중복 제거를 통해 스토리지 가용성 영역(SAZ) 전체에 걸쳐 공간 절약 효과를 제공합니다. SAZ 내 모든 볼륨에서 중복 데이터 블록을 제거함으로써 스토리지 효율성을 크게 향상시키고 총 소유 비용을 절감할 수 있습니다. 이 기능은 AFX 시스템에서 기본적으로 활성화되어 있으며 관리자 구성 없이 투명하게 작동합니다. 자세한 내용은 link:../administer/additional-ontap-svm.html["AFX 스토리지 시스템 SVM에 대한 추가 관리"]을 참조하십시오.
+
+|===
+
+
+== REST API
+
+[cols="2,4"]
+|===
+| 업데이트 | 설명 
+
+
+| Kubernetes 스토리지 오케스트레이션을 위한 균형 배치 개선  a| 
+ONTAP 9.19.1은 현재  `/storage/volumes` REST API 엔드포인트에서 사용 가능한 6개의 매개변수를  `/applications/containers` 엔드포인트에 추가합니다. 이 개선 사항을 통해 Kubernetes 스토리지 오케스트레이션을 위한 NetApp Trident를 사용하는 고객은 ONTAP의 기본 균형 배치 기능을 사용하여 볼륨을 생성할 수 있습니다.
+
+|===
+
+
+== 보안
+
+[cols="2,4"]
+|===
+| 업데이트 | 설명 
+
+
+| 적격 SnapMirror 운영 볼륨에 대한 ARP/AI 지원  a| 
+ARP/AI는 AFX 시스템과의 SnapMirror 동기 관계에서 적합한 운영 볼륨을 지원합니다. ARP/AI는 활성 읽기-쓰기 운영 볼륨에서 실행되어 운영 볼륨 전용 ARP 스냅샷을 생성하고 머신 러닝 기반 랜섬웨어 탐지 기능을 제공합니다.
+
+
+
+| link:../administer/additional-ontap-cluster.html["TLS 하드웨어 오프로드 지원"]  a| 
+지원되는 이더넷 카드로 전체 클러스터의 전송 계층 보안(TLS) 암호화 및 복호화를 오프로드할 수 있습니다. 이를 통해 CPU 오버헤드가 줄어들고 TLS를 사용하는 시스템의 성능이 향상됩니다.
+
+|===
+
+
+== 스토리지 리소스 관리
+
+[cols="2,4"]
+|===
+| 업데이트 | 설명 
+
+
+| link:../administer/monitor-cluster-performance.html["System Manager는 스토리지 가용성 영역 용량 세부 정보를 지원합니다."]  a| 
+System Manager에서 스토리지 가용 영역 용량 세부 정보(공간 임계값, 스냅샷으로 사용된 공간, 데이터 감소 등)를 확인할 수 있습니다. 또한 ONTAP에서 경고 및 위험 알림을 생성할 비율로 공간 사용 임계값을 설정할 수 있습니다.
+
+
+
+| link:../administer/additional-ontap-cluster.html["자동 QoS 처리량 상한 증가를 제어하는 기본 설정을 수정하는 기능에 대한 지원이 제공됩니다."]  a| 
+QoS 정책 그룹이 단기적인 성능 향상 요구에 대응하여 QoS 처리량 상한을 자동으로 높이는 방식을 제어하는 기본 설정을 수정할 수 있습니다. 이러한 설정은 ONTAP 9.18.1 이하 버전에서는 수정할 수 없습니다.
+
+|===
+
+
+== 업그레이드
+
+[cols="2,4"]
+|===
+| 업데이트 | 설명 
+
+
+| link:../administer/upgrade-ontap.html["자동 업그레이드 전 점검을 위한 향상된 보고 기능"]  a| 
+자동화된 업그레이드 전 검사를 실행할 때 오류와 경고가 별도로 표시되어 업그레이드 전에 해결해야 할 문제를 쉽게 파악할 수 있습니다.
+
+|===
+.관련 정보
+* https://docs.netapp.com/us-en/ontap/release-notes/index.html["ONTAP 9 출시 주요 내용"^]
+
