@@ -1881,9 +1881,6 @@
   <block id="1f237fc34e7dd74398581eefc40958c3" category="admonition"><block ref="50cef57effbd6fcf26f3b3db513271ba" category="inline-link-rx"></block>에 대한 새롭고 향상된 지원에 대해 알아보십시오.</block>
   <block id="10d7bfdf332491f86c54ec3d92031af9" category="summary">AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.19.1에 포함된 새로운 기능에 대해 알아보십시오.</block>
   <block id="9ebdbbd8dbfbcf6224092a44e6772af0" category="doc">AFX 스토리지 시스템용 ONTAP 9.19.1의 새로운 기능</block>
-  <block id="a0c84a4c41f756ea7750bb10b0423e11" category="section-title">성능 및 확장성</block>
-  <block id="0d0331cbf0e501ed4e4912dc043a60c7" category="cell">확장된 AFX 클러스터 크기</block>
-  <block id="25bb096e1dae008973cf4d1cbcb776f6" category="paragraph">ONTAP 9.19.1은 AFX 클러스터를 최대 32개 노드까지 확장할 수 있도록 지원합니다. 이를 통해 워크로드 및 애플리케이션의 증가하는 요구 사항에 맞춰 AFX 스토리지 시스템을 확장할 수 있습니다.</block>
   <block id="5713c60dfa0d2bc57e54b11e4a1b6cfe" category="cell">교차 파일 순차 읽기(CFSR)</block>
   <block id="4c400b26187ab8dd0971020d23077db3" category="paragraph">Cross File Sequential Read는 특정 미디어 및 엔터테인먼트 워크로드에서 읽기 성능을 크게 향상시킬 수 있습니다. 이 기능은 순차적 비디오 프레임을 지능적으로 미리 가져와 비디오 편집 애플리케이션의 처리량을 대폭 개선하고 지연 시간을 줄입니다. 자세한 내용은 <block ref="d20869026a82d2608dc3e8932f1a0bfe" category="inline-link-macro-rx"></block>을(를) 검토하십시오.</block>
   <block id="9d8ca8942805bbef83b9c607e5358741" category="paragraph">글로벌 데이터 중복 제거는 ONTAP 데이터 중복 제거를 통해 스토리지 가용성 영역(SAZ) 전체에 걸쳐 공간 절약 효과를 제공합니다. SAZ 내 모든 볼륨에서 중복 데이터 블록을 제거함으로써 스토리지 효율성을 크게 향상시키고 총 소유 비용을 절감할 수 있습니다. 이 기능은 AFX 시스템에서 기본적으로 활성화되어 있으며 관리자 구성 없이 투명하게 작동합니다. 자세한 내용은 <block ref="d20869026a82d2608dc3e8932f1a0bfe" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
@@ -1906,4 +1903,18 @@
   <block id="368f083985829ad76ae5f8d7530fbd0e" category="cell"><block ref="368f083985829ad76ae5f8d7530fbd0e" category="inline-link-macro-rx"></block></block>
   <block id="2b1cc84feb959647df3e34b19f0fa843" category="paragraph">자동화된 업그레이드 전 검사를 실행할 때 오류와 경고가 별도로 표시되어 업그레이드 전에 해결해야 할 문제를 쉽게 파악할 수 있습니다.</block>
   <block id="7ceef35284e2093e2f3f2e17a1256628" category="sidebar">ONTAP 9.19.1의 새로운 기능</block>
+  <block id="b48fd339e170a9f069029f36a4c5c062" category="inline-link-macro">ONTAP 제한 및 기본값 변경 사항</block>
+  <block id="86c7db31d90416abec90b535da924b25" category="paragraph">NetApp Hardware Universe 및 상호 운용성 매트릭스 도구에서 제공되는 세부 정보를 검토하여 AFX 클러스터의 기능을 확인해야 합니다. 또한 AFX 릴리스 노트 섹션의 <block ref="8bef5b3500e1d2396e08db40f86c62db" category="inline-link-macro-rx"></block>도 검토하십시오.</block>
+  <block id="4cc2a31dced9a524a1b76972ce8cabf5" category="summary">AFX 시스템에 영향을 미치는 제한 및 기본값 변경 사항에 대해 알아보세요. NetApp은 각 ONTAP 릴리스에서 가장 중요한 기본값 및 제한 변경 사항을 고객이 이해할 수 있도록 지원하기 위해 노력합니다.</block>
+  <block id="d119e4d4dc8f9b894c96d18128e78e46" category="doc">AFX 시스템에 영향을 미치는 ONTAP 제한 및 기본값 변경 사항</block>
+  <block id="d579ca395df40cbbb953cb531ce23a3d" category="section-title">ONTAP 제한 변경 사항</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">기능</block>
+  <block id="4d209cddba5e4e3f517cda6d0180e867" category="cell">제한 변경</block>
+  <block id="534453c63ab1c5041c53f8bbc059a9b7" category="cell">릴리스에서 변경됨</block>
+  <block id="8010ab2f71c733c1a8013b31b901be79" category="cell">클러스터당 노드 수</block>
+  <block id="355836185b6feaed32d56f19e33032eb" category="paragraph">AFX 클러스터는 최대 32개 노드까지 확장할 수 있습니다. 이를 통해 워크로드 및 애플리케이션의 증가하는 요구 사항에 맞춰 AFX 스토리지 시스템을 확장할 수 있습니다.</block>
+  <block id="5148c61a8c3e3afeb285a73e9241d26c" category="cell">ONTAP 9.19.1 RC</block>
+  <block id="f80f1ede0c7983dcab18fc7104224f56" category="cell">동적 스토리지 효율성</block>
+  <block id="00e7d9732d9f1a308baa60f42ec78d16" category="paragraph">Dynamic Storage Efficiency는 고성능과 최대 처리량이 요구되는 대규모 워크로드에 맞춰 스토리지 효율성 작업(압축, 중복 제거, 컴팩션)을 지능적으로 최적화합니다. 이 기능은 대용량 쓰기 조건을 자동으로 감지하고 인라인 및 백그라운드 스토리지 효율성 프로세스를 일시적으로 중단하여 피크 부하 시 성능 저하를 방지합니다. 처리량이 정의된 임계값 아래로 떨어지면 스토리지 효율성 작업이 재개되어 수동 개입 없이 절감 효과를 복구할 수 있습니다. 이 기능은 AFX 스토리지 시스템에서 사용 가능하며 별도의 구성 없이 기본적으로 활성화됩니다.</block>
+  <block id="0b6845dd2391304844b6f9578fd8c865" category="sidebar">ONTAP 기본 설정 및 제한 사항 변경</block>
 </blocks>

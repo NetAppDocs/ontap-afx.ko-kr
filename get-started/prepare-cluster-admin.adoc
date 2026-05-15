@@ -124,7 +124,7 @@ CAUTION: AFX 스토리지 시스템의 운영 매개 변수를 늘리기 전에 
 클러스터 스위치:: 클러스터 스토리지 네트워크에는 최소 두 개의 스위치가 필요합니다.  허용되는 최대값은 클러스터의 컨트롤러 노드 총 수에 따라 결정됩니다.
 
 
-AFX 클러스터의 기능을 확인하려면 NetApp Hardware Universe 및 상호 운용성 매트릭스 도구에서 제공되는 세부 정보를 검토해야 합니다.
+NetApp Hardware Universe 및 상호 운용성 매트릭스 도구에서 제공되는 세부 정보를 검토하여 AFX 클러스터의 기능을 확인해야 합니다. 또한 AFX 릴리스 노트 섹션의 link:../release-notes/changes-to-limits-defaults.html["ONTAP 제한 및 기본값 변경 사항"]도 검토하십시오.
 
 
 
