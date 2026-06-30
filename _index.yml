@@ -15,8 +15,10 @@ indexpage:
       url: "/get-started/ontap-afx-storage.html"
     - title: 빠른 시작
       url: "/get-started/quick-start.html"
-    - title: AFX 하드웨어 설치
+    - title: AFX 1K 하드웨어 설치
       url: "/install-setup/install-setup-workflow.html"
+    - title: AFX 2K 하드웨어 설치
+      url: "/install-afx-2k/install-setup-workflow.html"
     - title: AFX 클러스터 설정
       url: "/install-setup/cluster-setup.html"
   - title: 클러스터 관리

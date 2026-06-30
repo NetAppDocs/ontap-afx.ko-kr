@@ -1,0 +1,74 @@
+---
+permalink: install-afx-2k/afx-cable-overview.html 
+sidebar: sidebar 
+keywords: afx, afx 2k, cable, overview, cisco 9332, cisco 9364, cabling, hardware, switches, storage shelves, disk shelves, controller nodes 
+summary: 컨트롤러 노드를 네트워크, 스위치, 스토리지 선반에 케이블로 연결하는 방법을 알아보세요. 
+---
+= AFX 2K 스토리지 시스템에 지원되는 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 2K 스토리지 시스템에서 지원되는 하드웨어 구성 요소 및 케이블 연결 옵션에 대해 알아보십시오. 여기에는 시스템을 올바르게 설정하는 데 필요한 호환 스토리지 디스크 쉘프, 스위치 및 케이블 유형이 포함됩니다.
+
+
+
+== 지원되는 AFX 2K 케이블 구성
+
+AFX 2K 스토리지 시스템의 초기 구성은 듀얼 스위치를 통해 스토리지 디스크 쉘프에 연결된 최소 4개의 컨트롤러 노드를 지원합니다.
+
+추가 컨트롤러 노드와 디스크 쉘프를 통해 초기 AFX 2K 스토리지 시스템 구성을 확장할 수 있습니다. 확장된 AFX 2K 구성은 아래 그림과 같이 스위치 기반 케이블링 방식을 따릅니다.
+
+image:../media/drw_afx_2k_cable_overview_half_node_ieops-2871.svg["AFX 2K 스토리지 시스템 케이블 연결 예시, width=1000px"]
+
+
+
+== 지원되는 하드웨어 구성 요소
+
+AFX 2K 스토리지 시스템에 호환되는 스토리지 디스크 쉘프, 스위치 및 케이블 유형을 검토합니다.
+
+[cols="35%,65%"]
+|===
+| 하드웨어 구성 요소 | 지원되는 케이블 
+
+
+| AFX 2K (컨트롤러 셸프)  a| 
+* 400GbE QDD to 400GbE QSFP 케이블 (컨트롤러-스위치 연결용)
+* 관리 연결을 위한 RJ-45 케이블
+
+
+
+
+| NX224(디스크 쉘프)  a| 
+* 400GbE QSFP-DD 브레이크아웃에서 4x100GbE QSFP 브레이크아웃 케이블로 (스위치-디스크 쉘프 연결)
+
+
+
+
+| Cisco Nexus 9808 (스위치)  a| 
+* 400GbE QSFP-DD 브레이크아웃에서 4x100GbE QSFP 브레이크아웃 케이블로 (스위치-디스크 쉘프 연결)
+* 스위치 A와 스위치 B 간 ISL 연결을 위한 2 x 400GbE 케이블
+* 관리 연결을 위한 RJ-45 케이블
+
+
+
+
+| Cisco Nexus 9332D-GX2B (스위치)  a| 
+* 400GbE QSFP-DD 브레이크아웃에서 4x100GbE QSFP 브레이크아웃 케이블로 (스위치-디스크 쉘프 연결)
+* 스위치 A와 스위치 B 간 ISL 연결을 위한 2 x 400GbE 케이블
+* 관리 연결을 위한 RJ-45 케이블
+
+
+
+
+| Cisco Nexus 9364D-GX2A (스위치)  a| 
+* 400GbE QSFP-DD 브레이크아웃에서 4x100GbE QSFP 브레이크아웃 케이블로 (스위치-디스크 쉘프 연결)
+* 스위치 A와 스위치 B 간 ISL 연결을 위한 2 x 400GbE 케이블
+* 관리 연결을 위한 RJ-45 케이블
+
+
+|===
+.다음은 무엇인가요?
+지원되는 시스템 구성 및 하드웨어 구성 요소를 검토한 후, link:install-network-reqs.html["AFX 2K 스토리지 시스템의 네트워크 요구 사항을 검토합니다"].

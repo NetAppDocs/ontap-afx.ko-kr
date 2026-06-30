@@ -147,7 +147,7 @@ image::../media/drw_afx_network_cabling_b_ieops-2814.svg[케이블-이더넷 네
 image::../media/oie_cable100_gbe_qsfp28.png[100Gb 케이블]
 
 +
-image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[케이블 컨트롤러 클러스터,HA,and storage to switch A]
+image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[케이블 컨트롤러 클러스터,800px,and storage to switch A]
 
 
 
@@ -178,7 +178,7 @@ image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[케이블 컨트롤�
 image::../media/oie_cable100_gbe_qsfp28.png[100Gb 케이블]
 
 +
-image::../media/drw_afx_ha_cluster_storage_b_ieops-2780.svg[케이블 컨트롤러 클러스터,HA,and storage to switch B]
+image::../media/drw_afx_ha_cluster_storage_b_ieops-2780.svg[케이블 컨트롤러 클러스터,800px,and storage to switch B]
 
 
 

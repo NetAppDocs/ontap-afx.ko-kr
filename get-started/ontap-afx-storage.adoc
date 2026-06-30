@@ -51,9 +51,9 @@ TIP: 당신은 검토해야합니다link:../faq-ontap-afx.html["AFX 스토리지
 
 AFX 클러스터에는 다음 하드웨어 구성 요소가 사용됩니다.
 
-* AFX 1K 컨트롤러
+* AFX 1K 또는 2K 컨트롤러
 * NX224 선반
-* Cisco Nexus 9332D-GX2B 또는 Nexus 9364D-GX2A 스위치
+* Cisco Nexus 9332D-GX2B, Nexus 9364D-GX2A 또는 Nexus 9808 스위치
 
 
 

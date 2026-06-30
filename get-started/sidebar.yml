@@ -16,30 +16,58 @@ entries:
   url: "/get-started/quick-start.html"
 - title: AFX 시스템 설치
   entries:
-  - title: 워크플로 설치
-    url: "/install-setup/install-setup-workflow.html"
-  - title: 하드웨어 요구 사항 검토
-    url: "/install-setup/install-setup-requirements.html"
-  - title: 설치 준비
-    url: "/install-setup/prepare-hardware.html"
-  - title: 하드웨어 설치
+  - title: AFX 1K
     entries:
-    - title: 스위치 설치
-      url: "/install-setup/install-switches.html"
-    - title: 보관 시스템과 선반 설치
-      url: "/install-setup/deploy-hardware.html"
-  - title: 케이블링
+    - title: 워크플로 설치
+      url: "/install-setup/install-setup-workflow.html"
+    - title: 하드웨어 요구 사항 검토
+      url: "/install-setup/install-setup-requirements.html"
+    - title: 설치 준비
+      url: "/install-setup/prepare-hardware.html"
+    - title: 하드웨어 설치
+      entries:
+      - title: 스위치 설치
+        url: "/install-setup/install-switches.html"
+      - title: 보관 시스템과 선반 설치
+        url: "/install-setup/deploy-hardware.html"
+    - title: 케이블링
+      entries:
+      - title: 지원되는 구성 검토
+        url: "/install-setup/afx-cable-overview.html"
+      - title: 네트워크 정보 수집
+        url: "/install-setup/install-network-reqs.html"
+      - title: 케이블 하드웨어
+        url: "/install-setup/cable-hardware.html"
+    - title: 스위치 전원 켜기 및 구성
+      url: "/install-setup/power-on-configure-switch.html"
+    - title: 시스템 전원 켜기
+      url: "/install-setup/power-on-hardware.html"
+  - title: AFX 2K
     entries:
-    - title: 지원되는 구성 검토
-      url: "/install-setup/afx-cable-overview.html"
-    - title: 네트워크 정보 수집
-      url: "/install-setup/install-network-reqs.html"
-    - title: 케이블 하드웨어
-      url: "/install-setup/cable-hardware.html"
-  - title: 스위치 전원 켜기 및 구성
-    url: "/install-setup/power-on-configure-switch.html"
-  - title: 시스템 전원 켜기
-    url: "/install-setup/power-on-hardware.html"
+    - title: 워크플로 설치
+      url: "/install-afx-2k/install-setup-workflow.html"
+    - title: 하드웨어 요구 사항 검토
+      url: "/install-afx-2k/install-setup-requirements.html"
+    - title: 설치 준비
+      url: "/install-afx-2k/prepare-hardware.html"
+    - title: 하드웨어 설치
+      entries:
+      - title: 스위치 설치
+        url: "/install-afx-2k/install-switches.html"
+      - title: 보관 시스템과 선반 설치
+        url: "/install-afx-2k/deploy-hardware.html"
+    - title: 케이블링
+      entries:
+      - title: 지원되는 구성 검토
+        url: "/install-afx-2k/afx-cable-overview.html"
+      - title: 네트워크 정보 수집
+        url: "/install-afx-2k/install-network-reqs.html"
+      - title: 케이블 하드웨어
+        url: "/install-afx-2k/cable-hardware.html"
+    - title: 스위치 전원 켜기 및 구성
+      url: "/install-afx-2k/power-on-configure-switch.html"
+    - title: 시스템 전원 켜기
+      url: "/install-afx-2k/power-on-hardware.html"
 - title: AFX 시스템 설정
   url: "/install-setup/cluster-setup.html"
 - title: AFX 관리를 준비하세요

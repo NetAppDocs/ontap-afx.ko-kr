@@ -21,7 +21,7 @@ AFX 1K 스토리지 시스템의 초기 구성은 듀얼 스위치를 통해 스
 
 추가 컨트롤러 노드와 디스크 셸프는 초기 AFX 1K 스토리지 시스템 구성을 확장합니다.  확장된 AFX 1K 구성은 아래에 표시된 스키마와 동일한 스위치 기반 케이블링 방법을 따릅니다.
 
-image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["AFK 1K 스토리지 시스템 케이블링 예시"]
+image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["AFX 1K 스토리지 시스템 케이블 연결 예시, width=1000px"]
 
 
 

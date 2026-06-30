@@ -19,7 +19,7 @@ AFX만 설치할지, 아니면 AFX와 AI Data Engine을 함께 설치할지 결�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"] 하드웨어 설치 및 설정
 [role="quick-margin-para"]
-link:../install-setup/install-setup-workflow.html["AFX 스토리지 시스템 설치"] 그리고 선택적으로  https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["AIDE 타사 서버 설치"] 또는  https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["AIDE NetApp 데이터 컴퓨팅 노드 설치"] AIDE를 초기 구성의 일부로 포함하는 경우.
+link:../install-setup/install-setup-workflow.html["AFX 1K"] 또는 link:../install-afx-2k/install-setup-workflow.html["AFX 2K"] 스토리지 시스템을 설치합니다. 선택적으로, 초기 AFX 1K 구성의 일부로 AIDE를 포함하는 경우  https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["AIDE 타사 서버 설치"] 또는  https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["AIDE NetApp 데이터 컴퓨팅 노드 설치"] 할 수 있습니다.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["삼"] 클러스터를 설정하세요
 [role="quick-margin-para"]

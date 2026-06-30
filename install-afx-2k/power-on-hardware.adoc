@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
-permalink: install-setup/power-on-hardware.html 
-keywords: afx, afx 1k, power on 
+permalink: install-afx-2k/power-on-hardware.html 
+keywords: afx, afx 2k, power on 
 summary: 각 선반의 전원을 켜서 고유한 선반 ID를 지정하고, AFX 컨트롤러 노드의 전원을 켜고, 전원 케이블을 고정합니다. 
 ---
-= AFX 1K 스토리지 시스템의 전원을 켜세요
+= AFX 2K 스토리지 시스템 전원 켜기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-AFX 1K 스토리지 시스템용 랙 하드웨어를 설치하고 컨트롤러 노드와 스토리지 선반용 케이블을 설치한 후에는 스토리지 선반과 컨트롤러 노드의 전원을 켜야 합니다.
+AFX 2K 스토리지 시스템의 랙 하드웨어를 설치하고 컨트롤러 노드와 스토리지 셸프용 케이블을 설치한 후에는 스토리지 셸프와 컨트롤러 노드의 전원을 켜야 합니다.
 
 
 
@@ -198,6 +198,48 @@ Eth1/17/4       1       eth  trunk  up      none                     100G(D) --
 .
 ----
 ====
++
+.Cisco Nexus 9808 스위치의 예 표시
+[%collapsible]
+====
+[listing, subs="+quotes"]
+----
+cs1# *show interface brief*
+
+--------------------------------------------------------------------------------
+Port   VRF          Status IP Address                              Speed    MTU
+--------------------------------------------------------------------------------
+mgmt0  --           up     10.232.206.36                           1000    1500
+--------------------------------------------------------------------------------
+Ethernet        VLAN    Type Mode   Status  Reason Speed     Port
+Interface                                                                    Ch #
+--------------------------------------------------------------------------------
+Eth1/1          1       eth  trunk  up      none                     400G(D) --
+Eth1/2          1       eth  trunk  up      none                     400G(D) --
+.
+.
+.
+Eth1/17         1       eth  trunk  up      none                     400G(D) --
+Eth1/18         1       eth  trunk  down    XCVR not inserted        auto(D) --
+Eth1/19/1       1       eth  trunk  up      none                     100G(D) --
+Eth1/19/2       1       eth  trunk  up      none                     100G(D) --
+.
+.
+.
+Eth1/35/3       1       eth  trunk  down    XCVR not inserted        auto(D) --
+Eth1/35/4       1       eth  trunk  down    XCVR not inserted        auto(D) --
+Eth1/36         1       eth  trunk  down    XCVR not inserted        auto(D) 1
+
+------------------------------------------------------------------------------------------
+Port-channel VLAN    Type Mode   Status  Reason                              Speed   Protocol
+Interface
+------------------------------------------------------------------------------------------
+Po1          1       eth  trunk  down    No operational members                auto(D)  lacp
+Po998        1       eth  access down    Administratively down                 auto(I)  none
+Po999        1       eth  access down    Administratively down                 auto(I)  none
+cs1#
+----
+====
 . 다음 명령어를 사용하여 클러스터 노드가 올바른 클러스터 VLAN에 있는지 확인하십시오.
 +
 `show vlan brief`
@@ -349,6 +391,168 @@ Po1           1
 ----
 ====
 +
+.Cisco Nexus 9808 스위치의 예 표시
+[%collapsible]
+====
+[listing, subs="+quotes"]
+----
+cs1# *show vlan brief*
+
+VLAN Name                     Status    Ports
+---- ----------------------- ---------- -------- -----------------------------
+1    default                          active    Po1, Po998, Po999, Eth1/1
+                                                Eth1/2, Eth1/3, Eth1/4, Eth1/5
+                                                Eth1/6, Eth1/7, Eth1/8, Eth1/9
+.
+.
+.
+                                                Eth1/34/3, Eth1/34/4, Eth1/35/1
+                                                Eth1/35/2, Eth1/35/3, Eth1/35/4
+17   VLAN0017                         active    Eth1/1, Eth1/2, Eth1/3, Eth1/4
+                                                Eth1/5, Eth1/6, Eth1/7, Eth1/8
+.
+.
+.
+                                                Eth1/34/3, Eth1/34/4, Eth1/35/1
+                                                Eth1/35/2, Eth1/35/3, Eth1/35/4
+18   VLAN0018                         active    Eth1/1, Eth1/2, Eth1/3, Eth1/4
+                                                Eth1/5, Eth1/6, Eth1/7, Eth1/8
+.
+.
+.
+                                                Eth1/34/3, Eth1/34/4, Eth1/35/1
+                                                Eth1/35/2, Eth1/35/3, Eth1/35/4
+30   VLAN0030                         active    Eth1/1, Eth1/2, Eth1/3, Eth1/4
+                                                Eth1/5, Eth1/6, Eth1/7, Eth1/8
+.
+.
+.
+                                                Eth1/34/3, Eth1/34/4, Eth1/35/1
+                                                Eth1/35/2, Eth1/35/3, Eth1/35/4
+40   VLAN0040                         active    Po1, Eth1/1, Eth1/2, Eth1/3
+                                                Eth1/4, Eth1/5, Eth1/6, Eth1/7
+                                                Eth1/8, Eth1/9, Eth1/10, Eth1/11
+.
+.
+.
+                                                Eth1/35/1, Eth1/35/2, Eth1/35/3
+                                                Eth1/35/4
+
+cs1#
+
+
+cs1# *show interface trunk*
+
+--------------------------------------------------------------------------------
+Port          Native  Status        Port
+              Vlan                  Channel
+--------------------------------------------------------------------------------
+Eth1/1        1       trunking      --
+Eth1/2        1       trunking      --
+.
+.
+.
+Eth1/17       1       trunking      --
+Eth1/18       1       trunking      --
+Eth1/19/1     1       trunking      --
+Eth1/19/2     1       trunking      --
+.
+.
+.
+Eth1/35/4     1       trunking      --
+Eth1/36       1       trnk-bndl     Po1
+Po1           1       trunking      --
+
+--------------------------------------------------------------------------------
+Port          Vlans Allowed on Trunk
+--------------------------------------------------------------------------------
+Eth1/1        1,17-18,30,40
+Eth1/2        1,17-18,30,40
+.
+.
+.
+Eth1/17       1,17-18,30,40
+Eth1/18       1,17-18,30,40
+Eth1/19/1     1,17-18,30,40
+Eth1/19/2     1,17-18,30,40
+.
+.
+.
+Eth1/35/3     1,17-18,30,40
+Eth1/35/4     1,17-18,30,40
+Eth1/36       1,40
+Po1           1,40
+
+--------------------------------------------------------------------------------
+Port          Vlans Err-disabled on Trunk
+--------------------------------------------------------------------------------
+Eth1/1        none
+Eth1/2        none
+.
+.
+.
+Eth1/17       none
+Eth1/18       none
+Eth1/19/1     none
+Eth1/19/2     none
+.
+.
+.
+Eth1/35/4     none
+Eth1/36       none
+Po1           none
+
+--------------------------------------------------------------------------------
+Port          STP Forwarding
+--------------------------------------------------------------------------------
+Eth1/1        1,17-18,30,40
+Eth1/2        1,17-18,30,40
+.
+.
+.
+Eth1/17       1,17-18,30,40
+Eth1/18       none
+Eth1/19/1     1,17-18,30,40
+Eth1/19/2     1,17-18,30,40
+.
+.
+.
+Eth1/35/4     none
+Eth1/36       none
+Po1           none
+
+--------------------------------------------------------------------------------
+Port          Vlans in spanning tree forwarding state and not pruned
+--------------------------------------------------------------------------------
+Eth1/1        Feature VTP is not enabled
+1,17-18,30,40
+Eth1/2        Feature VTP is not enabled
+1,17-18,30,40
+.
+.
+.
+Eth1/23/3     Feature VTP is not enabled
+1,17-18,30,40
+Eth1/23/4     Feature VTP is not enabled
+1,17-18,30,40
+Eth1/24/1     Feature VTP is not enabled
+none
+Eth1/24/2     Feature VTP is not enabled
+none
+.
+.
+.
+Eth1/35/4     Feature VTP is not enabled
+none
+Eth1/36       Feature VTP is not enabled
+none
+Po1           Feature VTP is not enabled
+none
+cs1#
+
+----
+====
++
 
 NOTE: 특정 포트 및 VLAN 사용에 대한 자세한 내용은 RCF의 배너 및 중요 참고 사항 섹션을 참조하십시오.
 
@@ -404,16 +608,38 @@ Group Port-       Type     Protocol  Member Ports
 cs1#
 ----
 ====
++
+.Cisco Nexus 9808 스위치의 예 표시
+[%collapsible]
+====
+
+NOTE: Cisco Nexus 9808 스위치는 단일 스위치이므로 ISL이 연결 해제되어 있습니다. 따라서 명령 출력에서 피어를 볼 수 없습니다.
+
+[listing, subs="+quotes"]
+----
+cs1# *show port-channel summary*
+Flags:  D - Down        P - Up in port-channel (members)
+        I - Individual  H - Hot-standby (LACP only)
+        s - Suspended   r - Module-removed
+        b - BFD Session Wait
+        S - Switched    R - Routed
+        U - Up (port-channel)
+        p - Up in delay-lacp mode (member)
+        M - Not in use. Min-links not met
+--------------------------------------------------------------------------------
+Group Port-       Type     Protocol  Member Ports
+      Channel
+--------------------------------------------------------------------------------
+1     Po1(SD)     Eth      LACP      Eth1/36(D)
+998   Po998(SD)   Eth      NONE      --
+999   Po999(SD)   Eth      NONE      --
+cs1#
+----
+====
 
 
 .다음은 무엇인가요?
-AFX 1K 스토리지 시스템의 전원을 켠 후 배포 옵션에 따라 설정을 완료하십시오.
+AFX 2K 스토리지 시스템의 전원을 켠 후 배포 옵션에 따라 설정을 완료하십시오.
 
-* 전용 AFX 1K 스토리지 시스템 배포의 경우 link:../install-setup/cluster-setup.html["AFX 클러스터 설정"]로 이동하십시오.
-* AI Data Engine(AIDE)이 포함된 AFX 1K 배포의 경우, AIDE 타사 서버 또는 NetApp에서 제공하는 데이터 컴퓨팅 노드를 설치하십시오.
-+
-** 타사 서버 배포의 경우 https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["타사 서버의 AI Data Engine용 하드웨어 설치"^]를 완료한 다음 https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-aide-as-software.html["타사 서버에 AIDE 소프트웨어 설치"^]을 진행하십시오.
-** NetApp DCN 배포의 경우 다음을 완료하십시오 https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["NetApp에서 제공하는 데이터 컴퓨팅 노드에 AI Data Engine용 하드웨어 설치"^].
-
-
+* 전용 AFX 2K 스토리지 시스템 배포의 경우 link:../install-setup/cluster-setup.html["AFX 클러스터 설정"]로 이동하십시오.
 

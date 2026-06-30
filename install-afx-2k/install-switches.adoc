@@ -1,19 +1,19 @@
 ---
 sidebar: sidebar 
-permalink: install-setup/install-switches.html 
-keywords: afx, afx 1k, install, setup, switches, cisco 9332, cisco 9336, switches, 
-summary: AFX 1K 보관 시스템과 보관 선반에 스위치를 설치하는 방법을 알아보세요. 
+permalink: install-afx-2k/install-switches.html 
+keywords: afx, afx 2k, install, setup, switches, cisco 9332, cisco 9336, switches, 
+summary: AFX 2K 스토리지 시스템 및 스토리지 셸프용 스위치 설치 방법을 알아보세요. 
 ---
-= AFX 1K 스토리지 시스템용 스위치 설치
+= AFX 2K 스토리지 시스템의 스위치를 설치합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-AFX 1K 스토리지 시스템 설치를 위한 준비를 완료한 후에는 캐비닛이나 통신 랙에 스위치를 설치해야 합니다.
+AFX 2K 스토리지 시스템 설치 준비를 완료한 후에는 스위치를 캐비닛 또는 통신 랙에 설치해야 합니다.
 
-캐비닛이나 랙에 Cisco Nexus 9332D-GX2B 또는 9364D-GX2A 스위치를 설치합니다.  Cisco Nexus 9364D-GX2A 스위치를 사용하는 경우 패스스루 패널 키트를 설치하세요.
+캐비닛이나 랙에 Cisco Nexus 9808, 9332D-GX2B 또는 9364D-GX2A 스위치를 설치하십시오. Cisco Nexus 9364D-GX2A 스위치를 사용하는 경우 패스스루 패널 키트를 설치하십시오.
 
 .시작하기 전에
 다음 구성 요소가 있는지 확인하세요.
@@ -36,10 +36,22 @@ NetApp 패스스루 패널 키트에는 다음 하드웨어가 포함되어 있�
 NOTE: 점퍼 코드는 패스스루 키트에 포함되어 있지 않습니다.  스위치와 함께 점퍼 케이블이 제공되지 않은 경우 NetApp 에 ​​문의하여 올바른 점퍼 케이블을 주문하세요.
 
 
-NOTE: 스위치의 공기 흐름이 포트 측 흡기(버건디색 팬 및 PSU)로 구성된 경우, 스위치의 네트워크 포트는 캐비닛 전면을 향하도록 설치해야 하며, 배기 팬은 캐비닛 후면을 향해야 합니다. 이 구성에서는 캐비닛 전면의 네트워크 포트에서 캐비닛 후면의 스토리지 포트까지 연결할 수 있을 만큼 충분히 긴 케이블을 사용해야 합니다. + 이러한 스위치에 대한 자세한 내용은 Cisco 웹사이트 https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9332D-GX2B 모드 스위치 하드웨어 설치 가이드"^] 및 https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9364D-GX2A 모드 스위치 하드웨어 설치 가이드"^]를 참조하십시오.
+NOTE: 스위치의 공기 흐름이 포트 측 흡기(버건디색 팬 및 전원 공급 장치)로 구성된 경우, 스위치의 네트워크 포트는 캐비닛 전면을 향하도록 설치해야 하며, 배기 팬은 캐비닛 후면을 향해야 합니다. 이 구성에서는 캐비닛 전면의 네트워크 포트에서 캐비닛 후면의 스토리지 포트까지 연결하기에 충분한 길이의 케이블을 사용해야 합니다. + 이러한 스위치에 대한 자세한 내용은 Cisco 웹사이트(link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/9800/9808/nx-os/cisco-nexus-9808-nx-os-mode-switch-hardware-installation-guide/m-8000-modular-overview-ph2.html["Cisco Nexus 9808 Mode Switch 하드웨어 설치 가이드"^], link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9332D-GX2B 모드 스위치 하드웨어 설치 가이드"^] 및 link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9364D-GX2A 모드 스위치 하드웨어 설치 가이드"^])를 참조하십시오.
 
 
 CAUTION: 설치 및 유지보수 절차를 수행하는 동안에는 항상 검증된 접지점에 연결된 접지 손목 스트랩을 착용하십시오. 적절한 ESD 예방 조치를 따르지 않으면 컨트롤러 노드, 스토리지 셸프 및 네트워크 스위치가 영구적으로 손상될 수 있습니다.
+
+
+
+== Cisco Nexus 9808 스위치 설치
+
+Cisco Nexus 9808 스위치를 설치하는 경우, 캐비닛 또는 랙에 스위치를 설치하는 방법에 대한 자세한 지침은 link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/9800/9808/nx-os/cisco-nexus-9808-nx-os-mode-switch-hardware-installation-guide/m-8000-install-chassis.html["Cisco Nexus 9808 Mode Switch 하드웨어 설치 가이드"^]을 참조하십시오.
+
+
+
+== Cisco Nexus 9332D-GX2B 및 9364D-GX2A 스위치 설치
+
+Cisco Nexus 9332D-GX2B 또는 9364D를 설치하는 경우, 다음 단계를 따라 스위치를 캐비닛 또는 랙에 설치하십시오.
 
 .단계
 . 패스스루 블랭킹 패널을 설치합니다.
@@ -47,7 +59,7 @@ CAUTION: 설치 및 유지보수 절차를 수행하는 동안에는 항상 검�
 .. 캐비닛이나 랙에서 스위치와 블랭킹 패널의 수직 위치를 결정합니다.
 .. 앞쪽 캐비닛 레일에 맞는 사각형 구멍에 양쪽에 클립 너트 두 개를 설치합니다.
 .. 인접한 랙 공간을 침범하지 않도록 패널을 수직으로 중앙에 놓은 다음 나사를 조입니다.
-.. 두 점퍼 코드의 암 커넥터를 패널 뒷면에서 브러시 어셈블리를 통해 삽입합니다.
+.. 패널 뒷면에서 나오는 두 점퍼 코드의 암 커넥터를 브러시 어셈블리를 통해 끼우십시오.
 +
 image::../media/cisco_9148_jumper_cords.gif[점퍼 코드의 암 커넥터]
 
@@ -80,7 +92,7 @@ image::../media/3132q_front_bracket.gif[프론트 브라켓]
 image::../media/ru_locations_for_3132q_v.gif[클립 너트 위치]
 
 +
-컨트롤러와 선반에 효율적으로 접근할 수 있는 캐비닛 위치(예: 가운데 줄)에 두 개의 9332D-GX2B 스위치를 장착합니다.
+컨트롤러와 쉘프에 효율적으로 접근할 수 있는 캐비닛 위치(예: 중간 열)에 두 개의 스위치를 설치하십시오.
 
 . 캐비닛이나 랙에 슬라이더 레일을 설치합니다.
 +
@@ -174,4 +186,4 @@ NOTE: 중복성을 유지하려면 두 개의 코드를 서로 다른 PDU에 연
 
 
 .다음은 무엇인가요?
-캐비닛이나 랙에 스위치를 설치한 후link:deploy-hardware.html["캐비닛이나 랙에 AFX 1K 보관 시스템과 선반을 설치합니다."] .
+캐비닛이나 랙에 스위치를 설치한 후에는 link:deploy-hardware.html["캐비닛 또는 랙에 AFX 2K 스토리지 시스템과 쉘프를 설치합니다."].
