@@ -13,18 +13,14 @@ summary: AFX 시스템을 처음 가동하려면 하드웨어 구성 요소를 �
 [role="lead"]
 AFX 시스템을 처음 사용하려면 하드웨어 구성 요소를 설치하고 클러스터를 설정한 다음 클러스터 및 SVM을 관리할 준비를 해야 합니다.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"] AIDE도 AFX와 함께 설치되나요?
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"] 하드웨어 설치 및 설정
 [role="quick-margin-para"]
-AFX만 설치할지, 아니면 AFX와 AI Data Engine을 함께 설치할지 결정해야 합니다.  https://docs.netapp.com/us-en/ontap-afx/get-started/learn-about-aide.html#installation-options["AIDE 설치 옵션"]을(를) 검토하여 필요에 가장 적합한 옵션을 결정하세요.
+link:../install-setup/install-setup-workflow.html["AFX 1K"] 또는 link:../install-afx-2k/install-setup-workflow.html["AFX 2K"] 스토리지 시스템을 설치합니다.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"] 하드웨어 설치 및 설정
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"] 클러스터를 설정하세요
 [role="quick-margin-para"]
-link:../install-setup/install-setup-workflow.html["AFX 1K"] 또는 link:../install-afx-2k/install-setup-workflow.html["AFX 2K"] 스토리지 시스템을 설치합니다. 선택적으로, 초기 AFX 1K 구성의 일부로 AIDE를 포함하는 경우  https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["AIDE 타사 서버 설치"] 또는  https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["AIDE NetApp 데이터 컴퓨팅 노드 설치"] 할 수 있습니다.
+System Manager를 사용하여 ONTAP 클러스터를 link:../install-setup/cluster-setup.html["설정"]하는 빠르고 쉬운 프로세스를 따르십시오.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["삼"] 클러스터를 설정하세요
-[role="quick-margin-para"]
-System Manager를 사용하여 ONTAP 클러스터를 link:../install-setup/cluster-setup.html["설정"]하는 빠르고 쉬운 프로세스를 따르십시오. AFX와 함께 데이터 컴퓨팅 노드에 AIDE도 설치하는 경우 추가 필수 구성에 대해  https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["새로운 AFX 클러스터를 사용하여 AIDE 설정"^]를 검토하십시오.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] 클러스터 관리를 준비하십시오
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["삼"] 클러스터 관리를 준비하십시오
 [role="quick-margin-para"]
 AFX를 프로덕션 환경에 배포하기 전에 다음 사항이 필수입니다.link:../get-started/prepare-cluster-admin.html["준비하다"] 스토리지 가상 머신(SVM), 사용자, 역할 및 관리 인터페이스를 포함한 관리 구조를 이해함으로써 안전하고 효율적이며 효과적인 클러스터 관리를 보장합니다.

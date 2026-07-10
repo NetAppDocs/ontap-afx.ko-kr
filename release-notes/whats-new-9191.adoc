@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: release-notes/whats-new-9191.html 
-keywords: 'afx, release notes, what"s new, 9.19.1, ai data engine, aide' 
+keywords: 'afx, release notes, what"s new, 9.19.1' 
 summary: AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.19.1에 포함된 새로운 기능에 대해 알아보십시오. 
 ---
 = AFX 스토리지 시스템용 ONTAP 9.19.1의 새로운 기능
@@ -15,9 +15,6 @@ summary: AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.19.1에 �
 
 [role="lead"]
 AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.19.1에 포함된 새로운 기능에 대해 알아보십시오.
-
-
-TIP:  https://docs.netapp.com/us-en/ai-data-engine/release-notes/whats-new.html["AI Data Engine"^]에 대한 새롭고 향상된 지원에 대해 알아보십시오.
 
 
 

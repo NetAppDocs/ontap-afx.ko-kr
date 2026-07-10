@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: install-setup/cluster-setup.html 
 keywords: afx, afx system, cluster setup, setup 
-summary: 'AFX 하드웨어 설치가 완료되면 ONTAP 클러스터 설정을 완료할 수 있습니다. 이 프로세스에는 순차적으로 수행해야 하는 관련 구성 단계가 포함됩니다. 이 과정에서 선택적으로 AI Data Engine(AIDE)을 실행하는 데이터 컴퓨팅 노드(DCN)를 추가하여 AFX 스토리지 클러스터와 DCN 클러스터를 동일한 ONTAP 제어 평면을 통해 관리되는 단일 시스템으로 운영할 수 있습니다.' 
+summary: AFX 하드웨어 설치가 완료되면 ONTAP 클러스터 설정을 완료할 수 있습니다. 이 프로세스에는 순차적으로 수행해야 하는 관련 구성 단계가 포함됩니다. 
 ---
 = AFX 스토리지 시스템 ONTAP 클러스터 설정
 :allow-uri-read: 
@@ -11,14 +11,14 @@ summary: 'AFX 하드웨어 설치가 완료되면 ONTAP 클러스터 설정을 �
 
 
 [role="lead"]
-AFX 하드웨어 설치가 완료되면 ONTAP 클러스터 설정을 완료할 수 있습니다. 이 프로세스에는 순차적으로 수행해야 하는 관련 구성 단계가 포함됩니다. 이 과정에서 선택적으로 AI Data Engine(AIDE)을 실행하는 데이터 컴퓨팅 노드(DCN)를 추가하여 AFX 스토리지 클러스터와 DCN 클러스터를 동일한 ONTAP 제어 평면을 통해 관리되는 단일 시스템으로 운영할 수 있습니다.
+AFX 하드웨어 설치가 완료되면 ONTAP 클러스터 설정을 완료할 수 있습니다. 이 프로세스에는 순차적으로 수행해야 하는 관련 구성 단계가 포함됩니다.
 
 
 
 [[prepare-to-set-up-an-afx-storage-system]]
 == AFX 스토리지 시스템 설정 준비
 
-ONTAP 클러스터를 설정하기 전에 핵심 AFX 요구 사항과 추가 AIDE 고려 사항을 검토하여 설정 프로세스를 성공적으로 완료하는 데 필요한 모든 정보와 리소스가 있는지 확인해야 합니다.
+ONTAP 클러스터를 설정하기 전에 핵심 AFX 요구 사항을 검토하여 설정 프로세스를 성공적으로 완료하는 데 필요한 모든 정보와 리소스를 확보했는지 확인해야 합니다.
 
 
 
@@ -55,18 +55,6 @@ AFX 시스템의 하드웨어 설치가 완료되었는지 확인하십시오. �
 
 
 
-[[additional-aide-considerations]]
-=== 추가 AIDE 고려 사항
-
-AFX를 처음 설치하고 설정할 때 선택적으로 NetApp AI Data Engine(AIDE)을 포함할 수 있습니다. AIDE는 타사 서버에 AIDE 소프트웨어를 설치하는 방식과 NetApp에서 제공하는 데이터 컴퓨팅 노드(DCN)에 설치하는 방식, 이렇게 두 가지 배포 모델을 지원합니다. AIDE를 설정하려면 먼저 사용하려는 배포 모델에 필요한 사전 요구 사항을 완료해야 합니다.
-
-* 타사 서버 배포의 경우 https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["타사 서버의 AI Data Engine용 하드웨어 설치"^]를 완료한 다음 https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-aide-as-software.html["타사 서버에 AIDE 소프트웨어 설치"^]을 진행하십시오.
-* NetApp DCN 배포의 경우 다음을 완료하십시오 https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["NetApp에서 제공하는 데이터 컴퓨팅 노드에 AI Data Engine용 하드웨어 설치"^].
-* 컴퓨팅 노드의 주소 및 관련 네트워크 구성을 확보하십시오.
-
-
-
-
 [[perform-initial-cluster-setup]]
 == 초기 클러스터 설정 수행
 
@@ -95,7 +83,6 @@ AFX 클러스터에는 처음에 구성해야 하는 4개의 영역이 있습니
 +
 IP 주소와 서브넷 마스크를 제공하세요.
 
-. AFX 스토리지 시스템과 함께 AI Data Engine을 설치하는 경우 세 개의 컴퓨팅 노드에 대한 IP 주소를 제공하십시오.
 . DNS 및 NIS를 포함한 네트워크 서비스를 구성합니다. *Continue*를 선택합니다.
 +
 DNS 및 NTP 서버에 대한 세부 정보를 정의합니다.
@@ -138,7 +125,6 @@ AFX 시스템 ONTAP 클러스터에는 설정 중에 구성된 세 가지 영역
 
 
 .다음은 무엇입니까?
-* AFX 클러스터 설정의 일부로 AIDE를 포함한 경우 추가 AIDE 구성 단계를 완료하십시오. 인증 구성은 모든 AIDE 배포에 적용됩니다. 라이선스가 부여된 AIDE 기능을 사용하는 NetApp DCN 배포에는 라이선스가 필요합니다. 타사 서버 배포는 메타데이터 중심이므로 AIDE 라이선스가 필요하지 않습니다. 자세한 내용은  https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["AI Data Engine 설정"^]을(를) 참조하십시오.
 * 당신은해야합니다link:../get-started/prepare-cluster-admin.html["AFX 관리를 준비하세요"] 프로덕션 환경에서 AFX 클러스터를 사용하기 전에.
 
 
@@ -147,7 +133,6 @@ AFX 시스템 ONTAP 클러스터에는 설정 중에 구성된 세 가지 영역
 [[related-information]]
 == 관련 정보
 
-* link:../get-started/learn-about-aide.html["NetApp AI Data Engine에 대해 알아보십시오"]
 * link:../administer/configure-svm.html["AFX SVM 구성"]
 * link:../get-started/prepare-cluster-admin.html["AFX 관리를 준비하세요"]
 

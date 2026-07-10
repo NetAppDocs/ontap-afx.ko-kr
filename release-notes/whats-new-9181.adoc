@@ -17,9 +17,6 @@ summary: AFX 스토리지 시스템에서 사용할 수 있는 ONTAP 9.18.1의 �
 AFX 스토리지 시스템에서 사용할 수 있는 ONTAP 9.18.1의 새로운 기능에 대해 알아보세요.
 
 
-TIP:  https://docs.netapp.com/us-en/ai-data-engine/release-notes/whats-new.html["AI Data Engine"^]에 대한 새롭고 향상된 지원에 대해 알아보십시오.
-
-
 
 [[storage-resource-management-enhancements]]
 == 스토리지 리소스 관리 향상

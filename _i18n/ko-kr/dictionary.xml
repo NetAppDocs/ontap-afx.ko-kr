@@ -1723,40 +1723,9 @@
   <block id="7485a9a2ae4ee9755a52213e23e1172c" category="inline-link">NetApp Support Site에서 NLF 라이센스를 다운로드하는 방법</block>
   <block id="0d31e45cb458235b1c184c1176df0af6" category="list-text"><block ref="0d31e45cb458235b1c184c1176df0af6" category="inline-link-rx"></block></block>
   <block id="d0e68fc1dba1032a2fa3af9f7e71bfc4" category="list-text">Grafana Harvest 25.08.1 이전 버전</block>
-  <block id="f4400f8e3998b00dc936390760dfa0b2" category="summary">NetApp AI Data Engine(AIDE)은 AFX 클러스터에 연결된 데이터 컴퓨팅 노드에서 실행되는 스토리지 통합 AI 데이터 서비스입니다. 선택적으로 AIDE를 AFX 클러스터에 설치 및 통합하여 AI 및 ML 워크로드에 전용 GPU 가속 데이터 처리를 제공함으로써 AFX의 기능을 확장하는 동시에 ONTAP의 모든 이점을 유지할 수 있습니다.</block>
-  <block id="a488cbabbe8d00d891faddf3e2aaedec" category="doc">NetApp AI Data Engine에 대해 알아보십시오</block>
-  <block id="fd73f0069f1d3fe412b6cc9624e9d727" category="section-title">AIDE 개요</block>
-  <block id="6bcc7c95100882ca261552d0ffd8f1b6" category="paragraph">AIDE는 AI 및 ML 워크로드에 필요한 데이터 준비 및 관리를 가속화하고 간소화하도록 설계된 시스템입니다. AIDE는 별도로 설치되며 AFX 스토리지 시스템 클러스터와 긴밀하게 통합됩니다. AIDE는 고성능 및 확장 가능한 AFX 스토리지 기반을 활용하는 동시에 AI 데이터 처리, 거버넌스 및 워크플로 자동화를 위한 특수 서비스를 제공합니다.</block>
-  <block id="37b3dc451b95ca444c011393639868c7" category="paragraph">AIDE의 핵심 강점은 대규모 분산 데이터 세트 전반에 걸쳐 메타데이터 관리를 중앙 집중화하고 자동화하는 능력입니다. ONTAP 볼륨의 데이터를 기반으로 메타데이터 저장소를 지속적으로 카탈로그화하고 업데이트하도록 구성할 수 있어 사용자가 효율적으로 검색, 분류 및 거버넌스 정책을 적용할 수 있습니다. 내부 처리 파이프라인은 의미 검색 및 검색 작업에 필요한 벡터 임베딩 생성을 포함하여 AI에서 바로 사용할 수 있는 데이터 세트를 생성합니다.</block>
-  <block id="e4a694a3dc8671d50ac2711d735738d2" category="paragraph">보안 및 거버넌스 또한 설계의 핵심 요소입니다. AIDE는 인증, 새로운 RBAC 역할을 통한 액세스 제어, 데이터 분류, 그리고 민감한 정보 보호를 위한 정책 기반 시행 기능을 제공합니다. 자동 수정, 마스킹, 감사 로깅과 같은 기능은 관련 규제 요건을 충족하고 AI 수명주기 전반에 걸쳐 중요한 데이터를 보호하는 데 도움이 됩니다.</block>
-  <block id="a4a07490b53ede56eedd6615965e9098" category="paragraph">AIDE는 신속한 데이터 검색, 큐레이션 및 워크플로우 관리를 위한 도구를 제공하여 데이터 엔지니어와 데이터 과학자의 역량을 강화합니다. 전용 AIDE 콘솔과 향상된 AFX REST API를 통해 사용자는 큐레이션된 데이터 컬렉션을 생성하고, 벡터 검색을 수행하며, 외부 AI 및 GenAI 애플리케이션과 통합할 수 있습니다. AIDE는 필요한 수작업을 줄여주므로 팀은 데이터에서 인사이트를 추출하는 데 집중할 수 있습니다.</block>
-  <block id="ea206a7167c7e693d778525a7c87c869" category="section-title">설치 옵션</block>
-  <block id="a4fe9c37a470f8ecf5564e8a245e6426" category="paragraph">AIDE를 AFX 스토리지 클러스터에 설치하고 통합하는 방법에는 두 가지 옵션이 있습니다.</block>
-  <block id="e47448b4066bbe2bcd70858f5bace656" category="section-title">AFX와 AIDE 함께 설정하세요</block>
-  <block id="76114086772ee7fa8f48ad37d5d95dcb" category="paragraph">AFX 스토리지 시스템과 AIDE를 동시에 배포하면 통합되고 간소화된 설치 프로세스를 통해 즉각적인 통합과 최적의 구성을 보장합니다. 이러한 턴키 방식은 온보딩을 간소화하고 호환성을 보장하며, 신속한 가치 실현을 목표로 하는 신규 구축 환경에 이상적인 완벽하게 작동하는 AI 데이터 플랫폼을 빠르게 활용할 수 있도록 지원합니다.</block>
-  <block id="a94dcc736627933f5609e28e7ef85321" category="section-title">기존 AFX 클러스터에 AIDE를 통합합니다</block>
-  <block id="08b9205a85210f5785e7bf74bc45457c" category="paragraph">이미 AFX 스토리지 클러스터를 설치하고 운영 중인 경우 언제든지 AIDE를 추가하여 데이터 접근성과 가치를 향상시킬 수 있습니다. AIDE는 기존 AFX 스토리지 환경에 애드온으로 배포되어 운영에 지장을 주지 않고 기존 클러스터 스토리지 네트워크에 연결됩니다. 통합 프로세스는 사용 가능한 ONTAP 볼륨을 자동으로 검색하고 메타데이터를 동기화합니다. AI 자동화, 거버넌스 및 큐레이션 도구를 통해 데이터 처리 워크플로우를 개선하는 동시에 기존 스토리지 기반을 유지할 수 있습니다.</block>
-  <block id="75d38d77f71f859f0e6bfa05a8868b12" category="inline-link">AI Data Engine에 대해 알아보십시오</block>
-  <block id="14905966d4697587a926c48b4f3b6868" category="list-text"><block ref="14905966d4697587a926c48b4f3b6868" category="inline-link-rx"></block></block>
-  <block id="dcaec67f8b6685884b28ce763c3b6b20" category="inline-link">NetApp AI Data Engine FAQ</block>
-  <block id="19d7d8892fce8fa9173b4cd097aeae29" category="list-text"><block ref="19d7d8892fce8fa9173b4cd097aeae29" category="inline-link-rx"></block></block>
-  <block id="9781d9b60a3156749ead991d1b8f8476" category="inline-link">ONTAP AIDE 클러스터를 설정하세요</block>
-  <block id="72c3ab9fda47d2c464e4e6035e5ee7d5" category="list-text"><block ref="72c3ab9fda47d2c464e4e6035e5ee7d5" category="inline-link-rx"></block></block>
-  <block id="2f05d6cddb39e99b401c758387957ed6" category="inline-link">NetApp AI Data Engine</block>
-  <block id="97bf7903281438713379444f1d00bdfe" category="list-text"><block ref="97bf7903281438713379444f1d00bdfe" category="inline-link-rx"></block></block>
   <block id="cb2003e71a82c4946bc9b91168398431" category="summary">AFX 시스템을 처음 가동하려면 하드웨어 구성 요소를 설치하고 클러스터를 설정한 다음 클러스터 및 SVM을 관리할 준비를 해야 합니다.</block>
   <block id="14c19ed730096036466b6f8aa6689f4e" category="paragraph">AFX 시스템을 처음 사용하려면 하드웨어 구성 요소를 설치하고 클러스터를 설정한 다음 클러스터 및 SVM을 관리할 준비를 해야 합니다.</block>
-  <block id="08c7f01b69af18ad32a13c64bc8b43d1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> AIDE도 AFX와 함께 설치되나요?</block>
-  <block id="5089e4b50d1f4e886a231cd5c043ad9d" category="inline-link">AIDE 설치 옵션</block>
-  <block id="d3d9eaa68fa2acc25f51847944519bc7" category="paragraph">AFX만 설치할지, 아니면 AFX와 AI Data Engine을 함께 설치할지 결정해야 합니다. <block ref="b158da038797eb3a533563ed16d340e2" category="inline-link-rx"></block>을(를) 검토하여 필요에 가장 적합한 옵션을 결정하세요.</block>
-  <block id="99882077cc5150985de38b05fe43c5bf" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 하드웨어 설치 및 설정</block>
-  <block id="8a28e13725679cf81ae7a97f135f3151" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 클러스터를 설정하세요</block>
-  <block id="67cf641733ab3c2361c8f1f769a0874b" category="inline-link">새로운 AFX 클러스터를 사용하여 AIDE 설정</block>
-  <block id="35a50ba3ebcc67e69ce937368b540ae9" category="paragraph">System Manager를 사용하여 ONTAP 클러스터를 <block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block>하는 빠르고 쉬운 프로세스를 따르십시오. AFX와 함께 데이터 컴퓨팅 노드에 AIDE도 설치하는 경우 추가 필수 구성에 대해 <block ref="ea340cdc1a42614e036446f1b104ebdd" category="inline-link-rx"></block>를 검토하십시오.</block>
-  <block id="927e370f9384cda0a4f5d88224cb1fdb" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 클러스터 관리를 준비하십시오</block>
-  <block id="40b9c78d4cb87fc896b9f0629f52df42" category="summary">AFX 하드웨어 설치가 완료되면 ONTAP 클러스터 설정을 완료할 수 있습니다. 이 프로세스에는 순차적으로 수행해야 하는 관련 구성 단계가 포함됩니다. 이 과정에서 선택적으로 AI Data Engine(AIDE)을 실행하는 데이터 컴퓨팅 노드(DCN)를 추가하여 AFX 스토리지 클러스터와 DCN 클러스터를 동일한 ONTAP 제어 평면을 통해 관리되는 단일 시스템으로 운영할 수 있습니다.</block>
   <block id="437d7eedd2da2ae1c1685c0d0c80c679" category="section-title">AFX 스토리지 시스템 설정 준비</block>
-  <block id="f41ed4469bd565e9483931052957aea1" category="paragraph">ONTAP 클러스터를 설정하기 전에 핵심 AFX 요구 사항과 추가 AIDE 고려 사항을 검토하여 설정 프로세스를 성공적으로 완료하는 데 필요한 모든 정보와 리소스가 있는지 확인해야 합니다.</block>
   <block id="9d88ee465b7f03fb4741ec9544797f42" category="section-title">핵심 AFX 요구 사항</block>
   <block id="c2eb7333972f3fa93553cd7a06df958c" category="paragraph">AFX 클러스터를 설정할 때 고려해야 할 몇 가지 핵심 요구 사항이 있습니다.</block>
   <block id="2381aa60d42fb06772fbc2c2f051f150" category="paragraph-title">하드웨어 설치</block>
@@ -1765,12 +1734,8 @@
   <block id="bbadb22f847f13b3fb765b4ca3e45a35" category="paragraph">다음과 같은 IP 주소 구성이 필요합니다.</block>
   <block id="754aeda810cf43298af8b5d9682a3ff0" category="paragraph-title">추가 네트워크 구성</block>
   <block id="3716d7de1273609f72cac60d3ce80a8b" category="paragraph">다음과 같은 관련 네트워킹 정보도 필요합니다.</block>
-  <block id="6f17f12812465b184f0ec95def3e37b7" category="section-title">추가 AIDE 고려 사항</block>
   <block id="51a1e9578b7b51efdaedcad5b2df0d09" category="list-text">AFX 클러스터 및 컨트롤러 노드의 IP 주소를 구성합니다.</block>
   <block id="b8bd3c09a7652f21306db623894a4a8e" category="list-text">DNS 및 NIS를 포함한 네트워크 서비스를 구성합니다. *Continue*를 선택합니다.</block>
-  <block id="b0124f2be19a540828d3e1c546d45955" category="inline-link">AI Data Engine 설정</block>
-  <block id="e656cce89d1f00ff5696185aaf4f7d5d" category="list-text"><block ref="e656cce89d1f00ff5696185aaf4f7d5d" category="inline-link-macro-rx"></block></block>
-  <block id="ec728291e475cad65a149d393bcb1011" category="sidebar">AIDE에 대해 알아보십시오</block>
   <block id="97b5a2da97dacb4945c7a40a9b91f0ea" category="paragraph">각 컨트롤러의 관리(렌치) 포트를 관리 스위치 중 하나에 연결하거나 관리 네트워크에 직접 연결하십시오.</block>
   <block id="be2a2f351864aca4d396a29665b7c035" category="list-text">컨트롤러(예)</block>
   <block id="9bbf373797bf7cf7ba62c80023682e25" category="list-text">컨트롤러</block>
@@ -1778,18 +1743,6 @@
   <block id="6f6d8208a6030c9676f47f16bbb4e52d" category="list-text">e11a (스토리지)</block>
   <block id="37fea526549e28ae68ef55e55a51f038" category="list-text">e10b (스토리지)</block>
   <block id="6d865fdc8b96603a02615c7c46b07937" category="list-text">e11b (스토리지)</block>
-  <block id="2f89616ef718a1cdf501f4048f79f110" category="paragraph">NetApp AI Data Engine(AIDE)은 AFX 클러스터에 연결된 컴퓨팅 노드에서 실행되는 스토리지 통합형 AI 데이터 서비스입니다. NetApp에서 제공하는 데이터 컴퓨팅 노드(DCN) 또는 타사 서버의 AIDE 소프트웨어를 사용하는 두 가지 배포 모델 중 하나를 사용하여 AIDE를 AFX 클러스터에 선택적으로 설치하고 통합할 수 있습니다. NetApp DCN 배포는 전체 AIDE 기능을 제공하는 반면, 타사 서버 배포는 메타데이터에 중점을 둡니다.</block>
-  <block id="26bf1fb96884a6d564b885faac9346fe" category="inline-link">AIDE 타사 서버 설치</block>
-  <block id="0feacb0d94d23bf1fee14eae79e870cd" category="inline-link">AIDE NetApp 데이터 컴퓨팅 노드 설치</block>
-  <block id="bd9ad7be68120900030f68ff19b5b1e4" category="paragraph">AFX를 처음 설치하고 설정할 때 선택적으로 NetApp AI Data Engine(AIDE)을 포함할 수 있습니다. AIDE는 타사 서버에 AIDE 소프트웨어를 설치하는 방식과 NetApp에서 제공하는 데이터 컴퓨팅 노드(DCN)에 설치하는 방식, 이렇게 두 가지 배포 모델을 지원합니다. AIDE를 설정하려면 먼저 사용하려는 배포 모델에 필요한 사전 요구 사항을 완료해야 합니다.</block>
-  <block id="bf53bb5aa0413b6868cea02f2c24f170" category="inline-link">타사 서버의 AI Data Engine용 하드웨어 설치</block>
-  <block id="1f9fa35f3b88c59775937f1382277c15" category="inline-link">타사 서버에 AIDE 소프트웨어 설치</block>
-  <block id="2531713737eb86bda494a4c431d75639" category="list-text">타사 서버 배포의 경우<block ref="d5b26b1f5ada71a4220042a5d6aef0e3" category="inline-link-rx"></block>를 완료한 다음<block ref="77329e7d1925c704e553ae44f4833aec" category="inline-link-rx"></block>을 진행하십시오.</block>
-  <block id="cd260db427b0e8de4b6152a0d113773b" category="inline-link">NetApp에서 제공하는 데이터 컴퓨팅 노드에 AI Data Engine용 하드웨어 설치</block>
-  <block id="d641ea3e8a3406887e82efb694adcee3" category="list-text">NetApp DCN 배포의 경우 다음을 완료하십시오<block ref="c15fb65309a0948930bd70e0eed618f3" category="inline-link-rx"></block>.</block>
-  <block id="671c5433927bc9dfd6b61da2ab79dd6d" category="list-text">컴퓨팅 노드의 주소 및 관련 네트워크 구성을 확보하십시오.</block>
-  <block id="4ba7d969d3c09dfd698e8db23d272f9e" category="list-text">AFX 스토리지 시스템과 함께 AI Data Engine을 설치하는 경우 세 개의 컴퓨팅 노드에 대한 IP 주소를 제공하십시오.</block>
-  <block id="9f492f03b9dc61bbcd50dd10c6f65d02" category="list-text">AFX 클러스터 설정의 일부로 AIDE를 포함한 경우 추가 AIDE 구성 단계를 완료하십시오. 인증 구성은 모든 AIDE 배포에 적용됩니다. 라이선스가 부여된 AIDE 기능을 사용하는 NetApp DCN 배포에는 라이선스가 필요합니다. 타사 서버 배포는 메타데이터 중심이므로 AIDE 라이선스가 필요하지 않습니다. 자세한 내용은 <block ref="bd3118f2bb5e86ecaca641a7e2c5d81b" category="inline-link-rx"></block>을(를) 참조하십시오.</block>
   <block id="9446a98ad14416153cc4d45ab8b531bf" category="section-title">성능</block>
   <block id="345b766b796f651335c71b9f6b81cfdc" category="paragraph">일반적인 ONTAP 기능을 활용하여 AFX 스토리지 시스템 클러스터의 성능을 최적화하십시오.</block>
   <block id="61dd3b29ebbda633eaa5595a4948d71f" category="section-title">자동 QoS 처리량 상한 증가를 제어하는 기본 설정을 수정합니다.</block>
@@ -1852,8 +1805,6 @@
   <block id="da33e3b3b6f0f55817eb5e53583085c6" category="list-text"><block ref="da33e3b3b6f0f55817eb5e53583085c6" category="inline-link-rx"></block></block>
   <block id="1338d36244d668a642dfc6cca5a1c144" category="inline-link">기본 ONTAP S3 버킷 정책에 액세스 규칙 추가</block>
   <block id="64f4444ba55f9951fddb7993dc2eb691" category="list-text"><block ref="64f4444ba55f9951fddb7993dc2eb691" category="inline-link-rx"></block></block>
-  <block id="424a10335c5c90e5b96111de1934acec" category="inline-link">AI Data Engine</block>
-  <block id="1f237fc34e7dd74398581eefc40958c3" category="admonition"><block ref="50cef57effbd6fcf26f3b3db513271ba" category="inline-link-rx"></block>에 대한 새롭고 향상된 지원에 대해 알아보십시오.</block>
   <block id="10d7bfdf332491f86c54ec3d92031af9" category="summary">AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.19.1에 포함된 새로운 기능에 대해 알아보십시오.</block>
   <block id="9ebdbbd8dbfbcf6224092a44e6772af0" category="doc">AFX 스토리지 시스템용 ONTAP 9.19.1의 새로운 기능</block>
   <block id="5713c60dfa0d2bc57e54b11e4a1b6cfe" category="cell">교차 파일 순차 읽기(CFSR)</block>
@@ -1895,7 +1846,6 @@
   <block id="ade0334803648df75c59492f5cdc9515" category="list-text">AFX 1K 또는 2K 컨트롤러</block>
   <block id="d93573d87e2303f62f258396da54c30a" category="list-text">Cisco Nexus 9332D-GX2B, Nexus 9364D-GX2A 또는 Nexus 9808 스위치</block>
   <block id="23b43ede4557b73e6fa354124a73ba91" category="inline-link-macro">AFX 2K</block>
-  <block id="67f77e2b70d6947cf982bd2da150677a" category="paragraph"><block ref="7348958905d0d24441b4869883313dcd" category="inline-link-macro-rx"></block> 또는 <block ref="024ba43ec37d7ed62c4f2aab58b974f1" category="inline-link-macro-rx"></block> 스토리지 시스템을 설치합니다. 선택적으로, 초기 AFX 1K 구성의 일부로 AIDE를 포함하는 경우 <block ref="55438a0ee0065472ca14633bb4190e20" category="inline-link-rx"></block> 또는 <block ref="2e7d33dc5887b0da93aae67b0f923c5c" category="inline-link-rx"></block> 할 수 있습니다.</block>
   <block id="8d7460cb352c0a6b105cf65e1fa10c31" category="doc">AFX 2K 스토리지 시스템에 지원되는 구성</block>
   <block id="1a99ce1ec4ed0985ca29a2e328f9e4c9" category="paragraph">AFX 2K 스토리지 시스템에서 지원되는 하드웨어 구성 요소 및 케이블 연결 옵션에 대해 알아보십시오. 여기에는 시스템을 올바르게 설정하는 데 필요한 호환 스토리지 디스크 쉘프, 스위치 및 케이블 유형이 포함됩니다.</block>
   <block id="0c6e41fac4d1679f2837b31810ad5736" category="section-title">지원되는 AFX 2K 케이블 구성</block>
@@ -2093,4 +2043,11 @@
   <block id="2a4823fb79409c272c92a0b82e9c3667" category="paragraph">AFX 2K 스토리지 시스템의 전원을 켠 후, <block ref="2072e5ec3241d0a9ac16c974239f2f84" category="inline-link-macro-rx"></block>.</block>
   <block id="cb030b87229281c1b5ed398ba50abebb" category="list-text">*지금 등록하기*를 선택하고 계정을 만드십시오.</block>
   <block id="28a41904da7057df6bc7ab97f4b94424" category="paragraph">AFX 1K 스토리지 시스템의 전원을 켠 후, <block ref="2072e5ec3241d0a9ac16c974239f2f84" category="inline-link-macro-rx"></block>.</block>
+  <block id="40a0d9b63d17cd9ee40121b195ad7812" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 하드웨어 설치 및 설정</block>
+  <block id="7619fdb18ed4ee8dce6d3d8eb7e96e30" category="paragraph"><block ref="7348958905d0d24441b4869883313dcd" category="inline-link-macro-rx"></block> 또는 <block ref="024ba43ec37d7ed62c4f2aab58b974f1" category="inline-link-macro-rx"></block> 스토리지 시스템을 설치합니다.</block>
+  <block id="d950f0cc340509cac6299d8daed8cf0a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 클러스터를 설정하세요</block>
+  <block id="952715d9fa928d1059a800473c5469c0" category="paragraph">System Manager를 사용하여 ONTAP 클러스터를 <block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block>하는 빠르고 쉬운 프로세스를 따르십시오.</block>
+  <block id="373a0502633d2333dd8b952009c2d1ad" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 클러스터 관리를 준비하십시오</block>
+  <block id="b6bc9b43cb446eaa57e2615dc37d813a" category="summary">AFX 하드웨어 설치가 완료되면 ONTAP 클러스터 설정을 완료할 수 있습니다. 이 프로세스에는 순차적으로 수행해야 하는 관련 구성 단계가 포함됩니다.</block>
+  <block id="79977d403c6d53cd9f671794eeca0ed7" category="paragraph">ONTAP 클러스터를 설정하기 전에 핵심 AFX 요구 사항을 검토하여 설정 프로세스를 성공적으로 완료하는 데 필요한 모든 정보와 리소스를 확보했는지 확인해야 합니다.</block>
 </blocks>
