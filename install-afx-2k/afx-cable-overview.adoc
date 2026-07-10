@@ -15,6 +15,7 @@ AFX 2K 스토리지 시스템에서 지원되는 하드웨어 구성 요소 및 
 
 
 
+[[supported-afx-2k-cabling-configuration]]
 == 지원되는 AFX 2K 케이블 구성
 
 AFX 2K 스토리지 시스템의 초기 구성은 듀얼 스위치를 통해 스토리지 디스크 쉘프에 연결된 최소 4개의 컨트롤러 노드를 지원합니다.
@@ -25,6 +26,7 @@ image:../media/drw_afx_2k_cable_overview_half_node_ieops-2871.svg["AFX 2K 스토
 
 
 
+[[supported-hardware-components]]
 == 지원되는 하드웨어 구성 요소
 
 AFX 2K 스토리지 시스템에 호환되는 스토리지 디스크 쉘프, 스위치 및 케이블 유형을 검토합니다.

@@ -15,6 +15,7 @@ summary: 컨트롤러 노드를 네트워크, 스위치, 스토리지 선반에 
 
 
 
+[[supported-afx-1k-cabling-configuration]]
 == 지원되는 AFX 1K 케이블링 구성
 
 AFX 1K 스토리지 시스템의 초기 구성은 듀얼 스위치를 통해 스토리지 디스크 선반에 연결된 최소 4개의 컨트롤러 노드를 지원합니다.
@@ -25,6 +26,7 @@ image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["AFX 1K 스토리
 
 
 
+[[supported-hardware-components]]
 == 지원되는 하드웨어 구성 요소
 
 AFX 1K 스토리지 시스템에 호환되는 스토리지 디스크 선반, 스위치 및 케이블 유형을 검토해 보세요.

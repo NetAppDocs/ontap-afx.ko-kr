@@ -18,6 +18,7 @@ TIP: AFF 및 FAS 시스템에서 사용할 수 있는 개념과 관리 절차 �
 
 
 
+[[terminology-and-options]]
 == 용어 및 옵션
 
 AFX 스토리지와 관련하여 알아야 할 용어가 몇 가지 있습니다.
@@ -40,12 +41,14 @@ NFS 세션 트렁킹:: NFS 트렁킹은 NFS v4.1 클라이언트가 NFS 서버�
 
 
 
+[[data-migration-options]]
 == 데이터 마이그레이션 옵션
 
 데이터 마이그레이션 옵션은 여러 가지가 있습니다.  외부 데이터를 AFX 클러스터로 마이그레이션하는 데 중점을 두고 있습니다.
 
 
 
+[[migrating-data-from-aff-or-fas-systems]]
 === AFF 또는 FAS 시스템에서 데이터 마이그레이션
 
 다음 기술을 사용하면 Unified ONTAP 개성을 실행하는 AFF 또는 FAS 시스템에서 AFX로의 완전히 통합된 마이그레이션 경로를 사용할 수 있습니다.
@@ -59,18 +62,21 @@ NFS 세션 트렁킹:: NFS 트렁킹은 NFS v4.1 클라이언트가 NFS 서버�
 
 
 
+[[migrating-data-from-a-non-ontap-source]]
 === ONTAP 아닌 소스에서 데이터 마이그레이션
 
 ONTAP 아닌 시스템에서의 데이터 마이그레이션은 파일 수준 복사 작업을 사용하여 수행할 수 있습니다. 다음과 같은 빠른 복사 유틸리티 https://docs.netapp.com/us-en/xcp/["엑스피"^] 또는 https://docs.netapp.com/us-en/data-services-copy-sync/["복사 및 동기화"^] RoboCopy(SMB용) 및 rsync(NFS용)와 같은 표준 유틸리티는 물론 DataDobi와 같은 타사 도구도 사용할 수 있습니다.
 
 
 
+[[migration-limitations]]
 === 마이그레이션 제한 사항
 
 소스 데이터 볼륨에 LUN이나 NVMe 네임스페이스가 포함되어 있지 않으면 AFF 또는 FAS 시스템에서 AFX로 데이터를 복제할 수 있습니다. AFX에서 AFF 또는 FAS 시스템으로 복제할 때, AFF 또는 FAS 시스템에 지원되는 최소 ONTAP 버전은 9.16.1입니다. 이는 고급 용량 분산을 지원하는 최초의 ONTAP 릴리스입니다.
 
 
 
+[[display-an-overview-of-your-storage]]
 == 저장 공간 개요 표시
 
 AFX 데이터 관리를 시작하려면 저장소 개요를 표시해야 합니다.
@@ -87,6 +93,7 @@ AFX 클러스터에 대해 정의된 모든 볼륨과 버킷에 액세스할 수
 
 
 
+[[related-information]]
 == 관련 정보
 
 * https://docs.netapp.com/us-en/ontap/concept_nas_file_system_analytics_overview.html["ONTAP 파일 시스템 분석에 대해 알아보세요"^]

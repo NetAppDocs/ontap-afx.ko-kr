@@ -15,12 +15,14 @@ SVM을 한 ONTAP 클러스터에서 다른 ONTAP 클러스터로 마이그레이
 
 
 
+[[interoperability-considerations]]
 == 상호 운용성 고려 사항
 
 SVM 마이그레이션을 계획하고 수행하기 전에 기능과 제한 사항을 포함한 상호 운용성 고려 사항을 알아야 합니다.
 
 
 
+[[use-cases]]
 === 사용 사례
 
 클러스터 관리자는 SVM을 소스 클러스터에서 대상 클러스터로 다시 이동할 수 있습니다. 용량 관리 및 부하 분산의 일환으로 이를 수행할 수도 있고, 장비 업그레이드나 데이터 센터 통합을 허용하기 위해 이를 수행할 수도 있습니다. AFX 스토리지 시스템은 Unified ONTAP 에서의 기존 업그레이드를 지원하지 않으므로 SVM 마이그레이션은 중요한 사용 사례입니다.
@@ -29,6 +31,7 @@ SVM 마이그레이션을 계획하고 수행하기 전에 기능과 제한 사�
 
 
 
+[[version-interoperability]]
 === 버전 상호 운용성
 
 다음 표에서는 ONTAP 특성과 소스 및 대상 클러스터의 릴리스에 따라 허용되는 SVM 마이그레이션을 설명합니다.
@@ -48,6 +51,7 @@ SVM 마이그레이션을 계획하고 수행하기 전에 기능과 제한 사�
 |===
 
 
+[[prechecks]]
 === 사전 점검
 
 Unified ONTAP 에는 AFX로 구현된 여러 가지 사전 검사 기능이 포함되어 있습니다.  또한, AFX에서 지원되지 않는 플래그 기능에는 다음과 같은 몇 가지 새로운 사전 검사가 추가되었습니다.
@@ -58,6 +62,7 @@ Unified ONTAP 에는 AFX로 구현된 여러 가지 사전 검사 기능이 포�
 
 
 
+[[volume-provisioning]]
 === 볼륨 프로비저닝
 
 볼륨은 AFX 클러스터의 SAZ(스토리지 가용성 영역) 전체에 걸쳐 배치를 균형 있게 조정하도록 프로비저닝됩니다.
@@ -81,6 +86,7 @@ Unified ONTAP 에는 AFX로 구현된 여러 가지 사전 검사 기능이 포�
 |===
 
 
+[[additional-restrictions]]
 === 추가 제한 사항
 
 SVM을 마이그레이션하기 전에 고려해야 할 추가 제한 사항이 있습니다.
@@ -90,6 +96,7 @@ MetroCluster:: AFX 스토리지 시스템은 NetApp MetroCluster 지원하지 �
 
 
 
+[[related-information]]
 == 관련 정보
 
 * https://docs.netapp.com/us-en/ontap/svm-migrate/index.html["ONTAP SVM 데이터 이동성"^]

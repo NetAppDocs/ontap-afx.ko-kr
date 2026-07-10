@@ -15,6 +15,7 @@ AFX 데이터를 관리하기 전에 주요 개념과 기능에 대해 숙지해
 
 
 
+[[terminology-and-options]]
 == 용어 및 옵션
 
 AFX 데이터 보안과 관련하여 알아야 할 용어가 몇 가지 있습니다.
@@ -27,6 +28,7 @@ AFX 데이터 보안과 관련하여 알아야 할 용어가 몇 가지 있습�
 
 
 
+[[related-information]]
 == 관련 정보
 
 * link:../administer/additional-ontap-svm.html["추가 AFX SVM 관리"]

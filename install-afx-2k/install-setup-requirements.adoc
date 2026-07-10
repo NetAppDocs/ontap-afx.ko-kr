@@ -15,6 +15,7 @@ AFX 2K 스토리지 컨트롤러 및 스토리지 쉘프에 필요한 장비와 
 
 
 
+[[equipment-needed-for-install]]
 == 설치에 필요한 장비
 
 AFX 2K 스토리지 시스템을 설치하려면 다음과 같은 장비와 도구가 필요합니다.
@@ -29,12 +30,14 @@ AFX 2K 스토리지 시스템을 설치하려면 다음과 같은 장비와 도�
 
 
 
+[[lifting-precautions]]
 == 리프팅 시 주의사항
 
 AFX 스토리지 컨트롤러와 스토리지 선반은 무겁습니다.  이런 품목을 들어올리거나 옮길 때는 주의하세요.
 
 
 
+[[storage-controller-weights]]
 === 스토리지 컨트롤러 무게
 
 AFX 2K 스토리지 컨트롤러를 이동하거나 들어 올릴 때 필요한 주의 사항을 따르십시오.
@@ -46,6 +49,7 @@ image::../media/drw_afx_2k_weight_caution_ieops-2938.svg[AFX 2K 컨트롤러 리
 
 
 
+[[storage-shelf-weights]]
 === 보관 선반 무게
 
 선반을 옮기거나 들어 올릴 때는 필요한 예방 조치를 취하세요.
@@ -58,6 +62,7 @@ image::../media/drw_nx224_lifting_weight_ieops-2437.svg[NX224 NSM100 리프팅 �
 
 
 
+[[switch-weights]]
 === 스위치 웨이트
 
 스위치를 이동하거나 들어 올릴 때는 필요한 예방 조치를 취하십시오.

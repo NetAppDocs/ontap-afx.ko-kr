@@ -21,6 +21,7 @@ TIP:  https://docs.netapp.com/us-en/ai-data-engine/release-notes/whats-new.html[
 
 
 
+[[storage-resource-management-enhancements]]
 == 스토리지 리소스 관리 향상
 
 [cols="2,4"]

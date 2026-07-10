@@ -15,6 +15,7 @@ AFX 1K 보관 컨트롤러와 보관 선반에 필요한 장비와 들어올릴 
 
 
 
+[[equipment-needed-for-install]]
 == 설치에 필요한 장비
 
 AFX 1K 보관 시스템을 설치하려면 다음과 같은 장비와 도구가 필요합니다.
@@ -29,12 +30,14 @@ AFX 1K 보관 시스템을 설치하려면 다음과 같은 장비와 도구가 
 
 
 
+[[lifting-precautions]]
 == 리프팅 시 주의사항
 
 AFX 스토리지 컨트롤러와 스토리지 선반은 무겁습니다.  이런 품목을 들어올리거나 옮길 때는 주의하세요.
 
 
 
+[[storage-controller-weights]]
 === 스토리지 컨트롤러 무게
 
 AFX 1K 스토리지 컨트롤러를 옮기거나 들어 올릴 때는 필요한 예방 조치를 취하세요.
@@ -46,6 +49,7 @@ image::../media/drw_a1k_weight_caution_ieops-1698.svg[AFX 1K 리프팅 경고 �
 
 
 
+[[storage-shelf-weights]]
 === 보관 선반 무게
 
 선반을 옮기거나 들어 올릴 때는 필요한 예방 조치를 취하세요.

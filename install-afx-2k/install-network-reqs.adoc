@@ -18,6 +18,7 @@ AFX 2K 스토리지 시스템에 연결하는 각 네트워크에 필요한 정�
 
 
 
+[[gather-network-information]]
 == 네트워크 정보 수집
 
 AFX 2K 스토리지 시스템 설치를 시작하기 전에 필요한 네트워크 정보를 준비하십시오.
@@ -48,12 +49,14 @@ AFX 2K 스토리지 시스템 설치를 시작하기 전에 필요한 네트워�
 
 
 
+[[network-requirements-for-cisco-switches]]
 == Cisco 스위치에 대한 네트워크 요구 사항
 
 Cisco Nexus 9808, Cisco Nexus 9332D-GX2 및 9364D-GX2A 스위치의 설치 및 유지 관리를 위해서는 케이블 및 네트워크 요구 사항을 반드시 검토하십시오.
 
 
 
+[[network-requirements]]
 === 네트워크 요구 사항
 
 모든 스위치 구성에는 다음 네트워크 정보가 필요합니다.
@@ -65,6 +68,7 @@ Cisco Nexus 9808, Cisco Nexus 9332D-GX2 및 9364D-GX2A 스위치의 설치 및 �
 
 
 
+[[cabling-requirements]]
 === 케이블링 요구 사항
 
 * 스위치에 적합한 수와 유형의 케이블과 케이블 커넥터가 있습니다. 를 참조하십시오 https://hwu.netapp.com["Hardware Universe"^] .

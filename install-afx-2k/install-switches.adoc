@@ -43,12 +43,14 @@ CAUTION: 설치 및 유지보수 절차를 수행하는 동안에는 항상 검�
 
 
 
+[[cisco-nexus-9808-switch-installation]]
 == Cisco Nexus 9808 스위치 설치
 
 Cisco Nexus 9808 스위치를 설치하는 경우, 캐비닛 또는 랙에 스위치를 설치하는 방법에 대한 자세한 지침은 link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/9800/9808/nx-os/cisco-nexus-9808-nx-os-mode-switch-hardware-installation-guide/m-8000-install-chassis.html["Cisco Nexus 9808 Mode Switch 하드웨어 설치 가이드"^]을 참조하십시오.
 
 
 
+[[cisco-nexus-9332d-gx2b-and-9364d-gx2a-switch-installation]]
 == Cisco Nexus 9332D-GX2B 및 9364D-GX2A 스위치 설치
 
 Cisco Nexus 9332D-GX2B 또는 9364D를 설치하는 경우, 다음 단계를 따라 스위치를 캐비닛 또는 랙에 설치하십시오.

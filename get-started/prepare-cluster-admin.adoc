@@ -15,6 +15,7 @@ AFX를 프로덕션 환경에 배포하기 전에 관리 구조와 구성 옵션
 
 
 
+[[understand-storage-virtual-machines]]
 == 스토리지 가상 머신 이해
 
 스토리지 가상 머신(SVM)은 ONTAP 클러스터 내의 격리된 서버 또는 테넌트 환경입니다.  연결된 클라이언트에 데이터를 제공하도록 SVM을 구성할 수 있습니다.  AFX SVM의 기능과 특성을 잘 알고 있어야 합니다.
@@ -28,6 +29,7 @@ SVM 범위 리소스:: AFX 리소스와 구성 가능한 엔터티는 클러스�
 
 
 
+[[two-afx-administrative-levels]]
 == 두 개의 AFX 관리 수준
 
 AFX로 수행하는 관리 ONTAP 작업은 일반적으로 두 가지 범주로 나뉩니다.  일부 작업은 ONTAP 클러스터 전체에 적용되는 반면, 다른 작업은 특정 SVM에 적용됩니다.  이로 인해 2계층 행정 모델이 탄생하게 됩니다.
@@ -43,6 +45,7 @@ SVM 관리자:: SVM 관리자 역할은 특정 SVM을 제어하므로 클러스�
 
 
 
+[[three-administrative-interfaces]]
 == 3개의 관리 인터페이스
 
 AFF 및 FAS 시스템과 마찬가지로 AFX에는 세 가지 관리 인터페이스가 있습니다.  사용해야 하는 LIF(또는 IP 주소)는 관리 인터페이스와 환경에 따라 달라집니다.
@@ -65,12 +68,14 @@ NOTE: 대부분의 관리 작업에는 시스템 관리자 사용자 인터페�
 |===
 
 
+[[learn-to-search-filter-and-sort-information-in-system-manager]]
 == 시스템 관리자에서 정보를 검색, 필터링 및 정렬하는 방법을 알아보세요.
 
 시스템 관리자 사용자 인터페이스에는 필요한 정보에 액세스하고 표시할 수 있는 강력한 기능 세트가 포함되어 있습니다.  이러한 기능을 사용하는 방법을 배우면 AFX 스토리지 시스템을 보다 효과적으로 관리하는 데 도움이 됩니다. 보다 https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html["시스템 관리자에서 정보 검색, 필터링, 정렬"^] 자세한 내용은.
 
 
 
+[[access-the-ontap-cli]]
 == ONTAP CLI에 접속하세요
 
 대부분의 AFX 관리에는 System Manager를 사용할 수 있지만, ONTAP 명령줄 인터페이스를 사용해서만 수행할 수 있는 일부 작업도 있습니다.
@@ -104,6 +109,7 @@ SSH(보안 셸)를 통해 ONTAP CLI에 액세스할 수 있습니다.  CLI에는
 
 
 
+[[working-with-ontap-ha-pairs]]
 == ONTAP HA 쌍 작업
 
 Unified ONTAP 과 마찬가지로 AFX 클러스터 노드는 장애 허용 및 중단 없는 운영을 위해 고가용성(HA) 쌍으로 구성됩니다.  HA 페어링은 스토리지 장애 조치와 같은 노드 장애가 발생하더라도 스토리지 작업이 온라인 상태를 유지할 수 있는 기능을 제공합니다.  각 노드는 다른 노드와 협력하여 단일 쌍을 형성합니다.  이는 일반적으로 두 노드의 NVRAM 모듈 간의 직접 연결을 사용하여 수행됩니다.
@@ -112,6 +118,7 @@ AFX를 사용하면 백엔드 클러스터 스위치에 새로운 HA VLAN을 추
 
 
 
+[[afx-cluster-deployment-limitations]]
 == AFX 클러스터 배포 제한 사항
 
 AFX는 클러스터를 구성하고 사용할 때 최소값과 최대값을 포함한 여러 가지 제한 사항을 적용합니다. 이러한 제한 사항은 여러 범주로 나뉩니다.
@@ -128,6 +135,7 @@ NetApp Hardware Universe 및 상호 운용성 매트릭스 도구에서 제공�
 
 
 
+[[confirm-afx-system-health]]
 == AFX 시스템 상태 확인
 
 AFX 관리 작업을 수행하기 전에 클러스터의 상태를 확인해야 합니다.
@@ -170,6 +178,7 @@ link:../administer/view-insights.html["Insights를 사용하여 AFX 클러스터
 
 
 
+[[quick-start-for-creating-and-using-an-svm]]
 == SVM 생성 및 사용을 위한 빠른 시작
 
 AFX 클러스터를 설치하고 설정한 후에는 대부분 AFX 배포에서 일반적으로 수행되는 관리 작업을 수행할 수 있습니다.  클라이언트와 데이터를 공유하기 위해 필요한 주요 단계는 다음과 같습니다.
@@ -192,6 +201,7 @@ link:../manage-data/prepare-manage-data.html["준비하다"]데이터를 할당�
 
 
 
+[[related-information]]
 == 관련 정보
 
 * https://hwu.netapp.com/["NetApp Hardware Universe"^]

@@ -54,8 +54,19 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["케이블 당김 탭
 
 NOTE: Cisco Nexus 9332D-GX2B 및 9364D-GX2A 스위치 구성을 AFX 1K 스토리지 시스템에 연결하려면 4x100GbE 브레이크아웃 케이블 연결이 필요합니다.
 
+* NVIDIA C6X-DX 및 CX7(100GbE) NIC 어댑터는 구리 및 광 브레이크아웃 연결(케이블)의 혼용을 지원하지 않습니다.  구리 또는 광 연결 중 하나만 사용해야 하며, 서로 다른 연결 유형을 혼합하여 사용하지 마십시오.  연결 유형을 혼용하면 장시간 사용 후 링크 포화 현상이 발생할 수 있습니다.
++
+스위치를 연결하기 전에 연결 유형에 맞는 케이블이 있는지 확인하십시오.
+
++
+
+NOTE: 연결 유형을 혼합하여 사용하는 방법에 대한 자세한 내용은 NetApp 기술 자료 문서 link:https://kb.netapp.com/on-prem/ontap/OHW/OHW-Issues/CHW-3504["CX6-DX NIC에서 구리 및 광섬유 브레이크아웃 케이블이 혼합된 포트에서 CRC 링크 오류가 발생합니다."^]를 참조하십시오.
 
 
+
+
+
+[[step-1-connect-the-controllers-to-the-management-network]]
 == 1단계: 컨트롤러를 관리 네트워크에 연결합니다.
 
 각 컨트롤러의 관리(렌치) 포트를 관리 스위치 중 하나에 연결하거나 관리 네트워크에 직접 연결하십시오.
@@ -76,6 +87,7 @@ IMPORTANT: 아직 전원 코드를 꽂지 마세요.
 
 
 
+[[step-2-connect-the-controllers-to-the-host-network]]
 == 2단계: 컨트롤러를 호스트 네트워크에 연결합니다.
 
 이더넷 모듈 포트를 호스트 네트워크에 연결합니다.
@@ -125,6 +137,7 @@ image::../media/drw_afx_network_cabling_b_ieops-2814.svg[케이블-이더넷 네
 
 
 
+[[step-3-cable-the-cluster-ha-and-storage-connections-to-switch-a]]
 == 3단계: 클러스터, HA 및 스토리지 연결을 스위치 A에 케이블로 연결합니다
 
 4x100GbE 브레이크아웃 케이블을 사용하여 컨트롤러의 클러스터, HA 및 스토리지 포트를 네트워크 스위치 A에 연결합니다. 클러스터 및 HA 인터커넥트 케이블을 사용하여 포트 e1a와 e7a를 스위치 A에 연결합니다. e1a 포트는 HA 연결에 사용되고 e7a 포트는 클러스터 연결에 사용됩니다. 스토리지 연결의 경우 포트 e10a와 e11a를 스위치 A에 연결합니다.
@@ -157,6 +170,7 @@ image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[케이블 컨트롤�
 
 
 
+[[step-4-cable-the-cluster-ha-and-storage-connections-to-switch-b]]
 == 4단계: 클러스터, HA 및 스토리지 연결을 스위치 B에 케이블로 연결합니다
 
 4x100GbE 브레이크아웃 케이블을 사용하여 컨트롤러의 클러스터, HA 및 스토리지 포트를 네트워크 스위치 B에 연결합니다. 클러스터 및 HA 인터커넥트 케이블을 사용하여 포트 e1b와 e7b를 스위치 B에 연결합니다. e1b 포트는 HA 연결에 사용되고 e7b 포트는 클러스터 연결에 사용됩니다. 스토리지 연결의 경우 포트 e10b와 e11b를 스위치 B에 연결합니다.
@@ -188,6 +202,7 @@ image::../media/drw_afx_ha_cluster_storage_b_ieops-2780.svg[케이블 컨트롤�
 
 
 
+[[step-5-cable-the-shelf-to-switch-connections]]
 == 5단계: 선반-스위치 연결 케이블 연결
 
 NX224 스토리지 선반을 스위치에 연결합니다.

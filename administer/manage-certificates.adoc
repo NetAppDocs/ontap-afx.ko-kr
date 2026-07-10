@@ -15,6 +15,7 @@ summary: 환경에 따라 AFX 관리의 일환으로 디지털 인증서를 만�
 
 
 
+[[generate-a-certificate-signing-request]]
 == 인증서 서명 요청 생성
 
 디지털 인증서를 사용하려면 인증서 서명 요청(CSR)을 생성해야 합니다.  CSR은 인증 기관(CA)에 서명된 인증서를 요청하는 데 사용됩니다. 이 작업의 일환으로 ONTAP 공개/개인 키 쌍을 생성하고 공개 키를 CSR에 포함합니다.
@@ -33,6 +34,7 @@ summary: 환경에 따라 AFX 관리의 일환으로 디지털 인증서를 만�
 
 
 
+[[add-a-trusted-certificate-authority]]
 == 신뢰할 수 있는 인증 기관 추가
 
 ONTAP TLS(전송 계층 보안) 및 기타 프로토콜과 함께 사용할 수 있는 신뢰할 수 있는 루트 인증서의 기본 세트를 제공합니다.  필요에 따라 신뢰할 수 있는 인증 기관을 추가할 수 있습니다.
@@ -50,6 +52,7 @@ AFX 시스템에 신뢰할 수 있는 인증 기관을 추가했습니다.
 
 
 
+[[renew-or-delete-a-trusted-certificate-authority]]
 == 신뢰할 수 있는 인증 기관을 갱신하거나 삭제합니다.
 
 신뢰할 수 있는 인증 기관은 매년 갱신해야 합니다.  만료된 인증서를 갱신하고 싶지 않다면, 해당 인증서를 삭제해야 합니다.
@@ -83,6 +86,7 @@ AFX 시스템에서 기존 신뢰할 수 있는 인증 기관을 갱신하거나
 
 
 
+[[add-a-clientserver-certificate-or-local-certificate-authority]]
 == 클라이언트/서버 인증서 또는 로컬 인증 기관 추가
 
 보안 웹 서비스를 활성화하는 일환으로 클라이언트/서버 인증서나 로컬 인증 기관을 추가할 수 있습니다.
@@ -99,6 +103,7 @@ AFX 시스템에 새로운 클라이언트/서버 인증서 또는 로컬 기관
 
 
 
+[[renew-or-delete-a-clientserver-certificate-or-local-certificate-authorities]]
 == 클라이언트/서버 인증서 또는 로컬 인증 기관을 갱신하거나 삭제합니다.
 
 클라이언트/서버 인증서와 로컬 인증 기관은 매년 갱신해야 합니다.  만료된 인증서나 로컬 인증 기관을 갱신하고 싶지 않다면 해당 인증서나 로컬 인증 기관을 삭제해야 합니다.
@@ -130,6 +135,7 @@ AFX 시스템에서 기존 클라이언트/서버 인증서 또는 로컬 인증
 
 
 
+[[related-information]]
 == 관련 정보
 
 * https://docs.netapp.com/us-en/ontap/authentication/install-server-certificate-cluster-svm-ssl-server-task.html["ONTAP 에서 CA 서명 서버 인증서 생성 및 설치"^]

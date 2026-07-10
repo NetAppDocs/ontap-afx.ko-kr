@@ -18,6 +18,7 @@ summary: 이 FAQ 목록은 고객이 AFX 스토리지 시스템에 대해 일반
 
 
 
+[[general]]
 == 일반적인
 
 .ONTAP 성격이란 무엇인가요?
@@ -50,6 +51,7 @@ AFX 스토리지 시스템은 2025년 10월 NetApp Insight 컨퍼런스에서 �
 
 
 
+[[interoperability]]
 == 상호 운용성
 
 .동일한 ONTAP 클러스터에서 AFX 시스템 노드를 AFF, ASA 또는 FAS 시스템 노드와 혼합할 수 있습니까?
@@ -68,6 +70,7 @@ FlexGroup 볼륨에 대한 지원에는 몇 가지 차이점이 있습니다.  A
 
 
 
+[[advanced-concepts]]
 == 고급 개념
 
 .AFX 저장 시스템에서 지원되는 데이터 프로토콜은 무엇입니까?

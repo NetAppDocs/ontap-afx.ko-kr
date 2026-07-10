@@ -40,21 +40,3 @@ AFX 1K 스토리지 시스템을 설치하려면 현장 준비, 환경 및 전�
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["일곱"]link:power-on-hardware.html["AFX 1K 스토리지 시스템의 전원을 켜세요"]
 [role="quick-margin-para"]
 각 저장 선반의 전원을 켜고 컨트롤러 노드의 전원을 켜기 전에 고유한 선반 ID를 지정하여 설정에서 각 선반을 명확하게 식별합니다.
-
-[NOTE]
-====
-AI Data Engine(AIDE)이 포함된 AFX 1K를 배포하는 경우 AFX 시스템 설치를 완료한 후 AIDE 데이터 컴퓨팅 노드를 설치할 수 있습니다.
-
-* 타사 서버 배포에 대해서는  https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["타사 서버에서 AIDE 소프트웨어를 사용하는 AI Data Engine의 요구 사항"^] 및  https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-aide-as-software.html["타사 서버에 AIDE 소프트웨어 설치"^]을 참조하십시오.
-* NetApp DCN 배포에 대한 자세한 내용은 다음을 참조하십시오 https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["NetApp에서 제공하는 데이터 컴퓨팅 노드의 AI Data Engine 요구 사항"^].
-
-
-====
-* 타사 서버 배포에 대해서는  https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["타사 서버에서 AIDE 소프트웨어를 사용하는 AI Data Engine의 요구 사항"^] 및  https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-aide-as-software.html["타사 서버에 AIDE 소프트웨어 설치"^]을 참조하십시오.
-* NetApp DCN 배포에 대한 자세한 내용은 다음을 참조하십시오 https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["NetApp에서 제공하는 데이터 컴퓨팅 노드의 AI Data Engine 요구 사항"^].
-
-
-[]
-====
-
-====

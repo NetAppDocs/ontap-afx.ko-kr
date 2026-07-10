@@ -18,6 +18,7 @@ TIP: AFX 설명서에는 ONTAP 특성에 관계없이 동일하게 동작하는 
 
 
 
+[[configuration-differences]]
 == 구성 차이점
 
 AFX 구성은 AFF 및 FAS 시스템과 몇 가지 측면에서 다릅니다.
@@ -27,12 +28,14 @@ AFX 구성은 AFF 및 FAS 시스템과 몇 가지 측면에서 다릅니다.
 
 
 
+[[unsupported-or-restricted-unified-ontap-capabilities]]
 == 지원되지 않거나 제한된 Unified ONTAP 기능
 
 NetApp AFX는 고성능 NAS 및 객체 워크로드에 최적화되어 있습니다. 따라서 AFF 및 FAS 스토리지 시스템과는 몇 가지 차이점이 있습니다. 다음 기능은 NetApp AFX에서 사용할 수 없으며, 목록은 주요 기능 또는 기능 영역별로 정리되어 있습니다. 또한 사용 중인 ONTAP 릴리스에 따라 link:../release-notes/whats-new-9171.html["새로운 소식"]에서 AFX의 업데이트 및 변경 사항을 검토해야 합니다.
 
 
 
+[[block-and-san]]
 === 블록 및 SAN
 
 * SAN 관리 및 클라이언트 액세스
@@ -42,6 +45,7 @@ NetApp AFX는 고성능 NAS 및 객체 워크로드에 최적화되어 있습니
 
 
 
+[[aggregates-and-physical-storage]]
 === 집계 및 물리적 저장소
 
 * MetroCluster
@@ -56,6 +60,7 @@ NetApp AFX는 고성능 NAS 및 객체 워크로드에 최적화되어 있습니
 
 
 
+[[data-replication-snapmirror]]
 === 데이터 복제(SnapMirror)
 
 
@@ -67,6 +72,7 @@ NOTE: Unified ONTAP 과 AFX 간의 모든 데이터 복제는 동일한 버전 �
 
 
 
+[[manageability]]
 === 관리 용이성
 
 * ONTAPI API(ZAPI)
@@ -78,6 +84,7 @@ NOTE: Unified ONTAP 과 AFX 간의 모든 데이터 복제는 동일한 버전 �
 
 
 
+[[changes-to-the-command-line-interface]]
 == 명령줄 인터페이스 변경 사항
 
 AFX에서 사용할 수 있는 ONTAP CLI는 일반적으로 AFF 및 FAS 시스템에서 사용할 수 있는 CLI를 반영합니다.  하지만 다음과 같은 몇 가지 차이점이 있습니다.
@@ -95,6 +102,7 @@ AFX에서 사용할 수 있는 ONTAP CLI는 일반적으로 AFF 및 FAS 시스�
 
 
 
+[[related-information]]
 == 관련 정보
 
 * link:../get-started/system-design.html["AFX 시스템 특성"]

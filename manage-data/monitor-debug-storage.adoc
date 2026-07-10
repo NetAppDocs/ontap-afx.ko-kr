@@ -15,6 +15,7 @@ AFX 시스템에는 각 클러스터가 관리하는 스토리지를 모니터�
 
 
 
+[[display-nas-clients]]
 == NAS 클라이언트 표시
 
 현재 AFX 클러스터에 연결된 NFS 및 SMB/CIFS 클라이언트 목록을 표시할 수 있습니다.
@@ -27,6 +28,7 @@ AFX 시스템에는 각 클러스터가 관리하는 스토리지를 모니터�
 
 
 
+[[related-information]]
 == 관련 정보
 
 * link:../manage-data/prepare-manage-data.html["AFX 데이터 관리를 준비하세요"]
