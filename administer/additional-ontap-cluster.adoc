@@ -64,6 +64,15 @@ link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-
 
 
 
+[[ipspace-tcp-performance]]
+=== IPspace TCP 성능
+
+ONTAP 9.19.1 버전부터 ONTAP은 PRR과 RACK이라는 두 가지 손실 복구 기능을 ONTAP TCP 스택에 통합하여 손실이 많고 지연 시간이 긴 WAN 링크에서 TCP 데이터 전송 성능을 향상시킵니다. PRR은 모든 네트워크에 적합하며 기본적으로 활성화되어 있습니다. RACK은 링크 속도가 약 25Gigabits/초인 혼잡한 네트워크에 적합하며 기본적으로 비활성화되어 있습니다.
+
+자세한 내용은 link:https://docs.netapp.com/us-en/ontap/networking/improve-tcp-wan-performance.html["PRR 및 RACK을 사용하여 TCP WAN 성능 향상"]을 참조하십시오.
+
+
+
 [[security]]
 == 보안
 
@@ -107,6 +116,22 @@ OAuth 2.0은 서명된 액세스 토큰을 사용하여 보호된 리소스에 �
 
 
 
+[[data-protection]]
+== 데이터 보호
+
+ONTAP 데이터 보호 기능과 이러한 기능이 AFX 스토리지 시스템과 어떤 관련이 있는지 알고 있어야 합니다.
+
+
+
+[[load-share-mirrors]]
+=== 부하 분산 미러
+
+ONTAP에서 로드 쉐어링 미러(LSM)는 SVM의 NAS 네임스페이스에 대한 진입점 역할을 하는 스토리지 VM(SVM) 루트 볼륨의 SnapMirror 복제본입니다. 루트 볼륨의 읽기 전용 복사본을 다른 노드에 하나 이상 유지함으로써, 로드 쉐어링 미러는 HA 쌍의 두 노드 모두 사용할 수 없게 되더라도 클라이언트가 NAS 네임스페이스에 계속 액세스할 수 있도록 지원합니다.
+
+*AFX 스토리지 시스템은 로드 쉐어링 미러링을 지원하지 않습니다.* AFX에서 로드 쉐어링 미러링 관계를 생성, 초기화 또는 업데이트할 수 없습니다. AFX에서 네임스페이스 복원력, 데이터 배포 또는 읽기 확장성을 구현하려면 FlexCache 볼륨 또는 SnapMirror 복제를 사용하십시오. 이러한 기능은 클라이언트가 데이터와 네임스페이스를 항상 사용할 수 있도록 유지하는 데 있어 동등하거나 그 이상의 기능을 제공하며, AFX에서 완벽하게 지원됩니다.
+
+
+
 [[related-information]]
 == 관련 정보
 
@@ -114,4 +139,5 @@ OAuth 2.0은 서명된 액세스 토큰을 사용하여 보호된 리소스에 �
 * https://kb.netapp.com/nss/Licensing/How_to_download_NLF_licenses_from_the_NetApp_Support_Site["NetApp Support Site에서 NLF 라이센스를 다운로드하는 방법"^]
 * https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["ONTAP OAuth 2.0 구현 개요"^]
 * link:../administer/additional-ontap-svm.html["AFX SVM에 대한 추가 관리"]
+* https://docs.netapp.com/us-en/ontap/data-protection/manage-snapmirror-root-volume-replication-concept.html["ONTAP SnapMirror 루트 볼륨 복제에 대해 알아보기"^]
 

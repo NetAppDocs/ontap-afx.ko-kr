@@ -93,6 +93,13 @@ AFX 배포와 함께 구성하고 사용할 수 있는 선택적 데이터 보�
 
 
 
+[[snapmirror-active-sync-for-nas]]
+=== SnapMirror NAS용 활성 동기화
+
+SnapMirror 액티브 싱크는 사이트 전체 장애 발생 시에도 비즈니스 서비스가 중단 없이 계속 작동하도록 지원합니다. 이 기술을 통해 애플리케이션은 수동 개입이나 사용자 지정 스크립트 없이도 보조 복사본으로 원활하게 페일오버될 수 있습니다. 자세한 내용은 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/protect-nas-task.html["SnapMirror NAS용 활성 동기화"^]을 참조하십시오.
+
+
+
 [[storage-efficiency]]
 == 스토리지 효율성
 
@@ -122,6 +129,13 @@ AFX 배포 시 구성하고 사용할 수 있는 선택적 보안 기능이 여�
 === 정책
 
 FPolicy는 스토리지 가상 머신(SVM)에서 파일 액세스 이벤트를 모니터링하고 관리하는 데 사용되는 파일 액세스 알림 프레임워크입니다. FPolicy를 사용하면 사용자가 정의한 기준에 따라 모니터링하고 선택적으로 차단할 파일 작업을 정의하는 정책을 생성할 수 있습니다. FPolicy는 일반적으로 보안 감사, 규정 준수 및 데이터 거버넌스에 사용됩니다. 자세한 내용은 https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy 솔루션"^]을 참조하십시오.
+
+
+
+[[nfs-over-tls]]
+=== TLS를 통한 NFS
+
+ONTAP 9.19.1부터 ONTAP NFS가 활성화된 SVM에서 전송 중인 NFS 트래픽을 암호화하기 위해 TLS 1.3을 사용하는 온프레미스 NFS over TLS 지원을 추가합니다. 또한 이 릴리스에서는 LIF별 선택적 상호 TLS 호스트 인증과 일치하는 클라이언트에 대한 비 TLS TCP 액세스를 거부하는 내보내기 정책 제어를 지원합니다. NFS over TLS는 기존 ONTAP NFS 인프라와 함께 작동하므로 애플리케이션은 TLS가 전송 중인 NFS 트래픽을 암호화하는 동안에도 NFS를 정상적으로 계속 사용할 수 있습니다. ONTAP 9.19.1의 클라우드 플랫폼에서는 NFS over TLS를 사용할 수 없습니다. 자세한 내용은 https://docs.netapp.com/us-en/ontap/nfs-admin/enable-nfs-over-tls-task.html["TLS를 통한 NFS 활성화"^]을 참조하십시오.
 
 
 

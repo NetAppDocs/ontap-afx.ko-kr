@@ -1797,7 +1797,6 @@
   <block id="2de6d638a130f9818bda5d9a251ad5c8" category="admonition">ONTAP 9.19.1부터 SVM 관리자는 전용 System Manager 대시보드를 사용하여 자체 SVM을 모니터링하고 관리할 수 있습니다. 에 대해 자세히 알아보십시오<block ref="2185e3072c3ca27b5462a691693a5a31" category="inline-link-rx"></block></block>
   <block id="867daeeeb6f3e3dbf90bc2470bdf5fa3" category="paragraph">AFX는 클러스터를 구성하고 사용할 때 최소값과 최대값을 포함한 여러 가지 제한 사항을 적용합니다. 이러한 제한 사항은 여러 범주로 나뉩니다.</block>
   <block id="e03d1a6e5f175f9e1dca199acd1ed7a4" category="admonition">AFX 스토리지 시스템의 운영 매개 변수를 늘리기 전에 해당 변경 사항이 애플리케이션과 클러스터 전체에 미치는 영향을 평가해야 합니다. 예를 들어 컨트롤러 노드 수를 늘리면 전체 용량은 증가하지만 클러스터 네트워크 트래픽도 증가할 수 있습니다. 이러한 구성 변경의 의미와 환경에 미칠 수 있는 영향을 이해하는 것이 중요합니다.</block>
-  <block id="737a863c22a0501aae47dfc0b82907b3" category="list-text">각 AFX 클러스터는 최소 4개의 노드를 가져야 합니다. 최대 노드 수는 ONTAP 릴리스에 따라 다르며, 예를 들어 9.19.1 RC 릴리스에서는 AFX 클러스터당 최대 32개의 노드를 허용합니다.</block>
   <block id="471b5d11017777fb374abe9e4f2cfed4" category="paragraph">ONTAP의 S3 스토리지 지원에 대한 최신 변경 사항 및 업데이트를 숙지하는 것도 중요합니다. 예를 들어, ONTAP 9.19.1 버전부터는 각 S3 사용자별로 두 번째 액세스 키를 생성할 수 있습니다. 이를 통해 기존 액세스 키가 만료되더라도 S3 리소스에 대한 액세스 권한을 유지할 수 있습니다. 또한 조건부 작업(쓰기, 복사, 삭제) 적용을 제어할 수도 있습니다.</block>
   <block id="1f88cf259e7331ee9666de0aed1e61b2" category="inline-link">ONTAP S3 키를 재생성하고 보존 기간을 수정합니다</block>
   <block id="da33e3b3b6f0f55817eb5e53583085c6" category="list-text"><block ref="da33e3b3b6f0f55817eb5e53583085c6" category="inline-link-rx"></block></block>
@@ -1810,7 +1809,6 @@
   <block id="9d8ca8942805bbef83b9c607e5358741" category="paragraph">글로벌 데이터 중복 제거는 ONTAP 데이터 중복 제거를 통해 스토리지 가용성 영역(SAZ) 전체에 걸쳐 공간 절약 효과를 제공합니다. SAZ 내 모든 볼륨에서 중복 데이터 블록을 제거함으로써 스토리지 효율성을 크게 향상시키고 총 소유 비용을 절감할 수 있습니다. 이 기능은 AFX 시스템에서 기본적으로 활성화되어 있으며 관리자 구성 없이 투명하게 작동합니다. 자세한 내용은 <block ref="d20869026a82d2608dc3e8932f1a0bfe" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="5726d8d4b7f0b6d793e33cbdb3ddf7aa" category="cell">Kubernetes 스토리지 오케스트레이션을 위한 균형 배치 개선</block>
   <block id="f77466cfbba999a74a9b2bfdbefe7288" category="paragraph">ONTAP 9.19.1은 현재 <block ref="3f7ecfe68df8aae32ef20639ae717f55" prefix=" " category="inline-code"></block> REST API 엔드포인트에서 사용 가능한 6개의 매개변수를 <block ref="74c1b9ffe0a04056613523d15a186b5a" prefix=" " category="inline-code"></block> 엔드포인트에 추가합니다. 이 개선 사항을 통해 Kubernetes 스토리지 오케스트레이션을 위한 NetApp Trident를 사용하는 고객은 ONTAP의 기본 균형 배치 기능을 사용하여 볼륨을 생성할 수 있습니다.</block>
-  <block id="5473f7e1d0ef87e9a99388e05733c203" category="cell">적격 SnapMirror 운영 볼륨에 대한 ARP/AI 지원</block>
   <block id="3def1da8e6d471a763e2b21ec25e0c82" category="paragraph">ARP/AI는 AFX 시스템과의 SnapMirror 동기 관계에서 적합한 운영 볼륨을 지원합니다. ARP/AI는 활성 읽기-쓰기 운영 볼륨에서 실행되어 운영 볼륨 전용 ARP 스냅샷을 생성하고 머신 러닝 기반 랜섬웨어 탐지 기능을 제공합니다.</block>
   <block id="281fd14262fa7c1793e3c18dfd336f7f" category="inline-link-macro">TLS 하드웨어 오프로드 지원</block>
   <block id="9ae8ab2f2bc89803b54b2d95dc15e797" category="cell"><block ref="9ae8ab2f2bc89803b54b2d95dc15e797" category="inline-link-macro-rx"></block></block>
@@ -1836,8 +1834,6 @@
   <block id="4d209cddba5e4e3f517cda6d0180e867" category="cell">제한 변경</block>
   <block id="534453c63ab1c5041c53f8bbc059a9b7" category="cell">릴리스에서 변경됨</block>
   <block id="8010ab2f71c733c1a8013b31b901be79" category="cell">클러스터당 노드 수</block>
-  <block id="355836185b6feaed32d56f19e33032eb" category="paragraph">AFX 클러스터는 최대 32개 노드까지 확장할 수 있습니다. 이를 통해 워크로드 및 애플리케이션의 증가하는 요구 사항에 맞춰 AFX 스토리지 시스템을 확장할 수 있습니다.</block>
-  <block id="5148c61a8c3e3afeb285a73e9241d26c" category="cell">ONTAP 9.19.1 RC</block>
   <block id="f80f1ede0c7983dcab18fc7104224f56" category="cell">동적 스토리지 효율성</block>
   <block id="00e7d9732d9f1a308baa60f42ec78d16" category="paragraph">Dynamic Storage Efficiency는 고성능과 최대 처리량이 요구되는 대규모 워크로드에 맞춰 스토리지 효율성 작업(압축, 중복 제거, 컴팩션)을 지능적으로 최적화합니다. 이 기능은 대용량 쓰기 조건을 자동으로 감지하고 인라인 및 백그라운드 스토리지 효율성 프로세스를 일시적으로 중단하여 피크 부하 시 성능 저하를 방지합니다. 처리량이 정의된 임계값 아래로 떨어지면 스토리지 효율성 작업이 재개되어 수동 개입 없이 절감 효과를 복구할 수 있습니다. 이 기능은 AFX 스토리지 시스템에서 사용 가능하며 별도의 구성 없이 기본적으로 활성화됩니다.</block>
   <block id="0b6845dd2391304844b6f9578fd8c865" category="sidebar">ONTAP 기본 설정 및 제한 사항 변경</block>
@@ -2050,4 +2046,36 @@
   <block id="f177c581ed9f9f9a2ade361b69f40000" category="list-text">Cisco Nexus 9808 스위치에 대한 자세한 내용은 클러스터 및 스토리지 스위치 설명서를 참조하십시오<block ref="fd812bd375b22a989715c699eb7ed44d" category="inline-link-macro-rx"></block>.</block>
   <block id="414467ebb81a54b0d2bfde0829d9be94" category="list-text">Cisco Nexus 9332D-GX2B 스위치에 대한 자세한 내용은 클러스터 및 스토리지 스위치 설명서를 참조하십시오 <block ref="4267e88712cb2b91d08e1a42358e695f" category="inline-link-macro-rx"></block>.</block>
   <block id="837d45987b31811e3c4dc00585c6683b" category="list-text">Cisco Nexus 9364D-GX2A 스위치에 대한 자세한 내용은 클러스터 및 스토리지 스위치 설명서를 참조하십시오<block ref="b235e965e82dd587688a629268d671aa" category="inline-link-macro-rx"></block>.</block>
+  <block id="67de111be220e704fc0fcaa510ec0b92" category="section-title">IPspace TCP 성능</block>
+  <block id="d3e53b85a4d88cd5e122ce8261a4169a" category="paragraph">ONTAP 9.19.1 버전부터 ONTAP은 PRR과 RACK이라는 두 가지 손실 복구 기능을 ONTAP TCP 스택에 통합하여 손실이 많고 지연 시간이 긴 WAN 링크에서 TCP 데이터 전송 성능을 향상시킵니다. PRR은 모든 네트워크에 적합하며 기본적으로 활성화되어 있습니다. RACK은 링크 속도가 약 25Gigabits/초인 혼잡한 네트워크에 적합하며 기본적으로 비활성화되어 있습니다.</block>
+  <block id="eca8546fa06b104b28a6d070fd7aeaec" category="inline-link-macro">PRR 및 RACK을 사용하여 TCP WAN 성능 향상</block>
+  <block id="0d0ceb30517990e149f7c0115b20a144" category="paragraph">자세한 내용은 <block ref="2f41cfc6efb882326a07e3acf541c6e5" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="6b6c95ed3ef78f4a7bc534697ad0c478" category="paragraph">ONTAP 데이터 보호 기능과 이러한 기능이 AFX 스토리지 시스템과 어떤 관련이 있는지 알고 있어야 합니다.</block>
+  <block id="4855a7e19f65daa9af8f3596fa9d0c8c" category="section-title">부하 분산 미러</block>
+  <block id="076d33100bcfd1f9076dfa799ac16b20" category="paragraph">ONTAP에서 로드 쉐어링 미러(LSM)는 SVM의 NAS 네임스페이스에 대한 진입점 역할을 하는 스토리지 VM(SVM) 루트 볼륨의 SnapMirror 복제본입니다. 루트 볼륨의 읽기 전용 복사본을 다른 노드에 하나 이상 유지함으로써, 로드 쉐어링 미러는 HA 쌍의 두 노드 모두 사용할 수 없게 되더라도 클라이언트가 NAS 네임스페이스에 계속 액세스할 수 있도록 지원합니다.</block>
+  <block id="bd8277e79fa32895c76e47771ec3c027" category="paragraph">*AFX 스토리지 시스템은 로드 쉐어링 미러링을 지원하지 않습니다.* AFX에서 로드 쉐어링 미러링 관계를 생성, 초기화 또는 업데이트할 수 없습니다. AFX에서 네임스페이스 복원력, 데이터 배포 또는 읽기 확장성을 구현하려면 FlexCache 볼륨 또는 SnapMirror 복제를 사용하십시오. 이러한 기능은 클라이언트가 데이터와 네임스페이스를 항상 사용할 수 있도록 유지하는 데 있어 동등하거나 그 이상의 기능을 제공하며, AFX에서 완벽하게 지원됩니다.</block>
+  <block id="48943fd6a375d0852da5ac067bf413fe" category="inline-link">ONTAP SnapMirror 루트 볼륨 복제에 대해 알아보기</block>
+  <block id="cabcbbabc15f52713a62eb42f8484a28" category="list-text"><block ref="cabcbbabc15f52713a62eb42f8484a28" category="inline-link-rx"></block></block>
+  <block id="64500d2f1eb952270058fcdc56fc55cb" category="section-title">SnapMirror NAS용 활성 동기화</block>
+  <block id="a4d5a9b04549fd43c1bca697b6ae8151" category="paragraph">SnapMirror 액티브 싱크는 사이트 전체 장애 발생 시에도 비즈니스 서비스가 중단 없이 계속 작동하도록 지원합니다. 이 기술을 통해 애플리케이션은 수동 개입이나 사용자 지정 스크립트 없이도 보조 복사본으로 원활하게 페일오버될 수 있습니다. 자세한 내용은<block ref="0aa3a1786b7eb8f80dffac419450355e" category="inline-link-rx"></block>을 참조하십시오.</block>
+  <block id="4ade1e690485ace608877ec90f1e5fbc" category="section-title">TLS를 통한 NFS</block>
+  <block id="a8d13b5c2965c87ca9fbbcf9afd27457" category="inline-link">TLS를 통한 NFS 활성화</block>
+  <block id="06c9fd0e4a1e637e7cd5da80408c883c" category="paragraph">ONTAP 9.19.1부터 ONTAP NFS가 활성화된 SVM에서 전송 중인 NFS 트래픽을 암호화하기 위해 TLS 1.3을 사용하는 온프레미스 NFS over TLS 지원을 추가합니다. 또한 이 릴리스에서는 LIF별 선택적 상호 TLS 호스트 인증과 일치하는 클라이언트에 대한 비 TLS TCP 액세스를 거부하는 내보내기 정책 제어를 지원합니다. NFS over TLS는 기존 ONTAP NFS 인프라와 함께 작동하므로 애플리케이션은 TLS가 전송 중인 NFS 트래픽을 암호화하는 동안에도 NFS를 정상적으로 계속 사용할 수 있습니다. ONTAP 9.19.1의 클라우드 플랫폼에서는 NFS over TLS를 사용할 수 없습니다. 자세한 내용은<block ref="4cf4365fc3bcf33037d7569c83a99e13" category="inline-link-rx"></block>을 참조하십시오.</block>
+  <block id="58e9fd1349348ac0d3b814afbc757395" category="list-text">각 AFX 클러스터는 최소 4개의 노드를 가져야 합니다. 최대 노드 수는 ONTAP 릴리스 버전에 따라 다르며, 예를 들어 9.19.1 릴리스에서는 AFX 클러스터당 최대 32개의 노드를 허용합니다.</block>
+  <block id="c968f0f1a1f47bf53c5bb5503d2b9765" category="paragraph">AFX 클러스터는 최대 32개 노드까지 확장할 수 있습니다. 이를 통해 워크로드 및 애플리케이션의 증가하는 요구 사항에 맞춰 AFX 스토리지 시스템을 확장할 수 있습니다. 단, 32개 노드 지원 시에는 일부 기능이 제한될 수 있습니다. 자세한 내용은 NetApp 영업팀에 문의하십시오.</block>
+  <block id="ea7f38fbe84ac28be0f7c90cca730a69" category="cell">ONTAP 9.19.1</block>
+  <block id="6c4c7d8e76cfe8af8727252cf3e875b5" category="cell">FlexGroup당 볼륨</block>
+  <block id="af6694594a3904e8c097275a5063d99b" category="paragraph">FlexGroup의 최대 볼륨 수가 32개 노드에서 512개로 증가했습니다. 이를 통해 AFX 스토리지 시스템이 더 큰 클러스터에 필요한 성능을 완벽하게 제공할 수 있습니다.</block>
+  <block id="d359aad806cfd9033ebf70235d998444" category="inline-link-macro">ONTAP SnapMirror 액티브 동기화를 사용하여 NAS 보호</block>
+  <block id="2e6bc327967589a31f3b3cf912541969" category="cell"><block ref="2e6bc327967589a31f3b3cf912541969" category="inline-link-macro-rx"></block></block>
+  <block id="6df678bfc8af1b23041d41f6cdba54ad" category="paragraph">SnapMirror 액티브 동기화는 AFX 클러스터(4노드만 해당)에서 NFS 및 SMB를 사용하여 SVM 수준에서 NAS 워크로드를 지원하며, 기본 클러스터에서는 읽기/쓰기 액세스만 허용합니다.</block>
+  <block id="a5fa5746370b608090b994a97b49e98b" category="section-title">네트워킹</block>
+  <block id="1d3f2716111de88760369111858eeee2" category="inline-link-macro">TCP 성능 개선</block>
+  <block id="0564b4663ca85cec01dd40ac0620d42b" category="cell"><block ref="0564b4663ca85cec01dd40ac0620d42b" category="inline-link-macro-rx"></block></block>
+  <block id="a9ca0c6d9fc385c7343075bc02edc104" category="paragraph">ONTAP 9.19.1 버전부터 ONTAP은 PRR과 RACK이라는 두 가지 손실 복구 기능을 ONTAP TCP 스택에 통합하여 손실이 많고 지연 시간이 긴 WAN 링크에서 TCP 데이터 전송 성능을 향상시킵니다.</block>
+  <block id="f44c5b52283f6fd3cb045d14198dfa6e" category="inline-link">SnapMirror 기본 볼륨에 대한 ARP/AI 지원</block>
+  <block id="2399496a6e54ed20ed46828a475f7a0e" category="cell"><block ref="2399496a6e54ed20ed46828a475f7a0e" category="inline-link-rx"></block></block>
+  <block id="e8eb207e6de7c7757810bc07b0846e79" category="inline-link-macro">TLS v3를 통한 NFS</block>
+  <block id="9f76431b14eae171858837b9c8175543" category="cell"><block ref="9f76431b14eae171858837b9c8175543" category="inline-link-macro-rx"></block></block>
+  <block id="fb78157da1449370c33ba54cae495e1f" category="paragraph">ONTAP 9.19.1 버전부터 ONTAP은 NFS가 활성화된 SVM에서 전송 중인 NFS 트래픽을 암호화하기 위해 TLS 1.3을 사용하는 NFS over TLS에 대한 온프레미스 지원을 추가합니다. 또한 이 릴리스에서는 LIF별 선택적 상호 TLS 호스트 인증과 일치하는 클라이언트에 대한 비 TLS TCP 액세스를 차단하는 내보내기 정책 제어를 지원합니다.</block>
 </blocks>
