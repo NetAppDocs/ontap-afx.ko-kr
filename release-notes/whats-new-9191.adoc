@@ -29,6 +29,11 @@ AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.19.1에 포함된 
 | link:../administer/additional-ontap-svm.html["ONTAP SnapMirror 액티브 동기화를 사용하여 NAS 보호"]  a| 
 SnapMirror 액티브 동기화는 AFX 클러스터(4노드만 해당)에서 NFS 및 SMB를 사용하여 SVM 수준에서 NAS 워크로드를 지원하며, 기본 클러스터에서는 읽기/쓰기 액세스만 허용합니다.
 
+
+
+| link:../manage-data/create-configure-bucket.html["SnapMirror 클라우드 지원 한도가 S3 버킷 100개로 증가했습니다."]  a| 
+SnapMirror 클라우드에서 지원하는 S3 버킷 수를 100개로 늘렸습니다.
+
 |===
 
 

@@ -2078,4 +2078,11 @@
   <block id="e8eb207e6de7c7757810bc07b0846e79" category="inline-link-macro">TLS v3를 통한 NFS</block>
   <block id="9f76431b14eae171858837b9c8175543" category="cell"><block ref="9f76431b14eae171858837b9c8175543" category="inline-link-macro-rx"></block></block>
   <block id="fb78157da1449370c33ba54cae495e1f" category="paragraph">ONTAP 9.19.1 버전부터 ONTAP은 NFS가 활성화된 SVM에서 전송 중인 NFS 트래픽을 암호화하기 위해 TLS 1.3을 사용하는 NFS over TLS에 대한 온프레미스 지원을 추가합니다. 또한 이 릴리스에서는 LIF별 선택적 상호 TLS 호스트 인증과 일치하는 클라이언트에 대한 비 TLS TCP 액세스를 차단하는 내보내기 정책 제어를 지원합니다.</block>
+  <block id="5a7a5c8d2eee66d24f7458eee76c2938" category="inline-link">ONTAP SnapMirror Cloud를 사용하여 데이터를 클라우드에 백업</block>
+  <block id="989d9263b7c2ecdd061c7f8f17651198" category="list-text"><block ref="989d9263b7c2ecdd061c7f8f17651198" category="inline-link-rx"></block></block>
+  <block id="bf34fdc864301c032f0e276e4ff8833a" category="cell">SnapMirror 클라우드 지원</block>
+  <block id="e23180ba684584a4c88cfa3b05724d54" category="paragraph">SnapMirror 클라우드에서 지원하는 S3 버킷의 최대 개수가 100개로 증가했습니다. 이를 통해 워크로드 및 애플리케이션에 더 많은 S3 버킷을 생성할 수 있습니다.</block>
+  <block id="9c1a79f4f2d2fd2b367f6ed1bb37d7ae" category="inline-link-macro">SnapMirror 클라우드 지원 한도가 S3 버킷 100개로 증가했습니다.</block>
+  <block id="b2d786633879a334695de09f0ae3cfb0" category="cell"><block ref="b2d786633879a334695de09f0ae3cfb0" category="inline-link-macro-rx"></block></block>
+  <block id="0f2919ddc73a7864a3605abad5d389c6" category="paragraph">SnapMirror 클라우드에서 지원하는 S3 버킷 수를 100개로 늘렸습니다.</block>
 </blocks>
