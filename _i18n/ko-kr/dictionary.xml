@@ -2085,4 +2085,11 @@
   <block id="9c1a79f4f2d2fd2b367f6ed1bb37d7ae" category="inline-link-macro">SnapMirror 클라우드 지원 한도가 S3 버킷 100개로 증가했습니다.</block>
   <block id="b2d786633879a334695de09f0ae3cfb0" category="cell"><block ref="b2d786633879a334695de09f0ae3cfb0" category="inline-link-macro-rx"></block></block>
   <block id="0f2919ddc73a7864a3605abad5d389c6" category="paragraph">SnapMirror 클라우드에서 지원하는 S3 버킷 수를 100개로 늘렸습니다.</block>
+  <block id="fab7289d2e0b55fc43d0b47d53a00fc3" category="admonition">ONTAP 9.17.1에는 AFX에서 사용할 수 있는 여러 가지 새로운 기능이 있습니다. 이러한 기능 중 일부는 AFX에 특화된 기능이며, 다른 많은 기능은 공통으로 사용되는 제품 기반에서 파생된 것입니다. 아래에 설명된 AFX 기능을 검토하는 것 외에도<block ref="f893755dddb8099eec78a6462ce91d0b" category="inline-link-rx"></block>도 참조하십시오.</block>
+  <block id="4104746c2a71c1942a4995ce44c82593" category="admonition">ONTAP 9.18.1에는 AFX에서 사용할 수 있는 여러 가지 새로운 기능이 있습니다. 이러한 기능 중 일부는 AFX에 특화된 기능이며, 다른 많은 기능은 공통으로 사용되는 제품 기반에서 파생된 것입니다. 아래에 설명된 AFX 기능을 검토하는 것 외에도<block ref="204bccace7f1ae9c578cbca9117d36d7" category="inline-link-rx"></block>을 참조하십시오.</block>
+  <block id="ecaf96cdec76c873c95a0fdcb5bf95c6" category="admonition">ONTAP 9.19.1에는 AFX에서 사용할 수 있는 몇 가지 새로운 기능이 있습니다. 이러한 기능 중 일부는 AFX에 특화된 기능이며, 다른 많은 기능은 공통으로 사용되는 제품 기반에서 파생된 것입니다. 아래에 설명된 AFX 기능을 검토하는 것 외에도<block ref="6397caa908413ec6433ae55aa1981652" category="inline-link-rx"></block>을 참조하십시오.</block>
+  <block id="51985b9bdf0ec7b57ade2b6af08c0214" category="section-title">S3 오브젝트 스토리지</block>
+  <block id="6b10f0340ee90e881f251f6a6c1c50e5" category="paragraph"><block ref="6b10f0340ee90e881f251f6a6c1c50e5" category="inline-xref-macro-rx"></block></block>
+  <block id="980de945038567285acd832eeffc81db" category="paragraph">조건을 사용하여 객체 업로드에 대한 조건부 쓰기 및 객체 삭제에 대한 조건부 삭제를 적용할 수 있습니다. 조건부 쓰기 및 삭제는 객체의 덮어쓰기 또는 의도하지 않은 삭제를 방지하는 방법을 제공합니다.</block>
+  <block id="2f3fb7b10644dc3204e82bf0a20ccfe1" category="paragraph">기존 액세스 키가 만료되더라도 S3 리소스에 대한 사용자 액세스를 유지하기 위해 ONTAP 클러스터 관리자는 각 S3 사용자에 대해 두 번째 액세스 키를 생성할 수 있습니다.</block>
 </blocks>

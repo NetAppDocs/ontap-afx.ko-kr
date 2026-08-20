@@ -17,6 +17,9 @@ summary: AFX 스토리지 시스템에서 사용할 수 있는 ONTAP 9.18.1의 �
 AFX 스토리지 시스템에서 사용할 수 있는 ONTAP 9.18.1의 새로운 기능에 대해 알아보세요.
 
 
+NOTE: ONTAP 9.18.1에는 AFX에서 사용할 수 있는 여러 가지 새로운 기능이 있습니다. 이러한 기능 중 일부는 AFX에 특화된 기능이며, 다른 많은 기능은 공통으로 사용되는 제품 기반에서 파생된 것입니다. 아래에 설명된 AFX 기능을 검토하는 것 외에도 https://docs.netapp.com/us-en/ontap/release-notes/whats-new-9181.html["ONTAP 9.18.1의 새로운 기능"^]을 참조하십시오.
+
+
 
 [[storage-resource-management-enhancements]]
 == 스토리지 리소스 관리 향상
