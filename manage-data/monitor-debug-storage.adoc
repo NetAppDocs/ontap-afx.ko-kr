@@ -32,4 +32,5 @@ AFX 시스템에는 각 클러스터가 관리하는 스토리지를 모니터�
 == 관련 정보
 
 * link:../manage-data/prepare-manage-data.html["AFX 데이터 관리를 준비하세요"]
+* https://docs.netapp.com/us-en/ontap/task_nas_file_system_analytics_enable.html["ONTAP 파일 시스템 분석 활성화"^]
 

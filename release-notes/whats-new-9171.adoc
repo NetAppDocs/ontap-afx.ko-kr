@@ -38,6 +38,26 @@ NOTE: ONTAP 9.17.1에는 AFX에서 사용할 수 있는 여러 가지 새로운 
 
 
 |===
-.관련 정보
+
+
+[[storage-resource-management-enhancements]]
+== 스토리지 리소스 관리 향상
+
+[cols="30%,70%"]
+|===
+| 업데이트 | 설명 
+
+
+ a| 
+xref:../manage-data/monitor-debug-storage.html[AFX 스토리지 시스템 모니터링 및 문제 해결]
+ a| 
+ONTAP NAS 프로토콜용으로 할당된 ONTAP 클러스터에서 새로 생성된 SVM에 생성된 볼륨에는 기본적으로 파일 시스템 분석(FSA)이 활성화됩니다. FSA는 볼륨이 생성되는 즉시 자동으로 활성화되어 추가 구성 없이 즉각적인 분석 기능을 제공합니다.
+
+|===
+
+
+[[related-information]]
+== 관련 정보
+
 * https://docs.netapp.com/us-en/ontap/release-notes/index.html["ONTAP 9 출시 주요 내용"^]
 

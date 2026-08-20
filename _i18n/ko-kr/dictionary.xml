@@ -2109,4 +2109,8 @@
   <block id="8e2c307ef6e54871dce87c1828dc21fd" category="inline-xref-macro">SVM 및 볼륨에 대한 2단계 중첩 QoS 정책 그룹 지원</block>
   <block id="e08db9e8d24efaf5a7190ce782b11af3" category="paragraph"><block ref="e08db9e8d24efaf5a7190ce782b11af3" category="inline-xref-macro-rx"></block></block>
   <block id="0d42fe34cb867538d9d93ccdd8b15ac7" category="paragraph">SVM에 QoS 정책을 할당하는 동시에 SVM에 속한 볼륨에도 QoS 정책을 할당할 수 있습니다.</block>
+  <block id="007a701e91cdfb37201a53977fddd2b4" category="inline-link">ONTAP 파일 시스템 분석 활성화</block>
+  <block id="05ac85f50d8d37906293d2e2a6c88604" category="list-text"><block ref="05ac85f50d8d37906293d2e2a6c88604" category="inline-link-rx"></block></block>
+  <block id="99a1ee6766885a2da62b660dd8ea16ac" category="paragraph"><block ref="99a1ee6766885a2da62b660dd8ea16ac" category="inline-xref-macro-rx"></block></block>
+  <block id="d71e1a06e0aeac0cc6a7a6eb58601633" category="paragraph">ONTAP NAS 프로토콜용으로 할당된 ONTAP 클러스터에서 새로 생성된 SVM에 생성된 볼륨에는 기본적으로 파일 시스템 분석(FSA)이 활성화됩니다. FSA는 볼륨이 생성되는 즉시 자동으로 활성화되어 추가 구성 없이 즉각적인 분석 기능을 제공합니다.</block>
 </blocks>
