@@ -2113,4 +2113,55 @@
   <block id="05ac85f50d8d37906293d2e2a6c88604" category="list-text"><block ref="05ac85f50d8d37906293d2e2a6c88604" category="inline-link-rx"></block></block>
   <block id="99a1ee6766885a2da62b660dd8ea16ac" category="paragraph"><block ref="99a1ee6766885a2da62b660dd8ea16ac" category="inline-xref-macro-rx"></block></block>
   <block id="d71e1a06e0aeac0cc6a7a6eb58601633" category="paragraph">ONTAP NAS 프로토콜용으로 할당된 ONTAP 클러스터에서 새로 생성된 SVM에 생성된 볼륨에는 기본적으로 파일 시스템 분석(FSA)이 활성화됩니다. FSA는 볼륨이 생성되는 즉시 자동으로 활성화되어 추가 구성 없이 즉각적인 분석 기능을 제공합니다.</block>
+  <block id="7a5cd40812fc4b3d065db77f8ad471a2" category="summary">NetApp AFX 클러스터에서 볼륨 마이그레이션, LIF 마이그레이션 및 HA 파트너 연결 해제를 포함하여 스토리지 노드를 제거하는 방법을 알아보십시오.</block>
+  <block id="4e5ba73143016dcff33719a396a6a145" category="doc">AFX 스토리지 시스템 클러스터에서 노드 제거</block>
+  <block id="6f0c0dcb367b5c75b40798fbe71ce6cf" category="paragraph">유지 관리 또는 하드웨어 교체를 위해 AFX 클러스터에서 노드를 제거해야 할 수 있습니다. 한 번에 하나의 노드만 제거할 수 있으며, 노드를 제거한 후에는 해당 노드의 HA 파트너도 함께 제거해야 합니다.</block>
+  <block id="4dc248d72f6d53f41520e119f1f1df61" category="list-text">AFX 스토리지 시스템에서는 모든 스토리지가 클러스터의 모든 노드에서 접근 가능한 단일 스토리지 가용 영역(SAZ) 내에 저장됩니다. 따라서 노드가 제거될 때, 제거되는 노드의 데이터를 복사할 필요가 없습니다. 대신, 나머지 노드들 간에 제거되는 노드의 볼륨에 대한 포인터가 업데이트됩니다. 이를 Zero Copy Volume Move(ZCVM)라고 하며, 실제로 데이터가 복사되거나 이동되지 않기 때문에 즉시 처리됩니다.</block>
+  <block id="2dbbd7a8acfe4ab40ac6e02f5b4365bd" category="paragraph">노드를 제거하기 전에 ZCVM에서 이동할 수 없는 볼륨은 수동으로 처리해야 합니다. 여기에는 볼륨 복제본, 오프라인 볼륨, 원래 암호화 키가 변경되었거나 재설정된 암호화된 볼륨, SnapMirror 클라우드를 사용하여 복원된 볼륨이 포함됩니다. 감사 스테이징 볼륨과 루트 볼륨은 노드 연결 해제 프로세스 중에 ZCVM에서 이동합니다.</block>
+  <block id="7b556ab7df79413da0cc234f3e94ae5c" category="inline-link-macro">감사 스테이징 볼륨</block>
+  <block id="b94fbeba18cc08b1ba75cabcbc2e50a0" category="list-text"><block ref="9fec2c3b1c6739fae6e26aee450a7911" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="791417c8f8a45d10a1481c1cdb8725eb" category="inline-link-macro">재입력된 암호화 볼륨</block>
+  <block id="1ddf84f2c214ffe15e58979d29d13e7e" category="list-text"><block ref="c62dc8115ddd949100052ee500f4ed05" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="03f868c6a771736d2ede498b24db10fd" category="list-text">노드를 클러스터에서 성공적으로 분리하면 다음과 같은 작업이 수행됩니다.</block>
+  <block id="da83a680025062a416e893d926036b59" category="list-text">노드를 부적격으로 표시하고 CLAM 쿼럼에서 제외합니다.</block>
+  <block id="1d6d051efd8278e7af988bc240035964" category="list-text">노드를 깔끔하게 종료하고 소유권을 살아남은 노드로 이전합니다.</block>
+  <block id="81969b995904bbc6ec383d70d109fe78" category="list-text">노드의 RAID 고가용성(HA) 상태를 정리하고 클러스터 데이터베이스에서 해당 상태를 삭제합니다.</block>
+  <block id="ee564f7d2a41885a7b7c447302897684" category="section-title">1단계: AFX 클러스터에서 노드를 제거할 준비를 합니다.</block>
+  <block id="20f6fea895a9042d4cb497b9b561472f" category="paragraph">AFX 클러스터에서 노드를 제거하기 전에 클러스터가 정상인지, 그리고 제거할 노드에 데이터 LIF가 없는지 확인해야 합니다.</block>
+  <block id="50ab3243fc412f508feaf2651e35de5a" category="list-text">클러스터가 정상인지 확인하십시오.</block>
+  <block id="6ed6db99070eb594c7294b2758336a36" category="list-text">제거하려는 노드가 온라인 상태이고 정상 작동하는지 확인하십시오.</block>
+  <block id="c8bd62f17e39fb32ef39057543588fff" category="list-text">노드의 LIF를 확인합니다.</block>
+  <block id="b296f30bfe1b8d15961aace982c88ede" category="list-text">노드에서 데이터 LIF를 마이그레이션합니다.</block>
+  <block id="b7fb269285f339c28cc4295e470228ce" category="paragraph">모든 데이터 LIF에 대해 이 명령을 반복하십시오. 클러스터 LIF와 노드 관리 LIF만 노드에 남아 있어야 합니다.</block>
+  <block id="67ad2de6e0aebb768d64f688a26f3263" category="list-text">노드에 모든 데이터 LIF가 제거되었고 클러스터 LIF와 노드 관리 LIF만 남아 있는지 확인하십시오.</block>
+  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">다음 단계는 무엇입니까?</block>
+  <block id="af7028a97133d9d6579e0120e4d2ac54" category="paragraph">준비 단계를 완료한 후에는 HA 쌍의 첫 번째 노드를 클러스터에서 제거한 다음 해당 HA 파트너를 제거할 수 있습니다.</block>
+  <block id="129a0f9dbb25cd859dc8156de126758f" category="section-title">2단계: AFX 클러스터에서 단일 노드 분리</block>
+  <block id="9e84e50094430ea932ef692f2de2fd8d" category="paragraph">AFX 클러스터에서 노드를 제거하려면 먼저 노드 제거를 위한 준비 단계를 완료해야 합니다. 클러스터에서 노드를 제거한 후에는 해당 노드의 HA 파트너도 제거해야 합니다.</block>
+  <block id="ff13cd92e9c877582383685ad84e1408" category="inline-link-macro">AutoSupport 메시지를 발행합니다</block>
+  <block id="e1e010021551213000f9a5ad8268a504" category="paragraph"><block ref="389d719ba9fa696dc8807adb3c915714" category="inline-link-macro-rx"></block>하여 클러스터에서 노드를 제거하고 있음을 NetApp 기술 지원에 알리는 것이 좋습니다.</block>
+  <block id="61ef46349dc8aeb8c96f3f89d14d2e3b" category="list-text">노드 볼륨을 비우십시오:</block>
+  <block id="4352398a52fe792d0d9bc8cd2e093100" category="list-text">노드 볼륨이 비워졌는지 확인하십시오.</block>
+  <block id="4fa4b393f4bd68dcb2697caa0d486054" category="paragraph">진행하기 전에 *대기 중인 카운트*가 0이 될 때까지 기다리십시오. 볼륨이 완전히 비워질 때까지 엡실론이나 적격성을 이동하지 마십시오.</block>
+  <block id="073a5eccc26b37d386010ab2297fb4ad" category="paragraph">필요한 경우 <block ref="1800c917431345cdd794d19f800ce56a" prefix=" " category="inline-code"></block> 명령을 사용하여 대피 프로세스를 중단할 수 있습니다.</block>
+  <block id="2cca63e4c1d7ec175a21377faff9a6ec" category="list-text">엡실론을 보유한 노드를 확인합니다.</block>
+  <block id="e23022fe3595885bf954a01c22683bad" category="list-text">제거하려는 노드에 엡실론이 있는 경우, 엡실론을 다른 노드로 이동하십시오.</block>
+  <block id="49e8d819c7a12b23ca983a3bc99e1bdf" category="list-text">현재 기본 노드를 식별하십시오.</block>
+  <block id="14029d6b9a69926c796b630bd649fe4a" category="list-text">제거하려는 노드가 현재 기본 노드인 경우, 해당 노드를 부적격 상태로 만드십시오.</block>
+  <block id="7f6abdd99160e3d3527591b98c573c7f" category="list-text">나머지 데이터 LIF의 홈 노드를 표시합니다.</block>
+  <block id="b77fc9ce12284fe9cb0ed31c9a1f86d5" category="list-text">나머지 데이터 LIF의 홈 노드를 다른 노드로 변경합니다.</block>
+  <block id="c9b5aae4621661ad2ffccfee6c9b3874" category="paragraph">클러스터 LIF와 노드 관리 LIF는 나가는 노드에 남겨두십시오.</block>
+  <block id="f73e9b92493b90c37101390646ee7ff4" category="list-text">제거할 노드의 인수 기능을 비활성화합니다.</block>
+  <block id="2f6504307623c74dfa94926c73a36268" category="list-text">제거할 노드에 대해 테이크오버가 비활성화되어 있는지 확인하십시오.</block>
+  <block id="398e3c6027c9ad5a579ba201dbdf1422" category="paragraph">페일오버가 비활성화된 경우 HA 쌍에서 테이크오버가 불가능합니다.</block>
+  <block id="e66ad8765eff08cc92ad6062c3b5484e" category="list-text">정상적으로 작동하는 노드에서 권한 수준을 고급으로 설정하십시오.</block>
+  <block id="8e9c4f7e32d6d0c0b5026f9b1bd4cb0e" category="list-text">클러스터에서 노드를 분리합니다.</block>
+  <block id="248d96fc2d0062d179e38ec920bbc9a6" category="paragraph">경고 메시지를 확인하십시오. 작업이 완료되면 *Node remove succeeded* 메시지가 표시되어야 합니다.</block>
+  <block id="fd7d664fcabce9a7163ddf544905c254" category="paragraph">이전 단계를 반복하여 클러스터에서 HA 파트너를 제거하십시오. 연결되지 않은 노드의 HA 파트너가 제거될 때까지는 추가 노드를 제거할 수 없습니다.</block>
+  <block id="ebe7c0cf5ca9d4767514a83c4598b75c" category="section-title">3단계: (선택 사항) 제거한 하드웨어 청소</block>
+  <block id="3212383e8d23d729b6cb21418a172111" category="paragraph">클러스터에서 제거한 노드를 다른 용도로 사용하려면 해당 노드의 구성을 지우고 모든 디스크를 초기화해야 클러스터에 다시 참여할 수 있습니다.</block>
+  <block id="9e870c65221f5c544b31efc1da95daeb" category="list-text">부팅 과정 중 메시지가 나타나면 Ctrl-C를 눌러 부팅 메뉴를 표시합니다.</block>
+  <block id="5b43d3aa91abf75fd24c44f1341b2f06" category="list-text">부팅 메뉴 옵션 *(4) Clean configuration and initialize all disks*를 선택합니다.</block>
+  <block id="e482842fa3fe9110a14b09a7990fc7e3" category="paragraph">해당 <block ref="5fc60967dddffb3c388156e897d54aad" prefix=" " category="inline-code"></block> 명령을 사용하면 동일한 클러스터 내에서 HA 쌍을 재사용할 수 있습니다.</block>
+  <block id="92157b9dae17603751a4d60f0f94bf8c" category="sidebar">클러스터에서 노드 제거</block>
 </blocks>

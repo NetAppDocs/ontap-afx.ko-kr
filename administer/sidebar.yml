@@ -46,6 +46,8 @@ entries:
   entries:
   - title: 클러스터 확장
     url: "/administer/expand-cluster.html"
+  - title: 클러스터에서 노드 제거
+    url: "/administer/remove-nodes.html"
   - title: ONTAP 업그레이드
     url: "/administer/upgrade-ontap.html"
   - title: 펌웨어 업데이트
