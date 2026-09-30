@@ -1149,7 +1149,6 @@
   <block id="c57ebf896522e61d2fb2936af391a342" category="inline-link-macro">AFX 데이터 관리를 준비하세요</block>
   <block id="5546f6d8bc3d0dd5a40c20c4d749d48e" category="list-text"><block ref="5546f6d8bc3d0dd5a40c20c4d749d48e" category="inline-link-macro-rx"></block></block>
   <block id="264c7a25568ab93610cc395140359eb4" category="summary">AFX 데이터를 관리하기 전에 기본 개념과 기능을 숙지해야 합니다.</block>
-  <block id="bfd961e2a1e35548010fea792ecda5e4" category="doc">AFX 스토리지 시스템 데이터 관리를 준비하세요</block>
   <block id="4e5fb30db16cab1af452750211083830" category="section-title">용어 및 옵션</block>
   <block id="91818c76048499823f8f320043c66890" category="paragraph">AFX 스토리지와 관련하여 알아야 할 용어가 몇 가지 있습니다.</block>
   <block id="045efe415c2e22ca0585f899f658f875" category="list-text">플렉스볼륨</block>
@@ -2302,7 +2301,6 @@
   <block id="17857f79a52a61ef52bb888e51ed3f46" category="cell">두 단계(config create 후 attach)를 통해 애그리게이트별로 구성됩니다.</block>
   <block id="3c8ae231f1522612c4001d8d19663cb2" category="cell">클러스터 수준에서 단일 명령으로 구성 가능하며, 클러스터당 하나의 버킷이 정의됩니다.</block>
   <block id="6fb6850c966cd386e070d6b4fe33da60" category="cell">기본 계층화 정책</block>
-  <block id="73a3a446b9ad39c30fc39b006c651c51" category="cell">기본 정책은 <block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>입니다. 티어링을 시작하려면 볼륨 정책을 명시적으로 설정해야 합니다.</block>
   <block id="3daeebad041e5bfd6f3201fcdec79710" category="cell">온도 추적</block>
   <block id="2a3317e03d44d341504d96b0c12b490a" category="cell">볼륨별 세분성</block>
   <block id="7868204f5e206dceb3273bea4608f30a" category="cell">클라우드 티어 제공업체</block>
@@ -2330,4 +2328,8 @@
   <block id="9cc7e1b7216fc9da25559b80381f9ca5" category="sidebar">FabricPool 구현 준비</block>
   <block id="6a917ac3c4ad1cc61d8259a608f2ae4e" category="sidebar">FabricPool 구성</block>
   <block id="015f8c34f52b6ef8a3361958660f5e88" category="sidebar">추가 고려 사항</block>
+  <block id="e51fa2d9b995b22d963aa0c409e58a35" category="cell">기본 정책은<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block> FabricPool 지원 애그리게이트를 제외하고 기본값은<block ref="c322d3de29d2b0c5e2e011dad5e77df2" prefix=" " category="inline-code"></block></block>
+  <block id="e23d29d70657da965822a4e0ec8f546b" category="cell">기본 정책은<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block></block>
+  <block id="5933d9a0441d1f9543a9286674ef11b5" category="doc">AFX S3 버킷 관리 옵션</block>
+  <block id="b8efc14136159d215438d8120125f40e" category="doc">AFX 스토리지 시스템 데이터 관리에 대해 알아보기</block>
 </blocks>

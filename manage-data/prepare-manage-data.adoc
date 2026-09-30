@@ -4,7 +4,7 @@ permalink: manage-data/prepare-manage-data.html
 keywords: afx, afx system, prepare, prepare manage, prepare manage data 
 summary: AFX 데이터를 관리하기 전에 기본 개념과 기능을 숙지해야 합니다. 
 ---
-= AFX 스토리지 시스템 데이터 관리를 준비하세요
+= AFX 스토리지 시스템 데이터 관리에 대해 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
