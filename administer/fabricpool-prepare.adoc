@@ -1,0 +1,67 @@
+---
+permalink: administer/fabricpool-prepare.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, requirements, limitations, licensing, prepare, prerequisites, storagegrid, ontap s3 
+summary: AFF 스토리지 시스템에서 FabricPool을 구성하기 전에 요구 사항, 제한 사항 및 선택된 기술을 숙지하여 준비해야 합니다. 
+---
+= AFX 스토리지 시스템에서 FabricPool 구현 준비
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFF 스토리지 시스템에서 FabricPool을 구성하기 전에 요구 사항, 제한 사항 및 선택된 기술을 숙지하여 준비해야 합니다.
+
+
+
+[[requirements]]
+== 요구 사항
+
+FabricPool을 AFX 스토리지에 배포할 때 가장 중요한 요구 사항은 다음과 같습니다.
+
+* *ONTAP 릴리스.* FabricPool는 ONTAP 9.19.1 P3 이상 릴리스가 설치된 AFX 스토리지 시스템에서 지원됩니다. 스토리지 주소 지정 방식의 내부 변경으로 인해 9.18.1에서 업그레이드된 AFX 클러스터에서는 이 기능이 지원되지 않습니다.
+* *오브젝트 저장소.* NetApp StorageGRID 또는 ONTAP S3 버킷이 필요합니다. 통합 ONTAP을 실행하는 AFF 및 FAS 스토리지와 마찬가지로 버킷은 이미 존재해야 하며 데이터에 따라 충분한 용량이 있어야 합니다. 인증서 확인을 명시적으로 비활성화하지 않는 한 CA 인증서를 사용하는 것이 좋습니다.
+* *네트워크 연결.* AFX 클러스터의 모든 노드는 오브젝트 저장소에 대한 네트워크 연결이 필요합니다. 이는 각 노드에 클러스터 간 LIF 쌍을 사용하여 구현되며, 이는 AFF 및 FAS 시스템과 동일합니다.
+
+
+AFX와 ONTAP FabricPool 구현 방식은 매우 유사합니다. 자세한 내용은  https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["ONTAP FabricPool 사용 요구 사항"^]을 참조하십시오.
+
+
+
+[[limitations-and-restrictions]]
+== 제한 및 제약 사항
+
+AFX FabricPool 구현은 통합 ONTAP보다 여러 면에서 더 많은 제약이 있습니다. AFX의 FabricPool에서는 다음과 같은 기능이 * 지원되지 않습니다*.
+
+* Amazon S3 및 Google Cloud Storage 등 ONTAP에서 사용할 수 있는 퍼블릭 클라우드 오브젝트 스토어는 AFX에서 지원되지 않습니다. StorageGRID 및 ONTAP S3만 지원됩니다.
+* FabricPool 미러링.
+* 여러 개의 오브젝트 스토어 버킷 또는 볼륨 단위 버킷 연결을 사용할 수 있으며, AFX 클러스터당 하나의 클러스터 수준 버킷이 사용됩니다.
+* 최적화된 볼륨 이동, 최적화된 SVM 마이그레이션 및 최적화된 클론 분할.
+* SVM 마이그레이션 및 AFF 또는 FAS 시스템에서 AFX 시스템으로의 마이그레이션.
+* 비활성 데이터 보고(IDR/AutoIDR).
+
+
+
+
+[[licensing]]
+== 라이센스
+
+AFF 및 FAS 시스템의 경우, 타사 퍼블릭 클라우드 오브젝트 스토어로 티어링할 때는 용량 기반 FabricPool 라이선스가 필요하지만, StorageGRID 또는 ONTAP S3를 사용하는 경우에는 추가 라이선스가 필요하지 않습니다. AFX는 StorageGRID 및 ONTAP S3만 지원하므로 AFX FabricPool에는 FabricPool 용량 라이선스가 필요하지 않습니다.
+
+
+
+[[intercluster-lifs]]
+== 인터클러스터 LIF
+
+인터클러스터 LIF는 클러스터 간 또는 외부 통신에 사용되는 논리적 네트워크 인터페이스입니다. AFF 및 FAS 시스템에서 FabricPool HA 쌍은 클라우드 계층에 도달하기 위해 쌍당 두 개의 인터클러스터 LIF가 필요하며, NetApp은 복원력을 위해 추가 인터클러스터 LIF를 권장합니다. AFX에서는 인터클러스터 LIF가 오브젝트 스토어와의 통신에도 사용됩니다. 연결은 오브젝트 스토어 구성 생성의 일부로 클러스터의 모든 노드에서 검증됩니다.
+
+
+
+[[related-information]]
+== 관련 정보
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["ONTAP FabricPool 사용 요구 사항"^]
+* https://docs.netapp.com/us-en/ontap/peering/peering-basics-concept.html["ONTAP 피어링 기본 사항"^]
+* https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-share-data-ports-task.html["공유 데이터 포트에서 ONTAP 인터클러스터 LIF 구성"^]
+

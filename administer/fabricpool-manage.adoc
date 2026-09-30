@@ -1,0 +1,41 @@
+---
+permalink: administer/fabricpool-manage.html 
+sidebar: sidebar 
+keywords: afx, oam, fabricpool, manage, monitor, space, tiering policy, zcvm, volume move, node join, node unjoin, flexaggr 
+summary: FabricPool AFX 시스템에서 FabricPool을 지속적으로 관리하는 방법은 AFF 및 FAS 시스템과 유사합니다. 공간 사용량을 모니터링하고, 볼륨을 관리하고, 티어링 정책을 조정해야 합니다. AFX 환경에서는 노드가 AFX 클러스터에 참여하거나 클러스터에서 나갈 때의 동작 방식 등 몇 가지 주목할 만한 추가 사항이 있습니다. 
+---
+= AFF 스토리지 시스템용 FabricPool 관리
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FabricPool AFX 시스템에서 FabricPool을 지속적으로 관리하는 방법은 AFF 및 FAS 시스템과 유사합니다. 공간 사용량을 모니터링하고, 볼륨을 관리하고, 티어링 정책을 조정해야 합니다. AFX 환경에서는 노드가 AFX 클러스터에 참여하거나 클러스터에서 나갈 때의 동작 방식 등 몇 가지 주목할 만한 추가 사항이 있습니다.
+
+
+
+[[monitor-space-and-manage-volumes]]
+== 공간 모니터링 및 볼륨 관리
+
+AFX에서 용량 계층 및 성능 계층 사용량을 모니터링하고 일상적인 볼륨 관리를 수행하는 데 사용되는 절차는 일반적으로 ONTAP에서 사용되는 절차와 동일합니다. AFX에서는 공간 보고가 분산 아키텍처를 고려하여 이루어진다는 점에 유의하십시오. 용량 계층 공간 정보는 관리자가 볼 수 있는 집계가 아닌 클러스터 수준 및 가용성 영역 보고를 통해 제공됩니다.
+
+
+
+[[node-join-and-node-unjoin]]
+== 노드 참여 및 노드 참여 해제
+
+AFX 시스템에서는 노드 작업이 FabricPool을 인식하며, 이는 ONTAP과 중요한 차이점입니다. 다음 동작을 참고하십시오.
+
+* *노드 참여.* 노드가 AFX 클러스터에 참여할 때 클러스터 오브젝트 저장소 구성이 이미 존재하는 경우, 오브젝트 저장소 연결이 자동으로 트리거됩니다. 연결이 실패하면 노드 참여 작업도 실패합니다.
+* *노드 연결 해제.* 노드가 클러스터에서 연결 해제되거나 제거되면 데이터에는 "사용 중지됨(defunct)"이라는 레이블이 지정됩니다. 연결된 볼륨은 ZCVM을 사용하여 재배치됩니다. 사용 중지된 오브젝트 메타파일은 클라우드 오브젝트에 계속 액세스할 수 있도록 유지되며 가비지 컬렉션 대상이 됩니다.
+
+
+
+
+[[related-information]]
+== 관련 정보
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/determine-data-inactive-reporting-task.html["FabricPool 관리"^]
+* link:../administer/expand-cluster.html["AFX 스토리지 시스템 클러스터 확장"]
+

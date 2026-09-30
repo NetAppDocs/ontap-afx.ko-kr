@@ -1,0 +1,114 @@
+---
+permalink: administer/fabricpool-additional.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, mirrors, commands, cli, encryption, nve 
+summary: AFX 스토리지 시스템에 FabricPool을 배포할 때 몇 가지 추가적인 고려 사항이 있습니다. 
+---
+= AFX 스토리지 시스템에서 FabricPool을 사용할 때 추가적으로 고려해야 할 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 스토리지 시스템에 FabricPool을 배포할 때 몇 가지 추가적인 고려 사항이 있습니다.
+
+
+
+[[fabricpool-mirrors]]
+== FabricPool 미러
+
+FabricPool 미러는 단일 FabricPool에 두 번째 오브젝트 스토어를 연결하여 생성되는 계층화된 클라우드 데이터를 위한 고가용성 구성입니다. 추가 미러가 구성되면 ONTAP는 데이터를 두 오브젝트 스토어에 동시에 동기적으로 계층화하여 재해 또는 오브젝트 스토어 장애 발생 시에도 데이터에 계속 액세스할 수 있도록 합니다. AFX는 단일 클러스터 수준 오브젝트 스토어를 구성하므로 *FabricPool 미러링은 초기 릴리스에서 AFX에서 지원되지 않습니다.
+
+
+
+[[encryption]]
+== 암호화
+
+암호화는 추가 구성 없이 AFF의 FabricPool에서 작동합니다. 하지만 다음 사항에 유의해야 합니다.
+
+* AFX는 NetApp 볼륨 암호화(NVE)를 지원하지만, NetApp 애그리게이트 암호화(NAE)는 지원하지 않습니다.
+* NVE는 성능 계층과 용량 계층에 동일한 키를 사용합니다.
+* 키 재설정 작업은 클라우드 계층 데이터를 포함하여 전체 볼륨의 데이터를 새 키로 다시 기록합니다.
+* 키 재설정 작업과 Zero Copy Volume Move는 동시에 실행할 수 없습니다.
+
+
+
+
+[[alternative-administrative-interfaces]]
+== 대체 관리 인터페이스
+
+System Manager는 AFX에서 FabricPool을 구성하고 관리하는 데 권장되는 기본 관리 인터페이스입니다. 하지만 명령줄 인터페이스(CLI) 또는 REST API를 사용하여 이러한 작업을 수행할 수도 있습니다.
+
+
+
+[[command-line-interface]]
+=== 명령줄 인터페이스
+
+AFX CLI는 클러스터 중심 설계 및 애그리게이트 부재에 맞춰 FabricPool을 지원하도록 재설계되었습니다.
+
+
+
+==== 클러스터 수준 오브젝트 저장소 명령
+
+ `admin` 수준에서 사용할 수 있는 다음 명령은 계층형 데이터의 오브젝트 저장소를 관리하는 데 사용됩니다.
+
+* *cluster object-store config create* StorageGRID 또는 ONTAP S3 오브젝트 스토어의 구성을 정의하고 클러스터의 모든 flexaggr에 자동으로 연결합니다. 이 단일 명령은 통합 ONTAP에서 사용되는 2단계 프로세스(config create + attach)를 대체합니다. 이 작업은 멱등성을 가지므로 초기 연결이 실패하더라도 다시 실행할 수 있습니다.
+* *cluster object-store config modify* 오브젝트 스토어 구성 속성을 수정합니다. 통합 ONTAP(연결 설정, 자격 증명, 인증서 옵션)에서 수정할 수 있는 동일한 속성을 AFX에서도 수정할 수 있습니다.
+* *cluster object-store config rename* 기존 오브젝트 저장소 구성의 이름을 변경합니다.
+* *cluster object-store config show* 명령은 연결 세부 정보 및 연결 상태를 포함하여 현재 오브젝트 스토어 구성을 표시합니다.
+* *cluster space show* 클러스터 수준의 공간 활용률(누적 오브젝트 저장소 사용량 포함)을 표시합니다. 출력에는 클라우드 계층의 논리적 사용 용량, 논리적 참조 용량, 논리적 미참조 용량 및 총 물리적 사용 공간이 포함됩니다.
+
+
+
+
+==== 볼륨 레벨 티어링 명령(관리자 및 고급 모드):
+
+티어링 동작을 제어하는 모든 ONTAP 볼륨 생성 및 수정 명령은 동일한 구문을 사용하여 AFX에서 완벽하게 지원됩니다.  여기에는 티어링 관련 매개변수를 포함한 표준 볼륨 생성 및 볼륨 수정 명령이 포함됩니다.
+
+* -tiering-policy
+* -tiering-minimum-cooling-days
+* -cloud-retrieval-policy
+* -is-cloud-write-enabled
+* -tiering-object-tags
+
+
+볼륨은 기본적으로 계층화 정책이 없음으로 설정되므로 볼륨별로 계층화를 명시적으로 활성화해야 합니다.
+
+
+
+[[rest-api]]
+=== REST API
+
+AFX의 FabricPool REST API 엔드포인트는 클러스터 수준의 오브젝트 저장소 관리와 볼륨 수준의 계층화 구성을 지원합니다. 클러스터 수준 아키텍처로 인해 애그리게이트 기반 엔드포인트는 지원되지 않습니다.
+
+지원되는 엔드포인트는 다음과 같습니다.
+
+* GET 및 POST 요청 `/cloud/targets`
+* GET 및 PATCH `/cloud/targets/{uuid}`
+* GET 및 POST 요청 `/storage/volumes`
+* `/storage/volumes/{uuid}`에 다음 티어링 매개변수를 사용하는 GET 및 PATCH:
++
+** tiering.policy
+** tiering.min_cooling_days
+** tiering.object_tags
+** cloud_retrieval_policy
+** cloud_write_enabled
+
+
+
+
+지원되지 않는 엔드포인트 및 매개변수는 다음과 같습니다.
+
+* DELETE `/cloud/targets/{uuid}`
+* `tiering.supported parameter` 볼륨 작업에서
+* 다음에 대한 모든 작업 `/storage/aggregates/{aggregate.uuid}/cloud-stores`
+
+
+
+
+[[related-information]]
+== 관련 정보
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/commands-manage-aggregates-reference.html["FabricPool 리소스를 관리하기 위한 ONTAP 명령"^]
+

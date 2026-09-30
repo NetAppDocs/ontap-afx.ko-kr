@@ -1,0 +1,65 @@
+---
+permalink: administer/fabricpool.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, tiering, data tiering, cloud tier, object store 
+summary: ONTAP 9.19.1 P3부터 FabricPool을 구성하여 AFX 스토리지 시스템의 사용 가능한 용량을 확장하고 비용을 절감하며 효율성을 향상시킬 수 있습니다. 
+---
+= AFX 스토리지 시스템용 FabricPool 에 대해 알아보기
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.19.1 P3부터 FabricPool을 구성하여 AFX 스토리지 시스템의 사용 가능한 용량을 확장하고 비용을 절감하며 효율성을 향상시킬 수 있습니다.
+
+
+
+[[fabricpool-overview]]
+== FabricPool 개요
+
+FabricPool은 데이터 활동 또는 "온도"를 기반으로 고성능 로컬 계층과 저비용 원격 클라우드 또는 용량 계층 간에 데이터를 이동하는 ONTAP 기능입니다. 자주 액세스되는 _핫_ 데이터는 빠른 로컬 SSD 스토리지에 유지하고 사용 빈도가 낮은 _콜드_ 데이터는 비용이 저렴한 오브젝트 스토리지로 이동합니다. FabricPool은 백그라운드에서 자동으로 투명하게 작동하며, 애플리케이션 변경이나 상당한 지속적인 관리가 필요하지 않습니다. 압축 및 중복 제거 등 관련 ONTAP 스토리지 효율성 기능은 데이터가 클라우드 계층으로 이동하거나 다시 돌아올 때 유지됩니다.
+
+FabricPool 티어링은 ONTAP 9.19.1 P3 이상 버전의 AFX 스토리지 시스템에서 지원되며, 데이터 집약적인 워크로드에 대해 로컬 티어를 넘어 AFX 클러스터 용량을 확장합니다. AFX의 FabricPool 구현에는 몇 가지 아키텍처 변경 사항이 있지만, ONTAP 기능의 핵심 작동 방식과 특징은 동일하게 유지됩니다.
+
+관리자는 볼륨별 정책과 비활성 데이터가 이동 가능해지는 시점을 정의하는 최소 냉각 기간을 통해 데이터 계층화를 계속 제어할 수 있습니다. 이러한 정책 기반 모델은 비용이 많이 드는 플래시 용량을 회수하여 스토리지 경제성을 향상시키고 하이브리드 스토리지 환경으로의 간편한 전환을 제공합니다. 계층화된 데이터를 안전하게 보호하고 가용성을 유지하면서 활성 작업 세트에 대한 성능 영향을 최소화합니다.
+
+
+
+[[compare-aff-and-fas-with-afx-implementations]]
+== AFF 및 FAS 와 AFX 구현 비교
+
+FabricPool 동작 방식은 ONTAP 유형(AFF 및 FAS 시스템용 통합 ONTAP, AFX 시스템용 AFX ONTAP 유형)에 따라 매우 유사하지만, 분산형 AFX 아키텍처로 인해 몇 가지 차이점이 발생합니다. 이 두 구현 방식 간의 가장 중요한 비교 영역은 아래에 요약되어 있습니다.
+
+[cols="1,2,2"]
+|===
+| 영역 또는 작업 | AFF 및 FAS 스토리지 | AFX 스토리지 
+
+
+| 오브젝트 저장소 범위 | 두 단계(config create 후 attach)를 통해 애그리게이트별로 구성됩니다. | 클러스터 수준에서 단일 명령으로 구성 가능하며, 클러스터당 하나의 버킷이 정의됩니다. 
+
+
+| 기본 계층화 정책 | 기본 정책은  `none`입니다. 티어링을 시작하려면 볼륨 정책을 명시적으로 설정해야 합니다. | 기본 정책은  `none`입니다. 티어링을 시작하려면 볼륨 정책을 명시적으로 설정해야 합니다. 
+
+
+| 온도 추적 | 볼륨별 세분성 | 볼륨별 세분성 
+
+
+| 클라우드 티어 제공업체 | StorageGRID, ONTAP S3 및 여러 주요 퍼블릭 클라우드 | StorageGRID 또는 ONTAP S3만 해당 
+
+
+| MetroCluster를 사용한 미러링 | 지원됨 | 지원되지 않음 
+
+
+| 볼륨 이동 | 표준 및 최적화된 볼륨 이동 | 용량 계층 데이터를 이동하지 않는 제로 카피 볼륨 이동(ZCVM) 
+|===
+
+
+[[related-information]]
+== 관련 정보
+
+* https://docs.netapp.com/us-en/ontap/concepts/fabricpool-concept.html["FabricPool 기본 개념"^]
+* https://docs.netapp.com/us-en/ontap/fabricpool/index.html["ONTAP FabricPool을 사용한 데이터 계층화에 대해 알아보기"^]
+* https://docs.netapp.com/us-en/ontap-technical-reports/tiering.html["ONTAP 티어링 기술 보고서"^]
+* link:../faq-ontap-afx.html["AFX 스토리지 시스템에 대한 FAQ"]
+

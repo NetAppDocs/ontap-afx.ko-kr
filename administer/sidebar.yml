@@ -36,6 +36,20 @@ entries:
     url: "/administer/configure-svm.html"
   - title: SVM 마이그레이션
     url: "/administer/migrate-svm.html"
+- title: 클러스터 데이터 관리
+  entries:
+  - title: FabricPool 계층 관리
+    entries:
+    - title: FabricPool에 대해 알아보십시오
+      url: "/administer/fabricpool.html"
+    - title: FabricPool 구현 준비
+      url: "/administer/fabricpool-prepare.html"
+    - title: FabricPool 구성
+      url: "/administer/fabricpool-configure.html"
+    - title: FabricPool 관리
+      url: "/administer/fabricpool-manage.html"
+    - title: 추가 고려 사항
+      url: "/administer/fabricpool-additional.html"
 - title: 클러스터를 지원하세요
   entries:
   - title: AutoSupport 관리
