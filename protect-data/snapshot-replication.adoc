@@ -4,7 +4,7 @@ permalink: protect-data/snapshot-replication.html
 keywords: afx, afx system, manage replication, manage snapshot replication 
 summary: 스냅샷 복제는 AFX 시스템의 일관성 그룹을 지리적으로 멀리 떨어진 위치로 복사하는 프로세스입니다.  초기 복제 후 일관성 그룹의 변경 사항은 복제 정책에 따라 원격 위치로 복사됩니다.  복제된 일관성 그룹은 재해 복구나 데이터 마이그레이션에 사용할 수 있습니다. 
 ---
-= AFX 스토리지 시스템에서 스냅샷 복제 관리
+= AFX 스토리지 시스템용 스냅샷 복제 워크플로
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

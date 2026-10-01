@@ -1316,7 +1316,6 @@
   <block id="e2bf3258a6bd916a9b75ab07319e2aa4" category="list-text">계층적 일관성 그룹은 ONTAP 9.16.1에서 도입되었으며 AFX에서 사용할 수 있습니다.  계층적 구조를 사용하면 하나 이상의 일관성 그룹을 상위 그룹 아래의 자식 그룹으로 구성할 수 있습니다.  이러한 계층적 그룹을 사용하면 개별 스냅샷 정책을 자식 일관성 그룹에 적용하고 부모를 복제하여 모든 자식의 스냅샷을 단일 단위로 원격 클러스터에 복제할 수 있습니다.</block>
   <block id="85fdd77d0274be7a2ed2bdefd292e18c" category="list-text">SnapLock 은 파일을 WORM(쓰기 한 번 읽기 여러 번) 상태로 옮겨서 보호할 수 있는 ONTAP 기능입니다.  이렇게 하면 지정된 보존 기간 동안 수정이나 삭제가 방지됩니다.  SnapLock 볼륨은 보존 기간을 기준으로 생성되며 생성 후에는 SnapLock 아닌 볼륨에서 변환할 수 없습니다.</block>
   <block id="f5ec2b2f45cf6729ee766559c7aa50f1" category="summary">스냅샷 복제는 AFX 시스템의 일관성 그룹을 지리적으로 멀리 떨어진 위치로 복사하는 프로세스입니다.  초기 복제 후 일관성 그룹의 변경 사항은 복제 정책에 따라 원격 위치로 복사됩니다.  복제된 일관성 그룹은 재해 복구나 데이터 마이그레이션에 사용할 수 있습니다.</block>
-  <block id="1fb9148e9e8349d6e785a8abe0e5fdba" category="doc">AFX 스토리지 시스템에서 스냅샷 복제 관리</block>
   <block id="a7ee55059187c77f0db0f1191da3e6c8" category="paragraph">스냅샷 복제를 설정하려면 AFX 스토리지 시스템과 원격 위치 간에 복제 관계를 설정해야 합니다.  복제 관계는 복제 정책에 의해 관리됩니다.  모든 스냅샷을 복제하는 기본 정책은 클러스터 설정 중에 생성됩니다.  기본 정책을 사용하거나 원하는 경우 새 정책을 만들 수 있습니다.</block>
   <block id="bb35c8e1197f3cb1f834baa178f51fdd" category="section-title">1단계: 클러스터 피어 관계 생성</block>
   <block id="256483a2b5ed8710e7c8fdf9ce515426" category="paragraph">원격 클러스터에 데이터를 복제하여 보호하려면 먼저 로컬 클러스터와 원격 클러스터 간에 클러스터 피어 관계를 만들어야 합니다.</block>
@@ -2332,4 +2331,5 @@
   <block id="e23d29d70657da965822a4e0ec8f546b" category="cell">기본 정책은<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block></block>
   <block id="5933d9a0441d1f9543a9286674ef11b5" category="doc">AFX S3 버킷 관리 옵션</block>
   <block id="b8efc14136159d215438d8120125f40e" category="doc">AFX 스토리지 시스템 데이터 관리에 대해 알아보기</block>
+  <block id="f71f016f7ff1ffe09fcc0bb6c3f2c337" category="doc">AFX 스토리지 시스템용 스냅샷 복제 워크플로</block>
 </blocks>
