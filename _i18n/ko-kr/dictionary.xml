@@ -2332,4 +2332,5 @@
   <block id="5933d9a0441d1f9543a9286674ef11b5" category="doc">AFX S3 버킷 관리 옵션</block>
   <block id="b8efc14136159d215438d8120125f40e" category="doc">AFX 스토리지 시스템 데이터 관리에 대해 알아보기</block>
   <block id="f71f016f7ff1ffe09fcc0bb6c3f2c337" category="doc">AFX 스토리지 시스템용 스냅샷 복제 워크플로</block>
+  <block id="320808ffdec6f54122d23d5939b758f2" category="admonition">AFX는 단일 스토리지 셸프 내에서 혼합된 드라이브 크기를 지원하지 않습니다. 셸프 내의 모든 드라이브는 동일한 크기여야 합니다. AFX 스토리지 시스템 구성에 대한 전체 호환성 정보는 <block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>을(를) 참조하십시오.</block>
 </blocks>
