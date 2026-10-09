@@ -2333,4 +2333,6 @@
   <block id="b8efc14136159d215438d8120125f40e" category="doc">AFX 스토리지 시스템 데이터 관리에 대해 알아보기</block>
   <block id="f71f016f7ff1ffe09fcc0bb6c3f2c337" category="doc">AFX 스토리지 시스템용 스냅샷 복제 워크플로</block>
   <block id="320808ffdec6f54122d23d5939b758f2" category="admonition">AFX는 단일 스토리지 셸프 내에서 혼합된 드라이브 크기를 지원하지 않습니다. 셸프 내의 모든 드라이브는 동일한 크기여야 합니다. AFX 스토리지 시스템 구성에 대한 전체 호환성 정보는 <block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>을(를) 참조하십시오.</block>
+  <block id="df0a5fa7367c040e26263e7f6bd5d3bb" category="paragraph-title">AFX 스토리지 셸프에 서로 다른 크기의 드라이브를 사용할 수 있나요?</block>
+  <block id="a5ca85d705ee24e667c1206bd5c112b4" category="paragraph">아니요. AFX는 단일 스토리지 셸프 내에서 드라이브 크기가 혼합된 구성을 지원하지 않습니다. 셸프 내의 모든 드라이브는 동일한 크기여야 합니다. AFX 스토리지 시스템 구성에 대한 전체 호환성 정보는 <block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>을(를) 참조하십시오.</block>
 </blocks>
