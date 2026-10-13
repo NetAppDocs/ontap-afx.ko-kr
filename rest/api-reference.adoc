@@ -4,7 +4,7 @@ permalink: rest/api-reference.html
 keywords: afx, afx system, rest api, rest api reference, swagger 
 summary: AFX REST API 참조에는 모든 API 호출에 대한 세부 정보가 포함되어 있습니다.  이 문서는 자동화 애플리케이션을 개발할 때 유용합니다. 
 ---
-= AFX 스토리지 시스템에 대한 REST API 참조
+= AFX 스토리지 시스템의 REST API 문서에 액세스하십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

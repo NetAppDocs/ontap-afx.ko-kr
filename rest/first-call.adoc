@@ -4,7 +4,7 @@ permalink: rest/first-call.html
 keywords: afx, afx system, rest api, first call, curl 
 summary: 간단한 curl 명령을 실행하여 AFX REST API를 사용하고 사용 가능 여부를 확인할 수 있습니다. 
 ---
-= 첫 번째 AFX 스토리지 시스템 REST API 호출
+= AFX 스토리지 시스템 REST API를 처음으로 호출해 보십시오.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
