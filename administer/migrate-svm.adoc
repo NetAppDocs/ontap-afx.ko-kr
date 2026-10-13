@@ -100,6 +100,6 @@ MetroCluster:: AFX 스토리지 시스템은 NetApp MetroCluster 지원하지 �
 == 관련 정보
 
 * https://docs.netapp.com/us-en/ontap/svm-migrate/index.html["ONTAP SVM 데이터 이동성"^]
-* link:../get-started/compare-unified-ontap.html["AFX 저장 시스템을 AFF 및 FAS 시스템과 비교"]
+* link:../get-started/compare-unified-ontap.html["AFX는 AFF 및 FAS 스토리지 시스템과 어떻게 다른가"]
 * link:../faq-ontap-afx.html["AFX 스토리지 시스템에 대한 FAQ"]
 

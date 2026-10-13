@@ -4,7 +4,7 @@ permalink: get-started/quick-start.html
 keywords: afx, afx system, quick start 
 summary: AFX 시스템을 처음 가동하려면 하드웨어 구성 요소를 설치하고 클러스터를 설정한 다음 클러스터 및 SVM을 관리할 준비를 해야 합니다. 
 ---
-= AFX 스토리지 시스템 설정을 위한 빠른 시작
+= AFX 스토리지 시스템 빠른 시작
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
