@@ -58,7 +58,7 @@ AFX 스토리지 시스템은 2025년 10월 NetApp Insight 컨퍼런스에서 �
 아니요. 동일한 클러스터에서 서로 다른 ONTAP 특성을 실행하는 시스템 노드를 혼합할 수 없습니다. 예를 들어, 동일한 클러스터에서 AFX 노드(AFX ONTAP 개성을 실행)와 AFF 또는 FAS 노드(Unified ONTAP 개성을 실행)를 혼합할 수 없습니다.
 
 .AFX 시스템 클러스터와 함께 FlexCache 사용할 수 있나요?
-네. AFX 스토리지 시스템은 Unified ONTAP 특성을 실행하는 AFF 또는 FAS 시스템과의 FlexCache 지원합니다. 유일한 제한 사항은 쓰기 백업 모드가 있는 FlexCache AFX에서 지원되지 않는다는 것입니다.
+예. AFX 스토리지 시스템은 통합 ONTAP 퍼스낼리티를 실행하는 AFF 또는 FAS 시스템과의 양방향 FlexCache를 지원합니다. 그러나 동일한 볼륨에 FlexGroup Advanced Capacity Balancing이 활성화된 경우 FlexCache 쓰기 저장을 사용할 수 없습니다. ACB는 모든 볼륨에 대해 기본적으로 활성화되어 있으므로 FlexCache 쓰기 저장을 활성화하기 전에 먼저 이를 비활성화해야 합니다(옵션 `-granular-data`` 사용). 이 동일한 제한은 통합 ONTAP에도 존재합니다.
 
 .SnapMirror 또는 FlexCache 위해 AFX 시스템과 함께 Unified ONTAP 개성을 실행하는 AFF 또는 FAS 시스템을 사용하려면 어떤 ONTAP 버전이 필요합니까?
 AFX의 SnapMirror 버전 규칙은 Unified ONTAP 과 동일합니다.  즉, Unified ONTAP 에서 복제하려면 소스 시스템이 지원되는 버전 범위 내에 있어야 합니다.  AFX에서 복제하려면 Unified ONTAP 시스템이 ONTAP 9.16.1 이상이어야 합니다(고급 용량 분산 기능이 지원되는 가장 초기 릴리스).  FlexCache 의 경우 소스 및 대상 시스템에 대해 설명된 것과 동일한 규칙이 적용됩니다. https://www.netapp.com/pdf.html?item=/media/7336-tr4743.pdf["TR-4743"^] .
