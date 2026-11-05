@@ -536,7 +536,6 @@
   <block id="8fbc7f1351a3e90b34e2d50e0c07adcf" category="paragraph-title">동일한 ONTAP 클러스터에서 AFX 시스템 노드를 AFF, ASA 또는 FAS 시스템 노드와 혼합할 수 있습니까?</block>
   <block id="b3c2db23091a0f69d5a98f7aa85c5999" category="inline-link">TR-4743</block>
   <block id="e41e8ba406c753a1f299483cef4ae186" category="paragraph">AFX의 SnapMirror 버전 규칙은 Unified ONTAP 과 동일합니다.  즉, Unified ONTAP 에서 복제하려면 소스 시스템이 지원되는 버전 범위 내에 있어야 합니다.  AFX에서 복제하려면 Unified ONTAP 시스템이 ONTAP 9.16.1 이상이어야 합니다(고급 용량 분산 기능이 지원되는 가장 초기 릴리스).  FlexCache 의 경우 소스 및 대상 시스템에 대해 설명된 것과 동일한 규칙이 적용됩니다.<block ref="21d9cc15452a0fa353089141a3f02dce" category="inline-link-rx"></block> .</block>
-  <block id="ed403710028c21becee46d02ed8f44c0" category="paragraph">FlexGroup 볼륨에 대한 지원에는 몇 가지 차이점이 있습니다.  AFX의 FlexGroup 볼륨은 Writeback 모드를 사용하는 FlexCache 볼륨의 원본 볼륨이 될 수 없습니다.</block>
   <block id="8708a9d2c137a59027465de500bfd069" category="paragraph-title">AFX 클러스터에 ONTAPI(ZAPI) API 호출을 할 수 있나요?</block>
   <block id="f54dc2ac5861fdbadd26691d76c517a0" category="paragraph">아니요. AFX에서는 ONTAP REST API만 지원됩니다.  ZAPI를 사용하는 모든 자동화 코드는 AFX와 함께 사용할 수 있도록 REST API로 변환해야 합니다.</block>
   <block id="85a92250c4c0abd493c68275cb1ef47b" category="section-title">고급 개념</block>
@@ -2334,4 +2333,93 @@
   <block id="a061b4886dc8395b711334fbef7bb048" category="list-text"><block ref="a061b4886dc8395b711334fbef7bb048" category="inline-link-macro-rx"></block></block>
   <block id="cffcf217d120cb1a72a68c2a76dd120c" category="doc">AFX 스토리지 시스템 빠른 시작</block>
   <block id="eaea4e2a08bd5c2b6c418b3299505e0f" category="paragraph">예. AFX 스토리지 시스템은 통합 ONTAP 퍼스낼리티를 실행하는 AFF 또는 FAS 시스템과의 양방향 FlexCache를 지원합니다. 그러나 동일한 볼륨에 FlexGroup Advanced Capacity Balancing이 활성화된 경우 FlexCache 쓰기 저장을 사용할 수 없습니다. ACB는 모든 볼륨에 대해 기본적으로 활성화되어 있으므로 FlexCache 쓰기 저장을 활성화하기 전에 먼저 이를 비활성화해야 합니다(옵션<block ref="decee3a1bb405f7a75c75230927c0fdc" prefix=" " category="inline-code"></block> 사용). 이 동일한 제한은 통합 ONTAP에도 존재합니다.</block>
+  <block id="ba7ad22e1a81b751fd383ff85d5afdb0" category="inline-link">ONTAP FPolicy가 NFSv4에 대해 모니터링하는 지원되는 파일 작업 및 필터 조합</block>
+  <block id="6a8ad412c3d9ebc0ab18e421d3127d72" category="paragraph">자세한 내용은<block ref="05cd43db8de5476d5e1977c9d95397ca" category="inline-link-rx"></block>을 참조하십시오.</block>
+  <block id="e5b5010fb7d96e12a82e9bc806b23fce" category="inline-link">FPolicy가 S3에 대해 모니터링할 수 있는 지원되는 파일 작업 및 필터 조합</block>
+  <block id="e50510d4bf96779c214f9db49c19a5c7" category="paragraph">자세한 내용은<block ref="92eebf3a041620ee5865a1f5090aa0f7" category="inline-link-rx"></block>을 참조하십시오.</block>
+  <block id="786347e300cbffb5148b2ca2c681797d" category="paragraph">FlexGroup 볼륨 지원에는 몇 가지 차이점이 있습니다. AFX의 FlexGroup 볼륨은 write-back 모드를 사용하는 FlexCache 볼륨의 원본 볼륨이 될 수 없습니다.</block>
+  <block id="fabdf2613f35f155197eae75e7a715c5" category="paragraph">SnapMirror active sync for NAS는 AFX 플랫폼(4 x 4)에서 지원하는 볼륨 수를 600개로 늘립니다.</block>
+  <block id="fa864467d02b35efb5b48d7a1226e621" category="cell">ONTAP 9.20.1</block>
+  <block id="403490259ca485564378615496f0d12e" category="cell">SnapMirror 동기식</block>
+  <block id="94fa49a536ee647eb042eda34c0508a7" category="paragraph">SnapMirror 동기 기능은 AFX 플랫폼에서 지원되는 볼륨 수를 400개에서 600개로 늘립니다.</block>
+  <block id="098a9352bab68d0361bda3b31e3eaf76" category="cell">FlexCache 볼륨</block>
+  <block id="e586a0d87adc85750b60048b984dcec5" category="paragraph">볼륨당 하나의 구성 요소를 사용할 경우 지원되는 FlexCache 볼륨 수는 노드당 2500개, HA 쌍당 5000개로 증가합니다.</block>
+  <block id="42048dd98a8ad89f24acddc35dc67b88" category="paragraph">원본 볼륨에서 생성할 수 있는 FlexCache 볼륨 수가 200개로 늘어나고, 원본당 쓰기 캐시 수가 50개로 늘어납니다.</block>
+  <block id="5d77241ae2b7d563a9a889195fa97992" category="summary">AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.20.1에 포함된 새로운 기능에 대해 알아보십시오.</block>
+  <block id="cfb4a84db453703235f2d352055e8e96" category="doc">AFX 스토리지 시스템용 ONTAP 9.20.1의 새로운 기능</block>
+  <block id="a723b6a368d39c8d49c195613b8f0358" category="inline-link">ONTAP 9.20.1의 새로운 기능</block>
+  <block id="528b908fb06e37839863d0ab949aecc9" category="admonition">ONTAP 9.20.1에는 AFX에서 사용할 수 있는 몇 가지 새로운 기능이 있습니다. 이러한 기능 중 일부는 AFX에 특화된 기능이며, 다른 많은 기능은 공통으로 사용되는 제품 기반에서 파생된 것입니다. 아래에 설명된 AFX 기능을 검토하는 것 외에도<block ref="bb496d6e4178788766e55a32eadccfc7" category="inline-link-rx"></block>을 참조하십시오.</block>
+  <block id="e764116c8b6d02fe92e8e153aab7cfb1" category="paragraph">비 SnapLock 소스 일관성 그룹에서 SnapLock for SnapVault 대상 일관성 그룹으로의 복제</block>
+  <block id="2db2c5f9a8e212e0f487a507cc5d27b0" category="paragraph">비 SnapLock 소스 일관성 그룹에서 SnapVault용 SnapLock 대상 일관성 그룹으로 복제할 수 있습니다. SnapVault용 SnapLock은 복제된 일관성 그룹을 실수 또는 악의적인 삭제로부터 보호합니다.</block>
+  <block id="0caba8f4c2505674387cfae0d08c928e" category="paragraph">NAS용 SnapMirror 활성 동기화에 대한 오브젝트 제한</block>
+  <block id="15706876356128f1bcb3bc70b209d95a" category="paragraph">SnapMirror 동기식 재해 복구에 대해 알아보십시오.</block>
+  <block id="e15ee7120aedb84fa118db472a832f75" category="paragraph">SnapMirror 동기식 기능은 AFX 플랫폼에서 복제 작업 수를 600개로 늘립니다.</block>
+  <block id="3e863d692173b182266f969760d6d478" category="paragraph">향상된 SVM 재해 복구</block>
+  <block id="4eac17fb350fe615663aaa46b582ba3a" category="paragraph">ONTAP 9.20.1은 표준 관리자 권한 볼륨 수정 워크플로를 사용하여 SVM-DR 대상 볼륨에서 선택한 볼륨 수정 속성을 허용함으로써 SVM 재해 복구를 향상시켜 지원팀 지원 절차의 필요성을 줄여줍니다. 또한 이번 릴리스에서는 FlexGroup 구성 요소에 대한 선택적 SVM-DR 빠른 재동기화 지원을 확장하여, 대규모 FlexGroup 기반 SVM이 DR 예행연습, 재동기화 또는 플립 재동기화 워크플로 후 더 빠르게 보호된 상태로 복귀할 수 있도록 지원합니다.</block>
+  <block id="d73bfb713549140550025003a4f168a3" category="paragraph">SnapMirror 클라우드를 이용한 원본 소스 볼륨으로의 제자리 복원</block>
+  <block id="710287e99afe9454522633944f25ce89" category="paragraph">SnapMirror 클라우드는 FlexVol 볼륨에 대한 제자리 복원 작업을 지원하므로 클라우드 스냅샷 복원 작업을 원래 소스 볼륨으로 직접 수행할 수 있습니다. ONTAP은 최신 공통 스냅샷을 선택하고 증분 전송을 수행하여 복원 시간을 단축합니다.</block>
+  <block id="c07ee5debf5f3a3fef16c1ee5e8e4942" category="section-title">NAS</block>
+  <block id="0f9f32d313338b51082d0b2fbc212549" category="paragraph">Windows 클라이언트와의 호환성 및 성능을 보장하기 위해 NetApp ONTAP SMB 프로토콜에서 NormaliseNameInfo에 대한 지원을 구현합니다</block>
+  <block id="59ef273a57109799963413fbd18d4e67" category="paragraph">Windows 클라이언트는 단일 요청으로 정규 파일 및 디렉터리 이름을 검색할 수 있으므로 파일 열기 지연 시간이 줄어들고 엔터프라이즈 데스크톱, 애플리케이션 및 파일 서버의 SMB 호환성이 향상됩니다. ONTAP은 열려 있는 파일 및 디렉터리에 대한 정규 경로를 자동으로 반환하여, 추가 구성 없이 Windows 11 24H2 이상 클라이언트에서 구성 요소별 조회를 방지합니다.</block>
+  <block id="0736ff6d9fefa77105fcf265e12e0d94" category="paragraph">공간 재확보를 위한 VAAI-NAS를 사용한 자동 UNMAP 지원</block>
+  <block id="917f4277a529344ad46537ff610b1c87" category="paragraph">ONTAP은 VMware VAAI용 NetApp NFS 플러그인을 통해 NFS 데이터스토어에 대한 자동 공간 재확보를 지원합니다. 이는 VMware ESXi 9.0 이상 호스트에서 UNMAP 작업을 실행할 때 씬 프로비저닝된 VMDK 블록 범위에서 공간을 재확보하는 데 도움이 됩니다.</block>
+  <block id="47788bba2ab90d44ab79e1a6e365c59a" category="paragraph">ONTAP FlexVol 볼륨의 최대 디렉터리 크기</block>
+  <block id="cf894c84687559461fbfc2bfc4b3ed31" category="paragraph">ONTAP은 디렉터리 크기를 최대 4GB까지 지원하여 최대 약 2,500만 개의 파일을 포함하는 매우 큰 디렉터리의 성능을 향상시킵니다. AI 학습 등 단일 디렉터리에 매우 많은 파일을 생성하는 워크로드를 실행하는 고객은 기존에 대용량 디렉터리에서 발생했던 성능 저하를 방지하여 이점을 얻을 수 있습니다. 또한 데이터 보호 장애 조치 후에도 디렉터리가 완전히 인덱싱된 상태를 유지하도록 하여 복원력을 향상시키므로, SnapMirror 관계가 끊어지더라도 복제본이 원활하게 작동합니다. 이 기능은 AFX 스토리지 시스템에서 사용할 수 있으며 필요에 따라 각 볼륨에서 활성화할 수 있습니다.</block>
+  <block id="ac53f50b5da058f73fac8c6bebc6d081" category="paragraph">SID를 UNIX ID로 자동 변환하는 기능 지원</block>
+  <block id="9398eb51396f476556b0a6e339fc0783" category="paragraph">ONTAP은 Windows SID에서 POSIX UID/GID를 생성하고 역변환하기 위해 LDAP에 연결된 SVM에 대한 자동 SID-UNIX ID 변환 지원을 도입했습니다. 이를 통해 Active Directory에서 uidNumber/gidNumber 속성을 수동으로 유지 관리할 필요가 없어지므로 관리 오버헤드가 줄어들고 NFS 및 SMB 전반에서 일관된 파일 액세스를 보장할 수 있습니다. 이 업계 표준 기능은 SSSD 기반 NAS 플랫폼에서 대규모 네트워크를 마이그레이션하고 ID 매핑 일관성을 유지하려는 고객에게 특히 유용합니다. 이 기능은 기본적으로 비활성화되어 있으며 SVM별로 구성됩니다.</block>
+  <block id="5f5385d8bba7d72bd2a4add9ee895cea" category="inline-link-macro">FPolicy를 NFS 4.2로 확장</block>
+  <block id="5cd178a04e8c815fd80f6671ec1f24e4" category="cell"><block ref="5cd178a04e8c815fd80f6671ec1f24e4" category="inline-link-macro-rx"></block></block>
+  <block id="03d0230f2da11f8d30424dc81f19e44f" category="paragraph">FPolicy는 NFS 4.2로 확장되어 ONTAP에서 지원하는 최신 NFS 프로토콜 버전에 파일 활동 모니터링 및 정책 적용 기능을 제공합니다. FPolicy는 NFSv4.2 파일 액세스 이벤트를 모니터링하여 감사, 규정 준수 및 사이버 복원력 사용 사례를 지원합니다. 고급 보안 속성 모니터링은 더욱 강력한 데이터 보호 및 분류를 제공합니다. 레이블이 지정된 NFS 지원을 통해 규정 준수에 민감한 기밀 데이터 환경에서 보안 레이블 변경에 대한 정책 기반 대응이 가능합니다. 이 기능을 사용하여 감사, 규정 준수 및 랜섬웨어 보호를 강화하십시오.</block>
+  <block id="66ad375a2943521934942b5c84871df3" category="inline-link-macro">S3 오브젝트 스토리지용 FPolicy</block>
+  <block id="c547e5f0349de19aada8329994a26ced" category="cell"><block ref="c547e5f0349de19aada8329994a26ced" category="inline-link-macro-rx"></block></block>
+  <block id="1c3e66427001752e1b01aea535c91fbe" category="paragraph">FPolicy는 S3 오브젝트 워크플로우에 대한 보안 모니터링을 제공합니다. 이는 파일 및 오브젝트 스토리지를 위한 통합 FPolicy 프레임워크를 제공하여 하이브리드 데이터 환경의 보안 운영을 간소화합니다. S3 오브젝트용 FPolicy는 보안, 규정 준수 및 감사 요구사항을 위해 오브젝트 생성, 삭제 및 메타데이터 태그 변경을 모니터링하는 오브젝트 라이프사이클 가시성을 제공합니다. 이 기능은 성능에 영향을 주지 않고 무중단 모니터링을 제공합니다.</block>
+  <block id="9a44d52b36be90e1fbdc2004c5f925e8" category="paragraph">유연한 S3 버킷 크기 조정</block>
+  <block id="92363f840015d922b613a4ac9234d646" category="paragraph">ONTAP은 새 S3 버킷에 대한 구성 가능한 기본 크기를 지원합니다. 이를 통해 애플리케이션이 용량을 지정하지 않고 S3 API를 통해 버킷을 생성할 때 수동 크기 조정을 줄일 수 있습니다. 기본 크기가 구성되지 않은 경우 버킷 생성 동작은 변경되지 않습니다.</block>
+  <block id="2b98f829776806cdc2966731856e5418" category="paragraph">OnTAP S3 NAS 버킷을 FlexCache(FlexVol 오리진 사용)에서 허용합니다.</block>
+  <block id="48d8873c8d582faa2e4c6dffe93b0118" category="paragraph">FlexVol 오리진이 있는 FlexCache 볼륨의 S3 NAS 버킷은 ONTAP 9.20.1부터 지원됩니다. 단일 오브젝트 S3 작업(PUT, GET, DELETE, HEAD, LIST)이 지원됩니다. 기본 FlexVol 볼륨이 세분화된 데이터 배포를 지원하지 않으므로 멀티파트 업로드는 지원되지 않습니다.</block>
+  <block id="13cbc5e2b48b9abc5eeb8b62c7d0a23d" category="paragraph">FG 원본을 사용하는 FC 볼륨의 S3 NAS 버킷에 대한 COPY 오브젝트 지원</block>
+  <block id="2e044a3eecaa7c74e2990fce32ba30c4" category="paragraph">ONTAP 9.20.1부터 FlexCache 볼륨의 S3 NAS 버킷은 S3 CopyObject 및 UploadPartCopy API를 사용하여 서버 측 오브젝트 복사 작업을 지원합니다. 동일한 FlexCache NAS 버킷 내에서 오브젝트를 복사하거나 FlexGroup 볼륨으로 지원되는 S3 NAS 버킷에서 FlexCache NAS 버킷으로 오브젝트를 복사할 수 있습니다.</block>
+  <block id="f729093611726376b97aa197db571071" category="paragraph">초기 S3 체크섬 지원</block>
+  <block id="d1d5a6d18945612943072e311cbd3e10" category="paragraph">ONTAP S3는 S3 NAS 버킷에 대해 AWS 호환 CRC-64NVME 체크섬을 지원합니다. S3 클라이언트가 지원되는 업로드 및 멀티파트 작업에 대한 체크섬 정보를 제공하면 ONTAP은 체크섬을 검증 및 저장하고 지원되는 GET 및 HEAD 요청에 대한 체크섬 정보를 반환합니다.</block>
+  <block id="62a0282d39568be094470486eaf70c4f" category="section-title">SAN</block>
+  <block id="34812b0f41d288e68c5ea444d1260cad" category="paragraph">AFF 또는 FAS 시스템에서 AFX 시스템으로 데이터를 마이그레이션한 후 성능 향상 지원</block>
+  <block id="5d97f18d290744ab1158720b94b09b55" category="paragraph">ONTAP 9.20.1부터 ONTAP은 AFF 또는 FAS 시스템에서 AFX 시스템으로 데이터를 마이그레이션한 후 발생할 수 있는 추가적인 읽기 지연 시간과 CPU 사용량을 줄여줍니다.</block>
+  <block id="d3c565e1b610fe8579acf7347b07f64a" category="paragraph">ARP/AI 스냅샷 응답 정책에 대한 향상된 제어 기능</block>
+  <block id="ee6881de3a048e5b31015b22c552fefe" category="paragraph">ARP/AI 스냅샷 응답 정책은 SVM 또는 볼륨 수준에서 구성하여 ARP/AI가 비정상적인 활동을 감지했을 때 스냅샷을 생성할지 여부를 제어할 수 있습니다. 세 가지 정책을 사용할 수 있습니다. <block ref="1b3a3934bf677d76a0676b64e14951e8" prefix=" " category="inline-code"></block>(기본값, 기존 동작 유지), <block ref="6de1c3da4be44c3091aba32507725003" prefix=" " category="inline-code"></block>(공격 스냅샷만 생성, 주기적 스냅샷 없음) 및 <block ref="702af5da0029273c0c9374c9aa58cf8e" prefix=" " category="inline-code"></block>(경고 및 이벤트 로그만 생성, 스냅샷 생성 안 됨). 9.20.1로 업그레이드한 후에는 해당 노드 수준 옵션이 이전에 수정되지 않은 경우 기본 주기적 스냅샷 최대 개수가 6에서 2로, 기본 보존 기간이 12시간에서 7시간으로 변경됩니다. 자세한 내용은 <block ref="f724d846ba2546ab2af92b2a50d89cae" category="inline-link-rx"></block>을(를) 참조하십시오.</block>
+  <block id="83beb1c468f3ad51ef3cbd31422cfbfd" category="paragraph">데이터 SVM을 위한 키 관리 워크플로 개선 사항</block>
+  <block id="7d615da3673e35ec24d20c48d57d4164" category="paragraph">데이터 SVM에서 외부 키 관리자를 활성화하면 ONTAP은 해당 SVM의 볼륨 암호화 키를 관리자 범위 키 관리자에서 새 데이터 SVM 키 관리자로 자동으로 마이그레이션할 수 있습니다. 이를 통해 외부 키 관리로의 전환이 간소화되고 표준 워크플로에서 별도의 수동 마이그레이션 단계를 제거할 수 있습니다.</block>
+  <block id="262ee1b20e417b65ec80128f9c4f64e4" category="paragraph">MAV 승인자로서 IdP, AD 및 LDAP 그룹 지원</block>
+  <block id="3c4c2709835f1c87fc54563b59fa54e4" category="paragraph">MAV 승인 그룹에는 개별 관리자 외에도 ID 공급자(IdP), Active Directory(AD) 및 LDAP(nsswitch) 그룹을 승인자로 포함할 수 있습니다. 지원되는 그룹 유형에는 Entra ID, ADFS, AD 도메인 그룹 및 LDAP 그룹이 있습니다. IdP, AD 또는 LDAP 디렉터리에서 사용자를 추가하거나 제거해도 MAV 구성을 변경할 필요가 없습니다. 사용자의 그룹 멤버십 변경 사항은 사용자가 다음에 로그인할 때 재인증 후 적용됩니다. security multi-admin-verify registered-operations show 명령을 사용하여 현재 클러스터에서 사용 가능한 모든 MAV 보호 가능 작업을 표시할 수 있습니다.</block>
+  <block id="60d1fcaf1dfe82f190fa05efd7b3109f" category="paragraph">SNMPv3 SHA-512 인증 지원</block>
+  <block id="abb34d4ed9205566915842afe0ba2e7c" category="paragraph">ONTAP은 SNMPv3 사용자에 대해 SHA-512 인증을 지원합니다. 이 개선 사항을 통해 SHA-512 인증이 필요한 스위치를 포함하여 외부 SNMP 클라이언트 및 스위치 모니터링에 더욱 강력한 SNMPv3 인증을 사용할 수 있습니다. 자세한 내용은 ONTAP 클러스터에서 SNMPv3 사용자 구성 및 이더넷 스위치 상태 모니터링을 위한 SNMPv3 구성을 참조하십시오.</block>
+  <block id="0a6dafd87b929086149d1daa78b1b6b2" category="inline-link">이더넷 스위치 상태 모니터링을 위한 SNMPv3 구성</block>
+  <block id="c513c5145a4bb36c5683cd6b7e126ed3" category="paragraph">자세한 내용은<block ref="996ee393e9384ce63c244e0550fe9211" category="inline-link-rx"></block>을 참조하십시오.</block>
+  <block id="e1ef8d39059918ff1a92b10671c211ed" category="paragraph">자동 중복 제거 스케줄러(ADS) 최적화</block>
+  <block id="1c90de67f45bdbc0220cd3d203326951" category="paragraph">ONTAP은 ADS(자동 중복 제거 스케줄러) 성능을 향상시켜 노드당 더 많은 동시 중복 제거 세션을 허용하고, 클라이언트 I/O 균형을 더 잘 맞추기 위해 더욱 스마트하고 타겟팅된 스로틀링을 제공합니다. DP 볼륨(SnapMirror 전송) 및 글로벌 중복 제거 세션의 중복 제거 작업은 일반 볼륨 중복 제거와 함께 관리되므로 경합 및 메타데이터 증가를 줄입니다. 특히 혼합 워크로드 환경에서 스토리지 효율성을 향상시킬 수 있으며, 구성 변경은 필요하지 않습니다. 이 기능은 기본적으로 활성화되어 있으며 AFX 스토리지 시스템에서 사용할 수 있습니다.</block>
+  <block id="1a2ca197c3e78961716977efdddc1997" category="paragraph">AFX 32노드 엔터프라이즈 지원</block>
+  <block id="ea906347fb7d165614628efe201a3788" category="paragraph">ONTAP AFX 클러스터를 전체 32노드 규모로 배포하고 완벽한 엔터프라이즈 기능을 지원하여, 기존에는 소규모 AFX 배포에서만 가능했던 기능을 모두 활용할 수 있습니다. 이를 통해 특히 AI/ML 학습 및 데이터 파이프라인을 운영하는 엔터프라이즈 고객은 티어링, 데이터 보호, 스냅샷, 복원력 등 엔터프라이즈 데이터 서비스를 희생하지 않고 더 크고 밀도 높은 스토리지 클러스터를 구축할 수 있습니다. NFS, SMB, S3, FlexGroup 및 FlexCache를 포함한 전체 NAS 및 오브젝트 프로토콜 지원은 HA 및 복구 워크플로우와 함께 이 규모에서 검증되어 AFX 배포가 증가함에 따라 안정적인 운영을 보장합니다.</block>
+  <block id="a8565cd2ce3e82d040fd3d721a2584a2" category="paragraph">FabricPool은 데이터의 활동을 기반으로 고성능 로컬 계층과 저비용 원격 클라우드 또는 용량 계층 간에 데이터를 이동하는 ONTAP 기능입니다. FabricPool은 ONTAP 9.20.1부터 AFX 스토리지 시스템에 공식적으로 확장되었으며 9.19.1 P3에서도 사용할 수 있습니다. 이를 통해 데이터 집약적인 워크로드를 지원하는 훨씬 더 큰 데이터 규모를 구현할 수 있습니다. AFX 구현에서 몇 가지 아키텍처 변경 사항이 도입되었지만 ONTAP 기능의 핵심 특성은 동일하게 유지됩니다.</block>
+  <block id="33873845a3e33d72765a73e2af9ec314" category="paragraph">FSA - 정확한 디렉토리 액세스 시간</block>
+  <block id="551f1db1032142479617231b74216e12" category="paragraph">파일 시스템 분석 검사 및 System Manager 파일 시스템 탐색기 탐색은 디렉터리 액세스 시간(atime) 메타데이터를 보존합니다. 이를 통해 아카이빙, 계층화, 규정 준수 및 데이터 라이프사이클 워크플로에 필요한 정확한 atime 값을 유지할 수 있습니다.</block>
+  <block id="bb6bf1dabc81e360bacb4fe2c422057a" category="paragraph">FlexCache 볼륨 메트릭</block>
+  <block id="dddbea93f5316678d8883ccb2739b936" category="paragraph">FlexCache 볼륨 메트릭은 FlexCache 볼륨과 원본 볼륨 간에 교환되는 데이터 및 메타데이터의 양을 보고합니다. 기존 ONTAP REST 볼륨 통계 및 메트릭 엔드포인트에 FlexCache에서 원본으로, 원본에서 FlexCache로의 데이터 전송에 대한 가시성을 제공하는 두 가지 새로운 속성이 추가되었습니다. 이러한 카운터는 구성이 필요 없이 자동으로 수집되며, 용량 계획, 성능 분석, 네트워크 문제 해결 및 비용 분석에 유용합니다. 이 기능을 사용하려면 FlexCache 및 원본 노드 모두에 ONTAP 9.20 이상이 필요합니다. 자세한 내용은 ONTAP 자동화 문서를 참조하십시오.</block>
+  <block id="a0d1c28cb5dea36ea87f89a7deb5b642" category="paragraph">클러스터 내 재균형 조정</block>
+  <block id="1ea18823e9377acf474dfa352de7d9e0" category="paragraph">ONTAP은 워크로드 및 클러스터 용량이 변화함에 따라 관리 노력을 최소화하면서 클러스터 성능을 최적으로 유지할 수 있도록 두 가지 새로운 균형 배치 기능을 도입했습니다. 프로비저닝 시간 배치 제어를 통해 고객은 REST API를 통해 새 볼륨을 배치할 때 성능 또는 공간 요구사항 중 어떤 것을 우선시할지 지정할 수 있습니다. 공간 성능 재조정(SPR)은 클러스터 전체에서 발생하는 성능 핫스팟이나 애그리게이트 공간 압박을 지속적으로 찾는 백그라운드 프로세스입니다. 구성된 모드에 따라 SPR은 EMS 알림을 통해 교정 볼륨 이동을 권장하거나 표준 및 무중단 ONTAP 볼륨 이동 작업을 사용하여 자동으로 이동을 수행합니다. 자세한 내용은 ONTAP 자동화 문서를 참조하십시오.</block>
+  <block id="f9bd0f05ff9f13772b59d13ca615452f" category="paragraph">오브젝트가 포함된 ONTAP S3 버킷 삭제 지원</block>
+  <block id="25e09703e2591660d67511f154cb5110" category="paragraph">관리자는 구성 가능한 보존 기반 복구 기간을 사용하여 오브젝트가 포함된 버킷의 삭제를 예약할 수 있습니다. 이를 통해 보존 기간이 만료되기 전에 버킷을 복구할 수 있습니다. 이 기능은 만료로 인한 백로그를 줄이고 변동성이 큰 워크로드에서 용량을 더 빠르게 재사용할 수 있도록 합니다.</block>
+  <block id="11031c8bb7c2ac8735954df29507e0f2" category="paragraph">S3 NAS 버킷의 SVM 마이그레이션 지원</block>
+  <block id="36ebcabaee5643868ca7e7ca76e3dddc" category="paragraph">ONTAP 9.20.1은 FlexVol 볼륨에서 S3 NAS 버킷을 호스팅하는 SVM에 대한 SVM 마이그레이션을 지원하므로, 관리자는 먼저 S3 NAS 구성을 제거하지 않고도 SVM을 마이그레이션할 수 있습니다.</block>
+  <block id="e690a850857d633b6f83215e7327eb4f" category="paragraph">FlexGroup 볼륨에서 재확보 가능한 공간 계산</block>
+  <block id="067ec098932af9fcd49b75532fc0988d" category="paragraph">ONTAP은 FlexGroup 볼륨에서 스냅샷을 삭제하기 전에 재확보 가능한 공간을 계산하는 기능을 지원합니다.</block>
+  <block id="ddf94f7983776b6cf5970dcc4ef1c066" category="paragraph">비동기 삭제 성능 향상</block>
+  <block id="bed4bc49cac2359554d12c178f049274" category="paragraph">ONTAP은 NAS/SMB 클라이언트를 위한 비동기 삭제 성능을 향상시키고 공간 재확보를 가속화합니다. 자세한 내용은 NetApp 담당자에게 문의하십시오.</block>
+  <block id="bea269b6a9dae171b3776d35dfd0eaff" category="paragraph">고성능 FlexGroup 볼륨의 자동 프로비저닝</block>
+  <block id="3c36656655c0aab39eebd7d400123a49" category="paragraph">ONTAP은 고객이 워크로드에 맞게 균형 잡힌 또는 고성능 데이터 컨테이너를 선택할 수 있도록 하는 스토리지 프로파일을 통해 FlexGroup 프로비저닝을 간소화하여, 관리자가 성능 요구사항을 충족하기 위해 구성 요소 볼륨을 수동으로 구성하고 크기를 조정할 필요성을 줄여줍니다.</block>
+  <block id="f6b4095346f49f486b115d501192a48a" category="paragraph">FlexCache를 사용한 NVFAIL 지원</block>
+  <block id="2b30045f9f039839789b093debc97655" category="paragraph">NVFAIL이 활성화된 오리진과 FlexCache 관계를 생성할 수 있습니다. 또한 오리진 볼륨과 관계없이 캐시 볼륨에 NVFAIL을 활성화할 수 있습니다. NVFAIL이 발생한 오리진 또는 캐시 볼륨에서 ONTAP은 데이터 읽기 또는 변경을 차단하는 동시에 수정된 캐시 데이터의 쓰기 작업을 유지하고, 복구 후 정상적인 I/O가 재개됩니다.</block>
+  <block id="0a32d29e60cf9b348e7c880d2d91bf41" category="paragraph">인증서 및 사용자 암호 만료 알림 지원</block>
+  <block id="e3348f99e30fd92ad3f432118a3ea5ed" category="paragraph">System Manager는 클러스터 또는 스토리지 가상 머신(SVM) 인증서가 만료되기 30일 전에 대시보드 상태 알림을 표시하고 만료 전까지 남은 일수를 매일 업데이트합니다.</block>
+  <block id="444ba6c64d0d15801551acade229d411" category="paragraph">또한, 사용자 계정과 연결된 역할에 암호 만료 알림이 구성되어 있는 경우, 암호 만료일 14일 전부터 System Manager에 로그인하자마자 페이지 상단에 배너 알림이 표시됩니다. 이 알림은 사용자가 로그인할 때마다 업데이트되어 암호 만료까지 남은 일수를 보여줍니다. 관리자 역할을 추가하거나 편집할 때 만료 알림을 구성할 수 있습니다.</block>
+  <block id="290121bb9aa53673a1305e69e7450334" category="paragraph">추가 AutoSupport 알림 지원</block>
+  <block id="18770d28af8537961088ebf517a0919b" category="paragraph">System Manager는 AutoSupport 구성 문제를 해결하는 데 도움이 되는 새로운 AutoSupport 알림을 표시합니다.</block>
 </blocks>

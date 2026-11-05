@@ -130,6 +130,10 @@ AFX 배포 시 구성하고 사용할 수 있는 선택적 보안 기능이 여�
 
 FPolicy는 스토리지 가상 머신(SVM)에서 파일 액세스 이벤트를 모니터링하고 관리하는 데 사용되는 파일 액세스 알림 프레임워크입니다. FPolicy를 사용하면 사용자가 정의한 기준에 따라 모니터링하고 선택적으로 차단할 파일 작업을 정의하는 정책을 생성할 수 있습니다. FPolicy는 일반적으로 보안 감사, 규정 준수 및 데이터 거버넌스에 사용됩니다. 자세한 내용은 https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy 솔루션"^]을 참조하십시오.
 
+자세한 내용은 https://docs.netapp.com/us-en/ontap/nas-audit/supported-file-operation-filter-fpolicy-nfsv4-concept.html["ONTAP FPolicy가 NFSv4에 대해 모니터링하는 지원되는 파일 작업 및 필터 조합"^]을 참조하십시오.
+
+자세한 내용은 https://docs.netapp.com/us-en/ontap/nas-audit/supported-file-operation-filter-fpolicy-s3-concept.html["FPolicy가 S3에 대해 모니터링할 수 있는 지원되는 파일 작업 및 필터 조합"^]을 참조하십시오.
+
 
 
 [[nfs-over-tls]]

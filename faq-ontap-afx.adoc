@@ -63,7 +63,7 @@ AFX 스토리지 시스템은 2025년 10월 NetApp Insight 컨퍼런스에서 �
 .SnapMirror 또는 FlexCache 위해 AFX 시스템과 함께 Unified ONTAP 개성을 실행하는 AFF 또는 FAS 시스템을 사용하려면 어떤 ONTAP 버전이 필요합니까?
 AFX의 SnapMirror 버전 규칙은 Unified ONTAP 과 동일합니다.  즉, Unified ONTAP 에서 복제하려면 소스 시스템이 지원되는 버전 범위 내에 있어야 합니다.  AFX에서 복제하려면 Unified ONTAP 시스템이 ONTAP 9.16.1 이상이어야 합니다(고급 용량 분산 기능이 지원되는 가장 초기 릴리스).  FlexCache 의 경우 소스 및 대상 시스템에 대해 설명된 것과 동일한 규칙이 적용됩니다. https://www.netapp.com/pdf.html?item=/media/7336-tr4743.pdf["TR-4743"^] .
 
-FlexGroup 볼륨에 대한 지원에는 몇 가지 차이점이 있습니다.  AFX의 FlexGroup 볼륨은 Writeback 모드를 사용하는 FlexCache 볼륨의 원본 볼륨이 될 수 없습니다.
+FlexGroup 볼륨 지원에는 몇 가지 차이점이 있습니다. AFX의 FlexGroup 볼륨은 write-back 모드를 사용하는 FlexCache 볼륨의 원본 볼륨이 될 수 없습니다.
 
 .AFX 클러스터에 ONTAPI(ZAPI) API 호출을 할 수 있나요?
 아니요. AFX에서는 ONTAP REST API만 지원됩니다.  ZAPI를 사용하는 모든 자동화 코드는 AFX와 함께 사용할 수 있도록 REST API로 변환해야 합니다.
