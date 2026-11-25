@@ -2348,7 +2348,6 @@
   <block id="5d77241ae2b7d563a9a889195fa97992" category="summary">AFF 스토리지 시스템에서 사용할 수 있는 ONTAP 9.20.1에 포함된 새로운 기능에 대해 알아보십시오.</block>
   <block id="cfb4a84db453703235f2d352055e8e96" category="doc">AFX 스토리지 시스템용 ONTAP 9.20.1의 새로운 기능</block>
   <block id="a723b6a368d39c8d49c195613b8f0358" category="inline-link">ONTAP 9.20.1의 새로운 기능</block>
-  <block id="528b908fb06e37839863d0ab949aecc9" category="admonition">ONTAP 9.20.1에는 AFX에서 사용할 수 있는 몇 가지 새로운 기능이 있습니다. 이러한 기능 중 일부는 AFX에 특화된 기능이며, 다른 많은 기능은 공통으로 사용되는 제품 기반에서 파생된 것입니다. 아래에 설명된 AFX 기능을 검토하는 것 외에도<block ref="bb496d6e4178788766e55a32eadccfc7" category="inline-link-rx"></block>을 참조하십시오.</block>
   <block id="e764116c8b6d02fe92e8e153aab7cfb1" category="paragraph">비 SnapLock 소스 일관성 그룹에서 SnapLock for SnapVault 대상 일관성 그룹으로의 복제</block>
   <block id="2db2c5f9a8e212e0f487a507cc5d27b0" category="paragraph">비 SnapLock 소스 일관성 그룹에서 SnapVault용 SnapLock 대상 일관성 그룹으로 복제할 수 있습니다. SnapVault용 SnapLock은 복제된 일관성 그룹을 실수 또는 악의적인 삭제로부터 보호합니다.</block>
   <block id="0caba8f4c2505674387cfae0d08c928e" category="paragraph">NAS용 SnapMirror 활성 동기화에 대한 오브젝트 제한</block>
@@ -2422,4 +2421,5 @@
   <block id="444ba6c64d0d15801551acade229d411" category="paragraph">또한, 사용자 계정과 연결된 역할에 암호 만료 알림이 구성되어 있는 경우, 암호 만료일 14일 전부터 System Manager에 로그인하자마자 페이지 상단에 배너 알림이 표시됩니다. 이 알림은 사용자가 로그인할 때마다 업데이트되어 암호 만료까지 남은 일수를 보여줍니다. 관리자 역할을 추가하거나 편집할 때 만료 알림을 구성할 수 있습니다.</block>
   <block id="290121bb9aa53673a1305e69e7450334" category="paragraph">추가 AutoSupport 알림 지원</block>
   <block id="18770d28af8537961088ebf517a0919b" category="paragraph">System Manager는 AutoSupport 구성 문제를 해결하는 데 도움이 되는 새로운 AutoSupport 알림을 표시합니다.</block>
+  <block id="ce5b4b8e40877f3059210dd9eb2c728c" category="admonition">ONTAP 9.20.1에는 AFX에서 사용할 수 있는 몇 가지 새로운 기능이 있습니다. 이러한 기능 중 일부는 AFX에 특화된 기능이며, 다른 많은 기능은 공통으로 사용되는 제품 기반에서 파생된 것입니다. 아래에 설명된 AFX 기능을 검토하는 것 외에도<block ref="b9759575dd760b6d9ef8b5db42227b0c" category="inline-link-rx"></block>을 참조하십시오.</block>
 </blocks>
