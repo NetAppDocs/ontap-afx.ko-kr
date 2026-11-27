@@ -132,7 +132,7 @@ FPolicy는 스토리지 가상 머신(SVM)에서 파일 액세스 이벤트를 �
 
 자세한 내용은 https://docs.netapp.com/us-en/ontap/nas-audit/supported-file-operation-filter-fpolicy-nfsv4-concept.html["ONTAP FPolicy가 NFSv4에 대해 모니터링하는 지원되는 파일 작업 및 필터 조합"^]을 참조하십시오.
 
-자세한 내용은 https://docs.netapp.com/us-en/ontap/nas-audit/supported-file-operation-filter-fpolicy-s3-concept.html["FPolicy가 S3에 대해 모니터링할 수 있는 지원되는 파일 작업 및 필터 조합"^]을 참조하십시오.
+자세한 내용은 https://docs.netapp.com/us-en/ontap/nas-audit/supported-file-operation-filter-fpolicy-s3.html["FPolicy가 S3에 대해 모니터링할 수 있는 지원되는 파일 작업 및 필터 조합"^]을 참조하십시오.
 
 
 
